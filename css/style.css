@@ -1,100 +1,217 @@
-body {
-    font-family: 'Inter', system-ui, sans-serif;
+/* ========== UNI Study Hub – Refined Design ========== */
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --primary: #4f46e5;
+  --primary-dark: #3730a3;
+  --primary-soft: #eef2ff;
+  --border: #e2e8f0;
+  --success: #059669;
+  --success-soft: #ecfdf5;
+  --warning: #d97706;
+  --warning-soft: #fffbeb;
+  --danger: #e11d48;
+  --radius: 12px;
+  --shadow: 0 1px 3px rgba(15,23,42,0.06), 0 1px 2px rgba(15,23,42,0.04);
+  --shadow-lg: 0 10px 25px -5px rgba(15,23,42,0.08), 0 8px 10px -6px rgba(15,23,42,0.04);
 }
 
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+code, .mono, .formula-box {
+  font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', ui-monospace, monospace;
+}
+
+/* Cards */
 .unit-card {
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  border: 1px solid var(--border);
 }
 .unit-card:hover {
-    transform: translateY(-3px);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: #c7d2fe;
 }
 
-.prose h2 {
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: #1e293b;
-    border-bottom: 2px solid #e0e7ff;
-    padding-bottom: 0.35rem;
-}
-
-.prose h3 {
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #312e81;
-}
-
-.prose ul, .prose ol {
-    margin-left: 1.25rem;
-    margin-bottom: 1rem;
-}
-
-.prose li {
-    margin-bottom: 0.35rem;
-}
-
-.prose p {
-    margin-bottom: 0.85rem;
-    line-height: 1.65;
-}
-
+/* Content boxes */
 .definition-box {
-    background: #eef2ff;
-    border-left: 4px solid #4f46e5;
-    padding: 1rem 1.25rem;
-    border-radius: 0 0.5rem 0.5rem 0;
-    margin: 1rem 0;
+  background: var(--primary-soft);
+  border-left: 4px solid var(--primary);
+  padding: 1rem 1.25rem;
+  border-radius: 0 10px 10px 0;
+  margin: 1.1rem 0;
+  font-size: 0.95rem;
 }
 
 .example-box {
-    background: #f0fdf4;
-    border-left: 4px solid #16a34a;
-    padding: 1rem 1.25rem;
-    border-radius: 0 0.5rem 0.5rem 0;
-    margin: 1rem 0;
+  background: var(--success-soft);
+  border-left: 4px solid var(--success);
+  padding: 1rem 1.25rem;
+  border-radius: 0 10px 10px 0;
+  margin: 1.1rem 0;
+  font-size: 0.95rem;
 }
 
 .formula-box {
-    background: #f8fafc;
-    border: 1px solid #cbd5e1;
-    font-family: 'JetBrains Mono', monospace;
-    padding: 0.85rem 1.1rem;
-    border-radius: 0.5rem;
-    margin: 1rem 0;
-    overflow-x: auto;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  padding: 0.9rem 1.15rem;
+  border-radius: 10px;
+  margin: 1.1rem 0;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .tip-box {
-    background: #fffbeb;
-    border-left: 4px solid #f59e0b;
-    padding: 1rem 1.25rem;
-    border-radius: 0 0.5rem 0.5rem 0;
-    margin: 1rem 0;
+  background: var(--warning-soft);
+  border-left: 4px solid var(--warning);
+  padding: 1rem 1.25rem;
+  border-radius: 0 10px 10px 0;
+  margin: 1.1rem 0;
+  font-size: 0.95rem;
 }
 
+/* Prose */
+.prose h2 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.85rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e1b4b;
+  border-bottom: 2px solid #e0e7ff;
+  padding-bottom: 0.4rem;
+}
+
+.prose h3 {
+  margin-top: 1.6rem;
+  margin-bottom: 0.55rem;
+  font-size: 1.08rem;
+  font-weight: 650;
+  color: #312e81;
+}
+
+.prose ul, .prose ol {
+  margin-left: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.prose li {
+  margin-bottom: 0.4rem;
+}
+
+.prose p {
+  margin-bottom: 0.9rem;
+  line-height: 1.75;
+  color: #334155;
+}
+
+.prose strong {
+  color: #0f172a;
+  font-weight: 650;
+}
+
+/* Q&A */
 .qa-card {
-    border: 1px solid #e2e8f0;
-    border-radius: 0.75rem;
-    margin-bottom: 1rem;
-    overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 0.85rem;
+  overflow: hidden;
+  background: var(--surface);
+  transition: box-shadow 0.15s ease;
 }
-
+.qa-card:hover {
+  box-shadow: var(--shadow);
+}
 .qa-question {
-    background: #f8fafc;
-    padding: 1rem 1.25rem;
-    font-weight: 600;
-    cursor: pointer;
+  background: #f8fafc;
+  padding: 1rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #1e293b;
+  transition: background 0.15s ease;
 }
-
+.qa-question:hover {
+  background: #f1f5f9;
+}
 .qa-answer {
-    padding: 1rem 1.25rem;
-    border-top: 1px solid #e2e8f0;
-    display: none;
+  padding: 1rem 1.2rem;
+  border-top: 1px solid var(--border);
+  display: none;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #334155;
+  background: #fff;
+}
+.qa-card.open .qa-answer {
+  display: block;
+}
+.qa-card.open .qa-question {
+  background: var(--primary-soft);
+  color: var(--primary-dark);
 }
 
-.qa-card.open .qa-answer {
-    display: block;
+/* Header polish */
+header {
+  backdrop-filter: blur(8px);
+}
+
+/* Subtle fade-in */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.unit-card, .prose > * {
+  animation: fadeUp 0.35s ease both;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+}
+th {
+  background: #f1f5f9;
+  font-weight: 600;
+}
+
+/* Links */
+a {
+  transition: color 0.15s ease;
+}
+
+/* Selection */
+::selection {
+  background: #c7d2fe;
+  color: #1e1b4b;
 }
