@@ -11,47 +11,55 @@
         .level-easy { background: #E4E7DF; color: #65695B; }
         .level-med { background: #E8EEF1; color: #4C6170; }
         .level-hard { background: #EDE4D4; color: #8A9EAB; }
-        .badge { display: inline-block; font-size: 0.7rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 999px; letter-spacing: 0.03em; text-transform: uppercase; }
-        .opt { margin: 0.25rem 0; padding: 0.35rem 0.6rem; border-radius: 6px; background: #F7F2EF; font-size: 0.9rem; }
-        .nav-item { display: block; width: 100%; text-align: left; padding: 0.55rem 0.85rem; border-radius: 8px; font-size: 0.875rem; font-weight: 500; color: #65695B; transition: all 0.15s ease; }
+        .badge { display: inline-block; font-size: 0.65rem; font-weight: 700; padding: 0.12rem 0.45rem; border-radius: 999px; letter-spacing: 0.03em; text-transform: uppercase; vertical-align: middle; }
+        .opt { margin: 0.2rem 0; padding: 0.3rem 0.55rem; border-radius: 6px; background: #F7F2EF; font-size: 0.88rem; }
+        .nav-item { display: block; width: 100%; text-align: left; padding: 0.55rem 0.85rem; border-radius: 8px; font-size: 0.875rem; font-weight: 500; color: #65695B; transition: all 0.15s ease; border: none; background: transparent; cursor: pointer; }
         .nav-item:hover { background: #E8E5DF; color: #4C6170; }
         .nav-item.active { background: #4C6170; color: #EBE0DD; }
         .subject-block { display: none; }
         .subject-block.visible { display: block; }
 
-        .qa-card { cursor: pointer; }
-        .qa-question {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.5rem;
-            user-select: none;
+        /* Question always visible — NOT a dropdown */
+        .q-item {
+            background: #F7F2EF;
+            border: 1px solid #C0C4B7;
+            border-radius: 10px;
+            margin-bottom: 0.75rem;
+            padding: 0.9rem 1rem;
         }
-        .qa-question .chevron {
-            flex-shrink: 0;
-            margin-left: auto;
-            transition: transform 0.2s ease;
-            color: #8A9EAB;
-            font-size: 0.85rem;
-            padding-top: 0.15rem;
+        .q-text {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #4C6170;
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
         }
-        .qa-card.open .qa-question .chevron {
-            transform: rotate(180deg);
+        .q-options { margin: 0.4rem 0 0.6rem; }
+        .show-btn {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #4C6170;
+            background: #EBE0DD;
+            border: 1px solid #C0C4B7;
+            border-radius: 6px;
+            padding: 0.3rem 0.7rem;
+            cursor: pointer;
+            transition: background 0.15s;
         }
-        .qa-answer {
+        .show-btn:hover { background: #D9C3B6; }
+        .answer-panel {
             display: none;
-            animation: dropIn 0.2s ease;
+            margin-top: 0.65rem;
+            padding: 0.75rem 0.9rem;
+            background: #E4E7DF;
+            border-left: 3px solid #65695B;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.9rem;
+            line-height: 1.65;
+            color: #4C6170;
         }
-        .qa-card.open .qa-answer {
-            display: block;
-        }
-        @keyframes dropIn {
-            from { opacity: 0; transform: translateY(-6px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 768px) {
-            .sidebar { position: sticky; top: 3.5rem; z-index: 40; }
-        }
+        .answer-panel.open { display: block; }
     </style>
 </head>
 <body class="bg-[#EBE0DD] text-[#4C6170]">
@@ -63,8 +71,7 @@
     </header>
 
     <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row gap-6">
-        <!-- Left nav -->
-        <aside class="sidebar md:w-56 flex-shrink-0">
+        <aside class="md:w-56 flex-shrink-0">
             <div class="bg-[#F7F2EF] border border-[#C0C4B7] rounded-xl p-3 sticky top-20">
                 <div class="text-xs font-bold uppercase tracking-wider text-[#8A9EAB] mb-2 px-2">Select unit</div>
                 <nav class="space-y-1" id="unit-nav">
@@ -77,409 +84,648 @@
                     <button type="button" class="nav-item" data-unit="mgw1010">MGW1010</button>
                     <button type="button" class="nav-item" data-unit="acw2220">ACW2220</button>
                 </nav>
-                <p class="text-[11px] text-[#9CA38E] mt-3 px-2 leading-snug">Only the selected unit’s questions will show.</p>
             </div>
         </aside>
 
-        <!-- Main content -->
         <main class="flex-1 min-w-0">
-            <h1 class="text-2xl md:text-3xl font-bold mb-1 text-[#4C6170]">Practice Q&A Bank</h1>
-            <p class="text-sm text-[#65695B] mb-6">MCQ with options · Subjective · <span class="badge level-easy">Easy</span> <span class="badge level-med">Medium</span> <span class="badge level-hard">Hard</span></p>
+            <h1 class="text-2xl md:text-3xl font-bold mb-1">Practice Q&A Bank</h1>
+            <p class="text-sm text-[#65695B] mb-6">Questions always visible · Click <strong>Show answer</strong> to reveal · <span class="badge level-easy">Easy</span> <span class="badge level-med">Medium</span> <span class="badge level-hard">Hard</span></p>
 
-            <!-- ACW1120 -->
+            <!-- ========== ACW1120 ========== -->
             <section class="subject-block visible" data-unit="acw1120">
-                <h2 class="text-xl font-bold text-[#4C6170] mb-4 border-b-2 border-[#C0C4B7] pb-2">ACW1120 – Financial Accounting 1</h2>
-                <h3 class="font-semibold text-[#65695B] mt-4 mb-3">Objective (MCQ)</h3>
+                <h2 class="text-xl font-bold mb-4 border-b-2 border-[#C0C4B7] pb-2">ACW1120 – Financial Accounting 1</h2>
+                <h3 class="font-semibold text-[#65695B] mb-3">Objective (MCQ)</h3>
 
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-easy">Easy</span> &nbsp; The accounting equation is:<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> The accounting equation is:</div>
+                    <div class="q-options">
                         <div class="opt">A. Assets = Liabilities − Equity</div>
                         <div class="opt">B. Assets = Liabilities + Equity</div>
                         <div class="opt">C. Assets + Liabilities = Equity</div>
                         <div class="opt">D. Assets + Equity = Liabilities</div>
-                        <p class="mt-2"><strong>Answer: B</strong> — Assets = Liabilities + Equity.</p>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong> — Assets = Liabilities + Equity is the fundamental equation.</div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-easy">Easy</span> &nbsp; Which account is debited when rent is paid in advance for 12 months?<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> Which account is debited when rent is paid in advance for 12 months?</div>
+                    <div class="q-options">
                         <div class="opt">A. Rent Expense</div>
                         <div class="opt">B. Prepaid Rent</div>
                         <div class="opt">C. Cash</div>
                         <div class="opt">D. Unearned Revenue</div>
-                        <p class="mt-2"><strong>Answer: B</strong> — Creates a prepaid asset.</p>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong> — Payment in advance creates a prepaid asset. Cash is credited.</div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-med">Medium</span> &nbsp; The two fundamental qualitative characteristics are:<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> Normal balance of a liability account is:</div>
+                    <div class="q-options">
+                        <div class="opt">A. Debit</div>
+                        <div class="opt">B. Credit</div>
+                        <div class="opt">C. Either, depending on size</div>
+                        <div class="opt">D. Zero</div>
+                    </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong> — Liabilities increase with credits; normal balance is credit.</div>
+                </div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> The two fundamental qualitative characteristics are:</div>
+                    <div class="q-options">
                         <div class="opt">A. Comparability and Verifiability</div>
                         <div class="opt">B. Relevance and Faithful Representation</div>
                         <div class="opt">C. Timeliness and Understandability</div>
                         <div class="opt">D. Neutrality and Materiality</div>
-                        <p class="mt-2"><strong>Answer: B</strong></p>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong> — The others are enhancing characteristics (or aspects of the fundamentals).</div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-med">Medium</span> &nbsp; Under the accrual basis, revenue is recognised when:<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
-                        <div class="opt">A. Cash is received</div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Under the accrual basis, revenue is recognised when:</div>
+                    <div class="q-options">
+                        <div class="opt">A. Cash is received from the customer</div>
                         <div class="opt">B. The invoice is printed</div>
-                        <div class="opt">C. It is earned, regardless of cash timing</div>
+                        <div class="opt">C. It is earned, regardless of when cash is received</div>
                         <div class="opt">D. The financial year ends</div>
-                        <p class="mt-2"><strong>Answer: C</strong></p>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: C</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-hard">Hard</span> &nbsp; Accumulated Depreciation is best classified as:<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Adjusting entries never involve which account?</div>
+                    <div class="q-options">
+                        <div class="opt">A. Prepaid Rent</div>
+                        <div class="opt">B. Depreciation Expense</div>
+                        <div class="opt">C. Cash</div>
+                        <div class="opt">D. Unearned Revenue</div>
+                    </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: C</strong> — Adjusting entries allocate amounts already recorded; they do not involve cash.</div>
+                </div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> Accumulated Depreciation is best classified as:</div>
+                    <div class="q-options">
                         <div class="opt">A. An expense account</div>
                         <div class="opt">B. A liability account</div>
                         <div class="opt">C. A contra-asset account</div>
                         <div class="opt">D. An equity account</div>
-                        <p class="mt-2"><strong>Answer: C</strong></p>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: C</strong> — It offsets the asset; carrying amount = Cost − Accumulated Depreciation.</div>
+                </div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> Materiality is best described as an aspect of:</div>
+                    <div class="q-options">
+                        <div class="opt">A. Faithful representation only</div>
+                        <div class="opt">B. Relevance</div>
+                        <div class="opt">C. Verifiability</div>
+                        <div class="opt">D. Comparability</div>
+                    </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong> — Materiality is an entity-specific aspect of relevance.</div>
                 </div>
 
                 <h3 class="font-semibold text-[#65695B] mt-6 mb-3">Subjective / Calculation</h3>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-easy">Easy</span> &nbsp; Assets RM120,000; Liabilities RM45,000. Calculate equity.<span class="chevron">▼</span></div>
-                    <div class="qa-answer">Equity = 120,000 − 45,000 = <strong>RM75,000</strong></div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> Assets RM120,000; Liabilities RM45,000. Calculate equity.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Equity = Assets − Liabilities = 120,000 − 45,000 = <strong>RM75,000</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-med">Medium</span> &nbsp; Equipment RM48,000; residual RM6,000; life 7 years. Annual straight-line dep. and adjusting entry?<span class="chevron">▼</span></div>
-                    <div class="qa-answer">Depreciable = 42,000; Annual = <strong>RM6,000</strong><br>Dr Depreciation Expense 6,000 &nbsp; Cr Accum. Depreciation 6,000</div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> Define an asset according to the Conceptual Framework.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">A present economic resource controlled by the entity as a result of past events. An economic resource is a right that has the potential to produce economic benefits.</div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-hard">Hard</span> &nbsp; Explain cash basis vs accrual basis. Why does the Framework prefer accrual?<span class="chevron">▼</span></div>
-                    <div class="qa-answer">Cash: recognise only when cash moves. Accrual: when earned/incurred. Framework prefers accrual because it better reflects performance and position for decision-making.</div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Equipment cost RM48,000; residual RM6,000; useful life 7 years. Calculate annual straight-line depreciation and the year-end adjusting entry.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Depreciable amount = 42,000; Annual dep. = <strong>RM6,000</strong><br>Dr Depreciation Expense 6,000<br>Cr Accumulated Depreciation – Equipment 6,000</div>
+                </div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> On 1 Oct received RM9,000 for 6 months’ service. Year-end 31 Dec. What adjusting entry is needed?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">3 months earned → 9,000 × 3/6 = RM4,500<br>Dr Unearned Revenue 4,500<br>Cr Service Revenue 4,500</div>
+                </div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> Explain cash basis vs accrual basis. Why does the Conceptual Framework prefer accrual for general-purpose financial statements?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Cash:</strong> recognise only when cash is received/paid.<br><strong>Accrual:</strong> recognise when earned/incurred.<br>Framework prefers accrual because it better reflects performance and position by matching revenues with related expenses and recognising assets/liabilities when rights and obligations arise — more useful for users’ decisions.</div>
                 </div>
             </section>
 
-            <!-- BFW1001 -->
+            <!-- ========== BFW1001 ========== -->
             <section class="subject-block visible" data-unit="bfw1001">
-                <h2 class="text-xl font-bold text-[#4C6170] mb-4 mt-10 border-b-2 border-[#C0C4B7] pb-2">BFW1001 – Foundations of Finance</h2>
-                <h3 class="font-semibold text-[#65695B] mt-4 mb-3">Objective (MCQ)</h3>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-easy">Easy</span> &nbsp; Time value of money states that:<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
-                        <div class="opt">A. Money loses value only due to inflation</div>
+                <h2 class="text-xl font-bold mb-4 mt-10 border-b-2 border-[#C0C4B7] pb-2">BFW1001 – Foundations of Finance</h2>
+                <h3 class="font-semibold text-[#65695B] mb-3">Objective (MCQ)</h3>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> Time value of money states that:</div>
+                    <div class="q-options">
+                        <div class="opt">A. Money loses value only because of inflation</div>
                         <div class="opt">B. A ringgit today is worth more than a ringgit in the future</div>
-                        <div class="opt">C. Future cash is always worth more</div>
+                        <div class="opt">C. Future cash flows are always worth more than present ones</div>
                         <div class="opt">D. Interest rates do not affect value</div>
-                        <p class="mt-2"><strong>Answer: B</strong></p>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-med">Medium</span> &nbsp; Which method directly measures expected increase in firm value?<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> NPV decision rule for an independent project is:</div>
+                    <div class="q-options">
+                        <div class="opt">A. Accept if NPV &lt; 0</div>
+                        <div class="opt">B. Accept if NPV &gt; 0</div>
+                        <div class="opt">C. Accept if NPV = 0 only</div>
+                        <div class="opt">D. Accept if payback is longer</div>
+                    </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong></div>
+                </div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Which method directly measures expected increase in firm value?</div>
+                    <div class="q-options">
                         <div class="opt">A. Payback period</div>
                         <div class="opt">B. Accounting rate of return</div>
                         <div class="opt">C. Net Present Value (NPV)</div>
                         <div class="opt">D. Profitability index only</div>
-                        <p class="mt-2"><strong>Answer: C</strong></p>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: C</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-hard">Hard</span> &nbsp; Unsystematic risk is mainly reduced by:<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
-                        <div class="opt">A. Government bonds only</div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Ordinary annuity means payments occur:</div>
+                    <div class="q-options">
+                        <div class="opt">A. At the beginning of each period</div>
+                        <div class="opt">B. At the end of each period</div>
+                        <div class="opt">C. Only once at maturity</div>
+                        <div class="opt">D. Randomly within the year</div>
+                    </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong></div>
+                </div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> Unsystematic risk can be reduced mainly by:</div>
+                    <div class="q-options">
+                        <div class="opt">A. Investing only in government bonds</div>
                         <div class="opt">B. Diversification across many assets</div>
-                        <div class="opt">C. Higher leverage</div>
-                        <div class="opt">D. Holding one stock</div>
-                        <p class="mt-2"><strong>Answer: B</strong></p>
+                        <div class="opt">C. Increasing financial leverage</div>
+                        <div class="opt">D. Holding a single stock long term</div>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong></div>
                 </div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> A limitation of the IRR method is:</div>
+                    <div class="q-options">
+                        <div class="opt">A. It is expressed as a percentage</div>
+                        <div class="opt">B. Multiple IRRs can occur with non-conventional cash flows</div>
+                        <div class="opt">C. It always agrees with NPV ranking</div>
+                        <div class="opt">D. It ignores the time value of money</div>
+                    </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong></div>
+                </div>
+
                 <h3 class="font-semibold text-[#65695B] mt-6 mb-3">Subjective / Calculation</h3>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-easy">Easy</span> &nbsp; FV of RM12,000 at 8% for 5 years (annual compounding)?<span class="chevron">▼</span></div>
-                    <div class="qa-answer">FV = 12,000 × (1.08)<sup>5</sup> = <strong>RM17,632</strong></div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> Calculate FV of RM12,000 at 8% p.a. for 5 years (annual compounding).</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">FV = 12,000 × (1.08)<sup>5</sup> = <strong>RM17,632</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-med">Medium</span> &nbsp; Invest RM80,000; CF 30k, 35k, 40k; r=10%. NPV and decision?<span class="chevron">▼</span></div>
-                    <div class="qa-answer">PV ≈ 86,252; NPV = <strong>+RM6,252 → Accept</strong></div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> What is the present value of RM25,000 to be received in 4 years if r = 9%?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">PV = 25,000 / (1.09)<sup>4</sup> ≈ <strong>RM17,710</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-hard">Hard</span> &nbsp; Explain the risk–return trade-off and why riskier projects need higher discount rates.<span class="chevron">▼</span></div>
-                    <div class="qa-answer">Investors require higher expected returns for higher risk. The discount rate is the opportunity cost of capital for that risk level; mismatching it distorts NPV and can destroy value.</div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Project cost RM80,000; CF: Y1 30k, Y2 35k, Y3 40k; r = 10%. Calculate NPV and decide.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">PV inflows ≈ 86,252; NPV = <strong>+RM6,252 → Accept</strong></div>
+                </div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> Explain the risk–return trade-off and why managers should use higher discount rates for riskier projects.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Investors require higher expected returns for higher risk. The discount rate is the opportunity cost of capital for that risk. Using too low a rate overstates NPV and may accept value-destroying projects.</div>
                 </div>
             </section>
 
-            <!-- BTW1042 -->
+            <!-- ========== BTW1042 ========== -->
             <section class="subject-block visible" data-unit="btw1042">
-                <h2 class="text-xl font-bold text-[#4C6170] mb-4 mt-10 border-b-2 border-[#C0C4B7] pb-2">BTW1042 – Business Law</h2>
-                <h3 class="font-semibold text-[#65695B] mt-4 mb-3">Objective (MCQ)</h3>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-easy">Easy</span> &nbsp; A price tag in a self-service store is generally:<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
+                <h2 class="text-xl font-bold mb-4 mt-10 border-b-2 border-[#C0C4B7] pb-2">BTW1042 – Business Law</h2>
+                <h3 class="font-semibold text-[#65695B] mb-3">Objective (MCQ)</h3>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> A price tag on goods in a self-service store is generally:</div>
+                    <div class="q-options">
                         <div class="opt">A. An offer</div>
                         <div class="opt">B. An invitation to treat</div>
                         <div class="opt">C. An acceptance</div>
                         <div class="opt">D. A binding contract</div>
-                        <p class="mt-2"><strong>Answer: B</strong></p>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-med">Medium</span> &nbsp; Which is NOT generally essential for a valid contract?<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> Which is an essential element of a valid contract?</div>
+                    <div class="q-options">
+                        <div class="opt">A. Written form in all cases</div>
+                        <div class="opt">B. Offer and acceptance</div>
+                        <div class="opt">C. Registration with Companies Commission</div>
+                        <div class="opt">D. Payment by bank transfer only</div>
+                    </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong></div>
+                </div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Which is NOT generally essential for a valid contract under Malaysian law?</div>
+                    <div class="q-options">
                         <div class="opt">A. Offer and acceptance</div>
                         <div class="opt">B. Consideration</div>
                         <div class="opt">C. Written form</div>
                         <div class="opt">D. Intention to create legal relations</div>
-                        <p class="mt-2"><strong>Answer: C</strong></p>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: C</strong> — Most contracts need not be in writing.</div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-hard">Hard</span> &nbsp; A Sdn Bhd under Companies Act 2016 has:<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
-                        <div class="opt">A. No separate personality; unlimited liability</div>
-                        <div class="opt">B. Separate legal entity; limited liability</div>
-                        <div class="opt">C. Same status as a partnership</div>
-                        <div class="opt">D. Owner = business in law</div>
-                        <p class="mt-2"><strong>Answer: B</strong></p>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> A conditional acceptance that adds new terms is treated as:</div>
+                    <div class="q-options">
+                        <div class="opt">A. Valid acceptance</div>
+                        <div class="opt">B. A counter-offer</div>
+                        <div class="opt">C. An invitation to treat</div>
+                        <div class="opt">D. Past consideration</div>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong> — It rejects the original offer.</div>
                 </div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> A private limited company (Sdn Bhd) under the Companies Act 2016 has:</div>
+                    <div class="q-options">
+                        <div class="opt">A. No separate legal personality; unlimited liability</div>
+                        <div class="opt">B. Separate legal entity; shareholders’ liability limited to unpaid shares</div>
+                        <div class="opt">C. Same legal status as a partnership</div>
+                        <div class="opt">D. Owner and business as the same legal person</div>
+                    </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong></div>
+                </div>
+
                 <h3 class="font-semibold text-[#65695B] mt-6 mb-3">Subjective</h3>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-easy">Easy</span> &nbsp; List the four elements of negligence.<span class="chevron">▼</span></div>
-                    <div class="qa-answer">Duty of care; Breach; Causation; Damage not too remote</div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> List the four elements required to establish the tort of negligence.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">1. Duty of care  2. Breach of duty  3. Causation  4. Damage not too remote</div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-med">Medium</span> &nbsp; IRAC: Ali offers car for RM40,000. Ben: “I accept if spare tyre included.” Ali silent. Contract?<span class="chevron">▼</span></div>
-                    <div class="qa-answer"><strong>Issue:</strong> Valid acceptance? <strong>Rule:</strong> Must be unqualified; new terms = counter-offer. <strong>Application:</strong> Ben’s reply is counter-offer; silence ≠ acceptance. <strong>Conclusion:</strong> No contract.</div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Using IRAC: Ali offers to sell his car to Ben for RM40,000. Ben replies “I accept, but only if you include the spare tyre.” Ali remains silent. Is there a contract?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Issue:</strong> Valid acceptance?<br><strong>Rule:</strong> Acceptance must be absolute; new terms = counter-offer that rejects the original offer.<br><strong>Application:</strong> Ben’s reply is a counter-offer; silence ≠ acceptance.<br><strong>Conclusion:</strong> No contract.</div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-hard">Hard</span> &nbsp; Compare sole prop, partnership and Sdn Bhd on personality and liability.<span class="chevron">▼</span></div>
-                    <div class="qa-answer">Sole prop: no separate personality, unlimited. Partnership: generally none, unlimited joint & several. Sdn Bhd: separate entity, limited liability.</div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> Compare sole proprietorship, partnership and Sdn Bhd on legal personality and liability.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Sole prop:</strong> no separate personality; unlimited liability.<br><strong>Partnership:</strong> generally no separate personality; unlimited joint & several liability.<br><strong>Sdn Bhd:</strong> separate legal entity; limited liability.</div>
                 </div>
             </section>
 
-            <!-- ECM1953 -->
+            <!-- ========== ECM1953 ========== -->
             <section class="subject-block visible" data-unit="ecm1953">
-                <h2 class="text-xl font-bold text-[#4C6170] mb-4 mt-10 border-b-2 border-[#C0C4B7] pb-2">ECM1953 – Principles of Economics</h2>
-                <h3 class="font-semibold text-[#65695B] mt-4 mb-3">Objective (MCQ)</h3>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-easy">Easy</span> &nbsp; Demand ↑, supply unchanged → equilibrium price and quantity:<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
+                <h2 class="text-xl font-bold mb-4 mt-10 border-b-2 border-[#C0C4B7] pb-2">ECM1953 – Principles of Economics</h2>
+                <h3 class="font-semibold text-[#65695B] mb-3">Objective (MCQ)</h3>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> If demand increases and supply is constant, equilibrium price and quantity will:</div>
+                    <div class="q-options">
                         <div class="opt">A. Both fall</div>
                         <div class="opt">B. Both rise</div>
-                        <div class="opt">C. Price ↑, quantity ↓</div>
-                        <div class="opt">D. Price ↓, quantity ↑</div>
-                        <p class="mt-2"><strong>Answer: B</strong></p>
+                        <div class="opt">C. Price rises, quantity falls</div>
+                        <div class="opt">D. Price falls, quantity rises</div>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-med">Medium</span> &nbsp; Profit maximisation in the short run occurs where:<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
-                        <div class="opt">A. P = AC</div>
-                        <div class="opt">B. MR = MC</div>
-                        <div class="opt">C. TR maximised</div>
-                        <div class="opt">D. AVC minimised</div>
-                        <p class="mt-2"><strong>Answer: B</strong></p>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> Opportunity cost is:</div>
+                    <div class="q-options">
+                        <div class="opt">A. The accounting cost of a resource</div>
+                        <div class="opt">B. The value of the next best alternative forgone</div>
+                        <div class="opt">C. Always equal to fixed cost</div>
+                        <div class="opt">D. Zero when resources are free in money terms</div>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-hard">Hard</span> &nbsp; If |PED| &lt; 1 and price rises, total revenue:<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
-                        <div class="opt">A. Falls</div>
-                        <div class="opt">B. Rises</div>
-                        <div class="opt">C. Unchanged</div>
-                        <div class="opt">D. Becomes zero</div>
-                        <p class="mt-2"><strong>Answer: B</strong> — Inelastic demand.</p>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> A firm maximises profit where:</div>
+                    <div class="q-options">
+                        <div class="opt">A. Price = Average cost</div>
+                        <div class="opt">B. Marginal revenue = Marginal cost</div>
+                        <div class="opt">C. Total revenue is maximised</div>
+                        <div class="opt">D. Average variable cost is minimised</div>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong></div>
                 </div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> If |PED| &lt; 1 and the firm raises price, total revenue will:</div>
+                    <div class="q-options">
+                        <div class="opt">A. Fall</div>
+                        <div class="opt">B. Rise</div>
+                        <div class="opt">C. Stay the same</div>
+                        <div class="opt">D. Become zero</div>
+                    </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong> — Demand is inelastic.</div>
+                </div>
+
                 <h3 class="font-semibold text-[#65695B] mt-6 mb-3">Subjective / Calculation</h3>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-easy">Easy</span> &nbsp; P: 10→12; Qd: 200→160. PED?<span class="chevron">▼</span></div>
-                    <div class="qa-answer">PED = −1 → <strong>unit elastic</strong></div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> Price rises from RM10 to RM12; quantity demanded falls from 200 to 160. Calculate PED.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">%ΔP = 20%; %ΔQd = −20%; PED = −1 → <strong>unit elastic</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-med">Medium</span> &nbsp; FC 20,000; VC 15; SP 25. Break-even units?<span class="chevron">▼</span></div>
-                    <div class="qa-answer">CM = 10; BE = <strong>2,000 units</strong></div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Fixed costs RM20,000; VC per unit RM15; SP RM25. Break-even quantity?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">CM = 10; BE = 20,000 / 10 = <strong>2,000 units</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-hard">Hard</span> &nbsp; Short-run AD–AS effect of higher government spending?<span class="chevron">▼</span></div>
-                    <div class="qa-answer">AD shifts right → higher output and higher price level in the short run.</div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> Using AD–AS logic, explain the short-run effect of an increase in government spending on output and the price level.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">G ↑ → AD shifts right → higher equilibrium real output and higher price level in the short run (movement along SRAS).</div>
                 </div>
             </section>
 
-            <!-- ETW1001 -->
+            <!-- ========== ETW1001 ========== -->
             <section class="subject-block visible" data-unit="etw1001">
-                <h2 class="text-xl font-bold text-[#4C6170] mb-4 mt-10 border-b-2 border-[#C0C4B7] pb-2">ETW1001 – Statistical Analysis</h2>
-                <h3 class="font-semibold text-[#65695B] mt-4 mb-3">Objective (MCQ)</h3>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-easy">Easy</span> &nbsp; Measure of central tendency least affected by outliers?<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
+                <h2 class="text-xl font-bold mb-4 mt-10 border-b-2 border-[#C0C4B7] pb-2">ETW1001 – Statistical Analysis</h2>
+                <h3 class="font-semibold text-[#65695B] mb-3">Objective (MCQ)</h3>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> Which measure of central tendency is least affected by extreme outliers?</div>
+                    <div class="q-options">
                         <div class="opt">A. Mean</div>
                         <div class="opt">B. Median</div>
-                        <div class="opt">C. Mode only</div>
+                        <div class="opt">C. Mode only when multimodal</div>
                         <div class="opt">D. Range</div>
-                        <p class="mt-2"><strong>Answer: B</strong></p>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-med">Medium</span> &nbsp; Type I error is:<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
-                        <div class="opt">A. Fail to reject false H₀</div>
-                        <div class="opt">B. Reject true H₀</div>
-                        <div class="opt">C. Sample too small</div>
-                        <div class="opt">D. p = 0.05 exactly</div>
-                        <p class="mt-2"><strong>Answer: B</strong></p>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> A Type I error occurs when:</div>
+                    <div class="q-options">
+                        <div class="opt">A. We fail to reject a false null hypothesis</div>
+                        <div class="opt">B. We reject a true null hypothesis</div>
+                        <div class="opt">C. The sample size is too small</div>
+                        <div class="opt">D. The p-value is exactly 0.05</div>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong> — False positive.</div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-hard">Hard</span> &nbsp; In Ŷ = 15 + 3.2X, slope 3.2 means:<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
-                        <div class="opt">A. Sales always RM3,200</div>
-                        <div class="opt">B. Each extra RM1,000 advertising ≈ RM3,200 higher sales on average</div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> In Ŷ = 15 + 3.2X (X = advertising RM’000), the slope 3.2 means:</div>
+                    <div class="q-options">
+                        <div class="opt">A. Sales are always RM3,200</div>
+                        <div class="opt">B. Each extra RM1,000 of advertising is associated with about RM3,200 higher sales on average</div>
                         <div class="opt">C. Advertising is 3.2% of sales</div>
-                        <div class="opt">D. Intercept is irrelevant</div>
-                        <p class="mt-2"><strong>Answer: B</strong></p>
+                        <div class="opt">D. The intercept is irrelevant</div>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong></div>
                 </div>
+
                 <h3 class="font-semibold text-[#65695B] mt-6 mb-3">Subjective / Calculation</h3>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-easy">Easy</span> &nbsp; Data 5,7,9,11,13. Mean?<span class="chevron">▼</span></div>
-                    <div class="qa-answer"><strong>9</strong></div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> Data: 5, 7, 9, 11, 13. Calculate the mean.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Mean = <strong>9</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-med">Medium</span> &nbsp; Same data. Sample SD?<span class="chevron">▼</span></div>
-                    <div class="qa-answer">s ≈ <strong>3.16</strong></div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Same data. Calculate the sample standard deviation.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Sample variance = 10; s = √10 ≈ <strong>3.16</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-hard">Hard</span> &nbsp; Parameter vs statistic? Why use statistics?<span class="chevron">▼</span></div>
-                    <div class="qa-answer">Parameter = whole population; statistic = from sample. Populations are often impractical to measure fully, so we infer from samples.</div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> Explain the difference between a population parameter and a sample statistic. Why do we usually work with statistics?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Parameter = characteristic of the whole population (e.g. μ). Statistic = from a sample (e.g. x̄). Full populations are often impractical to measure; we infer about parameters using samples.</div>
                 </div>
             </section>
 
-            <!-- MGW1010 -->
+            <!-- ========== MGW1010 ========== -->
             <section class="subject-block visible" data-unit="mgw1010">
-                <h2 class="text-xl font-bold text-[#4C6170] mb-4 mt-10 border-b-2 border-[#C0C4B7] pb-2">MGW1010 – Introduction to Management</h2>
-                <h3 class="font-semibold text-[#65695B] mt-4 mb-3">Objective (MCQ)</h3>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-easy">Easy</span> &nbsp; Belief that employees are self-motivated = <span class="chevron">▼</span></div>
-                    <div class="qa-answer">
+                <h2 class="text-xl font-bold mb-4 mt-10 border-b-2 border-[#C0C4B7] pb-2">MGW1010 – Introduction to Management</h2>
+                <h3 class="font-semibold text-[#65695B] mb-3">Objective (MCQ)</h3>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> Managers who believe employees are self-motivated follow:</div>
+                    <div class="q-options">
                         <div class="opt">A. Theory X</div>
                         <div class="opt">B. Theory Y</div>
                         <div class="opt">C. Scientific Management only</div>
                         <div class="opt">D. Bureaucracy</div>
-                        <p class="mt-2"><strong>Answer: B</strong></p>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong> (McGregor)</div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-med">Medium</span> &nbsp; Contingency approach says:<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
-                        <div class="opt">A. One best way always</div>
-                        <div class="opt">B. Best approach depends on the situation</div>
-                        <div class="opt">C. Only classical theory works</div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> The four functions of management are:</div>
+                    <div class="q-options">
+                        <div class="opt">A. Plan, Budget, Audit, Report</div>
+                        <div class="opt">B. Planning, Organising, Leading, Controlling</div>
+                        <div class="opt">C. Hire, Train, Motivate, Fire</div>
+                        <div class="opt">D. Strategy, Tactics, Operations, Logistics</div>
+                    </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong></div>
+                </div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> The contingency approach argues that:</div>
+                    <div class="q-options">
+                        <div class="opt">A. There is always one best way to manage</div>
+                        <div class="opt">B. The best approach depends on the situation</div>
+                        <div class="opt">C. Only classical theory is valid</div>
                         <div class="opt">D. Structure never matters</div>
-                        <p class="mt-2"><strong>Answer: B</strong></p>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-hard">Hard</span> &nbsp; Transformational leadership primarily:<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
-                        <div class="opt">A. Uses only contingent rewards</div>
-                        <div class="opt">B. Inspires followers to transcend self-interest</div>
-                        <div class="opt">C. Avoids exchange with followers</div>
-                        <div class="opt">D. Equals laissez-faire</div>
-                        <p class="mt-2"><strong>Answer: B</strong></p>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> Transformational leadership primarily:</div>
+                    <div class="q-options">
+                        <div class="opt">A. Focuses only on contingent rewards</div>
+                        <div class="opt">B. Inspires followers to transcend self-interest via vision and stimulation</div>
+                        <div class="opt">C. Avoids any exchange with followers</div>
+                        <div class="opt">D. Is identical to laissez-faire leadership</div>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong></div>
                 </div>
+
                 <h3 class="font-semibold text-[#65695B] mt-6 mb-3">Subjective</h3>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-easy">Easy</span> &nbsp; Name the four functions of management.<span class="chevron">▼</span></div>
-                    <div class="qa-answer">Planning, Organising, Leading, Controlling</div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> Name the four functions of management.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Planning, Organising, Leading, Controlling</div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-med">Medium</span> &nbsp; Transactional vs transformational leadership + example each.<span class="chevron">▼</span></div>
-                    <div class="qa-answer">Transactional: exchange/rewards (e.g. commission sales). Transformational: vision & inspiration (e.g. CEO sustainability drive).</div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Distinguish transactional and transformational leadership with a brief example of each.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Transactional:</strong> exchange-based (e.g. commission sales manager).<br><strong>Transformational:</strong> inspires via vision (e.g. CEO driving a sustainability mission).</div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-hard">Hard</span> &nbsp; Critically evaluate Scientific Management for knowledge/remote work.<span class="chevron">▼</span></div>
-                    <div class="qa-answer">Strengths: efficiency, standards. Weaknesses: mechanistic, ignores social needs. Poor fit for creative/non-routine remote work; blend with human-relations & contingency thinking.</div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> Critically evaluate Scientific Management in modern knowledge work or remote teams.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Strengths: efficiency, measurement, standardisation. Weaknesses: mechanistic view of workers, ignores social needs, assumes one best way. Poor fit for creative/non-routine remote work — blend with human-relations and contingency thinking.</div>
                 </div>
             </section>
 
-            <!-- ACW2220 -->
+            <!-- ========== ACW2220 ========== -->
             <section class="subject-block visible" data-unit="acw2220">
-                <h2 class="text-xl font-bold text-[#4C6170] mb-4 mt-10 border-b-2 border-[#C0C4B7] pb-2">ACW2220 – Management Accounting 1</h2>
-                <h3 class="font-semibold text-[#65695B] mt-4 mb-3">Objective (MCQ)</h3>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-easy">Easy</span> &nbsp; Contribution margin equals:<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
+                <h2 class="text-xl font-bold mb-4 mt-10 border-b-2 border-[#C0C4B7] pb-2">ACW2220 – Management Accounting 1</h2>
+                <h3 class="font-semibold text-[#65695B] mb-3">Objective (MCQ)</h3>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> Contribution margin equals:</div>
+                    <div class="q-options">
                         <div class="opt">A. Sales − Fixed costs</div>
                         <div class="opt">B. Sales − All variable costs</div>
-                        <div class="opt">C. Sales − COGS only</div>
+                        <div class="opt">C. Sales − Cost of goods sold only</div>
                         <div class="opt">D. Profit + Fixed costs</div>
-                        <p class="mt-2"><strong>Answer: B</strong></p>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-med">Medium</span> &nbsp; Special order with spare capacity — relevant costs are:<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
-                        <div class="opt">A. All allocated fixed costs</div>
-                        <div class="opt">B. Sunk costs</div>
-                        <div class="opt">C. Incremental VC + any extra FC from the order</div>
-                        <div class="opt">D. Full absorption cost only</div>
-                        <p class="mt-2"><strong>Answer: C</strong></p>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> Fixed costs in total (within the relevant range):</div>
+                    <div class="q-options">
+                        <div class="opt">A. Rise in proportion to activity</div>
+                        <div class="opt">B. Stay constant</div>
+                        <div class="opt">C. Always equal variable costs</div>
+                        <div class="opt">D. Are always irrelevant</div>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: B</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-hard">Hard</span> &nbsp; Make-or-buy: allocated fixed OH that continues either way should be:<span class="chevron">▼</span></div>
-                    <div class="qa-answer">
-                        <div class="opt">A. Included in make cost</div>
-                        <div class="opt">B. Treated as savings if buying</div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> In a special-order decision with spare capacity, relevant costs are:</div>
+                    <div class="q-options">
+                        <div class="opt">A. All fixed costs allocated to the product</div>
+                        <div class="opt">B. Sunk costs of existing equipment</div>
+                        <div class="opt">C. Incremental variable costs and any additional fixed costs caused by the order</div>
+                        <div class="opt">D. Historical full absorption cost only</div>
+                    </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: C</strong></div>
+                </div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> When deciding make-or-buy, allocated fixed overhead that continues either way should be:</div>
+                    <div class="q-options">
+                        <div class="opt">A. Included in the cost to make</div>
+                        <div class="opt">B. Treated as a relevant cost savings if buying</div>
                         <div class="opt">C. Ignored (irrelevant)</div>
                         <div class="opt">D. Doubled for safety</div>
-                        <p class="mt-2"><strong>Answer: C</strong></p>
                     </div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Answer: C</strong> — It does not differ between alternatives.</div>
                 </div>
+
                 <h3 class="font-semibold text-[#65695B] mt-6 mb-3">Subjective / Calculation</h3>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-easy">Easy</span> &nbsp; SP 90, VC 54, FC 108,000. CM and BE units?<span class="chevron">▼</span></div>
-                    <div class="qa-answer">CM = 36; BE = <strong>3,000 units</strong></div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> SP RM90, VC RM54, FC RM108,000. Calculate CM per unit and break-even units.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">CM = 36; BE = 108,000 / 36 = <strong>3,000 units</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-med">Medium</span> &nbsp; Offer RM70 × 800 units; VC 55; spare capacity. Accept?<span class="chevron">▼</span></div>
-                    <div class="qa-answer">Incremental profit = 15 × 800 = <strong>RM12,000 → Accept</strong></div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Spare capacity. Customer offers RM70 for 800 units. Normal SP RM95, VC RM55, FC unchanged. Accept?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Incremental profit = (70 − 55) × 800 = <strong>RM12,000 → Accept</strong></div>
                 </div>
-                <div class="qa-card" onclick="this.classList.toggle('open')">
-                    <div class="qa-question"><span class="badge level-hard">Hard</span> &nbsp; Make: DM18+DL12+VarOH7+Alloc.Fixed9. Buy RM35. Fixed continues. Make or buy?<span class="chevron">▼</span></div>
-                    <div class="qa-answer">Relevant make = 37; Buy = 35 → <strong>Buy</strong> (save 2/unit) if quality OK.</div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Units needed to earn a target profit of RM36,000 (same data: CM 36, FC 108,000)?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">(108,000 + 36,000) / 36 = <strong>4,000 units</strong></div>
+                </div>
+
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> Make cost: DM 18 + DL 12 + Var OH 7 + Allocated Fixed OH 9. Supplier quote RM35. Fixed OH continues. Advise make or buy.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Relevant make cost = 18+12+7 = <strong>RM37</strong> (ignore continuing allocated fixed).<br>Buy = RM35 → <strong>Buy</strong> (save RM2/unit) if quality/reliability OK.</div>
                 </div>
             </section>
 
-            <p class="mt-10 p-4 bg-[#D9C3B6]/40 border border-[#C0C4B7] rounded-xl text-sm text-[#4C6170]">
-                <strong>Tip:</strong> Select a unit on the left, practise Easy → Medium → Hard, then close the answer and recall it after 10–15 minutes.
+            <p class="mt-10 p-4 bg-[#D9C3B6]/40 border border-[#C0C4B7] rounded-xl text-sm">
+                <strong>Tip:</strong> Questions stay visible. Click <strong>Show answer</strong> only when you are ready. Use the left menu to focus on one unit.
             </p>
         </main>
     </div>
 
-    <footer class="bg-[#4C6170] text-[#C0C4B7] py-6 text-center text-sm mt-4">
-        UNI Study Hub · Q&A Bank
-    </footer>
+    <footer class="bg-[#4C6170] text-[#C0C4B7] py-6 text-center text-sm mt-4">UNI Study Hub · Q&A Bank</footer>
 
     <script>
-        // Q&A toggle
-        document.querySelectorAll('.qa-card').forEach(card => {
-            card.setAttribute('tabindex', '0');
-            card.addEventListener('keypress', e => {
-                if (e.key === 'Enter' || e.key === ' ') card.classList.toggle('open');
-            });
-        });
+        function toggleAns(btn) {
+            const panel = btn.nextElementSibling;
+            const open = panel.classList.toggle('open');
+            btn.textContent = open ? 'Hide answer' : 'Show answer';
+        }
 
-        // Left nav filter
-        const navBtns = document.querySelectorAll('#unit-nav .nav-item');
-        const blocks = document.querySelectorAll('.subject-block');
-
-        navBtns.forEach(btn => {
+        document.querySelectorAll('#unit-nav .nav-item').forEach(btn => {
             btn.addEventListener('click', () => {
                 const unit = btn.getAttribute('data-unit');
-                navBtns.forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('#unit-nav .nav-item').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-                blocks.forEach(block => {
+                document.querySelectorAll('.subject-block').forEach(block => {
                     if (unit === 'all' || block.getAttribute('data-unit') === unit) {
                         block.classList.add('visible');
                     } else {
