@@ -6,177 +6,404 @@
     <title>Practice Q&A Bank | B2026 Accountancy Cores</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="bg-slate-50 text-slate-800">
     <header class="bg-indigo-900 text-white sticky top-0 z-50 shadow">
         <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
             <a href="index.html" class="font-bold hover:text-indigo-200">← Back to Hub</a>
-            <span class="text-sm text-indigo-200">Q&A Practice Bank</span>
+            <span class="text-sm text-indigo-200">Expanded Q&A Bank</span>
         </div>
     </header>
 
     <main class="max-w-4xl mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold mb-2">Practice Questions & Answers</h1>
-        <p class="text-slate-600 mb-8">Click any question to reveal the model answer. Use these for active recall before exams.</p>
+        <h1 class="text-3xl font-bold mb-2">Expanded Practice Q&A Bank</h1>
+        <p class="text-slate-600 mb-2">Calculations • Objective (MCQ) • Subjective / Essay-style</p>
+        <p class="text-sm text-slate-500 mb-8">Click any question to reveal the model answer. Practise active recall.</p>
 
         <!-- ACW1120 -->
-        <h2 class="text-xl font-bold text-indigo-700 mb-4 mt-8">ACW1120 – Financial Accounting 1</h2>
-        
+        <h2 class="text-xl font-bold text-indigo-700 mb-4 mt-8 border-b-2 border-indigo-100 pb-2">ACW1120 – Financial Accounting 1</h2>
+
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">A. Objective / MCQ</h3>
+
         <div class="qa-card" onclick="this.classList.toggle('open')">
-            <div class="qa-question">Q1. Define an “asset” according to the Conceptual Framework and give two examples.</div>
+            <div class="qa-question">1. Which of the following is a fundamental qualitative characteristic of useful financial information according to the Conceptual Framework?</div>
             <div class="qa-answer">
-                An asset is a present economic resource controlled by the entity as a result of past events. An economic resource is a right that has the potential to produce economic benefits.<br><br>
-                Examples: Cash, accounts receivable, inventory, property, plant and equipment, patents.
+                <strong>Answer: Relevance and Faithful Representation</strong><br>
+                The two fundamental qualitative characteristics are Relevance and Faithful Representation. Comparability, Verifiability, Timeliness and Understandability are enhancing qualitative characteristics.
             </div>
         </div>
 
         <div class="qa-card" onclick="this.classList.toggle('open')">
-            <div class="qa-question">Q2. What is the difference between the cash basis and the accrual basis of accounting?</div>
+            <div class="qa-question">2. The accounting equation is best expressed as:</div>
+            <div class="qa-answer">
+                <strong>Answer: Assets = Liabilities + Equity</strong>
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">3. Under the accrual basis of accounting, revenue is recognised when:</div>
+            <div class="qa-answer">
+                <strong>Answer: It is earned, regardless of when cash is received.</strong>
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">4. Which account is debited when a business pays rent in advance for the next 12 months?</div>
+            <div class="qa-answer">
+                <strong>Answer: Prepaid Rent (an asset)</strong>
+            </div>
+        </div>
+
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">B. Calculation Questions</h3>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">5. Equipment was purchased for RM48,000 on 1 January. Residual value is estimated at RM6,000 and useful life is 7 years. Calculate the annual straight-line depreciation and prepare the year-end adjusting entry.</div>
+            <div class="qa-answer">
+                Depreciable amount = 48,000 − 6,000 = RM42,000<br>
+                Annual depreciation = 42,000 ÷ 7 = <strong>RM6,000</strong><br><br>
+                <strong>Adjusting entry (31 Dec):</strong><br>
+                Dr Depreciation Expense &nbsp;&nbsp;&nbsp; 6,000<br>
+                &nbsp;&nbsp;&nbsp;Cr Accumulated Depreciation – Equipment &nbsp;&nbsp;&nbsp; 6,000
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">6. On 1 October a firm received RM9,000 cash for services to be performed evenly over the next 6 months. What adjusting entry is required on 31 December (year-end)?</div>
+            <div class="qa-answer">
+                3 months of service have been performed (Oct–Dec).<br>
+                Revenue earned = 9,000 × 3/6 = <strong>RM4,500</strong><br><br>
+                Dr Unearned Revenue &nbsp;&nbsp;&nbsp; 4,500<br>
+                &nbsp;&nbsp;&nbsp;Cr Service Revenue &nbsp;&nbsp;&nbsp; 4,500
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">7. A business has the following balances: Assets RM120,000, Liabilities RM45,000. What is the equity?</div>
+            <div class="qa-answer">
+                Equity = Assets − Liabilities = 120,000 − 45,000 = <strong>RM75,000</strong>
+            </div>
+        </div>
+
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">C. Subjective / Short Essay</h3>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">8. Explain the difference between the cash basis and the accrual basis of accounting. Why does the Conceptual Framework prefer the accrual basis?</div>
             <div class="qa-answer">
                 <strong>Cash basis:</strong> Revenues and expenses are recognised only when cash is received or paid.<br>
-                <strong>Accrual basis:</strong> Revenues are recognised when earned and expenses when incurred, regardless of cash timing. The Conceptual Framework requires the accrual basis for general-purpose financial statements because it provides a better depiction of financial performance and position.
+                <strong>Accrual basis:</strong> Revenues are recognised when earned and expenses when incurred, irrespective of cash flows.<br><br>
+                The Conceptual Framework prefers the accrual basis because it better reflects the entity’s financial performance and position by matching revenues with related expenses and by recognising assets and liabilities when rights and obligations arise. This provides more relevant and faithfully representative information for users.
             </div>
         </div>
 
         <div class="qa-card" onclick="this.classList.toggle('open')">
-            <div class="qa-question">Q3. Equipment cost RM60,000, residual value RM6,000, useful life 9 years. Calculate annual straight-line depreciation and write the year-end adjusting entry.</div>
+            <div class="qa-question">9. Define an asset according to the Conceptual Framework and explain the recognition criteria.</div>
             <div class="qa-answer">
-                Depreciable amount = 60,000 – 6,000 = 54,000<br>
-                Annual depreciation = 54,000 / 9 = <strong>RM6,000</strong><br><br>
-                Dr Depreciation Expense 6,000<br>
-                &nbsp;&nbsp;&nbsp;Cr Accumulated Depreciation – Equipment 6,000
+                An asset is a present economic resource controlled by the entity as a result of past events. An economic resource is a right that has the potential to produce economic benefits.<br><br>
+                An item is recognised as an asset when it meets the definition and recognition provides useful information (relevant and faithfully representative). In practice this usually requires that the inflow of economic benefits is probable and the item can be measured reliably.
             </div>
         </div>
 
         <!-- BFW1001 -->
-        <h2 class="text-xl font-bold text-emerald-700 mb-4 mt-10">BFW1001 – Foundations of Finance</h2>
+        <h2 class="text-xl font-bold text-emerald-700 mb-4 mt-12 border-b-2 border-emerald-100 pb-2">BFW1001 – Foundations of Finance</h2>
+
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">A. Objective / MCQ</h3>
 
         <div class="qa-card" onclick="this.classList.toggle('open')">
-            <div class="qa-question">Q1. Calculate the future value of RM15,000 invested for 6 years at 7% p.a. compounded annually.</div>
+            <div class="qa-question">1. The time value of money concept states that:</div>
             <div class="qa-answer">
-                FV = 15,000 × (1.07)<sup>6</sup> = 15,000 × 1.5007 ≈ <strong>RM22,511</strong>
+                <strong>Answer: A ringgit today is worth more than a ringgit in the future</strong> because of earning potential, inflation and risk.
             </div>
         </div>
 
         <div class="qa-card" onclick="this.classList.toggle('open')">
-            <div class="qa-question">Q2. What is the decision rule for Net Present Value (NPV)?</div>
+            <div class="qa-question">2. Which capital budgeting technique directly measures the expected increase in value from a project?</div>
             <div class="qa-answer">
-                Accept the project if NPV > 0 (the project is expected to add value).<br>
-                Reject if NPV < 0.<br>
-                When ranking mutually exclusive projects, choose the one with the highest positive NPV.
+                <strong>Answer: Net Present Value (NPV)</strong>
+            </div>
+        </div>
+
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">B. Calculation Questions</h3>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">3. Calculate the future value of RM12,000 invested for 5 years at 8% p.a. compounded annually.</div>
+            <div class="qa-answer">
+                FV = 12,000 × (1.08)<sup>5</sup> = 12,000 × 1.4693 = <strong>RM17,632</strong>
             </div>
         </div>
 
         <div class="qa-card" onclick="this.classList.toggle('open')">
-            <div class="qa-question">Q3. Explain the risk-return trade-off in one or two sentences.</div>
+            <div class="qa-question">4. You will receive RM25,000 in 4 years. Discount rate is 9%. What is the present value?</div>
             <div class="qa-answer">
-                Investors require higher expected returns to compensate for taking on higher risk. Low-risk investments (e.g., government bonds) offer lower expected returns; high-risk investments (e.g., growth shares) must offer higher expected returns to attract capital.
+                PV = 25,000 / (1.09)<sup>4</sup> = 25,000 / 1.4116 ≈ <strong>RM17,710</strong>
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">5. Project requires RM80,000 initial investment. Cash inflows: Y1 RM30,000; Y2 RM35,000; Y3 RM40,000. Required return 10%. Calculate NPV and decide.</div>
+            <div class="qa-answer">
+                PV inflows = 30k/1.1 + 35k/1.21 + 40k/1.331 = 27,273 + 28,926 + 30,053 = 86,252<br>
+                NPV = 86,252 − 80,000 = <strong>+RM6,252 → Accept</strong>
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">6. Present value of an ordinary annuity of RM5,000 per year for 6 years at 7%.</div>
+            <div class="qa-answer">
+                PV<sub>A</sub> = 5,000 × [1 − (1.07)<sup>−6</sup>] / 0.07 ≈ 5,000 × 4.7665 = <strong>RM23,833</strong>
+            </div>
+        </div>
+
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">C. Subjective</h3>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">7. Explain the risk–return trade-off and why it matters for investors and managers.</div>
+            <div class="qa-answer">
+                Higher expected returns are required to compensate for higher risk. Rational investors only accept extra risk if compensated with higher expected return. Managers must use higher discount rates for riskier projects; otherwise they may accept value-destroying projects or reject value-creating ones.
             </div>
         </div>
 
         <!-- BTW1042 -->
-        <h2 class="text-xl font-bold text-rose-700 mb-4 mt-10">BTW1042 – Business Law</h2>
+        <h2 class="text-xl font-bold text-rose-700 mb-4 mt-12 border-b-2 border-rose-100 pb-2">BTW1042 – Business Law</h2>
+
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">A. Objective / MCQ</h3>
 
         <div class="qa-card" onclick="this.classList.toggle('open')">
-            <div class="qa-question">Q1. Is a price tag on a product in a supermarket an offer or an invitation to treat? Explain.</div>
+            <div class="qa-question">1. A price displayed on a product in a self-service store is generally regarded as:</div>
             <div class="qa-answer">
-                It is generally an <strong>invitation to treat</strong>. The customer makes the offer by taking the item to the cashier; the shop accepts the offer by accepting payment. This protects the shop from being bound if stock is limited or a pricing error occurs. (Pharmaceutical Society of Great Britain v Boots Cash Chemists principle is often cited.)
+                <strong>Answer: An invitation to treat</strong>
             </div>
         </div>
 
         <div class="qa-card" onclick="this.classList.toggle('open')">
-            <div class="qa-question">Q2. List the four elements that must be proved to establish the tort of negligence.</div>
+            <div class="qa-question">2. Which is NOT an essential element of a valid contract under Malaysian law (in most cases)?</div>
             <div class="qa-answer">
-                1. Duty of care owed by the defendant to the plaintiff<br>
-                2. Breach of that duty (fell below the standard of the reasonable person / professional)<br>
-                3. Causation (the breach caused the damage)<br>
-                4. Damage that is not too remote
+                <strong>Answer: Written form</strong> (most contracts need not be in writing)
+            </div>
+        </div>
+
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">B. Subjective / Problem</h3>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">3. Using IRAC: Ali offers to sell his car to Ben for RM40,000. Ben replies “I accept, but only if you include the spare tyre.” Ali remains silent. Is there a contract?</div>
+            <div class="qa-answer">
+                <strong>Issue:</strong> Valid acceptance?<br>
+                <strong>Rule:</strong> Acceptance must be absolute and unqualified. A conditional acceptance is a counter-offer that rejects the original offer.<br>
+                <strong>Application:</strong> Ben introduced a new term → counter-offer. Ali’s silence ≠ acceptance.<br>
+                <strong>Conclusion:</strong> No contract.
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">4. Explain the four elements of the tort of negligence with a professional-advice illustration.</div>
+            <div class="qa-answer">
+                1. Duty of care (e.g. accountant–client)<br>
+                2. Breach of duty (below standard of reasonably competent professional)<br>
+                3. Causation (breach caused the loss)<br>
+                4. Damage not too remote (loss reasonably foreseeable)<br><br>
+                Example: Negligent tax advice relied upon by client who then incurs penalties.
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">5. Compare sole proprietorship, partnership and private limited company on liability and separate legal personality.</div>
+            <div class="qa-answer">
+                <strong>Sole prop:</strong> No separate personality; unlimited liability.<br>
+                <strong>Partnership:</strong> Generally no separate personality; unlimited joint & several liability.<br>
+                <strong>Sdn Bhd:</strong> Separate legal entity (Companies Act 2016); limited liability.
             </div>
         </div>
 
         <!-- ECM1953 -->
-        <h2 class="text-xl font-bold text-amber-700 mb-4 mt-10">ECM1953 – Principles of Economics</h2>
+        <h2 class="text-xl font-bold text-amber-700 mb-4 mt-12 border-b-2 border-amber-100 pb-2">ECM1953 – Principles of Economics</h2>
+
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">A. Objective / MCQ</h3>
 
         <div class="qa-card" onclick="this.classList.toggle('open')">
-            <div class="qa-question">Q1. What happens to equilibrium price and quantity when demand increases and supply remains constant?</div>
+            <div class="qa-question">1. If demand increases while supply is constant, equilibrium price and quantity will:</div>
             <div class="qa-answer">
-                Both equilibrium price and equilibrium quantity rise. The demand curve shifts rightward; the new intersection with the supply curve is at a higher price and higher quantity.
+                <strong>Answer: Both rise</strong>
             </div>
         </div>
 
         <div class="qa-card" onclick="this.classList.toggle('open')">
-            <div class="qa-question">Q2. Calculate PED: Price rises from RM20 to RM25; quantity demanded falls from 400 to 300 units.</div>
+            <div class="qa-question">2. A firm maximises profit where:</div>
             <div class="qa-answer">
-                % change in P = (5/20) × 100 = 25%<br>
-                % change in Qd = (–100/400) × 100 = –25%<br>
-                PED = –25% / 25% = <strong>–1</strong> (unit elastic)
+                <strong>Answer: MR = MC</strong>
+            </div>
+        </div>
+
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">B. Calculation</h3>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">3. Price rises from RM10 to RM12; quantity demanded falls from 200 to 160. Calculate PED.</div>
+            <div class="qa-answer">
+                %ΔP = 20%; %ΔQd = −20%; PED = −1 → <strong>unit elastic</strong>
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">4. Fixed costs RM20,000; VC per unit RM15; SP RM25. Break-even quantity?</div>
+            <div class="qa-answer">
+                CM = 10; BE = 20,000 / 10 = <strong>2,000 units</strong>
+            </div>
+        </div>
+
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">C. Subjective</h3>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">5. Using AD-AS logic, explain the short-run effect of an increase in government spending on output and the price level.</div>
+            <div class="qa-answer">
+                G ↑ → AD shifts right → higher equilibrium real output and higher price level in the short run (movement along SRAS).
             </div>
         </div>
 
         <!-- ETW1001 -->
-        <h2 class="text-xl font-bold text-cyan-700 mb-4 mt-10">ETW1001 – Introduction to Statistical Analysis</h2>
+        <h2 class="text-xl font-bold text-cyan-700 mb-4 mt-12 border-b-2 border-cyan-100 pb-2">ETW1001 – Introduction to Statistical Analysis</h2>
+
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">A. Objective / MCQ</h3>
 
         <div class="qa-card" onclick="this.classList.toggle('open')">
-            <div class="qa-question">Q1. When is the median a better measure of central tendency than the mean?</div>
+            <div class="qa-question">1. Which measure of central tendency is least affected by extreme outliers?</div>
             <div class="qa-answer">
-                When the data distribution is skewed or contains extreme outliers. The median is not affected by extreme values, while the mean is pulled toward them.
+                <strong>Answer: Median</strong>
             </div>
         </div>
 
         <div class="qa-card" onclick="this.classList.toggle('open')">
-            <div class="qa-question">Q2. In a simple linear regression Ŷ = 10 + 2.5X, interpret the slope coefficient.</div>
+            <div class="qa-question">2. A Type I error occurs when:</div>
             <div class="qa-answer">
-                For every one-unit increase in X, the predicted value of Y increases by 2.5 units, on average, holding other factors constant.
+                <strong>Answer: We reject a true null hypothesis</strong>
+            </div>
+        </div>
+
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">B. Calculation</h3>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">3. Data: 5, 7, 9, 11, 13. Calculate mean and sample SD.</div>
+            <div class="qa-answer">
+                Mean = 9; Sample variance = 10; Sample SD = √10 ≈ <strong>3.16</strong>
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">4. Ŷ = 15 + 3.2X (X = advertising RM’000, Y = sales RM’000). Interpret slope and intercept.</div>
+            <div class="qa-answer">
+                Intercept 15: predicted sales RM15,000 when advertising = 0.<br>
+                Slope 3.2: each extra RM1,000 of advertising is associated with RM3,200 higher sales on average.
+            </div>
+        </div>
+
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">C. Subjective</h3>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">5. Explain the difference between a population parameter and a sample statistic. Why do we usually work with sample statistics?</div>
+            <div class="qa-answer">
+                Parameter = characteristic of the whole population (e.g. μ). Statistic = characteristic calculated from a sample (e.g. x̄). We use samples because it is usually impractical to measure the entire population; we then infer about the population using confidence intervals and hypothesis tests.
             </div>
         </div>
 
         <!-- MGW1010 -->
-        <h2 class="text-xl font-bold text-violet-700 mb-4 mt-10">MGW1010 – Introduction to Management</h2>
+        <h2 class="text-xl font-bold text-violet-700 mb-4 mt-12 border-b-2 border-violet-100 pb-2">MGW1010 – Introduction to Management</h2>
+
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">A. Objective / MCQ</h3>
 
         <div class="qa-card" onclick="this.classList.toggle('open')">
-            <div class="qa-question">Q1. Briefly contrast Theory X and Theory Y (McGregor).</div>
+            <div class="qa-question">1. Managers who believe employees are self-motivated follow:</div>
             <div class="qa-answer">
-                <strong>Theory X:</strong> Managers assume employees dislike work, avoid responsibility and must be coerced or controlled.<br>
-                <strong>Theory Y:</strong> Managers assume employees can find work enjoyable, are self-motivated and can accept (even seek) responsibility. Theory Y is associated with more participative management styles.
+                <strong>Answer: Theory Y (McGregor)</strong>
             </div>
         </div>
 
         <div class="qa-card" onclick="this.classList.toggle('open')">
-            <div class="qa-question">Q2. What is the contingency approach to management?</div>
+            <div class="qa-question">2. The contingency approach argues that:</div>
             <div class="qa-answer">
-                The contingency approach argues that there is no single best way to manage. The most effective management practices depend on the situation (environment, technology, size, people, etc.). Managers must diagnose the situation and adapt accordingly.
+                <strong>Answer: There is no one best way; the best approach depends on the situation.</strong>
+            </div>
+        </div>
+
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">B. Subjective</h3>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">3. Critically evaluate Scientific Management in modern knowledge work / remote teams.</div>
+            <div class="qa-answer">
+                Strengths: efficiency, measurement, standardisation. Weaknesses: mechanistic view of workers, ignores social/psychological needs, assumes one best way. In knowledge work and remote settings, autonomy, creativity and intrinsic motivation matter more; pure Taylorism often demotivates and is poorly suited to non-routine tasks.
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">4. Distinguish transactional and transformational leadership with brief examples.</div>
+            <div class="qa-answer">
+                <strong>Transactional:</strong> exchange-based (rewards for performance). Example: commission-only sales manager.<br>
+                <strong>Transformational:</strong> inspires followers via vision, intellectual stimulation, individualised consideration. Example: CEO who mobilises the organisation around a sustainability vision.
             </div>
         </div>
 
         <!-- ACW2220 -->
-        <h2 class="text-xl font-bold text-indigo-700 mb-4 mt-10">ACW2220 – Management Accounting 1</h2>
+        <h2 class="text-xl font-bold text-indigo-700 mb-4 mt-12 border-b-2 border-indigo-100 pb-2">ACW2220 – Management Accounting 1</h2>
+
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">A. Objective / MCQ</h3>
 
         <div class="qa-card" onclick="this.classList.toggle('open')">
-            <div class="qa-question">Q1. Selling price RM80, variable cost RM50, fixed costs RM90,000. Calculate break-even point in units and in sales ringgit.</div>
+            <div class="qa-question">1. Contribution margin equals:</div>
             <div class="qa-answer">
-                CM per unit = 80 – 50 = RM30<br>
-                Break-even units = 90,000 / 30 = <strong>3,000 units</strong><br>
-                Break-even sales = 3,000 × 80 = <strong>RM240,000</strong>
+                <strong>Answer: Sales − all variable costs</strong>
             </div>
         </div>
 
         <div class="qa-card" onclick="this.classList.toggle('open')">
-            <div class="qa-question">Q2. What is a relevant cost in decision-making?</div>
+            <div class="qa-question">2. In a special-order decision with spare capacity, relevant costs are:</div>
             <div class="qa-answer">
-                A relevant cost is a future cost that differs between the alternatives being considered. Sunk costs (already incurred) and future costs that do not differ between alternatives are irrelevant and should be ignored.
+                <strong>Answer: Incremental variable costs and any additional fixed costs caused by the order</strong> (ignore sunk and unchanged allocated fixed costs).
             </div>
         </div>
 
-        <p class="mt-10 text-sm text-slate-500">Tip: After answering, close the card and try to recall the answer again later (spaced repetition).</p>
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">B. Calculation</h3>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">3. SP RM90, VC RM54, FC RM108,000. Calculate CM per unit, BE units, BE sales, and units for target profit RM36,000.</div>
+            <div class="qa-answer">
+                CM = RM36<br>
+                BE units = 3,000<br>
+                BE sales = RM270,000<br>
+                Target-profit units = 4,000
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">4. Spare capacity. Customer offers RM70 for 800 units. Normal SP RM95, VC RM55, FC unchanged. Accept?</div>
+            <div class="qa-answer">
+                Incremental profit = (70 − 55) × 800 = <strong>RM12,000 → Accept</strong>
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">5. Make cost: DM 18 + DL 12 + Var OH 7 + Allocated Fixed OH 9. Supplier quote RM35. Fixed OH continues. Make or buy?</div>
+            <div class="qa-answer">
+                Relevant make cost = 18+12+7 = RM37<br>
+                Buy cost = RM35 → <strong>Buy</strong> (saves RM2/unit), assuming quality/reliability OK.
+            </div>
+        </div>
+
+        <h3 class="font-semibold text-slate-700 mt-6 mb-3">C. Subjective</h3>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">6. Explain fixed vs variable costs and why the distinction matters for CVP and decisions.</div>
+            <div class="qa-answer">
+                Variable costs change in total with activity; fixed costs stay constant in total within the relevant range. CVP uses contribution margin (Sales − VC) to cover FC and profit. In decisions we focus on costs that differ between alternatives; unchanged fixed costs are often irrelevant.
+            </div>
+        </div>
+
+        <p class="mt-12 p-4 bg-indigo-50 rounded-lg text-sm text-indigo-900">
+            <strong>Study tip:</strong> After attempting a question, close the answer and try to rewrite it from memory after 10–15 minutes (spaced repetition). Mix calculation, MCQ and essay questions in each session.
+        </p>
     </main>
 
     <footer class="bg-slate-900 text-slate-400 py-6 text-center text-sm">
-        B2026 Accountancy Pathway Study Hub • Active Recall Practice
+        B2026 Accountancy Pathway Study Hub • Expanded Q&A Bank
     </footer>
 
     <script>
-        // Optional: keyboard accessibility
         document.querySelectorAll('.qa-card').forEach(card => {
             card.setAttribute('tabindex', '0');
             card.addEventListener('keypress', e => {
