@@ -4,134 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACW2220 Management Accounting 1 | UNI Notes</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="bg-[#EBE0DD] text-[#4C6170]">
-    <header class="bg-[#4C6170] text-white sticky top-0 z-50 shadow-md">
+    <header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
         <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="../index.html" class="font-bold hover:text-[#C0C4B7]">← Back to Hub</a>
-            <span class="text-sm text-[#C0C4B7]">ACW2220 • UNI</span>
+            <a href="../index.html" class="font-bold hover:text-white">← UNI</a>
+            <span class="text-sm text-[#C0C4B7]">ACW2220</span>
         </div>
     </header>
 
     <main class="max-w-4xl mx-auto px-4 py-8 prose">
         <div class="mb-6">
-            <div class="text-sm font-semibold text-[#65695B]">ACCOUNTING • LEVEL 2</div>
-            <h1 class="text-3xl font-bold text-slate-900 mt-1">ACW2220 – Management Accounting 1</h1>
-            <p class="text-slate-600 mt-2">Detailed notes: Cost behaviour, CVP analysis, product costing, relevant costing for decisions.</p>
+            <div class="text-sm font-semibold text-[#8A9EAB]">ACCOUNTING · LEVEL 2</div>
+            <h1 class="text-3xl font-bold text-[#4C6170] mt-1">ACW2220 – Management Accounting 1</h1>
+            <p class="text-[#65695B] mt-2">Cost behaviour · CVP analysis · Relevant costing · Decisions</p>
         </div>
 
-        <h2>1. Unit Overview</h2>
-        <p>Management accounting provides information to internal managers for planning, control and decision-making. Unlike financial accounting, it is future-oriented, not bound by accounting standards, and emphasises relevance for decisions.</p>
+        <h2>1. Cost Behaviour</h2>
+        <div class="overflow-x-auto">
+            <table>
+                <thead>
+                    <tr><th>Type</th><th>Total cost</th><th>Per unit</th><th>Example</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Variable</strong></td><td>Changes with activity</td><td>Constant</td><td>Direct materials</td></tr>
+                    <tr><td><strong>Fixed</strong></td><td>Constant (relevant range)</td><td>Falls as volume rises</td><td>Factory rent</td></tr>
+                    <tr><td><strong>Mixed</strong></td><td>Both components</td><td>Varies</td><td>Utilities</td></tr>
+                </tbody>
+            </table>
+        </div>
 
-        <h2>2. Cost Classification</h2>
+        <!-- Cost behaviour sketch -->
+        <div class="overflow-x-auto my-4">
+            <svg viewBox="0 0 480 180" class="w-full max-w-md mx-auto" xmlns="http://www.w3.org/2000/svg">
+                <!-- Variable -->
+                <line x1="30" y1="150" x2="140" y2="150" stroke="#4C6170" stroke-width="1.5"/>
+                <line x1="30" y1="150" x2="30" y2="30" stroke="#4C6170" stroke-width="1.5"/>
+                <line x1="30" y1="150" x2="130" y2="40" stroke="#9CA38E" stroke-width="3"/>
+                <text x="80" y="170" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">Variable</text>
+                <!-- Fixed -->
+                <line x1="180" y1="150" x2="290" y2="150" stroke="#4C6170" stroke-width="1.5"/>
+                <line x1="180" y1="150" x2="180" y2="30" stroke="#4C6170" stroke-width="1.5"/>
+                <line x1="180" y1="90" x2="280" y2="90" stroke="#8A9EAB" stroke-width="3"/>
+                <text x="230" y="170" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">Fixed</text>
+                <!-- Total -->
+                <line x1="330" y1="150" x2="440" y2="150" stroke="#4C6170" stroke-width="1.5"/>
+                <line x1="330" y1="150" x2="330" y2="30" stroke="#4C6170" stroke-width="1.5"/>
+                <line x1="330" y1="110" x2="430" y2="40" stroke="#4C6170" stroke-width="3"/>
+                <line x1="330" y1="110" x2="430" y2="110" stroke="#C0C4B7" stroke-width="1.5" stroke-dasharray="4"/>
+                <text x="380" y="170" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">Total (FC+VC)</text>
+            </svg>
+        </div>
 
-        <h3>By Behaviour</h3>
-        <ul>
-            <li><strong>Variable costs</strong> – change in total in direct proportion to activity level (e.g. direct materials). Variable cost per unit is constant.</li>
-            <li><strong>Fixed costs</strong> – remain constant in total within the relevant range (e.g. factory rent). Fixed cost per unit falls as activity rises.</li>
-            <li><strong>Mixed (semi-variable) costs</strong> – contain both fixed and variable components.</li>
-        </ul>
-
-        <h3>By Traceability</h3>
-        <ul>
-            <li><strong>Direct costs</strong> – can be traced conveniently and economically to a cost object.</li>
-            <li><strong>Indirect costs</strong> – cannot be traced conveniently; must be allocated.</li>
-        </ul>
-
-        <h3>By Function</h3>
-        <ul>
-            <li>Manufacturing costs (Direct Materials + Direct Labour + Manufacturing Overhead)</li>
-            <li>Non-manufacturing costs (Selling & Administrative)</li>
-        </ul>
-
-        <h2>3. Cost-Volume-Profit (CVP) Analysis</h2>
+        <h2>2. CVP Analysis</h2>
         <div class="definition-box">
             <strong>Contribution Margin (CM)</strong> = Sales − All Variable Costs<br>
-            CM is the amount that contributes first to covering fixed costs and then to profit.
+            CM covers fixed costs first, then contributes to profit.
         </div>
-
         <div class="formula-box">
-            CM per unit = Selling Price − Variable Cost per unit<br>
-            CM Ratio = CM / Sales<br><br>
-            Break-even point (units) = Fixed Costs / CM per unit<br>
-            Break-even point (RM) = Fixed Costs / CM Ratio<br><br>
-            Units for Target Profit = (Fixed Costs + Target Profit) / CM per unit
+            CM per unit = SP − VC per unit<br>
+            Break-even (units) = Fixed Costs ÷ CM per unit<br>
+            Break-even (RM) = Fixed Costs ÷ CM Ratio<br>
+            Target-profit units = (FC + Target Profit) ÷ CM per unit
         </div>
 
-        <h3>Assumptions of CVP</h3>
-        <ul>
-            <li>Selling price, variable cost per unit and total fixed costs are constant</li>
-            <li>Costs are linear</li>
-            <li>Sales mix is constant (multi-product)</li>
-            <li>Inventory levels do not change</li>
-        </ul>
+        <!-- CVP / Break-even graph -->
+        <h3>Break-even Chart</h3>
+        <div class="overflow-x-auto my-4">
+            <svg viewBox="0 0 420 280" class="w-full max-w-md mx-auto" xmlns="http://www.w3.org/2000/svg">
+                <line x1="50" y1="240" x2="390" y2="240" stroke="#4C6170" stroke-width="2"/>
+                <line x1="50" y1="240" x2="50" y2="30" stroke="#4C6170" stroke-width="2"/>
+                <text x="220" y="270" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">Units →</text>
+                <text x="18" y="140" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif" transform="rotate(-90 18 140)">RM →</text>
+                <!-- Fixed cost -->
+                <line x1="50" y1="180" x2="370" y2="180" stroke="#8A9EAB" stroke-width="2" stroke-dasharray="5"/>
+                <text x="360" y="172" text-anchor="end" fill="#8A9EAB" font-size="10" font-family="sans-serif">FC</text>
+                <!-- Total cost -->
+                <line x1="50" y1="180" x2="370" y2="60" stroke="#65695B" stroke-width="2.5"/>
+                <text x="360" y="55" text-anchor="end" fill="#65695B" font-size="10" font-family="sans-serif">TC</text>
+                <!-- Revenue -->
+                <line x1="50" y1="240" x2="370" y2="40" stroke="#9CA38E" stroke-width="2.5"/>
+                <text x="360" y="35" text-anchor="end" fill="#9CA38E" font-size="10" font-family="sans-serif">Sales</text>
+                <!-- BEP -->
+                <circle cx="210" cy="140" r="6" fill="#4C6170"/>
+                <line x1="210" y1="140" x2="210" y2="240" stroke="#4C6170" stroke-width="1" stroke-dasharray="3"/>
+                <text x="210" y="255" text-anchor="middle" fill="#4C6170" font-size="10" font-weight="700" font-family="sans-serif">BEP</text>
+                <text x="130" y="200" fill="#8A9EAB" font-size="10" font-family="sans-serif">Loss</text>
+                <text x="280" y="100" fill="#9CA38E" font-size="10" font-family="sans-serif">Profit</text>
+            </svg>
+        </div>
 
         <div class="example-box">
-            <strong>CVP Example</strong><br>
-            SP = RM80, VC = RM50, Fixed costs = RM90,000, Target profit = RM30,000<br>
-            CM per unit = 30<br>
-            Break-even units = 90,000 / 30 = <strong>3,000 units</strong><br>
-            Break-even sales = 3,000 × 80 = <strong>RM240,000</strong><br>
-            Units for target profit = (90,000 + 30,000) / 30 = <strong>4,000 units</strong>
+            SP RM90, VC RM54, FC RM108,000, Target profit RM36,000<br>
+            CM = 36 → BE units = 3,000 → BE sales = RM270,000<br>
+            Target units = (108k + 36k) / 36 = <strong>4,000 units</strong>
         </div>
 
-        <h2>4. Relevant Costing for Decisions</h2>
+        <h2>3. Relevant Costing Decisions</h2>
         <div class="definition-box">
-            <strong>Relevant Cost</strong> – a future cost that differs between alternatives. Sunk costs are irrelevant. Allocated fixed costs that do not change are usually irrelevant.
+            <strong>Relevant cost</strong> = future cost that differs between alternatives. Sunk costs and unchanged allocated fixed costs are irrelevant.
         </div>
 
-        <h3>Special Order Decision</h3>
-        <p>With spare capacity: accept if the special-order price covers incremental variable costs (and any extra fixed costs) and generates a positive contribution.</p>
+        <h3>Special Order (spare capacity)</h3>
+        <div class="overflow-x-auto">
+            <table>
+                <thead>
+                    <tr><th>Item</th><th>Relevant?</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Variable production costs</td><td>Yes</td></tr>
+                    <tr><td>Extra fixed costs caused by order</td><td>Yes</td></tr>
+                    <tr><td>Allocated existing fixed costs</td><td>No</td></tr>
+                    <tr><td>Sunk costs</td><td>No</td></tr>
+                </tbody>
+            </table>
+        </div>
         <div class="example-box">
-            Normal SP RM100, VC RM60. Customer offers RM75 for 500 units. Spare capacity exists, no extra fixed costs.<br>
-            Incremental profit = (75 − 60) × 500 = <strong>RM7,500 → Accept</strong>
+            Offer RM70, VC RM55, 800 units, spare capacity → Incremental profit = 15 × 800 = <strong>RM12,000 → Accept</strong>
         </div>
 
-        <h3>Make or Buy Decision</h3>
-        <p>Compare relevant cost to make (DM + DL + Variable OH + any avoidable fixed costs) with the purchase price. Ignore allocated fixed costs that continue either way.</p>
+        <h3>Make or Buy</h3>
         <div class="example-box">
-            Make: DM 20 + DL 15 + Var OH 8 + Allocated Fixed 10 = 53<br>
-            Relevant make cost = 20+15+8 = 43 (fixed continues)<br>
-            Supplier quote = 40 → <strong>Buy</strong> (saves 3 per unit)
+            Make: DM 18 + DL 12 + Var OH 7 + Alloc. Fixed 9<br>
+            Relevant make cost = 18+12+7 = <strong>RM37</strong> (ignore continuing fixed)<br>
+            Buy quote RM35 → <strong>Buy</strong> (save RM2/unit) if quality OK
         </div>
 
-        <h3>Keep or Drop a Product Line</h3>
-        <p>Focus on avoidable costs and lost contribution margin. If the contribution margin lost exceeds the fixed costs saved, keep the line.</p>
+        <h2>4. Decision Summary Table</h2>
+        <div class="overflow-x-auto">
+            <table>
+                <thead>
+                    <tr><th>Decision</th><th>Focus on</th><th>Ignore</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Special order</td><td>Incremental revenue & costs</td><td>Unchanged fixed costs</td></tr>
+                    <tr><td>Make or buy</td><td>Avoidable costs vs purchase price</td><td>Unavoidable fixed OH</td></tr>
+                    <tr><td>Keep or drop</td><td>Lost CM vs saved fixed costs</td><td>Allocated common costs</td></tr>
+                </tbody>
+            </table>
+        </div>
 
-        <h2>5. Product Costing Systems (Overview)</h2>
-        <ul>
-            <li><strong>Job Costing</strong> – costs collected by individual job (customised products/services).</li>
-            <li><strong>Process Costing</strong> – costs averaged over large numbers of identical units.</li>
-            <li><strong>Activity-Based Costing (ABC)</strong> – overhead allocated using multiple activity cost drivers for more accurate product costs.</li>
-        </ul>
-
-        <h2>6. Common Mistakes</h2>
-        <ul>
-            <li>Including sunk costs or unchanged allocated fixed costs in decisions.</li>
-            <li>Using total costs instead of incremental costs for special orders.</li>
-            <li>Forgetting that fixed cost per unit changes with volume.</li>
-            <li>Mixing contribution margin with gross profit.</li>
-        </ul>
-
-        <h2>7. Exam Tips</h2>
         <div class="tip-box">
-            <ul>
-                <li>Always identify what changes between alternatives — only those items are relevant.</li>
-                <li>Prepare a contribution-format income statement for CVP questions.</li>
-                <li>State assumptions when using CVP.</li>
-                <li>Show clear workings with labels (DM, DL, OH, etc.).</li>
-                <li>End every decision question with a clear recommendation and brief reason.</li>
-            </ul>
+            <strong>Exam tip:</strong> Always ask “What changes?” Only those items are relevant. End every decision with a clear recommendation and one-line reason.
         </div>
 
-        <div class="mt-10 pt-6 border-t border-slate-200 flex justify-between text-sm">
-            <a href="mgw1010.html" class="text-[#65695B] hover:text-[#4C6170]">← MGW1010</a>
-            <a href="../index.html" class="text-[#65695B] hover:underline">Back to Hub →</a>
+        <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
+            <a href="mgw1010.html" class="text-[#4C6170] font-medium hover:underline">← MGW1010</a>
+            <a href="../index.html" class="text-[#4C6170] font-medium hover:underline">Back to Hub →</a>
         </div>
     </main>
 </body>

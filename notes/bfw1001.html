@@ -4,143 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BFW1001 Foundations of Finance | UNI Notes</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="bg-[#EBE0DD] text-[#4C6170]">
-    <header class="bg-[#4C6170] text-white sticky top-0 z-50 shadow-md">
+    <header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
         <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="../index.html" class="font-bold hover:text-[#C0C4B7]">← Back to Hub</a>
-            <span class="text-sm text-[#C0C4B7]">BFW1001 • UNI</span>
+            <a href="../index.html" class="font-bold hover:text-white">← UNI</a>
+            <span class="text-sm text-[#C0C4B7]">BFW1001</span>
         </div>
     </header>
 
     <main class="max-w-4xl mx-auto px-4 py-8 prose">
         <div class="mb-6">
-            <div class="text-sm font-semibold text-emerald-600">FINANCE • LEVEL 1</div>
-            <h1 class="text-3xl font-bold text-slate-900 mt-1">BFW1001 – Foundations of Finance</h1>
-            <p class="text-slate-600 mt-2">Detailed notes: Time value of money, valuation, capital budgeting, financial system, risk & return.</p>
+            <div class="text-sm font-semibold text-[#9CA38E]">FINANCE · LEVEL 1</div>
+            <h1 class="text-3xl font-bold text-[#4C6170] mt-1">BFW1001 – Foundations of Finance</h1>
+            <p class="text-[#65695B] mt-2">Time value of money · Valuation · Capital budgeting · Risk & return</p>
         </div>
 
-        <h2>1. Unit Overview</h2>
-        <p>This unit builds the language and basic toolkit of finance. You will master the time value of money, learn how to value simple cash flow streams, evaluate investment projects, and understand the structure of the financial system and the risk-return relationship.</p>
-
-        <h2>2. Core Concept: Time Value of Money (TVM)</h2>
+        <h2>1. Time Value of Money</h2>
         <div class="definition-box">
-            <strong>Time Value of Money</strong><br>
-            A sum of money today is worth more than the same sum in the future because of its potential earning capacity (opportunity cost), inflation, and risk.
+            A ringgit today is worth more than a ringgit in the future because of earning potential, inflation and risk.
         </div>
 
-        <h3>Key Variables</h3>
-        <ul>
-            <li><strong>PV</strong> – Present Value (value today)</li>
-            <li><strong>FV</strong> – Future Value (value at a future date)</li>
-            <li><strong>r</strong> – interest rate / discount rate per period</li>
-            <li><strong>n</strong> – number of periods</li>
-            <li><strong>PMT</strong> – periodic payment (annuity)</li>
-        </ul>
-
-        <h2>3. Essential Formulas (Memorise These)</h2>
-
-        <h3>Single Sum</h3>
-        <div class="formula-box">
-            Future Value: FV = PV × (1 + r)<sup>n</sup><br>
-            Present Value: PV = FV / (1 + r)<sup>n</sup> = FV × (1 + r)<sup>−n</sup>
+        <!-- Timeline diagram -->
+        <h3>Timeline Concept</h3>
+        <div class="overflow-x-auto my-4">
+            <svg viewBox="0 0 500 100" class="w-full max-w-lg mx-auto" xmlns="http://www.w3.org/2000/svg">
+                <line x1="40" y1="50" x2="460" y2="50" stroke="#4C6170" stroke-width="3"/>
+                <circle cx="60" cy="50" r="8" fill="#4C6170"/>
+                <circle cx="180" cy="50" r="8" fill="#9CA38E"/>
+                <circle cx="300" cy="50" r="8" fill="#9CA38E"/>
+                <circle cx="420" cy="50" r="8" fill="#65695B"/>
+                <text x="60" y="30" text-anchor="middle" fill="#4C6170" font-size="12" font-weight="700" font-family="sans-serif">t=0</text>
+                <text x="60" y="80" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">PV</text>
+                <text x="180" y="30" text-anchor="middle" fill="#4C6170" font-size="12" font-family="sans-serif">t=1</text>
+                <text x="180" y="80" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">CF₁</text>
+                <text x="300" y="30" text-anchor="middle" fill="#4C6170" font-size="12" font-family="sans-serif">t=2</text>
+                <text x="300" y="80" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">CF₂</text>
+                <text x="420" y="30" text-anchor="middle" fill="#4C6170" font-size="12" font-family="sans-serif">t=n</text>
+                <text x="420" y="80" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">FV / CFₙ</text>
+            </svg>
         </div>
 
-        <h3>Ordinary Annuity (payments at end of each period)</h3>
-        <div class="formula-box">
-            FV of Annuity: FV<sub>A</sub> = PMT × [(1 + r)<sup>n</sup> − 1] / r<br>
-            PV of Annuity: PV<sub>A</sub> = PMT × [1 − (1 + r)<sup>−n</sup>] / r
+        <h3>Core Formulas</h3>
+        <div class="overflow-x-auto">
+            <table>
+                <thead>
+                    <tr><th>Concept</th><th>Formula</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Future Value (single sum)</td><td class="font-mono text-sm">FV = PV × (1+r)<sup>n</sup></td></tr>
+                    <tr><td>Present Value (single sum)</td><td class="font-mono text-sm">PV = FV / (1+r)<sup>n</sup></td></tr>
+                    <tr><td>PV of ordinary annuity</td><td class="font-mono text-sm">PV<sub>A</sub> = PMT × [1−(1+r)<sup>−n</sup>] / r</td></tr>
+                    <tr><td>FV of ordinary annuity</td><td class="font-mono text-sm">FV<sub>A</sub> = PMT × [(1+r)<sup>n</sup>−1] / r</td></tr>
+                    <tr><td>Net Present Value</td><td class="font-mono text-sm">NPV = −I₀ + Σ CF<sub>t</sub>/(1+r)<sup>t</sup></td></tr>
+                </tbody>
+            </table>
         </div>
 
-        <h3>Net Present Value (NPV)</h3>
-        <div class="formula-box">
-            NPV = −Initial Investment + Σ [CF<sub>t</sub> / (1 + r)<sup>t</sup>]
-        </div>
-        <p><strong>Decision rule:</strong> Accept if NPV > 0; Reject if NPV < 0. When choosing between mutually exclusive projects, pick the highest positive NPV.</p>
-
-        <h2>4. Worked Examples (Step-by-Step)</h2>
-
+        <h2>2. Worked Examples</h2>
         <div class="example-box">
-            <strong>Example 1 – Future Value</strong><br>
-            Invest RM10,000 today at 6% p.a. for 5 years (annual compounding).<br>
-            FV = 10,000 × (1.06)<sup>5</sup> = 10,000 × 1.338226 = <strong>RM13,382</strong>
+            <strong>FV:</strong> RM12,000 at 8% for 5 years → 12,000 × (1.08)<sup>5</sup> = <strong>RM17,632</strong>
         </div>
-
         <div class="example-box">
-            <strong>Example 2 – Present Value</strong><br>
-            Need RM20,000 in 4 years. Discount rate 8%.<br>
-            PV = 20,000 / (1.08)<sup>4</sup> = 20,000 / 1.36049 ≈ <strong>RM14,701</strong>
+            <strong>PV:</strong> RM25,000 in 4 years, r=9% → 25,000 / (1.09)<sup>4</sup> ≈ <strong>RM17,710</strong>
         </div>
-
         <div class="example-box">
-            <strong>Example 3 – NPV</strong><br>
-            Project costs RM50,000. Cash flows: Year 1 RM18,000; Year 2 RM22,000; Year 3 RM25,000. Required return 10%.<br>
-            PV<sub>1</sub> = 18,000 / 1.10 = 16,364<br>
-            PV<sub>2</sub> = 22,000 / 1.21 = 18,182<br>
-            PV<sub>3</sub> = 25,000 / 1.331 ≈ 18,783<br>
-            Total PV of inflows = 53,329<br>
-            NPV = 53,329 − 50,000 = <strong>+RM3,329 → Accept</strong>
+            <strong>NPV:</strong> Invest RM80,000; CF: 30k, 35k, 40k; r=10%<br>
+            PV inflows ≈ 27,273 + 28,926 + 30,053 = 86,252<br>
+            NPV = 86,252 − 80,000 = <strong>+RM6,252 → Accept</strong>
         </div>
 
-        <div class="example-box">
-            <strong>Example 4 – PV of Ordinary Annuity</strong><br>
-            Receive RM4,000 at the end of each year for 5 years. Discount rate 9%.<br>
-            PV<sub>A</sub> = 4,000 × [1 − (1.09)<sup>−5</sup>] / 0.09<br>
-            (1.09)<sup>−5</sup> ≈ 0.6499<br>
-            [1 − 0.6499] / 0.09 = 3.8897<br>
-            PV<sub>A</sub> = 4,000 × 3.8897 ≈ <strong>RM15,559</strong>
+        <h2>3. Capital Budgeting Decision Rules</h2>
+        <div class="overflow-x-auto">
+            <table>
+                <thead>
+                    <tr><th>Method</th><th>Rule</th><th>Strength</th><th>Weakness</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>NPV</strong></td><td>Accept if NPV &gt; 0</td><td>Direct value measure</td><td>Needs discount rate</td></tr>
+                    <tr><td><strong>IRR</strong></td><td>Accept if IRR &gt; required return</td><td>Easy % comparison</td><td>Multiple IRRs possible</td></tr>
+                    <tr><td><strong>Payback</strong></td><td>Accept if payback ≤ cutoff</td><td>Simple, liquidity focus</td><td>Ignores TVM & later CFs</td></tr>
+                </tbody>
+            </table>
         </div>
 
-        <h2>5. Capital Budgeting Basics</h2>
-        <ul>
-            <li><strong>NPV</strong> – preferred method; directly measures value added.</li>
-            <li><strong>IRR</strong> – discount rate that makes NPV = 0. Accept if IRR > required return.</li>
-            <li><strong>Payback Period</strong> – time to recover initial investment. Simple but ignores TVM and cash flows after payback.</li>
-        </ul>
-        <p>When ranking mutually exclusive projects, NPV is generally superior to IRR (especially with different sizes or timing of cash flows).</p>
-
-        <h2>6. Financial System Overview</h2>
-        <ul>
-            <li><strong>Financial markets</strong> – bring savers and borrowers together (money market for short-term, capital market for long-term).</li>
-            <li><strong>Financial institutions</strong> – banks, insurance companies, unit trusts, pension funds, etc.</li>
-            <li><strong>Financial instruments</strong> – equity (shares), debt (bonds, loans), derivatives.</li>
-            <li><strong>Primary market</strong> – new issues; <strong>Secondary market</strong> – trading of existing securities.</li>
-        </ul>
-
-        <h2>7. Risk and Return</h2>
-        <div class="definition-box">
-            <strong>Risk–Return Trade-off</strong><br>
-            Investors require higher expected returns to compensate for bearing higher risk. Low-risk assets (e.g. government securities) offer lower expected returns; high-risk assets must offer higher expected returns to attract capital.
+        <!-- Risk-return graph -->
+        <h2>4. Risk–Return Trade-off</h2>
+        <div class="overflow-x-auto my-4">
+            <svg viewBox="0 0 400 260" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
+                <!-- Axes -->
+                <line x1="50" y1="220" x2="370" y2="220" stroke="#4C6170" stroke-width="2"/>
+                <line x1="50" y1="220" x2="50" y2="30" stroke="#4C6170" stroke-width="2"/>
+                <text x="210" y="250" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif">Risk →</text>
+                <text x="20" y="125" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif" transform="rotate(-90 20 125)">Expected Return →</text>
+                <!-- Line -->
+                <line x1="70" y1="180" x2="340" y2="50" stroke="#9CA38E" stroke-width="3"/>
+                <!-- Points -->
+                <circle cx="100" cy="165" r="7" fill="#4C6170"/>
+                <text x="100" y="155" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">T-bills</text>
+                <circle cx="180" cy="125" r="7" fill="#65695B"/>
+                <text x="180" y="115" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">Bonds</text>
+                <circle cx="260" cy="85" r="7" fill="#8A9EAB"/>
+                <text x="260" y="75" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">Stocks</text>
+                <circle cx="320" cy="55" r="7" fill="#9CA38E"/>
+                <text x="320" y="45" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">Small-cap</text>
+            </svg>
         </div>
-        <p>Diversification can reduce unsystematic (company-specific) risk. Systematic risk (market risk) cannot be diversified away and is the risk that is priced in the market.</p>
+        <p class="text-sm text-center text-[#65695B]">Higher risk → higher expected return required by rational investors</p>
 
-        <h2>8. Common Mistakes</h2>
-        <ul>
-            <li>Using the wrong number of periods (e.g. mixing years and months).</li>
-            <li>Forgetting that NPV already incorporates the required return — do not compare NPV with the discount rate.</li>
-            <li>Confusing ordinary annuity (end of period) with annuity due (beginning of period).</li>
-            <li>Adding cash flows instead of discounting them.</li>
-        </ul>
+        <h2>5. Financial System Snapshot</h2>
+        <div class="overflow-x-auto">
+            <table>
+                <thead>
+                    <tr><th>Component</th><th>Examples</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Markets</td><td>Money market (short-term), Capital market (long-term)</td></tr>
+                    <tr><td>Institutions</td><td>Banks, insurers, unit trusts, pension funds</td></tr>
+                    <tr><td>Instruments</td><td>Shares, bonds, loans, derivatives</td></tr>
+                    <tr><td>Primary vs Secondary</td><td>New issues vs trading of existing securities</td></tr>
+                </tbody>
+            </table>
+        </div>
 
-        <h2>9. Exam Tips</h2>
         <div class="tip-box">
-            <ul>
-                <li>Draw a timeline for every multi-period problem.</li>
-                <li>Write the formula first, then substitute numbers.</li>
-                <li>Show intermediate PV factors — markers give method marks.</li>
-                <li>State the decision clearly (“Accept because NPV > 0”).</li>
-                <li>Practise both calculator and manual (formula) methods.</li>
-            </ul>
+            <strong>Exam tip:</strong> Draw a timeline for every multi-period problem. Write the formula first, then substitute. State the decision clearly (“Accept because NPV &gt; 0”).
         </div>
 
-        <div class="mt-10 pt-6 border-t border-slate-200 flex justify-between text-sm">
-            <a href="acw1120.html" class="text-[#65695B] hover:text-[#4C6170]">← ACW1120</a>
-            <a href="btw1042.html" class="text-[#65695B] hover:underline">Next: BTW1042 →</a>
+        <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
+            <a href="acw1120.html" class="text-[#4C6170] font-medium hover:underline">← ACW1120</a>
+            <a href="btw1042.html" class="text-[#4C6170] font-medium hover:underline">Next: BTW1042 →</a>
         </div>
     </main>
 </body>
