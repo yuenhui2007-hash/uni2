@@ -223,6 +223,38 @@
                     <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
                     <div class="answer-panel"><strong>Cash:</strong> recognise only when cash is received/paid.<br><strong>Accrual:</strong> recognise when earned/incurred.<br>Framework prefers accrual because it better reflects performance and position by matching revenues with related expenses and recognising assets/liabilities when rights and obligations arise — more useful for users’ decisions.</div>
                 </div>
+            
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> A business has capital RM50,000 and liabilities RM20,000. What are total assets?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Assets = Liabilities + Equity = 20,000 + 50,000 = <strong>RM70,000</strong></div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> State the debit/credit rule for expenses and for revenues.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Expenses:</strong> Debit to increase, Credit to decrease.<br><strong>Revenues:</strong> Credit to increase, Debit to decrease.</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Salaries earned by staff RM3,500 have not been paid or recorded at year-end. Prepare the adjusting entry.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Dr Salaries Expense 3,500<br>Cr Salaries Payable 3,500<br>(Accrued expense)</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Prepaid insurance RM6,000 covers 12 months from 1 July. Year-end is 31 December. What is the adjusting entry?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">6 months expired → 6,000 × 6/12 = RM3,000<br>Dr Insurance Expense 3,000<br>Cr Prepaid Insurance 3,000</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> Machine cost RM90,000 on 1 Jan; residual RM10,000; useful life 8 years. After 3 years, what is the carrying amount? Show workings.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Annual dep. = (90,000 − 10,000)/8 = 10,000<br>Accum. dep. after 3 years = 30,000<br>Carrying amount = 90,000 − 30,000 = <strong>RM60,000</strong></div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> Distinguish relevance and faithful representation. Give one example of a trade-off between them.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Relevance:</strong> information can influence decisions (predictive/confirmatory value).<br><strong>Faithful representation:</strong> complete, neutral, free from error as far as possible.<br><strong>Trade-off example:</strong> a timely estimate may be highly relevant but less precise than a delayed exact figure.</div>
+                </div>
+
             </section>
 
             <!-- ========== BFW1001 ========== -->
@@ -327,6 +359,38 @@
                     <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
                     <div class="answer-panel">Investors require higher expected returns for higher risk. The discount rate is the opportunity cost of capital for that risk. Using too low a rate overstates NPV and may accept value-destroying projects.</div>
                 </div>
+            
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> What is the future value of RM5,000 invested for 3 years at 6% p.a. compounded annually?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">FV = 5,000 × (1.06)<sup>3</sup> = 5,000 × 1.191016 ≈ <strong>RM5,955</strong></div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> State the NPV decision rule for independent projects.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Accept if NPV &gt; 0; reject if NPV &lt; 0. NPV = 0 means the project earns exactly the required return.</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Calculate the PV of an ordinary annuity of RM4,000 per year for 5 years at 9%.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">PV<sub>A</sub> = 4,000 × [1 − (1.09)<sup>−5</sup>]/0.09 ≈ 4,000 × 3.8897 ≈ <strong>RM15,559</strong></div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> A project costs RM50,000. Cash flows: Y1 18,000; Y2 22,000; Y3 25,000. Required return 10%. Calculate NPV.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">PV = 16,364 + 18,182 + 18,783 = 53,329<br>NPV = 53,329 − 50,000 = <strong>+RM3,329 → Accept</strong></div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> Why is NPV generally preferred to IRR when ranking mutually exclusive projects?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">NPV measures value added in ringgit and assumes reinvestment at the cost of capital. IRR can give conflicting rankings when projects differ in size or cash-flow timing, and may have multiple rates. Maximising NPV is consistent with maximising shareholder wealth.</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> Distinguish systematic and unsystematic risk. Which is compensated in a well-diversified portfolio?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Unsystematic:</strong> firm-specific; can be diversified away.<br><strong>Systematic:</strong> market-wide; cannot be diversified away.<br>Only systematic risk is compensated with higher expected return.</div>
+                </div>
+
             </section>
 
             <!-- ========== BTW1042 ========== -->
@@ -413,6 +477,33 @@
                     <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
                     <div class="answer-panel"><strong>Sole prop:</strong> no separate personality; unlimited liability.<br><strong>Partnership:</strong> generally no separate personality; unlimited joint & several liability.<br><strong>Sdn Bhd:</strong> separate legal entity; limited liability.</div>
                 </div>
+            
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> What is consideration in contract law?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Something of value in the eyes of the law given in exchange for a promise. It must be sufficient but need not be adequate. Past consideration is generally not valid.</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> Name two sources of written law in Malaysia.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Federal Constitution; Acts of Parliament (also state enactments and subsidiary legislation).</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Explain the difference between an offer and an invitation to treat, with one example of each.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Offer:</strong> definite proposal intended to become binding on acceptance (e.g. “I will sell you this car for RM40,000”).<br><strong>Invitation to treat:</strong> willingness to negotiate (e.g. goods on supermarket shelves, most advertisements).</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Briefly explain actual authority and apparent authority in agency.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Actual authority:</strong> express or implied power given by the principal to the agent.<br><strong>Apparent authority:</strong> arises when the principal’s representation leads a third party to reasonably believe the agent has authority (estoppel).</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> A professional accountant gives negligent tax advice to a client who relies on it and incurs penalties. Outline how the four elements of negligence could be argued.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Duty:</strong> accountant–client relationship creates a duty of care.<br><strong>Breach:</strong> advice fell below the standard of a reasonably competent accountant.<br><strong>Causation:</strong> but for the advice, the client would not have suffered the loss.<br><strong>Remoteness:</strong> financial loss of this type was reasonably foreseeable.</div>
+                </div>
+
             </section>
 
             <!-- ========== ECM1953 ========== -->
@@ -487,6 +578,33 @@
                     <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
                     <div class="answer-panel">G ↑ → AD shifts right → higher equilibrium real output and higher price level in the short run (movement along SRAS).</div>
                 </div>
+            
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> State the law of demand and the law of supply.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Demand:</strong> other things equal, higher price → lower quantity demanded.<br><strong>Supply:</strong> other things equal, higher price → higher quantity supplied.</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> What is the difference between a movement along a demand curve and a shift of the demand curve?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Movement along:</strong> caused by a change in the good’s own price.<br><strong>Shift:</strong> caused by other factors (income, tastes, prices of related goods, etc.).</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Price falls from RM20 to RM16; quantity demanded rises from 100 to 130. Calculate PED and state whether demand is elastic or inelastic.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">%ΔP = −20%; %ΔQd = +30%; PED = 30/−20 = −1.5 → <strong>elastic</strong> (|PED| &gt; 1)</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Compare perfect competition and monopoly in terms of number of firms and price-setting power.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Perfect competition:</strong> many firms, identical product, price taker.<br><strong>Monopoly:</strong> one firm, unique product, price maker (subject to demand).</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> Explain how expansionary fiscal policy is expected to affect AD, output and the price level in the short run.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Higher G or lower taxes raise AD (shift right). Short-run equilibrium moves to higher real output and a higher price level along the SRAS curve.</div>
+                </div>
+
             </section>
 
             <!-- ========== ETW1001 ========== -->
@@ -549,6 +667,33 @@
                     <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
                     <div class="answer-panel">Parameter = characteristic of the whole population (e.g. μ). Statistic = from a sample (e.g. x̄). Full populations are often impractical to measure; we infer about parameters using samples.</div>
                 </div>
+            
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> Data: 4, 8, 8, 10, 15. Find the median and the mode.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Ordered already. Median = <strong>8</strong>; Mode = <strong>8</strong></div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> What does a 95% confidence interval for a mean conceptually mean?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">If the sampling process were repeated many times, about 95% of the intervals constructed would contain the true population mean.</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Data: 2, 4, 6, 8, 10. Calculate the sample variance and sample standard deviation.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Mean = 6; squared deviations sum = 40; s² = 40/4 = 10; s = √10 ≈ <strong>3.16</strong></div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> What is a Type II error in hypothesis testing?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Failing to reject a false null hypothesis (false negative).</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> A regression gives Ŷ = 20 + 1.5X with R² = 0.64. Interpret the slope and R² in words.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Slope 1.5:</strong> a one-unit increase in X is associated with a 1.5-unit increase in predicted Y on average.<br><strong>R² 0.64:</strong> 64% of the variation in Y is explained by X in this sample.</div>
+                </div>
+
             </section>
 
             <!-- ========== MGW1010 ========== -->
@@ -623,6 +768,33 @@
                     <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
                     <div class="answer-panel">Strengths: efficiency, measurement, standardisation. Weaknesses: mechanistic view of workers, ignores social needs, assumes one best way. Poor fit for creative/non-routine remote work — blend with human-relations and contingency thinking.</div>
                 </div>
+            
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> Define effectiveness and efficiency in management.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Effectiveness:</strong> doing the right things (achieving goals).<br><strong>Efficiency:</strong> doing things right (minimising resource waste).</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> What does Theory X assume about workers (McGregor)?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Workers dislike work, avoid responsibility, and need to be controlled and directed.</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Summarise Herzberg’s two-factor theory.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel"><strong>Hygiene factors</strong> (pay, conditions, policy) prevent dissatisfaction but do not strongly motivate.<br><strong>Motivators</strong> (achievement, recognition, work itself, responsibility, growth) drive satisfaction and motivation.</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> What is the main idea of Weber’s bureaucracy, and name one criticism.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Ideal type: hierarchy, formal rules, impersonality, merit-based advancement.<br><strong>Criticism:</strong> can become rigid, slow, and rule-bound (red tape / goal displacement).</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> Explain the contingency approach and why it challenges classical “one best way” thinking.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Contingency theory argues that effective management depends on situational factors (environment, technology, size, people). There is no universal best method; practices that work in one context may fail in another.</div>
+                </div>
+
             </section>
 
             <!-- ========== ACW2220 ========== -->
@@ -703,6 +875,38 @@
                     <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
                     <div class="answer-panel">Relevant make cost = 18+12+7 = <strong>RM37</strong> (ignore continuing allocated fixed).<br>Buy = RM35 → <strong>Buy</strong> (save RM2/unit) if quality/reliability OK.</div>
                 </div>
+            
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> SP RM50, VC RM30, FC RM40,000. Calculate CM per unit and break-even units.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">CM = 20; BE = 40,000 / 20 = <strong>2,000 units</strong></div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-easy">Easy</span> What is a sunk cost? Are sunk costs relevant to future decisions?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">A cost already incurred that cannot be changed. <strong>Not relevant</strong> to forward-looking decisions.</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> SP RM80, VC RM50, FC RM90,000. How many units are needed for a target profit of RM30,000?</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">CM = 30; Units = (90,000 + 30,000) / 30 = <strong>4,000 units</strong></div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-med">Medium</span> Define margin of safety and state why managers care about it.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Margin of safety = Actual (or budgeted) sales − Break-even sales. It shows how far sales can fall before a loss — a measure of risk/cushion.</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> A segment has CM RM80,000 and avoidable fixed costs RM50,000. Allocated common fixed costs RM40,000 would remain if dropped. Should the segment be kept or dropped? Explain.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">If dropped: lose CM 80,000, save only 50,000 → net loss of 30,000 contribution.<br>Common fixed 40,000 is irrelevant (continues). <strong>Keep the segment.</strong></div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text"><span class="badge level-hard">Hard</span> Special order: price RM60, VC RM45, extra fixed costs RM2,000, quantity 500, spare capacity. Calculate incremental profit and recommend.</div>
+                    <button type="button" class="show-btn" onclick="toggleAns(this)">Show answer</button>
+                    <div class="answer-panel">Incremental revenue = 30,000; incremental VC = 22,500; extra FC = 2,000<br>Incremental profit = 30,000 − 22,500 − 2,000 = <strong>RM5,500 → Accept</strong></div>
+                </div>
+
             </section>
 
             <p class="mt-10 p-4 bg-[#D9C3B6]/40 border border-[#C0C4B7] rounded-xl text-sm">
