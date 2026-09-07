@@ -1,0 +1,100 @@
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.unit-card {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.unit-card:hover {
+    transform: translateY(-3px);
+}
+
+.prose h2 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1e293b;
+    border-bottom: 2px solid #e0e7ff;
+    padding-bottom: 0.35rem;
+}
+
+.prose h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #312e81;
+}
+
+.prose ul, .prose ol {
+    margin-left: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.prose li {
+    margin-bottom: 0.35rem;
+}
+
+.prose p {
+    margin-bottom: 0.85rem;
+    line-height: 1.65;
+}
+
+.definition-box {
+    background: #eef2ff;
+    border-left: 4px solid #4f46e5;
+    padding: 1rem 1.25rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin: 1rem 0;
+}
+
+.example-box {
+    background: #f0fdf4;
+    border-left: 4px solid #16a34a;
+    padding: 1rem 1.25rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin: 1rem 0;
+}
+
+.formula-box {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 0.85rem 1.1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+}
+
+.tip-box {
+    background: #fffbeb;
+    border-left: 4px solid #f59e0b;
+    padding: 1rem 1.25rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin: 1rem 0;
+}
+
+.qa-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.qa-question {
+    background: #f8fafc;
+    padding: 1rem 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.qa-answer {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid #e2e8f0;
+    display: none;
+}
+
+.qa-card.open .qa-answer {
+    display: block;
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Q&A Bank | B2026 Accountancy Cores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <header class="bg-indigo-900 text-white sticky top-0 z-50 shadow">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="font-bold hover:text-indigo-200">← Back to Hub</a>
+            <span class="text-sm text-indigo-200">Q&A Practice Bank</span>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-2">Practice Questions & Answers</h1>
+        <p class="text-slate-600 mb-8">Click any question to reveal the model answer. Use these for active recall before exams.</p>
+
+        <!-- ACW1120 -->
+        <h2 class="text-xl font-bold text-indigo-700 mb-4 mt-8">ACW1120 – Financial Accounting 1</h2>
+        
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">Q1. Define an “asset” according to the Conceptual Framework and give two examples.</div>
+            <div class="qa-answer">
+                An asset is a present economic resource controlled by the entity as a result of past events. An economic resource is a right that has the potential to produce economic benefits.<br><br>
+                Examples: Cash, accounts receivable, inventory, property, plant and equipment, patents.
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">Q2. What is the difference between the cash basis and the accrual basis of accounting?</div>
+            <div class="qa-answer">
+                <strong>Cash basis:</strong> Revenues and expenses are recognised only when cash is received or paid.<br>
+                <strong>Accrual basis:</strong> Revenues are recognised when earned and expenses when incurred, regardless of cash timing. The Conceptual Framework requires the accrual basis for general-purpose financial statements because it provides a better depiction of financial performance and position.
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">Q3. Equipment cost RM60,000, residual value RM6,000, useful life 9 years. Calculate annual straight-line depreciation and write the year-end adjusting entry.</div>
+            <div class="qa-answer">
+                Depreciable amount = 60,000 – 6,000 = 54,000<br>
+                Annual depreciation = 54,000 / 9 = <strong>RM6,000</strong><br><br>
+                Dr Depreciation Expense 6,000<br>
+                &nbsp;&nbsp;&nbsp;Cr Accumulated Depreciation – Equipment 6,000
+            </div>
+        </div>
+
+        <!-- BFW1001 -->
+        <h2 class="text-xl font-bold text-emerald-700 mb-4 mt-10">BFW1001 – Foundations of Finance</h2>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">Q1. Calculate the future value of RM15,000 invested for 6 years at 7% p.a. compounded annually.</div>
+            <div class="qa-answer">
+                FV = 15,000 × (1.07)<sup>6</sup> = 15,000 × 1.5007 ≈ <strong>RM22,511</strong>
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">Q2. What is the decision rule for Net Present Value (NPV)?</div>
+            <div class="qa-answer">
+                Accept the project if NPV > 0 (the project is expected to add value).<br>
+                Reject if NPV < 0.<br>
+                When ranking mutually exclusive projects, choose the one with the highest positive NPV.
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">Q3. Explain the risk-return trade-off in one or two sentences.</div>
+            <div class="qa-answer">
+                Investors require higher expected returns to compensate for taking on higher risk. Low-risk investments (e.g., government bonds) offer lower expected returns; high-risk investments (e.g., growth shares) must offer higher expected returns to attract capital.
+            </div>
+        </div>
+
+        <!-- BTW1042 -->
+        <h2 class="text-xl font-bold text-rose-700 mb-4 mt-10">BTW1042 – Business Law</h2>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">Q1. Is a price tag on a product in a supermarket an offer or an invitation to treat? Explain.</div>
+            <div class="qa-answer">
+                It is generally an <strong>invitation to treat</strong>. The customer makes the offer by taking the item to the cashier; the shop accepts the offer by accepting payment. This protects the shop from being bound if stock is limited or a pricing error occurs. (Pharmaceutical Society of Great Britain v Boots Cash Chemists principle is often cited.)
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">Q2. List the four elements that must be proved to establish the tort of negligence.</div>
+            <div class="qa-answer">
+                1. Duty of care owed by the defendant to the plaintiff<br>
+                2. Breach of that duty (fell below the standard of the reasonable person / professional)<br>
+                3. Causation (the breach caused the damage)<br>
+                4. Damage that is not too remote
+            </div>
+        </div>
+
+        <!-- ECM1953 -->
+        <h2 class="text-xl font-bold text-amber-700 mb-4 mt-10">ECM1953 – Principles of Economics</h2>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">Q1. What happens to equilibrium price and quantity when demand increases and supply remains constant?</div>
+            <div class="qa-answer">
+                Both equilibrium price and equilibrium quantity rise. The demand curve shifts rightward; the new intersection with the supply curve is at a higher price and higher quantity.
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">Q2. Calculate PED: Price rises from RM20 to RM25; quantity demanded falls from 400 to 300 units.</div>
+            <div class="qa-answer">
+                % change in P = (5/20) × 100 = 25%<br>
+                % change in Qd = (–100/400) × 100 = –25%<br>
+                PED = –25% / 25% = <strong>–1</strong> (unit elastic)
+            </div>
+        </div>
+
+        <!-- ETW1001 -->
+        <h2 class="text-xl font-bold text-cyan-700 mb-4 mt-10">ETW1001 – Introduction to Statistical Analysis</h2>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">Q1. When is the median a better measure of central tendency than the mean?</div>
+            <div class="qa-answer">
+                When the data distribution is skewed or contains extreme outliers. The median is not affected by extreme values, while the mean is pulled toward them.
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">Q2. In a simple linear regression Ŷ = 10 + 2.5X, interpret the slope coefficient.</div>
+            <div class="qa-answer">
+                For every one-unit increase in X, the predicted value of Y increases by 2.5 units, on average, holding other factors constant.
+            </div>
+        </div>
+
+        <!-- MGW1010 -->
+        <h2 class="text-xl font-bold text-violet-700 mb-4 mt-10">MGW1010 – Introduction to Management</h2>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">Q1. Briefly contrast Theory X and Theory Y (McGregor).</div>
+            <div class="qa-answer">
+                <strong>Theory X:</strong> Managers assume employees dislike work, avoid responsibility and must be coerced or controlled.<br>
+                <strong>Theory Y:</strong> Managers assume employees can find work enjoyable, are self-motivated and can accept (even seek) responsibility. Theory Y is associated with more participative management styles.
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">Q2. What is the contingency approach to management?</div>
+            <div class="qa-answer">
+                The contingency approach argues that there is no single best way to manage. The most effective management practices depend on the situation (environment, technology, size, people, etc.). Managers must diagnose the situation and adapt accordingly.
+            </div>
+        </div>
+
+        <!-- ACW2220 -->
+        <h2 class="text-xl font-bold text-indigo-700 mb-4 mt-10">ACW2220 – Management Accounting 1</h2>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">Q1. Selling price RM80, variable cost RM50, fixed costs RM90,000. Calculate break-even point in units and in sales ringgit.</div>
+            <div class="qa-answer">
+                CM per unit = 80 – 50 = RM30<br>
+                Break-even units = 90,000 / 30 = <strong>3,000 units</strong><br>
+                Break-even sales = 3,000 × 80 = <strong>RM240,000</strong>
+            </div>
+        </div>
+
+        <div class="qa-card" onclick="this.classList.toggle('open')">
+            <div class="qa-question">Q2. What is a relevant cost in decision-making?</div>
+            <div class="qa-answer">
+                A relevant cost is a future cost that differs between the alternatives being considered. Sunk costs (already incurred) and future costs that do not differ between alternatives are irrelevant and should be ignored.
+            </div>
+        </div>
+
+        <p class="mt-10 text-sm text-slate-500">Tip: After answering, close the card and try to recall the answer again later (spaced repetition).</p>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-6 text-center text-sm">
+        B2026 Accountancy Pathway Study Hub • Active Recall Practice
+    </footer>
+
+    <script>
+        // Optional: keyboard accessibility
+        document.querySelectorAll('.qa-card').forEach(card => {
+            card.setAttribute('tabindex', '0');
+            card.addEventListener('keypress', e => {
+                if (e.key === 'Enter' || e.key === ' ') card.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

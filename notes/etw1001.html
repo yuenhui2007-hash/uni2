@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETW1001 Introduction to Statistical Analysis | Study Notes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <header class="bg-indigo-900 text-white sticky top-0 z-50 shadow">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../index.html" class="font-bold hover:text-indigo-200">← Back to Hub</a>
+            <span class="text-sm text-indigo-200">ETW1001</span>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8 prose">
+        <div class="mb-6">
+            <div class="text-sm font-semibold text-cyan-600">STATISTICS • LEVEL 1</div>
+            <h1 class="text-3xl font-bold text-slate-900 mt-1">ETW1001 – Introduction to Statistical Analysis</h1>
+            <p class="text-slate-600 mt-2">Descriptive analytics, probability, inference, regression and forecasting using Excel.</p>
+        </div>
+
+        <h2>1. Unit Overview</h2>
+        <p>Introduces the four types of analytics (descriptive, diagnostic, predictive, prescriptive) with a strong practical focus. You will learn to summarise data, handle uncertainty with probability, make inferences, build simple regression models and communicate results clearly. Excel is the main tool.</p>
+
+        <h2>2. Key Definitions</h2>
+
+        <div class="definition-box">
+            <strong>Descriptive Statistics</strong><br>
+            Methods used to summarise and describe the main features of a data set (mean, median, mode, standard deviation, graphs).
+        </div>
+
+        <div class="definition-box">
+            <strong>Population vs Sample</strong><br>
+            Population = entire group of interest. Sample = subset selected for analysis. We use sample statistics to make inferences about population parameters.
+        </div>
+
+        <div class="definition-box">
+            <strong>Probability</strong><br>
+            A numerical measure of the likelihood that an event will occur, ranging from 0 to 1.
+        </div>
+
+        <div class="definition-box">
+            <strong>Confidence Interval</strong><br>
+            A range of values, calculated from sample data, that is likely to contain the true population parameter with a stated level of confidence (e.g., 95%).
+        </div>
+
+        <div class="definition-box">
+            <strong>Hypothesis Testing</strong><br>
+            A formal procedure to decide whether sample evidence supports or rejects a claim about a population parameter.
+        </div>
+
+        <div class="definition-box">
+            <strong>Simple Linear Regression</strong><br>
+            A statistical method that models the relationship between a dependent variable (Y) and a single independent variable (X) using a straight line.
+        </div>
+
+        <h2>3. Core Formulas & Concepts</h2>
+
+        <h3>Measures of Central Tendency</h3>
+        <div class="formula-box">
+            Mean (x̄) = Σx / n<br>
+            Median = middle value when data is ordered<br>
+            Mode = most frequent value
+        </div>
+
+        <h3>Measures of Dispersion</h3>
+        <div class="formula-box">
+            Variance (s²) = Σ(x – x̄)² / (n – 1)<br>
+            Standard Deviation (s) = √variance<br>
+            Range = Max – Min
+        </div>
+
+        <h3>Z-score</h3>
+        <div class="formula-box">
+            z = (x – μ) / σ
+        </div>
+
+        <h3>Confidence Interval for Mean (σ known)</h3>
+        <div class="formula-box">
+            x̄ ± z<sub>α/2</sub> × (σ / √n)
+        </div>
+
+        <h3>Hypothesis Testing Steps</h3>
+        <ol>
+            <li>State H₀ and H₁</li>
+            <li>Choose significance level α (usually 0.05)</li>
+            <li>Select test statistic and compute its value</li>
+            <li>Find p-value or critical value</li>
+            <li>Make decision and interpret in context</li>
+        </ol>
+
+        <h3>Simple Linear Regression</h3>
+        <div class="formula-box">
+            Ŷ = b₀ + b₁X<br>
+            where b₁ = slope, b₀ = intercept
+        </div>
+        <p>R² measures the proportion of variation in Y explained by X.</p>
+
+        <h2>4. Worked Examples</h2>
+
+        <div class="example-box">
+            <strong>Mean & SD</strong><br>
+            Data: 4, 6, 8, 10, 12<br>
+            Mean = 8<br>
+            Variance = [(4-8)² + (6-8)² + … + (12-8)²] / 4 = 10<br>
+            SD = √10 ≈ 3.16
+        </div>
+
+        <div class="example-box">
+            <strong>Interpretation of Regression</strong><br>
+            Ŷ = 2.5 + 0.8X (X = advertising spend in RM’000, Y = sales in RM’000)<br>
+            Slope 0.8 means: for every additional RM1,000 spent on advertising, sales are expected to increase by RM800, on average.
+        </div>
+
+        <h2>5. Exam Tips</h2>
+        <div class="tip-box">
+            <ul>
+                <li>Know when to use mean vs median (skewed data → median).</li>
+                <li>Always interpret results in the business context – numbers alone are not enough.</li>
+                <li>Practise Excel: AVERAGE, STDEV.S, CORREL, Data Analysis ToolPak (Regression, Descriptive Statistics).</li>
+                <li>For hypothesis tests, clearly state the conclusion in words (“There is sufficient evidence…”).</li>
+                <li>Understand Type I and Type II errors.</li>
+            </ul>
+        </div>
+
+        <div class="mt-10 pt-6 border-t border-slate-200 flex justify-between text-sm">
+            <a href="ecm1953.html" class="text-indigo-600 hover:underline">← ECM1953</a>
+            <a href="mgw1010.html" class="text-indigo-600 hover:underline">Next: MGW1010 →</a>
+        </div>
+    </main>
+</body>
+</html>
