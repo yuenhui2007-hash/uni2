@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACW2220 Management Accounting 1 | Study Notes</title>
+    <title>ACW2220 Management Accounting 1 | Detailed Study Notes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
     <header class="bg-indigo-900 text-white sticky top-0 z-50 shadow">
         <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
             <a href="../index.html" class="font-bold hover:text-indigo-200">← Back to Hub</a>
-            <span class="text-sm text-indigo-200">ACW2220</span>
+            <span class="text-sm text-indigo-200">ACW2220 • Detailed Notes</span>
         </div>
     </header>
 
@@ -20,111 +20,110 @@
         <div class="mb-6">
             <div class="text-sm font-semibold text-indigo-600">ACCOUNTING • LEVEL 2</div>
             <h1 class="text-3xl font-bold text-slate-900 mt-1">ACW2220 – Management Accounting 1</h1>
-            <p class="text-slate-600 mt-2">Cost information for planning, control and decision-making inside the organisation.</p>
+            <p class="text-slate-600 mt-2">Detailed notes: Cost behaviour, CVP analysis, product costing, relevant costing for decisions.</p>
         </div>
 
         <h2>1. Unit Overview</h2>
-        <p>This unit focuses on the production and use of cost information to help managers plan, control operations and make decisions. Unlike financial accounting (external), management accounting is internal, forward-looking and not bound by accounting standards.</p>
+        <p>Management accounting provides information to internal managers for planning, control and decision-making. Unlike financial accounting, it is future-oriented, not bound by accounting standards, and emphasises relevance for decisions.</p>
 
-        <h2>2. Key Definitions</h2>
+        <h2>2. Cost Classification</h2>
 
+        <h3>By Behaviour</h3>
+        <ul>
+            <li><strong>Variable costs</strong> – change in total in direct proportion to activity level (e.g. direct materials). Variable cost per unit is constant.</li>
+            <li><strong>Fixed costs</strong> – remain constant in total within the relevant range (e.g. factory rent). Fixed cost per unit falls as activity rises.</li>
+            <li><strong>Mixed (semi-variable) costs</strong> – contain both fixed and variable components.</li>
+        </ul>
+
+        <h3>By Traceability</h3>
+        <ul>
+            <li><strong>Direct costs</strong> – can be traced conveniently and economically to a cost object.</li>
+            <li><strong>Indirect costs</strong> – cannot be traced conveniently; must be allocated.</li>
+        </ul>
+
+        <h3>By Function</h3>
+        <ul>
+            <li>Manufacturing costs (Direct Materials + Direct Labour + Manufacturing Overhead)</li>
+            <li>Non-manufacturing costs (Selling & Administrative)</li>
+        </ul>
+
+        <h2>3. Cost-Volume-Profit (CVP) Analysis</h2>
         <div class="definition-box">
-            <strong>Management Accounting</strong><br>
-            The process of identifying, measuring, analysing, interpreting and communicating information to managers to help achieve organisational objectives.
+            <strong>Contribution Margin (CM)</strong> = Sales − All Variable Costs<br>
+            CM is the amount that contributes first to covering fixed costs and then to profit.
         </div>
 
-        <div class="definition-box">
-            <strong>Cost Object</strong><br>
-            Anything for which a separate measurement of cost is desired (product, service, department, customer, project).
-        </div>
-
-        <div class="definition-box">
-            <strong>Direct Cost vs Indirect Cost</strong><br>
-            Direct – can be traced conveniently and economically to a cost object.<br>
-            Indirect – cannot be traced conveniently; must be allocated.
-        </div>
-
-        <div class="definition-box">
-            <strong>Variable Cost vs Fixed Cost</strong><br>
-            Variable – changes in total in proportion to changes in activity level.<br>
-            Fixed – remains constant in total within the relevant range.
-        </div>
-
-        <div class="definition-box">
-            <strong>Contribution Margin</strong><br>
-            Sales revenue minus all variable costs. It contributes towards covering fixed costs and then to profit.
-        </div>
-
-        <div class="definition-box">
-            <strong>Relevant Cost</strong><br>
-            A future cost that differs between alternatives. Sunk costs are irrelevant.
-        </div>
-
-        <h2>3. Core Concepts & Formulas</h2>
-
-        <h3>Cost Behaviour</h3>
         <div class="formula-box">
-            Total Cost = Fixed Cost + (Variable Cost per unit × Activity level)
-        </div>
-
-        <h3>Cost-Volume-Profit (CVP) Analysis</h3>
-        <div class="formula-box">
-            Contribution Margin (CM) = Sales – Variable Costs<br>
-            CM Ratio = CM / Sales<br>
+            CM per unit = Selling Price − Variable Cost per unit<br>
+            CM Ratio = CM / Sales<br><br>
             Break-even point (units) = Fixed Costs / CM per unit<br>
-            Break-even point (RM) = Fixed Costs / CM Ratio<br>
-            Target Profit units = (Fixed Costs + Target Profit) / CM per unit
+            Break-even point (RM) = Fixed Costs / CM Ratio<br><br>
+            Units for Target Profit = (Fixed Costs + Target Profit) / CM per unit
         </div>
 
-        <h3>Product Costing</h3>
+        <h3>Assumptions of CVP</h3>
         <ul>
-            <li><strong>Job costing</strong> – costs accumulated by individual job/order (custom work).</li>
-            <li><strong>Process costing</strong> – costs averaged over identical/similar units (mass production).</li>
-            <li><strong>Activity-Based Costing (ABC)</strong> – allocates overhead based on activities that drive costs.</li>
+            <li>Selling price, variable cost per unit and total fixed costs are constant</li>
+            <li>Costs are linear</li>
+            <li>Sales mix is constant (multi-product)</li>
+            <li>Inventory levels do not change</li>
         </ul>
 
-        <h3>Relevant Costing for Decisions</h3>
+        <div class="example-box">
+            <strong>CVP Example</strong><br>
+            SP = RM80, VC = RM50, Fixed costs = RM90,000, Target profit = RM30,000<br>
+            CM per unit = 30<br>
+            Break-even units = 90,000 / 30 = <strong>3,000 units</strong><br>
+            Break-even sales = 3,000 × 80 = <strong>RM240,000</strong><br>
+            Units for target profit = (90,000 + 30,000) / 30 = <strong>4,000 units</strong>
+        </div>
+
+        <h2>4. Relevant Costing for Decisions</h2>
+        <div class="definition-box">
+            <strong>Relevant Cost</strong> – a future cost that differs between alternatives. Sunk costs are irrelevant. Allocated fixed costs that do not change are usually irrelevant.
+        </div>
+
+        <h3>Special Order Decision</h3>
+        <p>With spare capacity: accept if the special-order price covers incremental variable costs (and any extra fixed costs) and generates a positive contribution.</p>
+        <div class="example-box">
+            Normal SP RM100, VC RM60. Customer offers RM75 for 500 units. Spare capacity exists, no extra fixed costs.<br>
+            Incremental profit = (75 − 60) × 500 = <strong>RM7,500 → Accept</strong>
+        </div>
+
+        <h3>Make or Buy Decision</h3>
+        <p>Compare relevant cost to make (DM + DL + Variable OH + any avoidable fixed costs) with the purchase price. Ignore allocated fixed costs that continue either way.</p>
+        <div class="example-box">
+            Make: DM 20 + DL 15 + Var OH 8 + Allocated Fixed 10 = 53<br>
+            Relevant make cost = 20+15+8 = 43 (fixed continues)<br>
+            Supplier quote = 40 → <strong>Buy</strong> (saves 3 per unit)
+        </div>
+
+        <h3>Keep or Drop a Product Line</h3>
+        <p>Focus on avoidable costs and lost contribution margin. If the contribution margin lost exceeds the fixed costs saved, keep the line.</p>
+
+        <h2>5. Product Costing Systems (Overview)</h2>
         <ul>
-            <li>Special order decisions</li>
-            <li>Make or buy decisions</li>
-            <li>Keep or drop a product line</li>
-            <li>Product mix with constrained resources</li>
+            <li><strong>Job Costing</strong> – costs collected by individual job (customised products/services).</li>
+            <li><strong>Process Costing</strong> – costs averaged over large numbers of identical units.</li>
+            <li><strong>Activity-Based Costing (ABC)</strong> – overhead allocated using multiple activity cost drivers for more accurate product costs.</li>
         </ul>
-        <p>Rule: Focus on differential (incremental) revenues and costs. Ignore sunk costs and allocated fixed costs that do not change.</p>
 
-        <h2>4. Worked Examples</h2>
+        <h2>6. Common Mistakes</h2>
+        <ul>
+            <li>Including sunk costs or unchanged allocated fixed costs in decisions.</li>
+            <li>Using total costs instead of incremental costs for special orders.</li>
+            <li>Forgetting that fixed cost per unit changes with volume.</li>
+            <li>Mixing contribution margin with gross profit.</li>
+        </ul>
 
-        <div class="example-box">
-            <strong>Break-even Calculation</strong><br>
-            Selling price = RM50; Variable cost = RM30; Fixed costs = RM40,000<br>
-            CM per unit = 50 – 30 = RM20<br>
-            Break-even units = 40,000 / 20 = <strong>2,000 units</strong><br>
-            Break-even sales = 2,000 × 50 = <strong>RM100,000</strong>
-        </div>
-
-        <div class="example-box">
-            <strong>Special Order</strong><br>
-            Normal price RM80; Variable cost RM45; Fixed costs unchanged.<br>
-            Customer offers RM60 for 500 units. Spare capacity exists.<br>
-            Relevant profit = (60 – 45) × 500 = <strong>RM7,500 positive → Accept</strong>
-        </div>
-
-        <div class="example-box">
-            <strong>Make or Buy</strong><br>
-            Cost to make: DM 12 + DL 8 + Variable OH 5 + Allocated Fixed OH 6 = RM31<br>
-            Supplier quote: RM28<br>
-            Relevant make cost = 12+8+5 = RM25 (ignore allocated fixed if it continues)<br>
-            Buying saves RM3 per unit → Buy if quality and reliability are acceptable.
-        </div>
-
-        <h2>5. Exam Tips</h2>
+        <h2>7. Exam Tips</h2>
         <div class="tip-box">
             <ul>
-                <li>Always identify what is relevant – future and differential.</li>
-                <li>Draw contribution format income statements for CVP questions.</li>
-                <li>State assumptions of CVP (linear costs/revenues, constant sales mix, etc.).</li>
-                <li>For ABC, focus on identifying cost drivers.</li>
-                <li>Show clear workings; labels (DM, DL, OH) matter.</li>
+                <li>Always identify what changes between alternatives — only those items are relevant.</li>
+                <li>Prepare a contribution-format income statement for CVP questions.</li>
+                <li>State assumptions when using CVP.</li>
+                <li>Show clear workings with labels (DM, DL, OH, etc.).</li>
+                <li>End every decision question with a clear recommendation and brief reason.</li>
             </ul>
         </div>
 

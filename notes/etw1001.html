@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETW1001 Introduction to Statistical Analysis | Study Notes</title>
+    <title>ETW1001 Statistical Analysis | Detailed Study Notes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
     <header class="bg-indigo-900 text-white sticky top-0 z-50 shadow">
         <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
             <a href="../index.html" class="font-bold hover:text-indigo-200">← Back to Hub</a>
-            <span class="text-sm text-indigo-200">ETW1001</span>
+            <span class="text-sm text-indigo-200">ETW1001 • Detailed Notes</span>
         </div>
     </header>
 
@@ -20,110 +20,90 @@
         <div class="mb-6">
             <div class="text-sm font-semibold text-cyan-600">STATISTICS • LEVEL 1</div>
             <h1 class="text-3xl font-bold text-slate-900 mt-1">ETW1001 – Introduction to Statistical Analysis</h1>
-            <p class="text-slate-600 mt-2">Descriptive analytics, probability, inference, regression and forecasting using Excel.</p>
+            <p class="text-slate-600 mt-2">Detailed notes: Descriptive statistics, probability, inference, regression, Excel focus.</p>
         </div>
 
         <h2>1. Unit Overview</h2>
-        <p>Introduces the four types of analytics (descriptive, diagnostic, predictive, prescriptive) with a strong practical focus. You will learn to summarise data, handle uncertainty with probability, make inferences, build simple regression models and communicate results clearly. Excel is the main tool.</p>
+        <p>Covers the four analytics types (descriptive, diagnostic, predictive, prescriptive). Strong emphasis on interpreting results in a business context and using Excel.</p>
 
-        <h2>2. Key Definitions</h2>
-
-        <div class="definition-box">
-            <strong>Descriptive Statistics</strong><br>
-            Methods used to summarise and describe the main features of a data set (mean, median, mode, standard deviation, graphs).
-        </div>
-
-        <div class="definition-box">
-            <strong>Population vs Sample</strong><br>
-            Population = entire group of interest. Sample = subset selected for analysis. We use sample statistics to make inferences about population parameters.
-        </div>
-
-        <div class="definition-box">
-            <strong>Probability</strong><br>
-            A numerical measure of the likelihood that an event will occur, ranging from 0 to 1.
-        </div>
-
-        <div class="definition-box">
-            <strong>Confidence Interval</strong><br>
-            A range of values, calculated from sample data, that is likely to contain the true population parameter with a stated level of confidence (e.g., 95%).
-        </div>
-
-        <div class="definition-box">
-            <strong>Hypothesis Testing</strong><br>
-            A formal procedure to decide whether sample evidence supports or rejects a claim about a population parameter.
-        </div>
-
-        <div class="definition-box">
-            <strong>Simple Linear Regression</strong><br>
-            A statistical method that models the relationship between a dependent variable (Y) and a single independent variable (X) using a straight line.
-        </div>
-
-        <h2>3. Core Formulas & Concepts</h2>
-
+        <h2>2. Descriptive Statistics</h2>
         <h3>Measures of Central Tendency</h3>
-        <div class="formula-box">
-            Mean (x̄) = Σx / n<br>
-            Median = middle value when data is ordered<br>
-            Mode = most frequent value
-        </div>
+        <ul>
+            <li><strong>Mean</strong> – arithmetic average. Sensitive to outliers.</li>
+            <li><strong>Median</strong> – middle value when ordered. Robust to outliers.</li>
+            <li><strong>Mode</strong> – most frequent value.</li>
+        </ul>
+        <p>Use median when data are skewed or contain extreme values.</p>
 
         <h3>Measures of Dispersion</h3>
         <div class="formula-box">
-            Variance (s²) = Σ(x – x̄)² / (n – 1)<br>
-            Standard Deviation (s) = √variance<br>
-            Range = Max – Min
+            Range = Max − Min<br>
+            Sample Variance s² = Σ(x − x̄)² / (n − 1)<br>
+            Sample Standard Deviation s = √s²
         </div>
 
-        <h3>Z-score</h3>
-        <div class="formula-box">
-            z = (x – μ) / σ
-        </div>
+        <h3>Other Useful Concepts</h3>
+        <ul>
+            <li>Percentiles and quartiles</li>
+            <li>Interquartile range (IQR) = Q3 − Q1</li>
+            <li>Z-score = (x − μ) / σ (how many SDs from the mean)</li>
+        </ul>
 
-        <h3>Confidence Interval for Mean (σ known)</h3>
+        <h2>3. Probability Basics</h2>
+        <ul>
+            <li>Probability ranges from 0 to 1</li>
+            <li>Addition rule, multiplication rule</li>
+            <li>Common distributions: Binomial, Normal (bell-shaped, defined by μ and σ)</li>
+        </ul>
+        <p>Empirical rule for Normal distribution: ~68% within 1 SD, ~95% within 2 SD, ~99.7% within 3 SD.</p>
+
+        <h2>4. Inferential Statistics</h2>
+        <h3>Confidence Intervals</h3>
         <div class="formula-box">
-            x̄ ± z<sub>α/2</sub> × (σ / √n)
+            CI for mean (σ known): x̄ ± z<sub>α/2</sub> × (σ / √n)
         </div>
+        <p>A 95% CI means: if we repeated the sampling process many times, approximately 95% of the intervals constructed would contain the true population mean.</p>
 
         <h3>Hypothesis Testing Steps</h3>
         <ol>
-            <li>State H₀ and H₁</li>
-            <li>Choose significance level α (usually 0.05)</li>
-            <li>Select test statistic and compute its value</li>
-            <li>Find p-value or critical value</li>
-            <li>Make decision and interpret in context</li>
+            <li>State H₀ (null) and H₁ (alternative)</li>
+            <li>Choose significance level α (commonly 0.05)</li>
+            <li>Calculate test statistic</li>
+            <li>Find p-value or compare with critical value</li>
+            <li>Decide: reject H₀ or fail to reject H₀</li>
+            <li>Interpret in business language</li>
         </ol>
+        <p><strong>Type I error</strong>: Reject true H₀ (false positive).<br>
+        <strong>Type II error</strong>: Fail to reject false H₀ (false negative).</p>
 
-        <h3>Simple Linear Regression</h3>
+        <h2>5. Simple Linear Regression</h2>
         <div class="formula-box">
-            Ŷ = b₀ + b₁X<br>
-            where b₁ = slope, b₀ = intercept
+            Ŷ = b₀ + b₁X
         </div>
-        <p>R² measures the proportion of variation in Y explained by X.</p>
-
-        <h2>4. Worked Examples</h2>
-
+        <ul>
+            <li>b₀ = intercept (predicted Y when X = 0)</li>
+            <li>b₁ = slope (change in predicted Y for a one-unit increase in X)</li>
+            <li>R² = proportion of variation in Y explained by X (0 to 1)</li>
+        </ul>
         <div class="example-box">
-            <strong>Mean & SD</strong><br>
-            Data: 4, 6, 8, 10, 12<br>
-            Mean = 8<br>
-            Variance = [(4-8)² + (6-8)² + … + (12-8)²] / 4 = 10<br>
-            SD = √10 ≈ 3.16
+            Ŷ = 12 + 2.5X (X = advertising RM’000, Y = sales RM’000)<br>
+            Slope 2.5 means: each additional RM1,000 of advertising is associated with RM2,500 higher sales on average.
         </div>
 
-        <div class="example-box">
-            <strong>Interpretation of Regression</strong><br>
-            Ŷ = 2.5 + 0.8X (X = advertising spend in RM’000, Y = sales in RM’000)<br>
-            Slope 0.8 means: for every additional RM1,000 spent on advertising, sales are expected to increase by RM800, on average.
-        </div>
+        <h2>6. Excel Skills to Master</h2>
+        <ul>
+            <li>AVERAGE, MEDIAN, STDEV.S, VAR.S</li>
+            <li>CORREL, Data Analysis ToolPak → Regression, Descriptive Statistics</li>
+            <li>Charts: histogram, scatter plot with trendline</li>
+        </ul>
 
-        <h2>5. Exam Tips</h2>
+        <h2>7. Exam Tips</h2>
         <div class="tip-box">
             <ul>
-                <li>Know when to use mean vs median (skewed data → median).</li>
-                <li>Always interpret results in the business context – numbers alone are not enough.</li>
-                <li>Practise Excel: AVERAGE, STDEV.S, CORREL, Data Analysis ToolPak (Regression, Descriptive Statistics).</li>
-                <li>For hypothesis tests, clearly state the conclusion in words (“There is sufficient evidence…”).</li>
-                <li>Understand Type I and Type II errors.</li>
+                <li>Always interpret numbers in context — “what does this mean for the business?”</li>
+                <li>State hypotheses clearly and write a conclusion in words.</li>
+                <li>Know when to prefer median over mean.</li>
+                <li>Practise reading regression output (coefficients, R², p-values).</li>
             </ul>
         </div>
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BFW1001 Foundations of Finance | Study Notes</title>
+    <title>BFW1001 Foundations of Finance | Detailed Study Notes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
     <header class="bg-indigo-900 text-white sticky top-0 z-50 shadow">
         <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
             <a href="../index.html" class="font-bold hover:text-indigo-200">← Back to Hub</a>
-            <span class="text-sm text-indigo-200">BFW1001</span>
+            <span class="text-sm text-indigo-200">BFW1001 • Detailed Notes</span>
         </div>
     </header>
 
@@ -20,112 +20,119 @@
         <div class="mb-6">
             <div class="text-sm font-semibold text-emerald-600">FINANCE • LEVEL 1</div>
             <h1 class="text-3xl font-bold text-slate-900 mt-1">BFW1001 – Foundations of Finance</h1>
-            <p class="text-slate-600 mt-2">Core concepts of finance, financial mathematics, investment analysis, the financial system and risk.</p>
+            <p class="text-slate-600 mt-2">Detailed notes: Time value of money, valuation, capital budgeting, financial system, risk & return.</p>
         </div>
 
         <h2>1. Unit Overview</h2>
-        <p>This unit provides a foundation in finance. You will learn the language of finance, how to value money across time, basic investment decision rules, the structure of the financial system, and the relationship between risk and return.</p>
+        <p>This unit builds the language and basic toolkit of finance. You will master the time value of money, learn how to value simple cash flow streams, evaluate investment projects, and understand the structure of the financial system and the risk-return relationship.</p>
 
-        <h2>2. Key Definitions</h2>
-
+        <h2>2. Core Concept: Time Value of Money (TVM)</h2>
         <div class="definition-box">
-            <strong>Time Value of Money (TVM)</strong><br>
-            A ringgit today is worth more than a ringgit in the future because of its earning potential (interest/opportunity). Money has a time value due to opportunity cost, inflation and risk.
+            <strong>Time Value of Money</strong><br>
+            A sum of money today is worth more than the same sum in the future because of its potential earning capacity (opportunity cost), inflation, and risk.
         </div>
 
-        <div class="definition-box">
-            <strong>Present Value (PV)</strong><br>
-            The current worth of a future sum of money or stream of cash flows, discounted at an appropriate rate.
-        </div>
+        <h3>Key Variables</h3>
+        <ul>
+            <li><strong>PV</strong> – Present Value (value today)</li>
+            <li><strong>FV</strong> – Future Value (value at a future date)</li>
+            <li><strong>r</strong> – interest rate / discount rate per period</li>
+            <li><strong>n</strong> – number of periods</li>
+            <li><strong>PMT</strong> – periodic payment (annuity)</li>
+        </ul>
 
-        <div class="definition-box">
-            <strong>Future Value (FV)</strong><br>
-            The value of a current sum of money at a future date after it has earned interest/compounded.
-        </div>
+        <h2>3. Essential Formulas (Memorise These)</h2>
 
-        <div class="definition-box">
-            <strong>Discount Rate / Required Rate of Return</strong><br>
-            The rate used to discount future cash flows. It reflects the opportunity cost of capital and the risk of the cash flows.
-        </div>
-
-        <div class="definition-box">
-            <strong>Capital Budgeting</strong><br>
-            The process of evaluating and selecting long-term investments (projects, assets) that are expected to generate cash flows over more than one year.
-        </div>
-
-        <h2>3. Core Formulas</h2>
-
-        <h3>Future Value of a Single Sum</h3>
+        <h3>Single Sum</h3>
         <div class="formula-box">
-            FV = PV × (1 + r)<sup>n</sup>
+            Future Value: FV = PV × (1 + r)<sup>n</sup><br>
+            Present Value: PV = FV / (1 + r)<sup>n</sup> = FV × (1 + r)<sup>−n</sup>
         </div>
 
-        <h3>Present Value of a Single Sum</h3>
+        <h3>Ordinary Annuity (payments at end of each period)</h3>
         <div class="formula-box">
-            PV = FV / (1 + r)<sup>n</sup> &nbsp;&nbsp; or &nbsp;&nbsp; PV = FV × (1 + r)<sup>-n</sup>
-        </div>
-
-        <h3>Future Value of an Ordinary Annuity</h3>
-        <div class="formula-box">
-            FV<sub>A</sub> = PMT × [(1 + r)<sup>n</sup> – 1] / r
-        </div>
-
-        <h3>Present Value of an Ordinary Annuity</h3>
-        <div class="formula-box">
-            PV<sub>A</sub> = PMT × [1 – (1 + r)<sup>-n</sup>] / r
+            FV of Annuity: FV<sub>A</sub> = PMT × [(1 + r)<sup>n</sup> − 1] / r<br>
+            PV of Annuity: PV<sub>A</sub> = PMT × [1 − (1 + r)<sup>−n</sup>] / r
         </div>
 
         <h3>Net Present Value (NPV)</h3>
         <div class="formula-box">
-            NPV = Σ [CF<sub>t</sub> / (1 + r)<sup>t</sup>] – Initial Investment
+            NPV = −Initial Investment + Σ [CF<sub>t</sub> / (1 + r)<sup>t</sup>]
         </div>
-        <p>Accept project if NPV > 0.</p>
+        <p><strong>Decision rule:</strong> Accept if NPV > 0; Reject if NPV < 0. When choosing between mutually exclusive projects, pick the highest positive NPV.</p>
 
-        <h3>Simple Interest vs Compound Interest</h3>
-        <div class="formula-box">
-            Simple: Interest = Principal × Rate × Time<br>
-            Compound: Interest is earned on interest (power of compounding)
-        </div>
-
-        <h2>4. Key Concepts</h2>
-        <ul>
-            <li><strong>Risk–Return Trade-off</strong>: Higher expected return is required for higher risk.</li>
-            <li><strong>Diversification</strong>: Spreading investments reduces unsystematic risk.</li>
-            <li><strong>Financial System</strong>: Markets (money market, capital market), institutions (banks, insurers, funds), and instruments (equity, debt, derivatives).</li>
-            <li><strong>Primary vs Secondary Markets</strong>: New issues vs trading of existing securities.</li>
-            <li><strong>Money Market</strong>: Short-term, highly liquid, low-risk instruments (T-bills, commercial paper).</li>
-            <li><strong>Capital Market</strong>: Longer-term instruments (shares, bonds).</li>
-        </ul>
-
-        <h2>5. Worked Examples</h2>
+        <h2>4. Worked Examples (Step-by-Step)</h2>
 
         <div class="example-box">
             <strong>Example 1 – Future Value</strong><br>
-            You invest RM10,000 today at 6% p.a. compounded annually for 5 years.<br>
-            FV = 10,000 × (1.06)<sup>5</sup> = 10,000 × 1.3382 = <strong>RM13,382</strong>
+            Invest RM10,000 today at 6% p.a. for 5 years (annual compounding).<br>
+            FV = 10,000 × (1.06)<sup>5</sup> = 10,000 × 1.338226 = <strong>RM13,382</strong>
         </div>
 
         <div class="example-box">
             <strong>Example 2 – Present Value</strong><br>
-            You will receive RM20,000 in 4 years. Discount rate is 8%.<br>
-            PV = 20,000 / (1.08)<sup>4</sup> = 20,000 / 1.3605 ≈ <strong>RM14,701</strong>
+            Need RM20,000 in 4 years. Discount rate 8%.<br>
+            PV = 20,000 / (1.08)<sup>4</sup> = 20,000 / 1.36049 ≈ <strong>RM14,701</strong>
         </div>
 
         <div class="example-box">
-            <strong>Example 3 – NPV Decision</strong><br>
-            Project costs RM50,000. Expected cash flows: Year 1 RM20,000; Year 2 RM25,000; Year 3 RM18,000. Required return 10%.<br>
-            PV of inflows = 20k/1.1 + 25k/1.21 + 18k/1.331 ≈ 18,182 + 20,661 + 13,523 = 52,366<br>
-            NPV = 52,366 – 50,000 = <strong>+RM2,366 → Accept</strong>
+            <strong>Example 3 – NPV</strong><br>
+            Project costs RM50,000. Cash flows: Year 1 RM18,000; Year 2 RM22,000; Year 3 RM25,000. Required return 10%.<br>
+            PV<sub>1</sub> = 18,000 / 1.10 = 16,364<br>
+            PV<sub>2</sub> = 22,000 / 1.21 = 18,182<br>
+            PV<sub>3</sub> = 25,000 / 1.331 ≈ 18,783<br>
+            Total PV of inflows = 53,329<br>
+            NPV = 53,329 − 50,000 = <strong>+RM3,329 → Accept</strong>
         </div>
 
-        <h2>6. Exam Tips</h2>
+        <div class="example-box">
+            <strong>Example 4 – PV of Ordinary Annuity</strong><br>
+            Receive RM4,000 at the end of each year for 5 years. Discount rate 9%.<br>
+            PV<sub>A</sub> = 4,000 × [1 − (1.09)<sup>−5</sup>] / 0.09<br>
+            (1.09)<sup>−5</sup> ≈ 0.6499<br>
+            [1 − 0.6499] / 0.09 = 3.8897<br>
+            PV<sub>A</sub> = 4,000 × 3.8897 ≈ <strong>RM15,559</strong>
+        </div>
+
+        <h2>5. Capital Budgeting Basics</h2>
+        <ul>
+            <li><strong>NPV</strong> – preferred method; directly measures value added.</li>
+            <li><strong>IRR</strong> – discount rate that makes NPV = 0. Accept if IRR > required return.</li>
+            <li><strong>Payback Period</strong> – time to recover initial investment. Simple but ignores TVM and cash flows after payback.</li>
+        </ul>
+        <p>When ranking mutually exclusive projects, NPV is generally superior to IRR (especially with different sizes or timing of cash flows).</p>
+
+        <h2>6. Financial System Overview</h2>
+        <ul>
+            <li><strong>Financial markets</strong> – bring savers and borrowers together (money market for short-term, capital market for long-term).</li>
+            <li><strong>Financial institutions</strong> – banks, insurance companies, unit trusts, pension funds, etc.</li>
+            <li><strong>Financial instruments</strong> – equity (shares), debt (bonds, loans), derivatives.</li>
+            <li><strong>Primary market</strong> – new issues; <strong>Secondary market</strong> – trading of existing securities.</li>
+        </ul>
+
+        <h2>7. Risk and Return</h2>
+        <div class="definition-box">
+            <strong>Risk–Return Trade-off</strong><br>
+            Investors require higher expected returns to compensate for bearing higher risk. Low-risk assets (e.g. government securities) offer lower expected returns; high-risk assets must offer higher expected returns to attract capital.
+        </div>
+        <p>Diversification can reduce unsystematic (company-specific) risk. Systematic risk (market risk) cannot be diversified away and is the risk that is priced in the market.</p>
+
+        <h2>8. Common Mistakes</h2>
+        <ul>
+            <li>Using the wrong number of periods (e.g. mixing years and months).</li>
+            <li>Forgetting that NPV already incorporates the required return — do not compare NPV with the discount rate.</li>
+            <li>Confusing ordinary annuity (end of period) with annuity due (beginning of period).</li>
+            <li>Adding cash flows instead of discounting them.</li>
+        </ul>
+
+        <h2>9. Exam Tips</h2>
         <div class="tip-box">
             <ul>
-                <li>Memorise the four main TVM formulas and know when to use each.</li>
-                <li>Draw timelines for multi-period problems.</li>
-                <li>NPV is preferred over IRR for ranking projects (especially mutually exclusive).</li>
-                <li>Understand the difference between ordinary annuity and annuity due.</li>
-                <li>Show all workings; calculators are usually allowed but method marks matter.</li>
+                <li>Draw a timeline for every multi-period problem.</li>
+                <li>Write the formula first, then substitute numbers.</li>
+                <li>Show intermediate PV factors — markers give method marks.</li>
+                <li>State the decision clearly (“Accept because NPV > 0”).</li>
+                <li>Practise both calculator and manual (formula) methods.</li>
             </ul>
         </div>
 
