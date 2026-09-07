@@ -5,63 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNI – Accountancy Pathway Core Notes</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              earth: {
-                50:  '#FBF6F0',
-                100: '#F2E6D8',
-                200: '#E8D5C4',
-                300: '#BF9B7A',
-                400: '#8C5B3E',
-                500: '#593E2E',
-                600: '#555934',
-                700: '#3D2A1F',
-              }
-            }
-          }
-        }
-      }
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-[#F2E6D8] text-[#593E2E] antialiased">
+<body class="bg-[#EBE0DD] text-[#4C6170] antialiased">
     <!-- Header -->
-    <header class="bg-[#593E2E] text-[#F2E6D8] sticky top-0 z-50 shadow-md">
+    <header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
         <div class="max-w-6xl mx-auto px-4 py-3.5 flex flex-wrap items-center justify-between gap-3">
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-lg bg-[#8C5B3E] flex items-center justify-center font-extrabold text-sm tracking-tight text-[#F2E6D8]">UNI</div>
+                <div class="w-9 h-9 rounded-lg bg-[#65695B] flex items-center justify-center font-extrabold text-sm tracking-tight text-[#EBE0DD]">UNI</div>
                 <div>
                     <div class="font-bold text-lg leading-tight tracking-tight">UNI</div>
-                    <div class="text-[#BF9B7A] text-xs">Accountancy Pathway Cores</div>
+                    <div class="text-[#C0C4B7] text-xs">Accountancy Pathway Cores</div>
                 </div>
             </div>
             <nav class="flex flex-wrap gap-1.5 text-sm">
-                <a href="index.html" class="px-3 py-1.5 bg-[#8C5B3E] rounded-lg font-medium text-[#F2E6D8]">Home</a>
-                <a href="#units" class="px-3 py-1.5 hover:bg-[#8C5B3E]/80 rounded-lg transition">Units</a>
-                <a href="assignments.html" class="px-3 py-1.5 hover:bg-[#8C5B3E]/80 rounded-lg transition">Assignments</a>
-                <a href="qa.html" class="px-3 py-1.5 hover:bg-[#8C5B3E]/80 rounded-lg transition">Q&A Bank</a>
+                <a href="index.html" class="px-3 py-1.5 bg-[#65695B] rounded-lg font-medium text-[#EBE0DD]">Home</a>
+                <a href="#units" class="px-3 py-1.5 hover:bg-[#65695B]/80 rounded-lg transition">Units</a>
+                <a href="assignments.html" class="px-3 py-1.5 hover:bg-[#65695B]/80 rounded-lg transition">Assignments</a>
+                <a href="qa.html" class="px-3 py-1.5 hover:bg-[#65695B]/80 rounded-lg transition">Q&A Bank</a>
             </nav>
         </div>
     </header>
 
     <!-- Hero -->
-    <section class="relative overflow-hidden bg-gradient-to-br from-[#593E2E] via-[#8C5B3E] to-[#555934] text-[#F2E6D8]">
-        <div class="absolute inset-0 opacity-25" style="background-image: radial-gradient(circle at 15% 50%, #BF9B7A 0%, transparent 45%), radial-gradient(circle at 85% 15%, #F2E6D8 0%, transparent 35%);"></div>
+    <section class="relative overflow-hidden bg-gradient-to-br from-[#4C6170] via-[#65695B] to-[#8A9EAB] text-[#EBE0DD]">
+        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 20% 50%, #9CA38E 0%, transparent 45%), radial-gradient(circle at 80% 20%, #EBE0DD 0%, transparent 35%);"></div>
         <div class="relative max-w-4xl mx-auto px-4 py-14 md:py-20 text-center">
-            <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wide uppercase bg-white/10 rounded-full border border-[#BF9B7A]/40">Monash B2026</div>
-            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-[#F2E6D8]">UNI Study Notes</h1>
-            <p class="text-[#E8D5C4] text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+            <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wide uppercase bg-white/10 rounded-full border border-[#C0C4B7]/40">Monash B2026</div>
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-[#EBE0DD]">UNI Study Notes</h1>
+            <p class="text-[#D9C3B6] text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
                 Clear, exam-ready notes for the 7 Accountancy pathway core units.<br class="hidden sm:block">
                 Definitions · Key concepts · Worked examples · Formulas · Practice Q&A
             </p>
             <div class="flex flex-wrap justify-center gap-3">
-                <a href="#units" class="bg-[#F2E6D8] text-[#593E2E] font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-white transition">Browse Units</a>
-                <a href="qa.html" class="border border-[#BF9B7A]/60 text-[#F2E6D8] font-semibold px-6 py-3 rounded-xl hover:bg-white/10 transition">Practice Q&A</a>
+                <a href="#units" class="bg-[#EBE0DD] text-[#4C6170] font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-white transition">Browse Units</a>
+                <a href="qa.html" class="border border-[#C0C4B7]/50 text-[#EBE0DD] font-semibold px-6 py-3 rounded-xl hover:bg-white/10 transition">Practice Q&A</a>
             </div>
         </div>
     </section>
@@ -69,84 +49,84 @@
     <!-- Stats -->
     <section class="max-w-6xl mx-auto px-4 -mt-6 relative z-10">
         <div class="grid grid-cols-3 gap-3 md:gap-4">
-            <div class="bg-[#FBF6F0] rounded-xl shadow-md border border-[#D4C0A8] p-4 md:p-5 text-center">
-                <div class="text-2xl md:text-3xl font-extrabold text-[#8C5B3E]">7</div>
-                <div class="text-xs md:text-sm text-[#8C5B3E]/80 mt-0.5">Core Units</div>
+            <div class="bg-[#F7F2EF] rounded-xl shadow-md border border-[#C0C4B7] p-4 md:p-5 text-center">
+                <div class="text-2xl md:text-3xl font-extrabold text-[#4C6170]">7</div>
+                <div class="text-xs md:text-sm text-[#65695B] mt-0.5">Core Units</div>
             </div>
-            <div class="bg-[#FBF6F0] rounded-xl shadow-md border border-[#D4C0A8] p-4 md:p-5 text-center">
-                <div class="text-2xl md:text-3xl font-extrabold text-[#8C5B3E]">42</div>
-                <div class="text-xs md:text-sm text-[#8C5B3E]/80 mt-0.5">Credit Points</div>
+            <div class="bg-[#F7F2EF] rounded-xl shadow-md border border-[#C0C4B7] p-4 md:p-5 text-center">
+                <div class="text-2xl md:text-3xl font-extrabold text-[#4C6170]">42</div>
+                <div class="text-xs md:text-sm text-[#65695B] mt-0.5">Credit Points</div>
             </div>
-            <div class="bg-[#FBF6F0] rounded-xl shadow-md border border-[#D4C0A8] p-4 md:p-5 text-center">
-                <div class="text-2xl md:text-3xl font-extrabold text-[#8C5B3E]">Y1</div>
-                <div class="text-xs md:text-sm text-[#8C5B3E]/80 mt-0.5">Recommended</div>
+            <div class="bg-[#F7F2EF] rounded-xl shadow-md border border-[#C0C4B7] p-4 md:p-5 text-center">
+                <div class="text-2xl md:text-3xl font-extrabold text-[#4C6170]">Y1</div>
+                <div class="text-xs md:text-sm text-[#65695B] mt-0.5">Recommended</div>
             </div>
         </div>
     </section>
 
     <!-- Notice -->
     <section class="max-w-6xl mx-auto px-4 mt-8">
-        <div class="bg-[#E8D5C4]/60 border border-[#BF9B7A]/50 rounded-xl p-4 md:p-5 text-sm text-[#593E2E]">
+        <div class="bg-[#D9C3B6]/40 border border-[#C0C4B7] rounded-xl p-4 md:p-5 text-sm text-[#4C6170]">
             <strong class="font-semibold">Note:</strong> Content is based on the Monash Handbook (2025–2026) and standard textbook concepts. Always cross-check with your current unit guide and Moodle.
         </div>
     </section>
 
     <!-- Units -->
     <section id="units" class="max-w-6xl mx-auto px-4 py-10 md:py-14">
-        <h2 class="text-xl md:text-2xl font-extrabold tracking-tight text-[#593E2E] mb-6">Part A – Accountancy Pathway Cores</h2>
+        <h2 class="text-xl md:text-2xl font-extrabold tracking-tight text-[#4C6170] mb-6">Part A – Accountancy Pathway Cores</h2>
         
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <a href="notes/acw1120.html" class="unit-card rounded-xl p-5 shadow-sm">
-                <div class="text-[11px] font-bold tracking-wider text-[#8C5B3E] uppercase mb-1">Accounting</div>
-                <div class="text-lg font-bold text-[#593E2E]">ACW1120</div>
-                <div class="font-medium text-[#8C5B3E] text-sm mb-1.5">Financial Accounting 1</div>
-                <p class="text-xs text-[#8C5B3E]/70 leading-relaxed">Conceptual Framework, double-entry, adjusting entries, statements</p>
+                <div class="text-[11px] font-bold tracking-wider text-[#8A9EAB] uppercase mb-1">Accounting</div>
+                <div class="text-lg font-bold text-[#4C6170]">ACW1120</div>
+                <div class="font-medium text-[#65695B] text-sm mb-1.5">Financial Accounting 1</div>
+                <p class="text-xs text-[#65695B]/80 leading-relaxed">Conceptual Framework, double-entry, adjusting entries, statements</p>
             </a>
             <a href="notes/bfw1001.html" class="unit-card rounded-xl p-5 shadow-sm">
-                <div class="text-[11px] font-bold tracking-wider text-[#555934] uppercase mb-1">Finance</div>
-                <div class="text-lg font-bold text-[#593E2E]">BFW1001</div>
-                <div class="font-medium text-[#8C5B3E] text-sm mb-1.5">Foundations of Finance</div>
-                <p class="text-xs text-[#8C5B3E]/70 leading-relaxed">Time value of money, NPV, valuation, risk & return</p>
+                <div class="text-[11px] font-bold tracking-wider text-[#9CA38E] uppercase mb-1">Finance</div>
+                <div class="text-lg font-bold text-[#4C6170]">BFW1001</div>
+                <div class="font-medium text-[#65695B] text-sm mb-1.5">Foundations of Finance</div>
+                <p class="text-xs text-[#65695B]/80 leading-relaxed">Time value of money, NPV, valuation, risk & return</p>
             </a>
             <a href="notes/btw1042.html" class="unit-card rounded-xl p-5 shadow-sm">
-                <div class="text-[11px] font-bold tracking-wider text-[#8C5B3E] uppercase mb-1">Law</div>
-                <div class="text-lg font-bold text-[#593E2E]">BTW1042</div>
-                <div class="font-medium text-[#8C5B3E] text-sm mb-1.5">Business Law</div>
-                <p class="text-xs text-[#8C5B3E]/70 leading-relaxed">Contract, negligence, agency, Malaysian legal system</p>
+                <div class="text-[11px] font-bold tracking-wider text-[#8A9EAB] uppercase mb-1">Law</div>
+                <div class="text-lg font-bold text-[#4C6170]">BTW1042</div>
+                <div class="font-medium text-[#65695B] text-sm mb-1.5">Business Law</div>
+                <p class="text-xs text-[#65695B]/80 leading-relaxed">Contract, negligence, agency, Malaysian legal system</p>
             </a>
             <a href="notes/ecm1953.html" class="unit-card rounded-xl p-5 shadow-sm">
-                <div class="text-[11px] font-bold tracking-wider text-[#555934] uppercase mb-1">Economics</div>
-                <div class="text-lg font-bold text-[#593E2E]">ECM1953</div>
-                <div class="font-medium text-[#8C5B3E] text-sm mb-1.5">Principles of Economics</div>
-                <p class="text-xs text-[#8C5B3E]/70 leading-relaxed">Demand & supply, elasticity, market structures, macro policy</p>
+                <div class="text-[11px] font-bold tracking-wider text-[#9CA38E] uppercase mb-1">Economics</div>
+                <div class="text-lg font-bold text-[#4C6170]">ECM1953</div>
+                <div class="font-medium text-[#65695B] text-sm mb-1.5">Principles of Economics</div>
+                <p class="text-xs text-[#65695B]/80 leading-relaxed">Demand & supply, elasticity, market structures, macro policy</p>
             </a>
             <a href="notes/etw1001.html" class="unit-card rounded-xl p-5 shadow-sm">
-                <div class="text-[11px] font-bold tracking-wider text-[#8C5B3E] uppercase mb-1">Statistics</div>
-                <div class="text-lg font-bold text-[#593E2E]">ETW1001</div>
-                <div class="font-medium text-[#8C5B3E] text-sm mb-1.5">Introduction to Statistical Analysis</div>
-                <p class="text-xs text-[#8C5B3E]/70 leading-relaxed">Descriptive stats, probability, regression, Excel</p>
+                <div class="text-[11px] font-bold tracking-wider text-[#8A9EAB] uppercase mb-1">Statistics</div>
+                <div class="text-lg font-bold text-[#4C6170]">ETW1001</div>
+                <div class="font-medium text-[#65695B] text-sm mb-1.5">Introduction to Statistical Analysis</div>
+                <p class="text-xs text-[#65695B]/80 leading-relaxed">Descriptive stats, probability, regression, Excel</p>
             </a>
             <a href="notes/mgw1010.html" class="unit-card rounded-xl p-5 shadow-sm">
-                <div class="text-[11px] font-bold tracking-wider text-[#555934] uppercase mb-1">Management</div>
-                <div class="text-lg font-bold text-[#593E2E]">MGW1010</div>
-                <div class="font-medium text-[#8C5B3E] text-sm mb-1.5">Introduction to Management</div>
-                <p class="text-xs text-[#8C5B3E]/70 leading-relaxed">Theories, leadership, ethics, contingency approach</p>
+                <div class="text-[11px] font-bold tracking-wider text-[#9CA38E] uppercase mb-1">Management</div>
+                <div class="text-lg font-bold text-[#4C6170]">MGW1010</div>
+                <div class="font-medium text-[#65695B] text-sm mb-1.5">Introduction to Management</div>
+                <p class="text-xs text-[#65695B]/80 leading-relaxed">Theories, leadership, ethics, contingency approach</p>
             </a>
             <a href="notes/acw2220.html" class="unit-card rounded-xl p-5 shadow-sm sm:col-span-2 lg:col-span-1">
-                <div class="text-[11px] font-bold tracking-wider text-[#8C5B3E] uppercase mb-1">Accounting · Level 2</div>
-                <div class="text-lg font-bold text-[#593E2E]">ACW2220</div>
-                <div class="font-medium text-[#8C5B3E] text-sm mb-1.5">Management Accounting 1</div>
-                <p class="text-xs text-[#8C5B3E]/70 leading-relaxed">Cost behaviour, CVP, relevant costing, decisions</p>
+                <div class="text-[11px] font-bold tracking-wider text-[#8A9EAB] uppercase mb-1">Accounting · Level 2</div>
+                <div class="text-lg font-bold text-[#4C6170]">ACW2220</div>
+                <div class="font-medium text-[#65695B] text-sm mb-1.5">Management Accounting 1</div>
+                <p class="text-xs text-[#65695B]/80 leading-relaxed">Cost behaviour, CVP, relevant costing, decisions</p>
             </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#593E2E] text-[#BF9B7A] py-8 mt-4">
+    <footer class="bg-[#4C6170] text-[#C0C4B7] py-8 mt-4">
         <div class="max-w-6xl mx-auto px-4 text-center text-sm">
-            <div class="font-semibold text-[#F2E6D8] mb-1">UNI Study Hub</div>
+            <div class="font-semibold text-[#EBE0DD] mb-1">UNI Study Hub</div>
             <p>Monash B2026 Accountancy Pathway · For personal exam revision</p>
-            <p class="mt-2 text-xs text-[#8C5B3E]">Based on official Handbook overviews and standard textbook concepts. Not affiliated with Monash University.</p>
+            <p class="mt-2 text-xs text-[#8A9EAB]">Based on official Handbook overviews and standard textbook concepts. Not affiliated with Monash University.</p>
         </div>
     </footer>
 </body>
