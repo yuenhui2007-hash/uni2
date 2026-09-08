@@ -23,6 +23,38 @@
 <h2>1. Statistical Reasoning in Business</h2>
 <p>Decisions under uncertainty require (i) summarising sample evidence and (ii) quantifying uncertainty about population parameters. Misinterpretation of p-values, confidence intervals and R² is more costly than arithmetic slips — exams increasingly test interpretation.</p>
 
+
+        <h3>Visual: Normal distribution &amp; empirical rule</h3>
+        <div class="overflow-x-auto my-4">
+<svg viewBox="0 0 400 200" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
+  <line x1="30" y1="170" x2="370" y2="170" stroke="#4C6170" stroke-width="2"/>
+  <path d="M40,170 Q80,160 100,120 Q140,40 200,30 Q260,40 300,120 Q320,160 360,170" fill="#E4E7DF" stroke="#65695B" stroke-width="2"/>
+  <line x1="200" y1="30" x2="200" y2="170" stroke="#4C6170" stroke-width="1.5" stroke-dasharray="3"/>
+  <text x="200" y="188" text-anchor="middle" fill="#4C6170" font-size="11" font-family="sans-serif">μ</text>
+  <line x1="140" y1="170" x2="140" y2="155" stroke="#8A9EAB" stroke-width="2"/>
+  <line x1="260" y1="170" x2="260" y2="155" stroke="#8A9EAB" stroke-width="2"/>
+  <text x="200" y="155" text-anchor="middle" fill="#65695B" font-size="10" font-family="sans-serif">≈68% within 1σ</text>
+  <text x="200" y="12" text-anchor="middle" fill="#4C6170" font-size="11" font-family="sans-serif">Bell curve</text>
+</svg>
+        </div>
+        <h3>Visual: Regression line</h3>
+        <div class="overflow-x-auto my-4">
+<svg viewBox="0 0 360 240" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
+  <line x1="40" y1="200" x2="330" y2="200" stroke="#4C6170" stroke-width="2"/>
+  <line x1="40" y1="200" x2="40" y2="30" stroke="#4C6170" stroke-width="2"/>
+  <text x="185" y="225" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">X</text>
+  <text x="16" y="120" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif" transform="rotate(-90 16 120)">Y</text>
+  <line x1="50" y1="170" x2="310" y2="50" stroke="#9CA38E" stroke-width="2.5"/>
+  <circle cx="80" cy="155" r="4" fill="#4C6170"/>
+  <circle cx="120" cy="140" r="4" fill="#4C6170"/>
+  <circle cx="160" cy="100" r="4" fill="#4C6170"/>
+  <circle cx="200" cy="115" r="4" fill="#4C6170"/>
+  <circle cx="240" cy="80" r="4" fill="#4C6170"/>
+  <circle cx="280" cy="55" r="4" fill="#4C6170"/>
+  <text x="250" y="45" fill="#65695B" font-size="11" font-family="sans-serif">Ŷ = b₀ + b₁X</text>
+</svg>
+        </div>
+
 <h2>2. Descriptives with Design Intent</h2>
 <p>Mean vs median: use median under skewness/outliers; mean for roughly symmetric data and as input to many inferential procedures. Sample variance uses n−1 (Bessel’s correction) for unbiasedness of σ² under iid normal sampling. Empirical rule / Chebyshev: know which requires normality assumptions.</p>
 

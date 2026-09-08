@@ -24,6 +24,55 @@
 <p>Introductory corporate finance adopts shareholder-wealth maximisation (or firm-value maximisation) as the normative objective under complete contracting and well-functioning markets. In the presence of agency conflicts, asymmetric information and externalities, this benchmark is qualified — but exam technique still uses NPV as the operational expression of value creation unless the question explicitly introduces constraints (capital rationing, ESG mandates, stakeholder trade-offs).</p>
 <p>Three decision classes: <strong>investment</strong> (which real assets), <strong>financing</strong> (claims against the firm), <strong>payout/liquidity</strong> (distributions and net working capital). Separation of investment and financing (Modigliani–Miller ideal) is taught as a baseline; when capital structure matters, WACC and adjusted present value appear in later units.</p>
 
+
+        <h3>Visual: Cash-flow timeline</h3>
+        <div class="overflow-x-auto my-4">
+<svg viewBox="0 0 520 110" class="w-full max-w-lg mx-auto" xmlns="http://www.w3.org/2000/svg">
+  <line x1="40" y1="55" x2="480" y2="55" stroke="#4C6170" stroke-width="3"/>
+  <circle cx="60" cy="55" r="9" fill="#4C6170"/>
+  <circle cx="180" cy="55" r="9" fill="#9CA38E"/>
+  <circle cx="300" cy="55" r="9" fill="#9CA38E"/>
+  <circle cx="420" cy="55" r="9" fill="#65695B"/>
+  <text x="60" y="30" text-anchor="middle" fill="#4C6170" font-size="12" font-weight="700" font-family="sans-serif">t=0</text>
+  <text x="60" y="88" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif">−I₀</text>
+  <text x="180" y="30" text-anchor="middle" fill="#4C6170" font-size="12" font-family="sans-serif">t=1</text>
+  <text x="180" y="88" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif">CF₁</text>
+  <text x="300" y="30" text-anchor="middle" fill="#4C6170" font-size="12" font-family="sans-serif">t=2</text>
+  <text x="300" y="88" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif">CF₂</text>
+  <text x="420" y="30" text-anchor="middle" fill="#4C6170" font-size="12" font-family="sans-serif">t=n</text>
+  <text x="420" y="88" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif">CFₙ</text>
+  <text x="250" y="15" text-anchor="middle" fill="#8A9EAB" font-size="11" font-family="sans-serif">discount → PV &nbsp;|&nbsp; compound → FV</text>
+</svg>
+        </div>
+        <h3>Visual: Risk–return trade-off</h3>
+        <div class="overflow-x-auto my-4">
+<svg viewBox="0 0 400 260" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
+  <line x1="50" y1="220" x2="370" y2="220" stroke="#4C6170" stroke-width="2"/>
+  <line x1="50" y1="220" x2="50" y2="30" stroke="#4C6170" stroke-width="2"/>
+  <text x="210" y="248" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif">Systematic risk (β) →</text>
+  <text x="18" y="130" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif" transform="rotate(-90 18 130)">E[R] →</text>
+  <line x1="70" y1="190" x2="340" y2="50" stroke="#9CA38E" stroke-width="3"/>
+  <circle cx="100" cy="175" r="7" fill="#4C6170"/><text x="100" y="162" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">Rf</text>
+  <circle cx="200" cy="120" r="7" fill="#65695B"/><text x="200" y="107" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">Market</text>
+  <circle cx="300" cy="70" r="7" fill="#8A9EAB"/><text x="300" y="57" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">High-β</text>
+  <text x="250" y="200" fill="#9CA38E" font-size="11" font-family="sans-serif">SML / trade-off</text>
+</svg>
+        </div>
+        <h3>Visual: NPV profile (IRR = root)</h3>
+        <div class="overflow-x-auto my-4">
+<svg viewBox="0 0 400 220" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
+  <line x1="40" y1="110" x2="370" y2="110" stroke="#4C6170" stroke-width="2"/>
+  <line x1="40" y1="200" x2="40" y2="20" stroke="#4C6170" stroke-width="2"/>
+  <text x="205" y="215" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">Discount rate r →</text>
+  <text x="14" y="115" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif" transform="rotate(-90 14 115)">NPV</text>
+  <path d="M50,40 Q120,50 180,110 Q250,180 350,195" fill="none" stroke="#65695B" stroke-width="3"/>
+  <circle cx="180" cy="110" r="6" fill="#4C6170"/>
+  <text x="195" y="100" fill="#4C6170" font-size="11" font-weight="700" font-family="sans-serif">IRR</text>
+  <text x="80" y="55" fill="#9CA38E" font-size="11" font-family="sans-serif">NPV&gt;0</text>
+  <text x="280" y="170" fill="#8A9EAB" font-size="11" font-family="sans-serif">NPV&lt;0</text>
+</svg>
+        </div>
+
 <h2>2. Discounted Cash Flow Algebra</h2>
 <div class="definition-box">
 Present value is the current market value of a promised (or expected) future payoff, obtained by discounting at a rate that compensates for time and risk. Arbitrage-free pricing in frictionless markets equates PV to the cost of a replicating portfolio.
