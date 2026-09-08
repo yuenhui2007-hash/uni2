@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BFW1001 Foundations of Finance | UNI Deep Notes</title>
+    <title>BFW1001 Foundations of Finance | UNI Degree Notes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -12,111 +12,90 @@
     <header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
         <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
             <a href="../index.html" class="font-bold hover:text-white">← UNI</a>
-            <span class="text-sm text-[#C0C4B7]">BFW1001 · Deep Notes</span>
+            <span class="text-sm text-[#C0C4B7]">BFW1001 · Degree-level</span>
         </div>
     </header>
-
     <main class="max-w-4xl mx-auto px-4 py-8 prose">
         <div class="mb-6">
-            <div class="text-sm font-semibold text-[#9CA38E]">FINANCE · LEVEL 1</div>
-            <h1 class="text-3xl font-bold text-[#4C6170] mt-1">BFW1001 – Foundations of Finance</h1>
-            <p class="text-[#65695B] mt-2">Deep conceptual notes: TVM, valuation, capital budgeting, risk</p>
+            <div class="text-sm font-semibold text-[#9CA38E]">FINANCE · LEVEL 1 · EXAM DEPTH</div>
+            <h1 class="text-3xl font-bold mt-1">BFW1001 – Foundations of Finance</h1>
+            <p class="text-[#65695B] mt-2">Degree-level: TVM mechanics, capital budgeting logic, risk pricing intuition, market structure</p>
         </div>
 
-        <h2>1. What Finance Is About</h2>
-        <p>Finance studies how individuals, firms and markets allocate scarce resources over time under uncertainty. Three big questions for a firm:</p>
+        <h2>1. Corporate Finance Decision Map</h2>
+        <p>Finance studies intertemporal allocation of resources under uncertainty. For the firm, the core problems are:</p>
         <ul>
-            <li><strong>Investment decision</strong> – Which real assets should the firm acquire? (capital budgeting)</li>
-            <li><strong>Financing decision</strong> – How should the firm raise funds? (debt vs equity, capital structure)</li>
-            <li><strong>Payout / working capital</strong> – How to manage short-term resources and return cash to owners</li>
+            <li><strong>Investment (capital budgeting):</strong> which real assets to acquire</li>
+            <li><strong>Financing (capital structure):</strong> debt vs equity mix and security design</li>
+            <li><strong>Payout and liquidity:</strong> dividends/repurchases and working-capital policy</li>
         </ul>
-        <p>The guiding principle is to maximise the value of the firm (or shareholder wealth) in a way consistent with risk and return.</p>
+        <p>The normative benchmark in introductory corporate finance is maximisation of firm value (shareholder wealth), subject to risk and capital-market constraints. Exam answers should link techniques (NPV, etc.) back to this objective — not treat formulas as ends in themselves.</p>
 
-        <h2>2. Time Value of Money – Conceptual Foundation</h2>
+        <h2>2. Time Value of Money — Theory and Mechanics</h2>
         <div class="definition-box">
-            A sum of money available today is worth more than the same sum in the future because (1) it can be invested to earn a return, (2) inflation erodes purchasing power, and (3) future cash flows are uncertain (risk).
+            A unit of currency today is worth more than the same unit in the future because of (i) the opportunity cost of capital (forgone return), (ii) inflation (purchasing-power erosion), and (iii) risk (uncertainty of future payoffs).
         </div>
-        <p>Interest (or required return) is the “price” of transferring money across time. Compounding moves value forward; discounting moves value back to the present. Present value is the fundamental building block of almost all valuation in finance.</p>
+        <p>Compounding maps present value to future value; discounting is the inverse operation. The discount rate is the required return for cash flows of comparable risk and timing. Mismatching the period of the rate and the number of periods is a common exam error (e.g. using an annual rate with monthly cash flows without conversion).</p>
 
-        <h3>Key Variables</h3>
-        <ul>
-            <li><strong>PV</strong> – present value (today’s worth)</li>
-            <li><strong>FV</strong> – future value</li>
-            <li><strong>r</strong> – interest / discount rate per period</li>
-            <li><strong>n</strong> – number of periods</li>
-            <li><strong>PMT</strong> – constant periodic cash flow (annuity)</li>
-        </ul>
-
-        <h3>Core Formulas</h3>
         <div class="overflow-x-auto">
             <table>
-                <thead><tr><th>Concept</th><th>Formula</th><th>Intuition</th></tr></thead>
+                <thead><tr><th>Relation</th><th>Formula</th><th>Use</th></tr></thead>
                 <tbody>
-                    <tr><td>Future value</td><td class="font-mono text-sm">FV = PV(1+r)<sup>n</sup></td><td>Grow today’s money forward</td></tr>
-                    <tr><td>Present value</td><td class="font-mono text-sm">PV = FV/(1+r)<sup>n</sup></td><td>Discount future money back</td></tr>
-                    <tr><td>PV of ordinary annuity</td><td class="font-mono text-sm">PMT × [1−(1+r)<sup>−n</sup>]/r</td><td>Value of level end-of-period payments</td></tr>
-                    <tr><td>FV of ordinary annuity</td><td class="font-mono text-sm">PMT × [(1+r)<sup>n</sup>−1]/r</td><td>Accumulated value of level payments</td></tr>
-                    <tr><td>NPV</td><td class="font-mono text-sm">−I₀ + Σ CF<sub>t</sub>/(1+r)<sup>t</sup></td><td>Value created by a project</td></tr>
+                    <tr><td>FV of a lump sum</td><td class="font-mono text-sm">FV = PV(1+r)<sup>n</sup></td><td>Terminal value of a present sum</td></tr>
+                    <tr><td>PV of a lump sum</td><td class="font-mono text-sm">PV = FV(1+r)<sup>−n</sup></td><td>Value today of a future sum</td></tr>
+                    <tr><td>PV of ordinary annuity</td><td class="font-mono text-sm">PMT[1−(1+r)<sup>−n</sup>]/r</td><td>Level end-of-period payments</td></tr>
+                    <tr><td>FV of ordinary annuity</td><td class="font-mono text-sm">PMT[(1+r)<sup>n</sup>−1]/r</td><td>Accumulated value of level payments</td></tr>
+                    <tr><td>NPV</td><td class="font-mono text-sm">−I₀ + Σ<sub>t</sub> CF<sub>t</sub>(1+r)<sup>−t</sup></td><td>Value created by a project</td></tr>
                 </tbody>
             </table>
         </div>
-        <p><strong>Ordinary annuity</strong> = payments at end of each period. <strong>Annuity due</strong> = payments at beginning (slightly higher PV/FV). Always match the period of r with the period of n (e.g. monthly rate with monthly periods).</p>
+        <p><strong>Ordinary annuity</strong> = payments at period-end; <strong>annuity due</strong> = payments at period-start (PV/FV higher by a factor of (1+r) relative to ordinary annuity, all else equal). Perpetuity PV = PMT/r (first payment one period from now, constant, infinite).</p>
 
-        <h2>3. Capital Budgeting – Deep Logic</h2>
-        <p>Capital budgeting decides which long-term projects to accept. Cash flows should be <strong>incremental</strong> (with-project minus without-project), after-tax, and should include side effects (cannibalisation, synergy) and opportunity costs. Sunk costs are ignored; financing costs are reflected in the discount rate, not double-counted in cash flows.</p>
+        <h2>3. Capital Budgeting — Cash-Flow Discipline</h2>
+        <p>Project evaluation uses <strong>incremental after-tax cash flows</strong>: with-project minus without-project. Include side effects (cannibalisation, synergies), opportunity costs of existing assets, and net working-capital investment (recovered at project end if appropriate). Exclude sunk costs. Do not deduct interest in the cash flows if it is already embedded in the discount rate (avoid double-counting financing costs).</p>
 
-        <h3>NPV (preferred method)</h3>
-        <p>NPV is the increase in wealth from undertaking the project. A positive NPV means the project earns more than the opportunity cost of capital. Decision rule: accept independent projects with NPV &gt; 0; for mutually exclusive projects, choose the highest NPV (given comparable scale/risk).</p>
+        <h3>3.1 Net Present Value (primary criterion)</h3>
+        <p>NPV is the expected increase in wealth from accepting the project, measured in present-value terms. Decision rule for independent projects: accept if NPV &gt; 0. For mutually exclusive projects of comparable risk, choose the higher NPV (subject to capital rationing techniques beyond basic NPV when constraints bind).</p>
         <div class="example-box">
-            I₀ = 80,000; CF₁=30,000; CF₂=35,000; CF₃=40,000; r=10%<br>
-            PV of inflows = 27,273 + 28,926 + 30,053 = 86,252<br>
-            NPV = +6,252 → <strong>Accept</strong> (creates RM6,252 of value)
+            I₀ = 80,000; CF = 30,000, 35,000, 40,000; r = 10%.<br>
+            PV inflows = 27,273 + 28,926 + 30,053 = 86,252 → NPV = <strong>+6,252 → accept</strong>.
         </div>
 
-        <h3>IRR</h3>
-        <p>IRR is the discount rate that sets NPV = 0. Accept if IRR &gt; required return. IRR is intuitive (a rate of return) but can mislead with non-conventional cash flows (multiple IRRs) or mutually exclusive projects of different size/timing (NPV is more reliable).</p>
-
-        <h3>Payback Period</h3>
-        <p>Time to recover the initial investment from project cash flows. Simple and emphasises liquidity, but ignores time value (unless discounted payback is used) and cash flows after the cutoff. Best used as a secondary screen, not the primary decision rule.</p>
-
+        <h3>3.2 IRR and Payback — uses and failure modes</h3>
+        <p><strong>IRR</strong> is the rate that sets NPV = 0. Accept if IRR &gt; hurdle rate for independent projects. Problems: multiple IRRs with sign-changing cash flows; ranking conflicts with NPV for mutually exclusive projects of different scale or timing; implicit reinvestment assumption at the IRR (often unrealistic).</p>
+        <p><strong>Payback</strong> measures recovery speed. Ignores time value (unless discounted payback) and cash flows beyond the cutoff. Acceptable as a liquidity or risk screen, not as the sole value-maximising rule.</p>
         <div class="overflow-x-auto">
             <table>
-                <thead><tr><th>Method</th><th>Decision rule</th><th>Main strength</th><th>Main limitation</th></tr></thead>
+                <thead><tr><th>Method</th><th>Strength</th><th>Limitation (exam point)</th></tr></thead>
                 <tbody>
-                    <tr><td>NPV</td><td>Accept if NPV &gt; 0</td><td>Direct measure of value</td><td>Requires a discount rate</td></tr>
-                    <tr><td>IRR</td><td>Accept if IRR &gt; r</td><td>Easy % interpretation</td><td>Multiple IRRs; ranking issues</td></tr>
-                    <tr><td>Payback</td><td>Accept if ≤ cutoff</td><td>Simple, liquidity focus</td><td>Ignores TVM & later CFs</td></tr>
+                    <tr><td>NPV</td><td>Direct value measure; additive</td><td>Requires appropriate risk-adjusted r</td></tr>
+                    <tr><td>IRR</td><td>Intuitive rate comparison</td><td>Multiple IRRs; ranking vs NPV can conflict</td></tr>
+                    <tr><td>Payback</td><td>Simple; liquidity focus</td><td>Ignores TVM & post-cutoff CFs</td></tr>
                 </tbody>
             </table>
         </div>
 
-        <h2>4. Risk and Return – Conceptual Core</h2>
+        <h2>4. Risk and Return</h2>
         <div class="definition-box">
-            <strong>Risk–return trade-off</strong> – Investors require higher expected returns to bear higher risk. Without extra expected return, rational investors would not hold riskier assets.
+            <strong>Risk–return trade-off:</strong> rational investors require higher expected returns to hold higher-risk claims. Required return is the opportunity cost of capital for cash flows of that risk class.
         </div>
-        <p><strong>Expected return</strong> is the probability-weighted average of possible outcomes. <strong>Risk</strong> in finance is often measured by dispersion of returns (variance / standard deviation) or, for diversified investors, by systematic risk (beta) relative to the market.</p>
+        <p><strong>Total risk</strong> (e.g. return standard deviation) decomposes into:</p>
         <ul>
-            <li><strong>Unsystematic (idiosyncratic) risk</strong> – firm-specific; can be reduced by diversification</li>
-            <li><strong>Systematic (market) risk</strong> – affects many assets together; cannot be diversified away; compensated by higher expected return</li>
+            <li><strong>Unsystematic (idiosyncratic) risk</strong> — firm-specific; diversifiable in a portfolio</li>
+            <li><strong>Systematic (market) risk</strong> — common factors; not diversifiable; priced in equilibrium</li>
         </ul>
-        <p>In well-functioning markets, only systematic risk is “priced”. That idea underpins models such as the CAPM (optional depth at this level): expected return rises linearly with beta.</p>
+        <p>For diversified investors, only systematic risk commands a risk premium. Using a firm-wide WACC on a project with different systematic risk misvalues the project (too high NPV for riskier projects if WACC is too low, and vice versa).</p>
 
-        <h2>5. Financial System – Role and Structure</h2>
-        <p>The financial system channels funds from savers to productive users, provides risk-sharing, liquidity and information. Key parts:</p>
-        <ul>
-            <li><strong>Financial markets</strong> – money market (short-term instruments) and capital market (long-term debt and equity)</li>
-            <li><strong>Financial institutions</strong> – banks, insurers, funds, etc., that intermediate and transform risk/maturity</li>
-            <li><strong>Instruments</strong> – equity, debt, hybrids, derivatives</li>
-            <li><strong>Primary market</strong> – new issuance; <strong>secondary market</strong> – trading of existing claims (provides liquidity and price discovery)</li>
-        </ul>
+        <h2>5. Financial System</h2>
+        <p>Markets and intermediaries channel funds from surplus to deficit units, provide liquidity, risk-sharing and information/price discovery. Distinguish primary markets (issuance) from secondary markets (trading). Money markets: short-term instruments; capital markets: long-term debt and equity.</p>
 
         <div class="tip-box">
-            <strong>Exam strategy:</strong> Draw a timeline for every multi-period problem. Write the formula before substituting numbers. For decisions, state the rule and the numerical conclusion (“Accept because NPV = +6,252 &gt; 0”). Explain <em>why</em> NPV is preferred when comparing methods.
+            <strong>Exam technique:</strong> Draw timelines; state the formula before substituting; specify the decision rule and numerical conclusion. When comparing NPV and IRR, discuss ranking conflicts and reinvestment assumptions explicitly for higher marks.
         </div>
 
         <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
-            <a href="acw1120.html" class="text-[#4C6170] font-medium hover:underline">← ACW1120</a>
-            <a href="btw1042.html" class="text-[#4C6170] font-medium hover:underline">Next: BTW1042 →</a>
+            <a href="acw1120.html" class="font-medium hover:underline">← ACW1120</a>
+            <a href="btw1042.html" class="font-medium hover:underline">Next: BTW1042 →</a>
         </div>
     </main>
 </body>

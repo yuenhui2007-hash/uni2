@@ -3,115 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETW1001 Statistical Analysis | UNI Notes</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <title>ETW1001 Statistical Analysis | UNI Degree Notes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="bg-[#EBE0DD] text-[#4C6170]">
-    <header class="bg-[#4C6170] text-white sticky top-0 z-50 shadow-md">
+    <header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
         <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="../index.html" class="font-bold hover:text-[#C0C4B7]">← Back to Hub</a>
-            <span class="text-sm text-[#C0C4B7]">ETW1001 • UNI</span>
+            <a href="../index.html" class="font-bold hover:text-white">← UNI</a>
+            <span class="text-sm text-[#C0C4B7]">ETW1001 · Degree-level</span>
         </div>
     </header>
-
     <main class="max-w-4xl mx-auto px-4 py-8 prose">
         <div class="mb-6">
-            <div class="text-sm font-semibold text-cyan-600">STATISTICS • LEVEL 1</div>
-            <h1 class="text-3xl font-bold text-slate-900 mt-1">ETW1001 – Introduction to Statistical Analysis</h1>
-            <p class="text-slate-600 mt-2">Detailed notes: Descriptive statistics, probability, inference, regression, Excel focus.</p>
+            <div class="text-sm font-semibold text-[#8A9EAB]">STATISTICS · LEVEL 1 · EXAM DEPTH</div>
+            <h1 class="text-3xl font-bold mt-1">ETW1001 – Introduction to Statistical Analysis</h1>
+            <p class="text-[#65695B] mt-2">Degree-level: descriptive foundations, inference logic, regression interpretation, decision errors</p>
         </div>
 
-        <h2>1. Unit Overview</h2>
-        <p>Covers the four analytics types (descriptive, diagnostic, predictive, prescriptive). Strong emphasis on interpreting results in a business context and using Excel.</p>
+        <h2>1. From Data to Decision</h2>
+        <p>Statistics supports business decisions under uncertainty. Distinguish descriptive analytics (summarise observed data) from inferential analytics (generalise from sample to population with quantified uncertainty). Degree assessments test correct choice of measure, valid interpretation, and awareness of assumptions — not only computation.</p>
 
         <h2>2. Descriptive Statistics</h2>
-        <h3>Measures of Central Tendency</h3>
-        <ul>
-            <li><strong>Mean</strong> – arithmetic average. Sensitive to outliers.</li>
-            <li><strong>Median</strong> – middle value when ordered. Robust to outliers.</li>
-            <li><strong>Mode</strong> – most frequent value.</li>
-        </ul>
-        <p>Use median when data are skewed or contain extreme values.</p>
-
-        <h3>Measures of Dispersion</h3>
+        <p><strong>Central tendency:</strong> mean (sensitive to outliers), median (robust), mode. Use median for skewed distributions or ordinal data where mean is misleading.</p>
         <div class="formula-box">
-            Range = Max − Min<br>
-            Sample Variance s² = Σ(x − x̄)² / (n − 1)<br>
-            Sample Standard Deviation s = √s²
+            Sample variance s² = Σ(x − x̄)² / (n − 1)<br>
+            Sample standard deviation s = √s²
         </div>
+        <p>Division by n−1 makes s² an unbiased estimator of population variance under standard sampling assumptions. Range and IQR summarise spread; z-scores standardise relative position.</p>
 
-        <h3>Other Useful Concepts</h3>
-        <ul>
-            <li>Percentiles and quartiles</li>
-            <li>Interquartile range (IQR) = Q3 − Q1</li>
-            <li>Z-score = (x − μ) / σ (how many SDs from the mean)</li>
-        </ul>
+        <h2>3. Sampling and Inference Logic</h2>
+        <p>A <strong>parameter</strong> describes a population; a <strong>statistic</strong> is computed from a sample. Sampling distributions describe how a statistic varies across samples; the standard error shrinks as n increases (for many estimators), improving precision.</p>
+        <p><strong>Confidence interval:</strong> a range constructed so that, under repeated sampling, a stated proportion (e.g. 95%) of such intervals contain the true parameter. It is incorrect to say “there is 95% probability the parameter lies in this specific interval” in the frequentist interpretation usually taught at this level — state the repeated-sampling meaning carefully for full marks.</p>
 
-        <h2>3. Probability Basics</h2>
-        <ul>
-            <li>Probability ranges from 0 to 1</li>
-            <li>Addition rule, multiplication rule</li>
-            <li>Common distributions: Binomial, Normal (bell-shaped, defined by μ and σ)</li>
-        </ul>
-        <p>Empirical rule for Normal distribution: ~68% within 1 SD, ~95% within 2 SD, ~99.7% within 3 SD.</p>
-
-        <h2>4. Inferential Statistics</h2>
-        <h3>Confidence Intervals</h3>
-        <div class="formula-box">
-            CI for mean (σ known): x̄ ± z<sub>α/2</sub> × (σ / √n)
-        </div>
-        <p>A 95% CI means: if we repeated the sampling process many times, approximately 95% of the intervals constructed would contain the true population mean.</p>
-
-        <h3>Hypothesis Testing Steps</h3>
+        <h2>4. Hypothesis Testing</h2>
         <ol>
-            <li>State H₀ (null) and H₁ (alternative)</li>
-            <li>Choose significance level α (commonly 0.05)</li>
-            <li>Calculate test statistic</li>
-            <li>Find p-value or compare with critical value</li>
-            <li>Decide: reject H₀ or fail to reject H₀</li>
-            <li>Interpret in business language</li>
+            <li>State H₀ and H₁ (one-sided vs two-sided matters)</li>
+            <li>Choose α (Type I error rate)</li>
+            <li>Compute test statistic and p-value (or critical value)</li>
+            <li>Reject H₀ if p ≤ α</li>
+            <li>Interpret in business language — statistical significance ≠ practical significance</li>
         </ol>
-        <p><strong>Type I error</strong>: Reject true H₀ (false positive).<br>
-        <strong>Type II error</strong>: Fail to reject false H₀ (false negative).</p>
+        <p><strong>Type I error:</strong> reject true H₀. <strong>Type II error:</strong> fail to reject false H₀. Power = 1 − β. Trade-off between α and β for fixed n.</p>
 
         <h2>5. Simple Linear Regression</h2>
-        <div class="formula-box">
-            Ŷ = b₀ + b₁X
-        </div>
-        <ul>
-            <li>b₀ = intercept (predicted Y when X = 0)</li>
-            <li>b₁ = slope (change in predicted Y for a one-unit increase in X)</li>
-            <li>R² = proportion of variation in Y explained by X (0 to 1)</li>
-        </ul>
-        <div class="example-box">
-            Ŷ = 12 + 2.5X (X = advertising RM’000, Y = sales RM’000)<br>
-            Slope 2.5 means: each additional RM1,000 of advertising is associated with RM2,500 higher sales on average.
-        </div>
+        <div class="formula-box">Ŷ = b₀ + b₁X</div>
+        <p>b₁: estimated average change in Y for a one-unit increase in X. b₀: predicted Y when X = 0 (may lack practical meaning if X = 0 is outside the data range). R²: proportion of sample variation in Y explained by the model — high R² does not prove causality. Residual analysis and awareness of nonlinearity, outliers and omitted variables are part of competent interpretation.</p>
 
-        <h2>6. Excel Skills to Master</h2>
-        <ul>
-            <li>AVERAGE, MEDIAN, STDEV.S, VAR.S</li>
-            <li>CORREL, Data Analysis ToolPak → Regression, Descriptive Statistics</li>
-            <li>Charts: histogram, scatter plot with trendline</li>
-        </ul>
-
-        <h2>7. Exam Tips</h2>
         <div class="tip-box">
-            <ul>
-                <li>Always interpret numbers in context — “what does this mean for the business?”</li>
-                <li>State hypotheses clearly and write a conclusion in words.</li>
-                <li>Know when to prefer median over mean.</li>
-                <li>Practise reading regression output (coefficients, R², p-values).</li>
-            </ul>
+            <strong>Exam technique:</strong> Always interpret numbers in context. State hypotheses and conclusions in words. Prefer median when skewness/outliers are indicated. Do not over-claim causality from regression alone.
         </div>
 
-        <div class="mt-10 pt-6 border-t border-slate-200 flex justify-between text-sm">
-            <a href="ecm1953.html" class="text-[#C0C4B7] hover:underline">← ECM1953</a>
-            <a href="mgw1010.html" class="text-[#C0C4B7] hover:underline">Next: MGW1010 →</a>
+        <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
+            <a href="ecm1953.html" class="font-medium hover:underline">← ECM1953</a>
+            <a href="mgw1010.html" class="font-medium hover:underline">Next: MGW1010 →</a>
         </div>
     </main>
 </body>
