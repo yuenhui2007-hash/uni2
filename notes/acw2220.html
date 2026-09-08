@@ -1,104 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACW2220 Management Accounting 1 | UNI Degree Notes</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACW2220 | UNI Advanced Notes</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="../css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="bg-[#EBE0DD] text-[#4C6170]">
-    <header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
-        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="../index.html" class="font-bold hover:text-white">← UNI</a>
-            <span class="text-sm text-[#C0C4B7]">ACW2220 · Degree-level</span>
-        </div>
-    </header>
-    <main class="max-w-4xl mx-auto px-4 py-8 prose">
-        <div class="mb-6">
-            <div class="text-sm font-semibold text-[#8A9EAB]">ACCOUNTING · LEVEL 2 · EXAM DEPTH</div>
-            <h1 class="text-3xl font-bold mt-1">ACW2220 – Management Accounting 1</h1>
-            <p class="text-[#65695B] mt-2">Degree-level: cost behaviour, CVP assumptions, relevant costing frameworks, decision pitfalls</p>
-        </div>
+<header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
+<div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+<a href="../index.html" class="font-bold hover:text-white">← UNI</a>
+<span class="text-sm text-[#C0C4B7]">ACW2220 · Advanced</span>
+</div></header>
+<main class="max-w-4xl mx-auto px-4 py-8 prose">
+<div class="mb-6">
+<div class="text-sm font-semibold text-[#8A9EAB]">B2026 · MANAGEMENT ACCOUNTING</div>
+<h1 class="text-3xl font-bold mt-1">ACW2220 – Management Accounting 1</h1>
+<p class="text-[#65695B] mt-2">Advanced notes: cost behaviour modelling, CVP under constraints, relevant-cost decision protocols, common exam traps</p>
+</div>
 
-        <h2>1. Purpose of Management Accounting</h2>
-        <p>Management accounting supports internal planning, control and decision-making. Unlike financial accounting, it is not bound by external reporting standards; relevance and cost-benefit of information dominate. Product costs, customer costs and segment reports may use different cost objects and allocation bases depending on the decision. At degree level you must state the decision context before selecting which costs matter.</p>
+<h2>1. Decision-Led Cost Analysis</h2>
+<p>Management accounting designs cost objects (product, job, customer, channel, segment) to answer specific decisions. Different decisions require different cost aggregations — full absorption cost for inventory valuation under financial reporting is often the <em>wrong</em> input for short-term pricing or make-or-buy. The degree skill is selecting the cost construction that matches the decision horizon and constraint set.</p>
 
-        <h2>2. Cost Taxonomy for Analysis</h2>
-        <h3>Behaviour</h3>
-        <ul>
-            <li><strong>Variable:</strong> total varies with activity; unit variable cost approximately constant in the relevant range</li>
-            <li><strong>Fixed:</strong> total constant in the relevant range; unit fixed cost declines with volume</li>
-            <li><strong>Mixed:</strong> fixed plus variable component; separate for CVP using high-low, scattergraph or regression</li>
-        </ul>
-        <p>The <strong>relevant range</strong> is the band of activity over which the cost-behaviour assumptions remain valid. Outside that range, step-fixed costs or non-linear variable costs appear — a frequent essay point.</p>
-        <h3>Decision relevance</h3>
-        <ul>
-            <li><strong>Relevant costs/revenues:</strong> future amounts that differ among alternatives</li>
-            <li><strong>Sunk costs:</strong> past, irreversible — irrelevant to the choice (though they may affect accounting profit)</li>
-            <li><strong>Opportunity cost:</strong> benefit of the best forgone alternative — often relevant and often omitted from the ledger</li>
-        </ul>
+<h2>2. Cost Behaviour and the Relevant Range</h2>
+<p>Variable costs are linear in activity only inside the relevant range; quantity discounts, overtime premiums and step-fixed supervision create piecewise-linear or nonlinear total cost functions. High-low estimates use only two points and are outlier-sensitive; least-squares regression uses all points and yields R²/standard error for fit assessment when required.</p>
+<p>Committed vs discretionary fixed costs matter for keep-or-drop: only avoidable fixed costs enter the differential analysis.</p>
 
-        <h2>3. CVP Analysis — Structure and Limitations</h2>
-        <div class="definition-box">
-            Contribution margin (CM) = Sales − Variable costs. CM first covers fixed costs; residual is operating profit. CM ratio = CM / Sales.
-        </div>
-        <div class="formula-box">
-            Break-even units = FC / CM per unit<br>
-            Break-even sales = FC / CM ratio<br>
-            Target-profit units = (FC + Target profit) / CM per unit<br>
-            Margin of safety = Expected sales − Break-even sales (in units or RM; can be expressed as % of expected sales)
-        </div>
-        <p><strong>Assumptions</strong> (must be stated in higher-mark answers): constant selling price and unit variable cost; linear total cost; constant sales mix (multi-product); production = sales (no inventory change); costs separable into fixed and variable within the relevant range.</p>
-        <div class="example-box">
-            SP 90, VC 54, FC 108,000 → CM = 36<br>
-            BE = 3,000 units (sales 270,000). Target profit 36,000 → 4,000 units.<br>
-            If expected sales = 5,000 units, margin of safety = 2,000 units (40% of expected volume).
-        </div>
+<h2>3. CVP — Algebra, Multi-Product and Limitations</h2>
+<div class="formula-box">
+Q<sub>BE</sub> = FC / (p − v)<br>
+Sales<sub>BE</sub> = FC / CM ratio<br>
+Q<sub>target</sub> = (FC + π) / (p − v)<br>
+Margin of safety % = (Q<sub>expected</sub> − Q<sub>BE</sub>) / Q<sub>expected</sub>
+</div>
+<p>Operating leverage: high FC / low VC amplifies profit sensitivity to volume (degree of operating leverage ≈ CM / operating profit at a given volume). Multi-product CVP requires a constant sales mix; break-even in “packages” of the mix, then decompose into units of each product. Inventory change violates the sales = production assumption and confounds contribution analysis with absorption costing fixed-overhead volume variances (bridge to later topics).</p>
 
-        <h2>4. Relevant Costing — Decision Protocols</h2>
-        <p>Method: identify alternatives → isolate differential cash flows → ignore sunk and non-differential allocated costs → incorporate opportunity costs of scarce resources → recommend, noting qualitative factors (capacity, quality, strategy, risk, long-term pricing effects).</p>
+<h2>4. Relevant Costing — Formal Protocol</h2>
+<ol>
+<li>Define alternatives and the decision horizon</li>
+<li>List all future cash flows that differ</li>
+<li>Include opportunity costs of scarce resources (contribution displaced)</li>
+<li>Exclude sunk costs and non-differential allocated overhead</li>
+<li>Optimise quantitative criterion then stress-test qualitative factors (quality, dependence on supplier, strategic option value, customer retaliation on segmented pricing)</li>
+</ol>
 
-        <h3>Special order</h3>
-        <p>With idle capacity, fixed costs often unchanged: accept if special price covers incremental variable costs plus any extra fixed costs and yields positive contribution. If capacity is constrained, include opportunity cost of displaced regular contribution.</p>
+<h3>Special orders</h3>
+<p>Idle capacity: minimum acceptable price = unit variable cost + unitised extra fixed costs + any unit opportunity cost. Full capacity: opportunity cost = forgone CM on regular sales displaced. Predatory-pricing / long-term customer reference-price effects are qualitative overlays.</p>
 
-        <h3>Make or buy</h3>
-        <p>Relevant make cost = avoidable manufacturing costs (DM, DL, variable OH, avoidable fixed) + opportunity cost of capacity. Compare with purchase price. Continuing allocated fixed overhead is irrelevant. Assess supplier reliability and strategic control of know-how.</p>
+<h3>Make vs buy</h3>
+<p>Relevant make cost = avoidable costs + opportunity cost of freed capacity (highest-valued alternative use). Allocated HQ overhead that continues is irrelevant. Strategic factors: IP leakage, supply-chain resilience, core competence.</p>
 
-        <h3>Keep or drop a segment</h3>
-        <p>Compare CM lost with fixed costs avoided. Allocated common fixed costs that remain after the drop must not be treated as “saved”. Dropping can reduce profit if avoidable fixed costs &lt; CM forgone.</p>
-        <div class="example-box">
-            Segment CM 80,000; avoidable FC 50,000; common allocated FC 40,000 (continues).<br>
-            Dropping loses 80,000 CM, saves only 50,000 → worse by 30,000 → <strong>keep</strong>.
-        </div>
+<h3>Segment continuity</h3>
+<div class="example-box">
+CM 120,000; avoidable FC 70,000; unavoidable allocated FC 55,000.<br>
+Segment margin on avoidable basis = 50,000 &gt; 0 → keep.<br>
+If the examiner allocates 55,000 and shows an “accounting loss”, the trap is treating unavoidable FC as saved by dropping.
+</div>
 
-        <div class="overflow-x-auto">
-            <table>
-                <thead><tr><th>Decision</th><th>Focus</th><th>Typically ignore</th></tr></thead>
-                <tbody>
-                    <tr><td>Special order</td><td>Incremental revenue &amp; costs; opportunity cost if constrained</td><td>Unchanged allocated FC; sunk costs</td></tr>
-                    <tr><td>Make or buy</td><td>Avoidable costs vs purchase price; capacity opportunity cost</td><td>Unavoidable fixed OH</td></tr>
-                    <tr><td>Keep or drop</td><td>Lost CM vs avoidable FC</td><td>Common FC that continue</td></tr>
-                </tbody>
-            </table>
-        </div>
+<h2>5. Costing Systems and Distorted Decisions</h2>
+<p>Volume-based overhead allocation cross-subsidises low-volume complex products when overhead is driven by batches, setups, design hours (ABC insight). Degree exams may require narrative critique of unit-cost figures used for pricing when the allocation base is weak.</p>
 
-        <h2>5. Product Costing Systems (Exam Awareness)</h2>
-        <ul>
-            <li><strong>Job costing:</strong> costs traced to discrete jobs (custom production/services)</li>
-            <li><strong>Process costing:</strong> average costs over homogeneous continuous output</li>
-            <li><strong>ABC:</strong> multiple activity drivers for overhead when products consume activities disproportionately — improves cost accuracy for pricing/mix decisions but is costlier to operate</li>
-        </ul>
-
-        <div class="tip-box">
-            <strong>Exam technique:</strong> Always state what is relevant and why. Present a clear incremental analysis table. Conclude with a recommendation plus one qualitative caveat. Marks are lost when sunk or continuing allocated costs are treated as differential.
-        </div>
-
-        <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
-            <a href="mgw1010.html" class="font-medium hover:underline">← MGW1010</a>
-            <a href="../index.html" class="font-medium hover:underline">Hub →</a>
-        </div>
-    </main>
-</body>
-</html>
+<div class="tip-box">
+<strong>High-band answers:</strong> explicit relevant-cost schedule; opportunity cost line item; qualitative paragraph; sensitivity (“if capacity were constrained…”). Never “accept because price &gt; absorption cost” without justification.
+</div>
+<div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
+<a href="mgw1010.html" class="font-medium hover:underline">← MGW1010</a>
+<a href="../index.html" class="font-medium hover:underline">Hub →</a>
+</div>
+</main></body></html>

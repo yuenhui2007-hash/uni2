@@ -1,66 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECM1953 Principles of Economics | UNI Degree Notes</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECM1953 | UNI Advanced Notes</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="../css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="bg-[#EBE0DD] text-[#4C6170]">
-    <header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
-        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="../index.html" class="font-bold hover:text-white">← UNI</a>
-            <span class="text-sm text-[#C0C4B7]">ECM1953 · Degree-level</span>
-        </div>
-    </header>
-    <main class="max-w-4xl mx-auto px-4 py-8 prose">
-        <div class="mb-6">
-            <div class="text-sm font-semibold text-[#9CA38E]">ECONOMICS · LEVEL 1 · EXAM DEPTH</div>
-            <h1 class="text-3xl font-bold mt-1">ECM1953 – Principles of Economics</h1>
-            <p class="text-[#65695B] mt-2">Degree-level: micro foundations, elasticity applications, market structure, AD-AS policy analysis</p>
-        </div>
+<header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
+<div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+<a href="../index.html" class="font-bold hover:text-white">← UNI</a>
+<span class="text-sm text-[#C0C4B7]">ECM1953 · Advanced</span>
+</div></header>
+<main class="max-w-4xl mx-auto px-4 py-8 prose">
+<div class="mb-6">
+<div class="text-sm font-semibold text-[#9CA38E]">B2026 · PRINCIPLES OF ECONOMICS</div>
+<h1 class="text-3xl font-bold mt-1">ECM1953 – Principles of Economics</h1>
+<p class="text-[#65695B] mt-2">Advanced notes: constrained optimisation intuition, comparative statics, market power, policy transmission</p>
+</div>
 
-        <h2>1. Scarcity, Choice and Opportunity Cost</h2>
-        <div class="definition-box">Opportunity cost is the value of the next-best alternative forgone when a choice is made. It is the central cost concept in economic reasoning — not merely accounting outlay.</div>
-        <p>Production possibility frontiers illustrate trade-offs and efficiency; points inside are inefficient, on the frontier efficient given resources/technology, outside unattainable without growth or trade.</p>
+<h2>1. Core Method</h2>
+<p>Economics analyses constrained choice. Opportunity cost, marginal analysis (MB = MC at interior optimum), and equilibrium comparative statics are the toolkit. Diagrams are analytical arguments, not decoration — label intercepts, curves, equilibria, and the shock.</p>
 
-        <h2>2. Demand, Supply and Market Equilibrium</h2>
-        <p>Law of demand: inverse relationship between price and quantity demanded, ceteris paribus. Law of supply: positive relationship between price and quantity supplied, ceteris paribus. Equilibrium equates Qd and Qs. Own-price changes cause movements along curves; non-price determinants shift curves (income, tastes, related-goods prices, expectations, input costs, technology, taxes/subsidies, number of buyers/sellers).</p>
-        <p>Exam skill: correctly identify shift vs movement, direction of shift, and resulting change in equilibrium P and Q (including ambiguous cases when both curves shift).</p>
+<h2>2. Demand–Supply Comparative Statics</h2>
+<p>Own-price movements along curves vs shifts from exogenous determinants. Simultaneous shifts: direction of P or Q may be theoretically ambiguous without magnitude assumptions — state the ambiguity explicitly for marks. Incidence of tax: wedge between buyer and seller prices; burden shares depend on elasticities (more inelastic side bears more).</p>
 
-        <h2>3. Elasticity — Computation and Revenue Logic</h2>
-        <div class="formula-box">PED = (%ΔQd) / (%ΔP)</div>
-        <p>|PED| &gt; 1 elastic; = 1 unit; &lt; 1 inelastic. For a price rise, total revenue rises if demand is inelastic and falls if elastic. Determinants of PED include substitutes, necessity vs luxury, budget share, time horizon.</p>
+<h2>3. Elasticity and Pricing</h2>
+<div class="formula-box">PED = %ΔQd / %ΔP &nbsp;&nbsp;|&nbsp;&nbsp; Midpoint method when required by the question</div>
+<p>TR test: raise price → TR↑ iff demand inelastic. MR for linear demand is twice as steep as AR; monopoly produces where MR = MC and reads price from demand, generating DWL relative to efficient benchmark under standard assumptions.</p>
 
-        <h2>4. Costs, Profit Maximisation and Market Structure</h2>
-        <p>Short-run cost curves: FC, VC, TC, ATC, AVC, MC. Profit maximisation: produce where MR = MC (subject to shutdown rules comparing price to AVC in the short run for competitive firms).</p>
-        <div class="overflow-x-auto">
-            <table>
-                <thead><tr><th>Structure</th><th>Firms</th><th>Product</th><th>Entry</th><th>Price power</th></tr></thead>
-                <tbody>
-                    <tr><td>Perfect competition</td><td>Many</td><td>Homogeneous</td><td>Free</td><td>None (P = MR)</td></tr>
-                    <tr><td>Monopolistic competition</td><td>Many</td><td>Differentiated</td><td>Free</td><td>Limited</td></tr>
-                    <tr><td>Oligopoly</td><td>Few</td><td>Homo/diff.</td><td>Barriers</td><td>Strategic interdependence</td></tr>
-                    <tr><td>Monopoly</td><td>One</td><td>Unique</td><td>Blocked</td><td>High (MR &lt; P)</td></tr>
-                </tbody>
-            </table>
-        </div>
+<h2>4. Cost Curves and Structure</h2>
+<p>SMC intersects AVC and ATC at their minima. Shutdown: P &lt; min AVC in short run. Entry/exit drive long-run competitive equilibrium toward P = min LRAC (zero economic profit) under free entry and identical firms. Oligopoly: strategic interdependence (reaction functions / kinked demand / game matrix as taught). Monopoly: barriers, efficiency critique, regulation rationale.</p>
 
-        <h2>5. Macro: AD–AS and Policy</h2>
-        <div class="formula-box">AD = C + I + G + (X − M)</div>
-        <p>Short-run: sticky prices/wages allow output to deviate from potential; AD shifts change Y and P along SRAS. Long-run: output tends toward potential output; AD shifts primarily affect the price level once expectations adjust (depending on model variant taught).</p>
-        <p><strong>Monetary policy:</strong> interest rates / money supply (Bank Negara). <strong>Fiscal policy:</strong> G and taxation. Expansionary policy aims to raise AD when there is spare capacity; trade-offs include inflation and, for fiscal expansion, financing/crowding-out concerns at intermediate level.</p>
-
-        <div class="tip-box">
-            <strong>Exam technique:</strong> Draw fully labelled diagrams. State ceteris paribus. For policy questions, specify the transmission (e.g. ↓i → ↑I → ↑AD). Distinguish short-run and long-run effects where the syllabus requires it.
-        </div>
-
-        <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
-            <a href="btw1042.html" class="font-medium hover:underline">← BTW1042</a>
-            <a href="etw1001.html" class="font-medium hover:underline">Next: ETW1001 →</a>
-        </div>
-    </main>
-</body>
-</html>
+<h2>5. Macro AD–AS and Policy</h2>
+<div class="formula-box">AD ≡ C+I+G+NX</div>
+<p>SRAS upward-sloping under sticky wages/prices or misperceptions; LRAS vertical at potential output in classical benchmark. Demand shock: short-run Y and P move together; long-run adjustment via expectations/wages returns Y to potential with permanent P change (model-dependent narrative — follow your lecturer’s version).</p>
+<p>Monetary transmission: i → I, C durables, exchange rate → NX. Fiscal: multiplier diluted by crowding-out and marginal propensity to import; automatic stabilisers vs discretionary policy lags.</p>
+<div class="tip-box">
+<strong>Exam:</strong> state ceteris paribus; show shock → curve shift → new equilibrium; distinguish movement along vs shift; for policy, write the transmission chain.
+</div>
+<div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
+<a href="btw1042.html" class="font-medium hover:underline">← BTW1042</a>
+<a href="etw1001.html" class="font-medium hover:underline">ETW1001 →</a>
+</div>
+</main></body></html>

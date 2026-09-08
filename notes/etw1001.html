@@ -1,64 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETW1001 Statistical Analysis | UNI Degree Notes</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETW1001 | UNI Advanced Notes</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="../css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="bg-[#EBE0DD] text-[#4C6170]">
-    <header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
-        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="../index.html" class="font-bold hover:text-white">← UNI</a>
-            <span class="text-sm text-[#C0C4B7]">ETW1001 · Degree-level</span>
-        </div>
-    </header>
-    <main class="max-w-4xl mx-auto px-4 py-8 prose">
-        <div class="mb-6">
-            <div class="text-sm font-semibold text-[#8A9EAB]">STATISTICS · LEVEL 1 · EXAM DEPTH</div>
-            <h1 class="text-3xl font-bold mt-1">ETW1001 – Introduction to Statistical Analysis</h1>
-            <p class="text-[#65695B] mt-2">Degree-level: descriptive foundations, inference logic, regression interpretation, decision errors</p>
-        </div>
+<header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
+<div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+<a href="../index.html" class="font-bold hover:text-white">← UNI</a>
+<span class="text-sm text-[#C0C4B7]">ETW1001 · Advanced</span>
+</div></header>
+<main class="max-w-4xl mx-auto px-4 py-8 prose">
+<div class="mb-6">
+<div class="text-sm font-semibold text-[#8A9EAB]">B2026 · STATISTICAL ANALYSIS</div>
+<h1 class="text-3xl font-bold mt-1">ETW1001 – Introduction to Statistical Analysis</h1>
+<p class="text-[#65695B] mt-2">Advanced notes: estimator logic, interval interpretation, testing errors, regression limits</p>
+</div>
 
-        <h2>1. From Data to Decision</h2>
-        <p>Statistics supports business decisions under uncertainty. Distinguish descriptive analytics (summarise observed data) from inferential analytics (generalise from sample to population with quantified uncertainty). Degree assessments test correct choice of measure, valid interpretation, and awareness of assumptions — not only computation.</p>
+<h2>1. Statistical Reasoning in Business</h2>
+<p>Decisions under uncertainty require (i) summarising sample evidence and (ii) quantifying uncertainty about population parameters. Misinterpretation of p-values, confidence intervals and R² is more costly than arithmetic slips — exams increasingly test interpretation.</p>
 
-        <h2>2. Descriptive Statistics</h2>
-        <p><strong>Central tendency:</strong> mean (sensitive to outliers), median (robust), mode. Use median for skewed distributions or ordinal data where mean is misleading.</p>
-        <div class="formula-box">
-            Sample variance s² = Σ(x − x̄)² / (n − 1)<br>
-            Sample standard deviation s = √s²
-        </div>
-        <p>Division by n−1 makes s² an unbiased estimator of population variance under standard sampling assumptions. Range and IQR summarise spread; z-scores standardise relative position.</p>
+<h2>2. Descriptives with Design Intent</h2>
+<p>Mean vs median: use median under skewness/outliers; mean for roughly symmetric data and as input to many inferential procedures. Sample variance uses n−1 (Bessel’s correction) for unbiasedness of σ² under iid normal sampling. Empirical rule / Chebyshev: know which requires normality assumptions.</p>
 
-        <h2>3. Sampling and Inference Logic</h2>
-        <p>A <strong>parameter</strong> describes a population; a <strong>statistic</strong> is computed from a sample. Sampling distributions describe how a statistic varies across samples; the standard error shrinks as n increases (for many estimators), improving precision.</p>
-        <p><strong>Confidence interval:</strong> a range constructed so that, under repeated sampling, a stated proportion (e.g. 95%) of such intervals contain the true parameter. It is incorrect to say “there is 95% probability the parameter lies in this specific interval” in the frequentist interpretation usually taught at this level — state the repeated-sampling meaning carefully for full marks.</p>
+<h2>3. Estimation</h2>
+<p>Point estimator properties (informal): unbiasedness, efficiency, consistency. SE of the mean ≈ s/√n. CI for mean (σ known): x̄ ± z<sub>α/2</sub> σ/√n; σ unknown: t<sub>n−1</sub>. Correct frequentist reading: the interval is random before data; the parameter is fixed; long-run coverage is 1−α. After observing data, avoid “probability the mean is in [a,b] is 0.95” unless Bayesian framework is taught.</p>
 
-        <h2>4. Hypothesis Testing</h2>
-        <ol>
-            <li>State H₀ and H₁ (one-sided vs two-sided matters)</li>
-            <li>Choose α (Type I error rate)</li>
-            <li>Compute test statistic and p-value (or critical value)</li>
-            <li>Reject H₀ if p ≤ α</li>
-            <li>Interpret in business language — statistical significance ≠ practical significance</li>
-        </ol>
-        <p><strong>Type I error:</strong> reject true H₀. <strong>Type II error:</strong> fail to reject false H₀. Power = 1 − β. Trade-off between α and β for fixed n.</p>
+<h2>4. Testing</h2>
+<p>H₀ as the straw-man of no effect / no difference; choose one- vs two-sided from the research claim <em>before</em> seeing data. p-value = probability, under H₀, of data as extreme or more extreme than observed — <strong>not</strong> P(H₀ true | data). Type I (α) vs Type II (β); power 1−β rises with n, effect size, α, and lower noise. Statistical significance ≠ economic significance (effect size, costs of error).</p>
 
-        <h2>5. Simple Linear Regression</h2>
-        <div class="formula-box">Ŷ = b₀ + b₁X</div>
-        <p>b₁: estimated average change in Y for a one-unit increase in X. b₀: predicted Y when X = 0 (may lack practical meaning if X = 0 is outside the data range). R²: proportion of sample variation in Y explained by the model — high R² does not prove causality. Residual analysis and awareness of nonlinearity, outliers and omitted variables are part of competent interpretation.</p>
-
-        <div class="tip-box">
-            <strong>Exam technique:</strong> Always interpret numbers in context. State hypotheses and conclusions in words. Prefer median when skewness/outliers are indicated. Do not over-claim causality from regression alone.
-        </div>
-
-        <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
-            <a href="ecm1953.html" class="font-medium hover:underline">← ECM1953</a>
-            <a href="mgw1010.html" class="font-medium hover:underline">Next: MGW1010 →</a>
-        </div>
-    </main>
-</body>
-</html>
+<h2>5. Simple Linear Regression</h2>
+<div class="formula-box">Y = β₀ + β₁X + ε &nbsp;;&nbsp; Ŷ = b₀ + b₁X</div>
+<p>OLS minimises Σe². b₁ is causal only under strong assumptions (random assignment / no omitted confounders / correct functional form). R² measures in-sample linear fit, not predictive validity out of sample and not causality. Residual plots diagnose nonlinearity and heteroscedasticity at the level required by the unit.</p>
+<div class="tip-box">
+<strong>Exam:</strong> define hypotheses in symbols and words; interpret CI and slope in context units; refuse causal claims from observational regression without warrant.
+</div>
+<div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
+<a href="ecm1953.html" class="font-medium hover:underline">← ECM1953</a>
+<a href="mgw1010.html" class="font-medium hover:underline">MGW1010 →</a>
+</div>
+</main></body></html>

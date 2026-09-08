@@ -1,102 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BFW1001 Foundations of Finance | UNI Degree Notes</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BFW1001 | UNI Advanced Notes</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="../css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="bg-[#EBE0DD] text-[#4C6170]">
-    <header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
-        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="../index.html" class="font-bold hover:text-white">← UNI</a>
-            <span class="text-sm text-[#C0C4B7]">BFW1001 · Degree-level</span>
-        </div>
-    </header>
-    <main class="max-w-4xl mx-auto px-4 py-8 prose">
-        <div class="mb-6">
-            <div class="text-sm font-semibold text-[#9CA38E]">FINANCE · LEVEL 1 · EXAM DEPTH</div>
-            <h1 class="text-3xl font-bold mt-1">BFW1001 – Foundations of Finance</h1>
-            <p class="text-[#65695B] mt-2">Degree-level: TVM mechanics, capital budgeting logic, risk pricing intuition, market structure</p>
-        </div>
+<header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
+<div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+<a href="../index.html" class="font-bold hover:text-white">← UNI</a>
+<span class="text-sm text-[#C0C4B7]">BFW1001 · Advanced</span>
+</div></header>
+<main class="max-w-4xl mx-auto px-4 py-8 prose">
+<div class="mb-6">
+<div class="text-sm font-semibold text-[#9CA38E]">B2026 · FOUNDATIONS OF FINANCE</div>
+<h1 class="text-3xl font-bold mt-1">BFW1001 – Foundations of Finance</h1>
+<p class="text-[#65695B] mt-2">Advanced notes: valuation algebra, project cash-flow construction, capital budgeting conflicts, risk decomposition</p>
+</div>
 
-        <h2>1. Corporate Finance Decision Map</h2>
-        <p>Finance studies intertemporal allocation of resources under uncertainty. For the firm, the core problems are:</p>
-        <ul>
-            <li><strong>Investment (capital budgeting):</strong> which real assets to acquire</li>
-            <li><strong>Financing (capital structure):</strong> debt vs equity mix and security design</li>
-            <li><strong>Payout and liquidity:</strong> dividends/repurchases and working-capital policy</li>
-        </ul>
-        <p>The normative benchmark in introductory corporate finance is maximisation of firm value (shareholder wealth), subject to risk and capital-market constraints. Exam answers should link techniques (NPV, etc.) back to this objective — not treat formulas as ends in themselves.</p>
+<h2>1. Value Maximisation as the Benchmark Objective</h2>
+<p>Introductory corporate finance adopts shareholder-wealth maximisation (or firm-value maximisation) as the normative objective under complete contracting and well-functioning markets. In the presence of agency conflicts, asymmetric information and externalities, this benchmark is qualified — but exam technique still uses NPV as the operational expression of value creation unless the question explicitly introduces constraints (capital rationing, ESG mandates, stakeholder trade-offs).</p>
+<p>Three decision classes: <strong>investment</strong> (which real assets), <strong>financing</strong> (claims against the firm), <strong>payout/liquidity</strong> (distributions and net working capital). Separation of investment and financing (Modigliani–Miller ideal) is taught as a baseline; when capital structure matters, WACC and adjusted present value appear in later units.</p>
 
-        <h2>2. Time Value of Money — Theory and Mechanics</h2>
-        <div class="definition-box">
-            A unit of currency today is worth more than the same unit in the future because of (i) the opportunity cost of capital (forgone return), (ii) inflation (purchasing-power erosion), and (iii) risk (uncertainty of future payoffs).
-        </div>
-        <p>Compounding maps present value to future value; discounting is the inverse operation. The discount rate is the required return for cash flows of comparable risk and timing. Mismatching the period of the rate and the number of periods is a common exam error (e.g. using an annual rate with monthly cash flows without conversion).</p>
+<h2>2. Discounted Cash Flow Algebra</h2>
+<div class="definition-box">
+Present value is the current market value of a promised (or expected) future payoff, obtained by discounting at a rate that compensates for time and risk. Arbitrage-free pricing in frictionless markets equates PV to the cost of a replicating portfolio.
+</div>
+<div class="formula-box">
+FV = PV(1+r)<sup>n</sup><br>
+PV = FV(1+r)<sup>−n</sup><br>
+PV<sub>ordinary annuity</sub> = PMT · a<sub>n⌉r</sub> = PMT[1−(1+r)<sup>−n</sup>]/r<br>
+PV<sub>perpetuity</sub> = PMT/r &nbsp;(first cash flow one period ahead)<br>
+PV<sub>growing perpetuity</sub> = C₁/(r−g) &nbsp;(r&gt;g)
+</div>
+<p>Effective annual rate (EAR) vs quoted APR: EAR = (1 + r<sub>nom</sub>/m)<sup>m</sup> − 1. Always align compounding frequency with cash-flow frequency. Annuity due = ordinary annuity × (1+r).</p>
 
-        <div class="overflow-x-auto">
-            <table>
-                <thead><tr><th>Relation</th><th>Formula</th><th>Use</th></tr></thead>
-                <tbody>
-                    <tr><td>FV of a lump sum</td><td class="font-mono text-sm">FV = PV(1+r)<sup>n</sup></td><td>Terminal value of a present sum</td></tr>
-                    <tr><td>PV of a lump sum</td><td class="font-mono text-sm">PV = FV(1+r)<sup>−n</sup></td><td>Value today of a future sum</td></tr>
-                    <tr><td>PV of ordinary annuity</td><td class="font-mono text-sm">PMT[1−(1+r)<sup>−n</sup>]/r</td><td>Level end-of-period payments</td></tr>
-                    <tr><td>FV of ordinary annuity</td><td class="font-mono text-sm">PMT[(1+r)<sup>n</sup>−1]/r</td><td>Accumulated value of level payments</td></tr>
-                    <tr><td>NPV</td><td class="font-mono text-sm">−I₀ + Σ<sub>t</sub> CF<sub>t</sub>(1+r)<sup>−t</sup></td><td>Value created by a project</td></tr>
-                </tbody>
-            </table>
-        </div>
-        <p><strong>Ordinary annuity</strong> = payments at period-end; <strong>annuity due</strong> = payments at period-start (PV/FV higher by a factor of (1+r) relative to ordinary annuity, all else equal). Perpetuity PV = PMT/r (first payment one period from now, constant, infinite).</p>
+<h2>3. Project Cash Flows — Construction Rules</h2>
+<p>NPV uses <strong>incremental free cash flows</strong>, not accounting profit. Standard adjustments:</p>
+<ul>
+<li>Add back non-cash charges (depreciation) after tax as taught in your unit sequence</li>
+<li>Tax on operating earnings; treat tax shields consistently with the discount rate chosen</li>
+<li>ΔNWC: increases are cash outflows; recover at horizon if operations wind down</li>
+<li>Opportunity cost of assets already owned (forgone after-tax sale proceeds)</li>
+<li>Side effects: eroded contribution from existing products (cannibalisation)</li>
+<li>Ignore sunk costs; ignore interest expense in FCF if using WACC (financing in the rate)</li>
+</ul>
 
-        <h2>3. Capital Budgeting — Cash-Flow Discipline</h2>
-        <p>Project evaluation uses <strong>incremental after-tax cash flows</strong>: with-project minus without-project. Include side effects (cannibalisation, synergies), opportunity costs of existing assets, and net working-capital investment (recovered at project end if appropriate). Exclude sunk costs. Do not deduct interest in the cash flows if it is already embedded in the discount rate (avoid double-counting financing costs).</p>
+<h2>4. Capital Budgeting Criteria — Comparative Statics</h2>
+<div class="formula-box">NPV = −I₀ + Σ<sub>t=1..T</sub> CF<sub>t</sub>/(1+r)<sup>t</sup></div>
+<p><strong>NPV &gt; 0</strong> increases wealth at the risk-adjusted opportunity cost of capital. NPV is additive across independent projects (absent interactions).</p>
+<p><strong>IRR:</strong> solve NPV(r*) = 0. Accept independent projects if r* &gt; hurdle. Pathologies: non-conventional cash flows → multiple real positive IRRs (Descartes’ rule of signs); mutually exclusive ranking conflicts when scale or timing differs (crossover rate analysis); reinvestment assumption at IRR vs at WACC for NPV.</p>
+<p><strong>Profitability index</strong> PI = PV(future CF)/I₀ useful under hard capital rationing for single-period constraint ranking (with care for indivisibilities).</p>
+<p><strong>Payback / discounted payback:</strong> liquidity heuristics; truncated horizon ignores terminal value — inconsistent with value maximisation as a sole criterion.</p>
+<div class="example-box">
+<strong>Ranking conflict sketch:</strong> Project A small, high IRR, modest NPV; Project B large, lower IRR, higher NPV. Under unconstrained capital and value maximisation, choose B. IRR alone misleads.
+</div>
 
-        <h3>3.1 Net Present Value (primary criterion)</h3>
-        <p>NPV is the expected increase in wealth from accepting the project, measured in present-value terms. Decision rule for independent projects: accept if NPV &gt; 0. For mutually exclusive projects of comparable risk, choose the higher NPV (subject to capital rationing techniques beyond basic NPV when constraints bind).</p>
-        <div class="example-box">
-            I₀ = 80,000; CF = 30,000, 35,000, 40,000; r = 10%.<br>
-            PV inflows = 27,273 + 28,926 + 30,053 = 86,252 → NPV = <strong>+6,252 → accept</strong>.
-        </div>
+<h2>5. Risk, Diversification and Cost of Capital Intuition</h2>
+<p>Return variance decomposes into systematic and idiosyncratic components. Portfolio diversification drives idiosyncratic risk toward zero; covariance with the market portfolio remains. Equilibrium models (CAPM intuition at this level) price only non-diversifiable risk: E[R<sub>i</sub>] = R<sub>f</sub> + β<sub>i</sub>(E[R<sub>m</sub>]−R<sub>f</sub>).</p>
+<p>Using a company WACC on a project with β different from the firm’s asset beta biases accept/reject decisions. Pure-play or subjective adjustment of discount rates is the practical response at introductory level.</p>
 
-        <h3>3.2 IRR and Payback — uses and failure modes</h3>
-        <p><strong>IRR</strong> is the rate that sets NPV = 0. Accept if IRR &gt; hurdle rate for independent projects. Problems: multiple IRRs with sign-changing cash flows; ranking conflicts with NPV for mutually exclusive projects of different scale or timing; implicit reinvestment assumption at the IRR (often unrealistic).</p>
-        <p><strong>Payback</strong> measures recovery speed. Ignores time value (unless discounted payback) and cash flows beyond the cutoff. Acceptable as a liquidity or risk screen, not as the sole value-maximising rule.</p>
-        <div class="overflow-x-auto">
-            <table>
-                <thead><tr><th>Method</th><th>Strength</th><th>Limitation (exam point)</th></tr></thead>
-                <tbody>
-                    <tr><td>NPV</td><td>Direct value measure; additive</td><td>Requires appropriate risk-adjusted r</td></tr>
-                    <tr><td>IRR</td><td>Intuitive rate comparison</td><td>Multiple IRRs; ranking vs NPV can conflict</td></tr>
-                    <tr><td>Payback</td><td>Simple; liquidity focus</td><td>Ignores TVM & post-cutoff CFs</td></tr>
-                </tbody>
-            </table>
-        </div>
+<h2>6. Financial System Architecture</h2>
+<p>Direct finance (markets) vs intermediated finance (banks, funds). Primary vs secondary markets; money vs capital markets. Market efficiency hypotheses (weak/semi-strong/strong) constrain the scope for “free” abnormal returns and motivate reliance on DCF with public information — discuss only to the depth of your syllabus.</p>
 
-        <h2>4. Risk and Return</h2>
-        <div class="definition-box">
-            <strong>Risk–return trade-off:</strong> rational investors require higher expected returns to hold higher-risk claims. Required return is the opportunity cost of capital for cash flows of that risk class.
-        </div>
-        <p><strong>Total risk</strong> (e.g. return standard deviation) decomposes into:</p>
-        <ul>
-            <li><strong>Unsystematic (idiosyncratic) risk</strong> — firm-specific; diversifiable in a portfolio</li>
-            <li><strong>Systematic (market) risk</strong> — common factors; not diversifiable; priced in equilibrium</li>
-        </ul>
-        <p>For diversified investors, only systematic risk commands a risk premium. Using a firm-wide WACC on a project with different systematic risk misvalues the project (too high NPV for riskier projects if WACC is too low, and vice versa).</p>
-
-        <h2>5. Financial System</h2>
-        <p>Markets and intermediaries channel funds from surplus to deficit units, provide liquidity, risk-sharing and information/price discovery. Distinguish primary markets (issuance) from secondary markets (trading). Money markets: short-term instruments; capital markets: long-term debt and equity.</p>
-
-        <div class="tip-box">
-            <strong>Exam technique:</strong> Draw timelines; state the formula before substituting; specify the decision rule and numerical conclusion. When comparing NPV and IRR, discuss ranking conflicts and reinvestment assumptions explicitly for higher marks.
-        </div>
-
-        <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
-            <a href="acw1120.html" class="font-medium hover:underline">← ACW1120</a>
-            <a href="btw1042.html" class="font-medium hover:underline">Next: BTW1042 →</a>
-        </div>
-    </main>
-</body>
-</html>
+<div class="tip-box">
+<strong>Exam targets:</strong> timeline precision; EAR conversions; full incremental CF list before discounting; explicit comparison of NPV vs IRR failure modes; state the wealth-maximisation link in the conclusion sentence.
+</div>
+<div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
+<a href="acw1120.html" class="font-medium hover:underline">← ACW1120</a>
+<a href="btw1042.html" class="font-medium hover:underline">BTW1042 →</a>
+</div>
+</main></body></html>
