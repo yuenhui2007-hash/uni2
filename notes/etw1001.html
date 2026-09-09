@@ -137,6 +137,49 @@ Median=6. No single mode (all unique) or all equally frequent.
 <li>□ Write hypotheses and conclusions in words</li>
 </ul>
 <div class="tip-box"><strong>Exam:</strong> Interpretation marks often exceed pure calculation marks.</div>
+<!-- EXPANSION -->
+
+<h2 id="t7">7. Descriptive statistics — more worked sets</h2>
+<div class="example-box">
+Data: 3, 7, 7, 9, 14<br>
+Mean = 8; Median = 7; Mode = 7<br>
+Deviations from 8: −5,−1,−1,+1,+6; sq: 25+1+1+1+36=64<br>
+s² = 64/4 = 16; s = 4
+</div>
+<div class="example-box">
+Skew hint: mean 12, median 9 → right-skew influence (mean dragged up)
+</div>
+
+<h2 id="t8">8. Confidence interval template</h2>
+<ol class="steps">
+<li>Point estimate x̄</li>
+<li>SE = s/√n (or σ/√n if σ known)</li>
+<li>Critical value (z or t as taught)</li>
+<li>CI = x̄ ± critical × SE</li>
+<li>Interpret: long-run capture rate language — not “probability μ is in this interval” after seeing data (frequentist)</li>
+</ol>
+<div class="example-box">
+x̄=50, s=10, n=25, approx z=1.96 for 95%<br>
+SE=2; CI ≈ 50 ± 3.92 → <strong>[46.08, 53.92]</strong>
+</div>
+
+<h2 id="t9">9. Hypothesis test write-up template</h2>
+<div class="formula-box">H₀: μ = μ₀<br>H₁: μ ≠ μ₀ (or one-sided)<br>Test stat ≈ (x̄ − μ₀)/(s/√n)</div>
+<div class="example-box">
+Claim μ=100; n=36; x̄=104; s=12; α=0.05 two-sided<br>
+SE=2; z=(104−100)/2=2<br>
+|2|&gt;1.96 → reject H₀<br>
+Business: evidence mean differs from 100 (appears higher)
+</div>
+
+<h2 id="t10">10. Regression interpretation bank</h2>
+<div class="example-box">
+Ŷ = 40 + 0.8X (X = study hours/week, Y = exam mark)<br>
+Slope: +1 study hour associated with +0.8 mark on average<br>
+If R²=0.30: 30% of variation in marks explained by study hours in this linear model<br>
+Residual for a student with X=10, actual Y=55: predicted 48; residual +7
+</div>
+
 <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
 <a href="ecm1953.html" class="font-medium hover:underline">← ECM1953</a>
 <a href="mgw1010.html" class="font-medium hover:underline">MGW1010 →</a>
