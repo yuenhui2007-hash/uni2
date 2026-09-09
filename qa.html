@@ -62,18 +62,17 @@
         .answer-panel.open { display: block; }
     </style>
 </head>
-<body class="bg-[#EBE0DD] text-[#4C6170]">
-    <header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="index.html" class="font-bold hover:text-white">← UNI</a>
-            <span class="text-sm text-[#C0C4B7]">Q&A Bank</span>
-        </div>
-    </header>
+<body>
+    <header class="site-header sticky top-0 z-50">
+<div class="max-w-4xl mx-auto px-5 py-4 flex justify-between items-center">
+<a href="index.html">← UNI</a>
+<span class="text-muted text-sm">Q&A</span>
+</div></header>
 
     <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row gap-6">
         <aside class="md:w-56 flex-shrink-0">
-            <div class="bg-[#F7F2EF] border border-[#C0C4B7] rounded-xl p-3 sticky top-20">
-                <div class="text-xs font-bold uppercase tracking-wider text-[#8A9EAB] mb-2 px-2">Select unit</div>
+            <div class=" border border-line rounded-xl p-3 sticky top-20">
+                <div class="text-xs font-bold uppercase tracking-wider text-muted mb-2 px-2">Select unit</div>
                 <nav class="space-y-1" id="unit-nav">
                     <button type="button" class="nav-item active" data-unit="all">All units</button>
                     <button type="button" class="nav-item" data-unit="acw1120">ACW1120</button>
@@ -89,12 +88,12 @@
 
         <main class="flex-1 min-w-0">
             <h1 class="text-2xl md:text-3xl font-bold mb-1">Practice Q&A Bank</h1>
-            <p class="text-sm text-[#65695B] mb-6">Questions always visible · Click <strong>Show answer</strong> to reveal · <span class="badge level-easy">Easy</span> <span class="badge level-med">Medium</span> <span class="badge level-hard">Hard</span></p>
+            <p class="text-sm text-muted mb-6">Questions always visible · Click <strong>Show answer</strong> to reveal · <span class="badge level-easy">Easy</span> <span class="badge level-med">Medium</span> <span class="badge level-hard">Hard</span></p>
 
             <!-- ========== ACW1120 ========== -->
             <section class="subject-block visible" data-unit="acw1120">
-                <h2 class="text-xl font-bold mb-4 border-b-2 border-[#C0C4B7] pb-2">ACW1120 – Financial Accounting 1</h2>
-                <h3 class="font-semibold text-[#65695B] mb-3">Objective (MCQ)</h3>
+                <h2 class="text-xl font-bold mb-4 border-b-2 border-line pb-2">ACW1120 – Financial Accounting 1</h2>
+                <h3 class="font-semibold text-muted mb-3">Objective (MCQ)</h3>
 
                 <div class="q-item">
                     <div class="q-text"><span class="badge level-easy">Easy</span> The accounting equation is:</div>
@@ -192,7 +191,7 @@
                     <div class="answer-panel"><strong>Answer: B</strong> — Materiality is an entity-specific aspect of relevance.</div>
                 </div>
 
-                <h3 class="font-semibold text-[#65695B] mt-6 mb-3">Subjective / Calculation</h3>
+                <h3 class="font-semibold text-muted mt-6 mb-3">Subjective / Calculation</h3>
 
                 <div class="q-item">
                     <div class="q-text"><span class="badge level-easy">Easy</span> Assets RM120,000; Liabilities RM45,000. Calculate equity.</div>
@@ -259,8 +258,8 @@
 
             <!-- ========== BFW1001 ========== -->
             <section class="subject-block visible" data-unit="bfw1001">
-                <h2 class="text-xl font-bold mb-4 mt-10 border-b-2 border-[#C0C4B7] pb-2">BFW1001 – Foundations of Finance</h2>
-                <h3 class="font-semibold text-[#65695B] mb-3">Objective (MCQ)</h3>
+                <h2 class="text-xl font-bold mb-4 mt-10 border-b-2 border-line pb-2">BFW1001 – Foundations of Finance</h2>
+                <h3 class="font-semibold text-muted mb-3">Objective (MCQ)</h3>
 
                 <div class="q-item">
                     <div class="q-text"><span class="badge level-easy">Easy</span> Time value of money states that:</div>
@@ -334,7 +333,7 @@
                     <div class="answer-panel"><strong>Answer: B</strong></div>
                 </div>
 
-                <h3 class="font-semibold text-[#65695B] mt-6 mb-3">Subjective / Calculation</h3>
+                <h3 class="font-semibold text-muted mt-6 mb-3">Subjective / Calculation</h3>
 
                 <div class="q-item">
                     <div class="q-text"><span class="badge level-easy">Easy</span> Calculate FV of RM12,000 at 8% p.a. for 5 years (annual compounding).</div>
@@ -395,8 +394,8 @@
 
             <!-- ========== BTW1042 ========== -->
             <section class="subject-block visible" data-unit="btw1042">
-                <h2 class="text-xl font-bold mb-4 mt-10 border-b-2 border-[#C0C4B7] pb-2">BTW1042 – Business Law</h2>
-                <h3 class="font-semibold text-[#65695B] mb-3">Objective (MCQ)</h3>
+                <h2 class="text-xl font-bold mb-4 mt-10 border-b-2 border-line pb-2">BTW1042 – Business Law</h2>
+                <h3 class="font-semibold text-muted mb-3">Objective (MCQ)</h3>
 
                 <div class="q-item">
                     <div class="q-text"><span class="badge level-easy">Easy</span> A price tag on goods in a self-service store is generally:</div>
@@ -458,7 +457,7 @@
                     <div class="answer-panel"><strong>Answer: B</strong></div>
                 </div>
 
-                <h3 class="font-semibold text-[#65695B] mt-6 mb-3">Subjective</h3>
+                <h3 class="font-semibold text-muted mt-6 mb-3">Subjective</h3>
 
                 <div class="q-item">
                     <div class="q-text"><span class="badge level-easy">Easy</span> List the four elements required to establish the tort of negligence.</div>
@@ -508,8 +507,8 @@
 
             <!-- ========== ECM1953 ========== -->
             <section class="subject-block visible" data-unit="ecm1953">
-                <h2 class="text-xl font-bold mb-4 mt-10 border-b-2 border-[#C0C4B7] pb-2">ECM1953 – Principles of Economics</h2>
-                <h3 class="font-semibold text-[#65695B] mb-3">Objective (MCQ)</h3>
+                <h2 class="text-xl font-bold mb-4 mt-10 border-b-2 border-line pb-2">ECM1953 – Principles of Economics</h2>
+                <h3 class="font-semibold text-muted mb-3">Objective (MCQ)</h3>
 
                 <div class="q-item">
                     <div class="q-text"><span class="badge level-easy">Easy</span> If demand increases and supply is constant, equilibrium price and quantity will:</div>
@@ -559,7 +558,7 @@
                     <div class="answer-panel"><strong>Answer: B</strong> — Demand is inelastic.</div>
                 </div>
 
-                <h3 class="font-semibold text-[#65695B] mt-6 mb-3">Subjective / Calculation</h3>
+                <h3 class="font-semibold text-muted mt-6 mb-3">Subjective / Calculation</h3>
 
                 <div class="q-item">
                     <div class="q-text"><span class="badge level-easy">Easy</span> Price rises from RM10 to RM12; quantity demanded falls from 200 to 160. Calculate PED.</div>
@@ -609,8 +608,8 @@
 
             <!-- ========== ETW1001 ========== -->
             <section class="subject-block visible" data-unit="etw1001">
-                <h2 class="text-xl font-bold mb-4 mt-10 border-b-2 border-[#C0C4B7] pb-2">ETW1001 – Statistical Analysis</h2>
-                <h3 class="font-semibold text-[#65695B] mb-3">Objective (MCQ)</h3>
+                <h2 class="text-xl font-bold mb-4 mt-10 border-b-2 border-line pb-2">ETW1001 – Statistical Analysis</h2>
+                <h3 class="font-semibold text-muted mb-3">Objective (MCQ)</h3>
 
                 <div class="q-item">
                     <div class="q-text"><span class="badge level-easy">Easy</span> Which measure of central tendency is least affected by extreme outliers?</div>
@@ -648,7 +647,7 @@
                     <div class="answer-panel"><strong>Answer: B</strong></div>
                 </div>
 
-                <h3 class="font-semibold text-[#65695B] mt-6 mb-3">Subjective / Calculation</h3>
+                <h3 class="font-semibold text-muted mt-6 mb-3">Subjective / Calculation</h3>
 
                 <div class="q-item">
                     <div class="q-text"><span class="badge level-easy">Easy</span> Data: 5, 7, 9, 11, 13. Calculate the mean.</div>
@@ -698,8 +697,8 @@
 
             <!-- ========== MGW1010 ========== -->
             <section class="subject-block visible" data-unit="mgw1010">
-                <h2 class="text-xl font-bold mb-4 mt-10 border-b-2 border-[#C0C4B7] pb-2">MGW1010 – Introduction to Management</h2>
-                <h3 class="font-semibold text-[#65695B] mb-3">Objective (MCQ)</h3>
+                <h2 class="text-xl font-bold mb-4 mt-10 border-b-2 border-line pb-2">MGW1010 – Introduction to Management</h2>
+                <h3 class="font-semibold text-muted mb-3">Objective (MCQ)</h3>
 
                 <div class="q-item">
                     <div class="q-text"><span class="badge level-easy">Easy</span> Managers who believe employees are self-motivated follow:</div>
@@ -749,7 +748,7 @@
                     <div class="answer-panel"><strong>Answer: B</strong></div>
                 </div>
 
-                <h3 class="font-semibold text-[#65695B] mt-6 mb-3">Subjective</h3>
+                <h3 class="font-semibold text-muted mt-6 mb-3">Subjective</h3>
 
                 <div class="q-item">
                     <div class="q-text"><span class="badge level-easy">Easy</span> Name the four functions of management.</div>
@@ -799,8 +798,8 @@
 
             <!-- ========== ACW2220 ========== -->
             <section class="subject-block visible" data-unit="acw2220">
-                <h2 class="text-xl font-bold mb-4 mt-10 border-b-2 border-[#C0C4B7] pb-2">ACW2220 – Management Accounting 1</h2>
-                <h3 class="font-semibold text-[#65695B] mb-3">Objective (MCQ)</h3>
+                <h2 class="text-xl font-bold mb-4 mt-10 border-b-2 border-line pb-2">ACW2220 – Management Accounting 1</h2>
+                <h3 class="font-semibold text-muted mb-3">Objective (MCQ)</h3>
 
                 <div class="q-item">
                     <div class="q-text"><span class="badge level-easy">Easy</span> Contribution margin equals:</div>
@@ -850,7 +849,7 @@
                     <div class="answer-panel"><strong>Answer: C</strong> — It does not differ between alternatives.</div>
                 </div>
 
-                <h3 class="font-semibold text-[#65695B] mt-6 mb-3">Subjective / Calculation</h3>
+                <h3 class="font-semibold text-muted mt-6 mb-3">Subjective / Calculation</h3>
 
                 <div class="q-item">
                     <div class="q-text"><span class="badge level-easy">Easy</span> SP RM90, VC RM54, FC RM108,000. Calculate CM per unit and break-even units.</div>
@@ -909,13 +908,13 @@
 
             </section>
 
-            <p class="mt-10 p-4 bg-[#D9C3B6]/40 border border-[#C0C4B7] rounded-xl text-sm">
+            <p class="mt-10 p-4 bg-[#D9C3B6]/40 border border-line rounded-xl text-sm">
                 <strong>Tip:</strong> Questions stay visible. Click <strong>Show answer</strong> only when you are ready. Use the left menu to focus on one unit.
             </p>
         </main>
     </div>
 
-    <footer class="bg-[#4C6170] text-[#C0C4B7] py-6 text-center text-sm mt-4">UNI Study Hub · Q&A Bank</footer>
+    <footer class=" text-muted py-6 text-center text-sm mt-4">UNI Study Hub · Q&A Bank</footer>
 
     <script>
         function toggleAns(btn) {

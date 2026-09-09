@@ -4,96 +4,89 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UNI – Study Hub</title>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 <header class="site-header sticky top-0 z-50">
   <div class="max-w-5xl mx-auto px-5 py-4 flex items-center justify-between">
-    <a href="index.html" class="font-semibold tracking-[0.12em] text-sm no-underline">UNI</a>
-    <nav class="flex gap-6 text-sm text-[#6F6F6F]">
-      <a href="qa.html" class="no-underline hover:text-black">Q&amp;A</a>
-      <a href="assignments.html" class="no-underline hover:text-black">Assignments</a>
+    <a href="index.html" style="letter-spacing:0.14em;font-size:0.85rem;">UNI</a>
+    <nav class="flex gap-6 text-sm">
+      <a href="qa.html" class="text-muted">Q&amp;A</a>
+      <a href="assignments.html" class="text-muted">Assignments</a>
     </nav>
   </div>
 </header>
 
 <main class="max-w-5xl mx-auto px-5 py-12 md:py-16">
   <section class="hero mb-14">
-    <span class="badge-soft">Monash · B2026 Accountancy pathway</span>
-    <h1>Clear notes for heavier exams</h1>
-    <p>A calm study space for the seven Part A cores — theory, calculations, diagrams, and model answers without the clutter.</p>
+    <span class="badge-soft">Monash B2026 · Accountancy pathway</span>
+    <h1>Study notes that stay out of the way</h1>
+    <p>Clean revision space for the seven Part A cores — theory, calculations, diagrams, and model answers.</p>
     <div class="flex flex-wrap gap-3 mt-8">
-      <a href="qa.html" style="background:#111;color:#fff;">Open Q&amp;A bank</a>
-      <a href="assignments.html" style="background:transparent;color:#111;border:1px solid #E6E4DF;">Assignments + answers</a>
+      <a href="qa.html" style="background:#0A0A0A;color:#fff;border-radius:999px;padding:0.7rem 1.15rem;font-size:0.88rem;font-weight:600;text-decoration:none;">Open Q&amp;A</a>
+      <a href="assignments.html" style="background:transparent;color:#0A0A0A;border:1px solid #EAEAEA;border-radius:999px;padding:0.7rem 1.15rem;font-size:0.88rem;font-weight:600;text-decoration:none;">Assignments</a>
     </div>
   </section>
 
-  <div class="flex items-end justify-between mb-5">
-    <h2 class="mt-0 mb-0">Core units</h2>
-    <span class="text-sm text-[#6F6F6F] hidden sm:inline">7 units</span>
-  </div>
-
-  <div class="grid md:grid-cols-2 gap-4 mb-14">
-    <a href="notes/acw1120.html" class="unit-card p-6 no-underline block">
-      <div class="text-[11px] font-semibold tracking-[0.08em] uppercase text-[#6F6F6F] mb-2">Accounting</div>
-      <div class="text-[1.15rem] font-semibold text-black" style="font-family:'IBM Plex Serif',Georgia,serif;">ACW1120</div>
-      <div class="text-sm text-[#3A3A3A] mt-1">Financial Accounting 1</div>
-      <p class="text-sm text-[#6F6F6F] mt-3 mb-0">Framework · accruals · inventory · statements</p>
+  <h2 style="margin-top:0;">Core units</h2>
+  <div class="grid md:grid-cols-2 gap-4 mt-5 mb-12">
+    <a class="unit-card p-6 block no-underline" href="notes/acw1120.html">
+      <div class="text-muted text-xs font-semibold tracking-widest uppercase mb-2">Accounting</div>
+      <div style="font-family:Newsreader,Georgia,serif;font-size:1.2rem;color:#0A0A0A;font-weight:600;">ACW1120</div>
+      <div class="text-sm mt-1" style="color:#2C2C2C;">Financial Accounting 1</div>
+      <p class="text-sm text-muted mt-3 mb-0">Framework · accruals · inventory · statements</p>
     </a>
-    <a href="notes/bfw1001.html" class="unit-card p-6 no-underline block">
-      <div class="text-[11px] font-semibold tracking-[0.08em] uppercase text-[#6F6F6F] mb-2">Finance</div>
-      <div class="text-[1.15rem] font-semibold text-black" style="font-family:'IBM Plex Serif',Georgia,serif;">BFW1001</div>
-      <div class="text-sm text-[#3A3A3A] mt-1">Foundations of Finance</div>
-      <p class="text-sm text-[#6F6F6F] mt-3 mb-0">TVM · NPV · bonds · risk</p>
+    <a class="unit-card p-6 block no-underline" href="notes/bfw1001.html">
+      <div class="text-muted text-xs font-semibold tracking-widest uppercase mb-2">Finance</div>
+      <div style="font-family:Newsreader,Georgia,serif;font-size:1.2rem;color:#0A0A0A;font-weight:600;">BFW1001</div>
+      <div class="text-sm mt-1" style="color:#2C2C2C;">Foundations of Finance</div>
+      <p class="text-sm text-muted mt-3 mb-0">TVM · NPV · bonds · risk</p>
     </a>
-    <a href="notes/btw1042.html" class="unit-card p-6 no-underline block">
-      <div class="text-[11px] font-semibold tracking-[0.08em] uppercase text-[#6F6F6F] mb-2">Law</div>
-      <div class="text-[1.15rem] font-semibold text-black" style="font-family:'IBM Plex Serif',Georgia,serif;">BTW1042</div>
-      <div class="text-sm text-[#3A3A3A] mt-1">Business Law</div>
-      <p class="text-sm text-[#6F6F6F] mt-3 mb-0">Contract · negligence · companies</p>
+    <a class="unit-card p-6 block no-underline" href="notes/btw1042.html">
+      <div class="text-muted text-xs font-semibold tracking-widest uppercase mb-2">Law</div>
+      <div style="font-family:Newsreader,Georgia,serif;font-size:1.2rem;color:#0A0A0A;font-weight:600;">BTW1042</div>
+      <div class="text-sm mt-1" style="color:#2C2C2C;">Business Law</div>
+      <p class="text-sm text-muted mt-3 mb-0">Contract · negligence · companies</p>
     </a>
-    <a href="notes/ecm1953.html" class="unit-card p-6 no-underline block">
-      <div class="text-[11px] font-semibold tracking-[0.08em] uppercase text-[#6F6F6F] mb-2">Economics</div>
-      <div class="text-[1.15rem] font-semibold text-black" style="font-family:'IBM Plex Serif',Georgia,serif;">ECM1953</div>
-      <div class="text-sm text-[#3A3A3A] mt-1">Principles of Economics</div>
-      <p class="text-sm text-[#6F6F6F] mt-3 mb-0">Markets · elasticity · policy</p>
+    <a class="unit-card p-6 block no-underline" href="notes/ecm1953.html">
+      <div class="text-muted text-xs font-semibold tracking-widest uppercase mb-2">Economics</div>
+      <div style="font-family:Newsreader,Georgia,serif;font-size:1.2rem;color:#0A0A0A;font-weight:600;">ECM1953</div>
+      <div class="text-sm mt-1" style="color:#2C2C2C;">Principles of Economics</div>
+      <p class="text-sm text-muted mt-3 mb-0">Markets · elasticity · policy</p>
     </a>
-    <a href="notes/etw1001.html" class="unit-card p-6 no-underline block">
-      <div class="text-[11px] font-semibold tracking-[0.08em] uppercase text-[#6F6F6F] mb-2">Statistics</div>
-      <div class="text-[1.15rem] font-semibold text-black" style="font-family:'IBM Plex Serif',Georgia,serif;">ETW1001</div>
-      <div class="text-sm text-[#3A3A3A] mt-1">Statistical Analysis</div>
-      <p class="text-sm text-[#6F6F6F] mt-3 mb-0">Descriptives · tests · regression</p>
+    <a class="unit-card p-6 block no-underline" href="notes/etw1001.html">
+      <div class="text-muted text-xs font-semibold tracking-widest uppercase mb-2">Statistics</div>
+      <div style="font-family:Newsreader,Georgia,serif;font-size:1.2rem;color:#0A0A0A;font-weight:600;">ETW1001</div>
+      <div class="text-sm mt-1" style="color:#2C2C2C;">Statistical Analysis</div>
+      <p class="text-sm text-muted mt-3 mb-0">Descriptives · tests · regression</p>
     </a>
-    <a href="notes/mgw1010.html" class="unit-card p-6 no-underline block">
-      <div class="text-[11px] font-semibold tracking-[0.08em] uppercase text-[#6F6F6F] mb-2">Management</div>
-      <div class="text-[1.15rem] font-semibold text-black" style="font-family:'IBM Plex Serif',Georgia,serif;">MGW1010</div>
-      <div class="text-sm text-[#3A3A3A] mt-1">Introduction to Management</div>
-      <p class="text-sm text-[#6F6F6F] mt-3 mb-0">Theory · leadership · ethics</p>
+    <a class="unit-card p-6 block no-underline" href="notes/mgw1010.html">
+      <div class="text-muted text-xs font-semibold tracking-widest uppercase mb-2">Management</div>
+      <div style="font-family:Newsreader,Georgia,serif;font-size:1.2rem;color:#0A0A0A;font-weight:600;">MGW1010</div>
+      <div class="text-sm mt-1" style="color:#2C2C2C;">Introduction to Management</div>
+      <p class="text-sm text-muted mt-3 mb-0">Theory · leadership · ethics</p>
     </a>
-    <a href="notes/acw2220.html" class="unit-card p-6 no-underline block md:col-span-2">
-      <div class="text-[11px] font-semibold tracking-[0.08em] uppercase text-[#6F6F6F] mb-2">Management accounting</div>
-      <div class="text-[1.15rem] font-semibold text-black" style="font-family:'IBM Plex Serif',Georgia,serif;">ACW2220</div>
-      <div class="text-sm text-[#3A3A3A] mt-1">Management Accounting 1</div>
-      <p class="text-sm text-[#6F6F6F] mt-3 mb-0">CVP · costing · special order · make or buy · keep or drop</p>
+    <a class="unit-card p-6 block no-underline md:col-span-2" href="notes/acw2220.html">
+      <div class="text-muted text-xs font-semibold tracking-widest uppercase mb-2">Management accounting</div>
+      <div style="font-family:Newsreader,Georgia,serif;font-size:1.2rem;color:#0A0A0A;font-weight:600;">ACW2220</div>
+      <div class="text-sm mt-1" style="color:#2C2C2C;">Management Accounting 1</div>
+      <p class="text-sm text-muted mt-3 mb-0">CVP · costing · special order · make or buy · keep or drop</p>
     </a>
   </div>
 
   <div class="grid md:grid-cols-2 gap-4">
-    <a href="qa.html" class="unit-card p-6 no-underline block">
-      <div class="text-[1.05rem] font-semibold text-black" style="font-family:'IBM Plex Serif',Georgia,serif;">Q&amp;A bank</div>
-      <p class="text-sm text-[#6F6F6F] mt-2 mb-0">Filter by unit · MCQ options · Easy / Medium / Hard</p>
+    <a class="unit-card p-6 block no-underline" href="qa.html">
+      <div style="font-family:Newsreader,Georgia,serif;font-size:1.1rem;color:#0A0A0A;font-weight:600;">Q&amp;A bank</div>
+      <p class="text-sm text-muted mt-2 mb-0">Filter by unit · MCQs · Easy / Medium / Hard</p>
     </a>
-    <a href="assignments.html" class="unit-card p-6 no-underline block">
-      <div class="text-[1.05rem] font-semibold text-black" style="font-family:'IBM Plex Serif',Georgia,serif;">Assignments</div>
-      <p class="text-sm text-[#6F6F6F] mt-2 mb-0">Graphs · calculations · long essays · model answers</p>
+    <a class="unit-card p-6 block no-underline" href="assignments.html">
+      <div style="font-family:Newsreader,Georgia,serif;font-size:1.1rem;color:#0A0A0A;font-weight:600;">Assignments</div>
+      <p class="text-sm text-muted mt-2 mb-0">Graphs · calculations · long essays · model answers</p>
     </a>
   </div>
 </main>
 
-<footer class="py-10 text-center text-sm">
-  UNI Study Hub · Monash Bachelor of Business and Commerce
-</footer>
+<footer>UNI Study Hub · Monash Bachelor of Business and Commerce</footer>
 </body>
 </html>
