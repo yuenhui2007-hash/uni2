@@ -7,72 +7,171 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="css/style.css">
 <style>
-.ans-panel{display:none;margin-top:.75rem;padding:1.1rem 1.2rem;background:#E4E7DF;border-left:4px solid #65695B;border-radius:0 10px 10px 0;font-size:.9rem;line-height:1.7}
-.ans-panel.open{display:block}
-.show-btn{font-size:.8rem;font-weight:600;color:#4C6170;background:#EBE0DD;border:1px solid #C0C4B7;border-radius:6px;padding:.35rem .75rem;cursor:pointer;margin-top:.4rem}
-.show-btn:hover{background:#D9C3B6}
-.task{background:#F7F2EF;border:1px solid #C0C4B7;border-radius:12px;padding:1.15rem 1.25rem;margin-bottom:1rem}
-.task h3{font-weight:700;font-size:1.02rem;margin-bottom:.4rem;color:#4C6170}
-.mark-tip{font-size:.8rem;color:#4C6170;margin-top:.75rem;padding:.55rem .7rem;background:#EBE0DD;border-radius:8px;border:1px solid #C0C4B7}
-.step{margin:.35rem 0 .35rem 0}
 
-.subject-bar{
-  display:flex;flex-wrap:wrap;gap:0.45rem;
-  position:sticky;top:3.4rem;z-index:40;
-  background:rgba(243,238,232,0.92);
-  backdrop-filter:blur(12px);
-  border:1px solid var(--line,#D9D2C8);
-  border-radius:16px;
-  padding:0.65rem 0.75rem;
-  margin:0 0 1.5rem 0;
-  box-shadow:0 4px 16px rgba(31,42,50,0.05);
+.assign-layout{
+  display:grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1.25rem;
+  align-items:start;
 }
-.subj-btn{
-  border:1px solid var(--line,#D9D2C8);
-  background:#FFFDFB;
-  color:var(--text,#3D4A54);
-  border-radius:999px;
-  padding:0.35rem 0.8rem;
-  font-size:0.78rem;
-  font-weight:650;
+.assign-sidebar{
+  position:sticky;
+  top: 4.2rem;
+  background: var(--card, #FFFDFB);
+  border: 1px solid var(--line, #D9D2C8);
+  border-radius: 16px;
+  padding: 0.85rem;
+  max-height: calc(100vh - 5rem);
+  overflow-y: auto;
+  box-shadow: 0 4px 16px rgba(31,42,50,0.04);
+}
+.sidebar-title{
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted, #6B7782);
+  margin: 0 0 0.55rem 0.35rem;
+}
+.sidebar-divider{
+  height:1px;
+  background: var(--line, #D9D2C8);
+  margin: 0.55rem 0;
+}
+.assign-sidebar .subj-btn{
+  display:block;
+  width:100%;
+  text-align:left;
+  border:1px solid transparent;
+  background:transparent;
+  color: var(--text, #3D4A54);
+  border-radius: 12px;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.82rem;
+  font-weight: 650;
   cursor:pointer;
   font-family:inherit;
+  margin-bottom: 0.2rem;
+  line-height: 1.25;
 }
-.subj-btn:hover{border-color:#2F5D50;color:#2F5D50}
-.subj-btn.active{
+.assign-sidebar .subj-btn span{
+  display:block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--muted, #6B7782);
+  margin-top: 0.12rem;
+}
+.assign-sidebar .subj-btn:hover{
+  background: #F3EEE8;
+}
+.assign-sidebar .subj-btn.active{
+  background: #2F5D50;
+  color: #fff;
+  border-color: #2F5D50;
+}
+.assign-sidebar .subj-btn.active span{ color: rgba(255,255,255,0.8); }
+.assign-main{ min-width: 0; }
+.subject-section.hidden-subj{ display:none !important; }
+
+/* Clearer answer panels */
+.ans-panel{
+  display:none;
+  margin-top:0.85rem;
+  padding:1.15rem 1.25rem;
+  background:#F4FAF7;
+  border:1px solid #C5DDD2;
+  border-left:5px solid #2F5D50;
+  border-radius:0 12px 12px 0;
+  font-size:0.92rem;
+  line-height:1.75;
+  color:#1F2A32;
+}
+.ans-panel.open{display:block}
+.ans-panel strong{ color:#1F2A32; }
+.ans-step{
+  background:#fff;
+  border:1px solid #D9D2C8;
+  border-radius:10px;
+  padding:0.65rem 0.85rem;
+  margin:0.45rem 0;
+}
+.ans-final{
   background:#2F5D50;
-  border-color:#2F5D50;
   color:#fff;
+  border-radius:10px;
+  padding:0.7rem 0.9rem;
+  margin-top:0.75rem;
+  font-weight:650;
 }
-.subject-section{display:block}
-.subject-section.hidden-subj{display:none !important}
+.mark-tip{
+  font-size:0.82rem;
+  color:#3D4A54;
+  margin-top:0.85rem;
+  padding:0.65rem 0.8rem;
+  background:#F8EFE6;
+  border-radius:10px;
+  border:1px solid #E5D3C0;
+}
+.show-btn{
+  font-size:0.8rem;font-weight:650;
+  color:#fff;background:#2F5D50;
+  border:none;border-radius:999px;
+  padding:0.4rem 0.95rem;cursor:pointer;margin-top:0.5rem;
+}
+.show-btn:hover{filter:brightness(1.08)}
+.task{
+  background:#FFFDFB;
+  border:1px solid #D9D2C8;
+  border-radius:14px;
+  padding:1.15rem 1.25rem;
+  margin-bottom:1rem;
+}
+.task h3{font-weight:700;font-size:1.02rem;margin-bottom:0.4rem;color:#1F2A32}
+
+@media (max-width: 860px){
+  .assign-layout{ grid-template-columns: 1fr; }
+  .assign-sidebar{
+    position:relative; top:auto;
+    max-height:none;
+    display:flex; flex-wrap:wrap; gap:0.35rem;
+  }
+  .assign-sidebar .subj-btn{ width:auto; }
+  .assign-sidebar .subj-btn span{ display:none; }
+  .sidebar-title, .sidebar-divider{ width:100%; }
+}
 
 </style>
 </head>
 <body>
 <header class="site-header sticky top-0 z-50">
-<div class="max-w-4xl mx-auto px-5 py-4 flex justify-between items-center">
+<div class="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center">
 <a href="index.html">← UNI</a>
 <span class="text-muted text-sm">Assignments</span>
 </div></header>
 
-<main class="max-w-4xl mx-auto px-4 py-8">
+<main class="max-w-6xl mx-auto px-4 py-8">
 <h1 class="text-3xl font-bold mb-2">Assignments — Detailed High-Band Answers</h1>
 <p class="text-muted mb-6">Attempt first, then open the model answer. Answers show <em>workings, structure, and examiner logic</em> — not only final numbers.</p>
 
-<div id="subject-bar" class="subject-bar">
-  <button type="button" class="subj-btn active" data-filter="all">All</button>
-  <button type="button" class="subj-btn" data-filter="acw1120">ACW1120</button>
-  <button type="button" class="subj-btn" data-filter="bfw1001">BFW1001</button>
-  <button type="button" class="subj-btn" data-filter="btw1042">BTW1042</button>
-  <button type="button" class="subj-btn" data-filter="acw2220">ACW2220</button>
-  <button type="button" class="subj-btn" data-filter="ecm1953">ECM1953</button>
-  <button type="button" class="subj-btn" data-filter="etw1001">ETW1001</button>
-  <button type="button" class="subj-btn" data-filter="mgw1010">MGW1010</button>
+
+<div class="assign-layout">
+<aside class="assign-sidebar" id="assign-sidebar">
+  <div class="sidebar-title">Subjects</div>
+  <button type="button" class="subj-btn active" data-filter="all">All subjects</button>
+  <button type="button" class="subj-btn" data-filter="acw1120">ACW1120<br><span>Financial Accounting</span></button>
+  <button type="button" class="subj-btn" data-filter="bfw1001">BFW1001<br><span>Foundations of Finance</span></button>
+  <button type="button" class="subj-btn" data-filter="btw1042">BTW1042<br><span>Business Law</span></button>
+  <button type="button" class="subj-btn" data-filter="acw2220">ACW2220<br><span>Management Accounting</span></button>
+  <button type="button" class="subj-btn" data-filter="ecm1953">ECM1953<br><span>Economics</span></button>
+  <button type="button" class="subj-btn" data-filter="etw1001">ETW1001<br><span>Statistics</span></button>
+  <button type="button" class="subj-btn" data-filter="mgw1010">MGW1010<br><span>Management</span></button>
+  <div class="sidebar-divider"></div>
   <button type="button" class="subj-btn" data-filter="graphs">Graphs</button>
-  <button type="button" class="subj-btn" data-filter="calcs">Calcs</button>
-  <button type="button" class="subj-btn" data-filter="essays">Essays</button>
-</div>
+  <button type="button" class="subj-btn" data-filter="calcs">Calculations</button>
+  <button type="button" class="subj-btn" data-filter="essays">Long essays</button>
+</aside>
+<div class="assign-main">
+<p class="text-sm text-muted" style="margin:0 0 1rem 0;">Each model answer is split into <strong>steps</strong>, a <strong>final answer</strong>, and an <strong>examiner tip</strong>. Open one task at a time after you try it.</p>
 
 
 <!-- ========== ACW1120 ========== -->
@@ -614,20 +713,28 @@ If the economy is operating below potential with unused capacity, a rightward sh
 </main>
 <footer class=" text-muted py-6 text-center text-sm mt-8">UNI · Detailed assignment answers</footer>
 
+
 <script>
-function toggleAns(btn){const p=btn.nextElementSibling;const o=p.classList.toggle('open');btn.textContent=o?'Hide model answer':'Show model answer';}
+function toggleAns(btn){
+  const p = btn.nextElementSibling;
+  const open = p.classList.toggle('open');
+  btn.textContent = open ? 'Hide model answer' : 'Show model answer';
+}
 (function(){
-  const buttons=[...document.querySelectorAll('.subj-btn')];
-  const sections=[...document.querySelectorAll('.subject-section')];
+  const buttons = [...document.querySelectorAll('.subj-btn')];
+  const sections = [...document.querySelectorAll('.subject-section')];
   function apply(filter){
-    buttons.forEach(b=>b.classList.toggle('active', b.dataset.filter===filter));
-    sections.forEach(sec=>{
-      const show = filter==='all' || sec.dataset.subject===filter;
+    buttons.forEach(b => b.classList.toggle('active', b.dataset.filter === filter));
+    sections.forEach(sec => {
+      const show = filter === 'all' || sec.dataset.subject === filter;
       sec.classList.toggle('hidden-subj', !show);
     });
-    window.scrollTo({top:0, behavior:'smooth'});
+    if (window.innerWidth > 860) {
+      const main = document.querySelector('.assign-main');
+      if (main) main.scrollIntoView({behavior:'smooth', block:'start'});
+    }
   }
-  buttons.forEach(b=>b.addEventListener('click',()=>apply(b.dataset.filter)));
+  buttons.forEach(b => b.addEventListener('click', () => apply(b.dataset.filter)));
 })();
 </script>
 
