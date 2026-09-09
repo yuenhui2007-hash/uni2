@@ -8,17 +8,14 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="notes-progress" id="notes-progress"></div>
 <header class="site-header sticky top-0 z-50">
 <div class="max-w-4xl mx-auto px-5 py-4 flex justify-between items-center">
 <a href="../index.html">← UNI</a>
 <span class="text-muted text-sm">BFW1001</span>
 </div></header>
 <main class="max-w-4xl mx-auto px-4 py-8 prose">
-<div class="mb-6">
-<div class="text-sm font-semibold text-[#9CA38E]">MONASH B2026 · FINANCE</div>
-<h1 class="text-3xl font-bold mt-1">BFW1001 – Foundations of Finance</h1>
-<p class="text-[#65695B] mt-2">Complete exam-prep: TVM toolkit, capital budgeting, risk-return, worked calculations</p>
-</div>
+<div class="notes-hero"><div class="kicker">MONASH B2026 · FINANCE</div><h1>BFW1001 – Foundations of Finance</h1><p>Complete exam-prep: TVM toolkit, capital budgeting, risk-return, worked calculations</p></div>
 
 <nav class="page-toc"><span class="page-toc-label">On this page</span><div class="page-toc-links"><a href="#f1">1. Objective</a><a href="#f2">2. TVM</a><a href="#f3">3. Annuities</a><a href="#f4">4. Capital budgeting</a><a href="#f5">5. Cash flows</a><a href="#f6">6. Risk</a><a href="#f7">7. Worked set</a><a href="#f8">8. Checklist</a></div></nav>
 
@@ -181,4 +178,20 @@ Price = 60/1.08 + 60/1.08² + 1,060/1.08³ ≈ 55.56 + 51.44 + 840.98 = <strong>
 <a href="acw1120.html" class="font-medium hover:underline">← ACW1120</a>
 <a href="acw2220.html" class="font-medium hover:underline">ACW2220 →</a>
 </div>
-</main></body></html>
+</main>
+<script>
+(function(){
+  const bar = document.getElementById('notes-progress');
+  if(!bar) return;
+  const onScroll = () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+    bar.style.width = pct + '%';
+  };
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+
+</body></html>

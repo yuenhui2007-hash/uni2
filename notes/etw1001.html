@@ -8,17 +8,14 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="notes-progress" id="notes-progress"></div>
 <header class="site-header sticky top-0 z-50">
 <div class="max-w-4xl mx-auto px-5 py-4 flex justify-between items-center">
 <a href="../index.html">← UNI</a>
 <span class="text-muted text-sm">ETW1001</span>
 </div></header>
 <main class="max-w-4xl mx-auto px-4 py-8 prose">
-<div class="mb-6">
-<div class="text-sm font-semibold text-[#8A9EAB]">MONASH B2026 · STATISTICS</div>
-<h1 class="text-3xl font-bold mt-1">ETW1001 – Introduction to Statistical Analysis</h1>
-<p class="text-[#65695B] mt-2">Complete exam-prep: descriptive stats, inference, regression, interpretation</p>
-</div>
+<div class="notes-hero"><div class="kicker">MONASH B2026 · STATISTICS</div><h1>ETW1001 – Introduction to Statistical Analysis</h1><p>Complete exam-prep: descriptive stats, inference, regression, interpretation</p></div>
 
 <nav class="page-toc"><span class="page-toc-label">On this page</span><div class="page-toc-links"><a href="#t1">1. Descriptives</a><a href="#t2">2. Probability</a><a href="#t3">3. Inference</a><a href="#t4">4. Regression</a><a href="#t5">5. Worked</a><a href="#t6">6. Checklist</a></div></nav>
 
@@ -105,4 +102,20 @@ Median=6. No single mode (all unique) or all equally frequent.
 <a href="ecm1953.html" class="font-medium hover:underline">← ECM1953</a>
 <a href="mgw1010.html" class="font-medium hover:underline">MGW1010 →</a>
 </div>
-</main></body></html>
+</main>
+<script>
+(function(){
+  const bar = document.getElementById('notes-progress');
+  if(!bar) return;
+  const onScroll = () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+    bar.style.width = pct + '%';
+  };
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+
+</body></html>

@@ -8,17 +8,14 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="notes-progress" id="notes-progress"></div>
 <header class="site-header sticky top-0 z-50">
 <div class="max-w-4xl mx-auto px-5 py-4 flex justify-between items-center">
 <a href="../index.html">← UNI</a>
 <span class="text-muted text-sm">BTW1042</span>
 </div></header>
 <main class="max-w-4xl mx-auto px-4 py-8 prose">
-<div class="mb-6">
-<div class="text-sm font-semibold text-[#8A9EAB]">MONASH B2026 · BUSINESS LAW</div>
-<h1 class="text-3xl font-bold mt-1">BTW1042 – Business Law</h1>
-<p class="text-[#65695B] mt-2">Complete exam-prep: legal system, contract, negligence, agency, business structures, IRAC templates</p>
-</div>
+<div class="notes-hero"><div class="kicker">MONASH B2026 · BUSINESS LAW</div><h1>BTW1042 – Business Law</h1><p>Complete exam-prep: legal system, contract, negligence, agency, business structures, IRAC templates</p></div>
 
 <nav class="page-toc"><span class="page-toc-label">On this page</span><div class="page-toc-links"><a href="#l1">1. System</a><a href="#l2">2. Contract</a><a href="#l3">3. Negligence</a><a href="#l4">4. Agency</a><a href="#l5">5. Structures</a><a href="#l6">6. IRAC drills</a><a href="#l7">7. Checklist</a></div></nav>
 
@@ -138,4 +135,20 @@ Duty (client relationship) → Breach (below competent standard) → Causation (
 <a href="bfw1001.html" class="font-medium hover:underline">← BFW1001</a>
 <a href="ecm1953.html" class="font-medium hover:underline">ECM1953 →</a>
 </div>
-</main></body></html>
+</main>
+<script>
+(function(){
+  const bar = document.getElementById('notes-progress');
+  if(!bar) return;
+  const onScroll = () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+    bar.style.width = pct + '%';
+  };
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+
+</body></html>
