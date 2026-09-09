@@ -1,107 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNI – Assignment Ideas</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UNI – Assignments with Model Answers</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.ans-panel{display:none;margin-top:.75rem;padding:1rem;background:#E4E7DF;border-left:4px solid #65695B;border-radius:0 8px 8px 0;font-size:.9rem;line-height:1.65}
+.ans-panel.open{display:block}
+.show-btn{font-size:.8rem;font-weight:600;color:#4C6170;background:#EBE0DD;border:1px solid #C0C4B7;border-radius:6px;padding:.35rem .75rem;cursor:pointer}
+.show-btn:hover{background:#D9C3B6}
+.task{background:#F7F2EF;border:1px solid #C0C4B7;border-radius:10px;padding:1rem;margin-bottom:.85rem}
+.task h3{font-weight:700;font-size:1rem;margin-bottom:.35rem;color:#4C6170}
+.mark-tip{font-size:.8rem;color:#65695B;margin-top:.5rem;padding:.4rem .6rem;background:#EBE0DD;border-radius:6px}
+</style>
 </head>
 <body class="bg-[#EBE0DD] text-[#4C6170]">
-    <header class="bg-[#4C6170] text-white sticky top-0 z-50 shadow-md">
-        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="index.html" class="font-bold hover:text-[#C0C4B7]">← Back to Hub</a>
-            <span class="text-sm text-[#C0C4B7]">Assignment Ideas</span>
-        </div>
-    </header>
+<header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
+<div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+<a href="index.html" class="font-bold hover:text-white">← UNI</a>
+<span class="text-sm text-[#C0C4B7]">Assignments + Model Answers</span>
+</div>
+</header>
 
-    <main class="max-w-4xl mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold mb-2">Possible Assignment Ideas</h1>
-        <p class="text-slate-600 mb-8">Realistic tasks that lecturers commonly set for these core units. Useful for practice or anticipating assessment.</p>
+<main class="max-w-4xl mx-auto px-4 py-8">
+<h1 class="text-3xl font-bold mb-2">Assignments with High-Band Model Answers</h1>
+<p class="text-[#65695B] mb-2">Practice tasks aligned to Monash core units. Model answers are written to maximise marks: structure, workings, application, and critique.</p>
+<p class="text-sm text-[#8A9EAB] mb-8">Click <strong>Show model answer</strong> after attempting each task yourself.</p>
 
-        <!-- ACW1120 -->
-        <section class="mb-10 bg-white rounded-xl shadow p-6 border border-slate-100">
-            <h2 class="text-xl font-bold text-[#C0C4B7] mb-3">ACW1120 – Financial Accounting 1</h2>
-            <ul class="space-y-3 text-sm">
-                <li><strong>Journal & Ledger Exercise:</strong> Record 12–15 transactions for a sole trader, post to T-accounts, prepare trial balance and basic financial statements.</li>
-                <li><strong>Adjusting Entries Case:</strong> Given a list of year-end information (prepayments, accruals, depreciation), prepare all adjusting entries and the adjusted trial balance.</li>
-                <li><strong>Conceptual Framework Essay:</strong> Explain the objective of general-purpose financial reporting and the qualitative characteristics. Apply them to a real Malaysian public-listed company.</li>
-                <li><strong>Error Correction:</strong> Identify and correct a series of accounting errors and show the effect on profit and the balance sheet.</li>
-            </ul>
-        </section>
+<!-- ===================== ACW1120 ===================== -->
+<section class="mb-12">
+<h2 class="text-xl font-bold border-b-2 border-[#C0C4B7] pb-2 mb-4">ACW1120 – Financial Accounting 1</h2>
 
-        <!-- BFW1001 -->
-        <section class="mb-10 bg-white rounded-xl shadow p-6 border border-slate-100">
-            <h2 class="text-xl font-bold text-emerald-700 mb-3">BFW1001 – Foundations of Finance</h2>
-            <ul class="space-y-3 text-sm">
-                <li><strong>TVM Problem Set:</strong> Calculate PV, FV, annuity values and loan amortisation schedules for different compounding frequencies.</li>
-                <li><strong>Capital Budgeting Mini-Project:</strong> Evaluate two mutually exclusive projects using NPV, IRR and payback. Recommend one with justification.</li>
-                <li><strong>Financial System Report:</strong> Describe the role of Bank Negara Malaysia, Bursa Malaysia and major financial institutions in the Malaysian financial system.</li>
-                <li><strong>Risk & Return Reflection:</strong> Compare the historical returns and volatility of two asset classes (e.g., KLCI vs government bonds) and discuss the risk-return trade-off.</li>
-            </ul>
-        </section>
+<div class="task">
+<h3>Task 1 — Adjusting entries + effect on profit</h3>
+<p class="text-sm">At 31 Dec, before adjustments: prepaid insurance RM6,000 (12 months from 1 Oct); unearned service revenue RM9,000 (of which 4 months earned); accrued salaries RM2,400; equipment cost RM48,000, residual RM6,000, life 7 years, full year, straight-line. Prepare all adjusting entries and state the net effect on profit.</p>
+<button type="button" class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+<strong>Workings</strong><br>
+Insurance expired: 6,000 × 3/12 = 1,500<br>
+Revenue earned: 9,000 × 4/12 = 3,000 (or state months clearly if different fraction)<br>
+Depreciation: (48,000 − 6,000) / 7 = 6,000<br><br>
+<strong>Journals</strong><br>
+Dr Insurance expense 1,500 &nbsp; Cr Prepaid insurance 1,500<br>
+Dr Unearned revenue 3,000 &nbsp; Cr Service revenue 3,000<br>
+Dr Salaries expense 2,400 &nbsp; Cr Salaries payable 2,400<br>
+Dr Depreciation expense 6,000 &nbsp; Cr Accumulated depreciation 6,000<br><br>
+<strong>Net effect on profit:</strong> −1,500 +3,000 −2,400 −6,000 = <strong>−6,900</strong> (profit decreases by RM6,900)<br>
+<div class="mark-tip"><strong>Marks tip:</strong> Show fraction workings, never put Cash in adjustments, state profit effect with sign.</div>
+</div>
+</div>
 
-        <!-- BTW1042 -->
-        <section class="mb-10 bg-white rounded-xl shadow p-6 border border-slate-100">
-            <h2 class="text-xl font-bold text-rose-700 mb-3">BTW1042 – Business Law</h2>
-            <ul class="space-y-3 text-sm">
-                <li><strong>Contract Problem Question:</strong> Analyse a multi-issue scenario involving offer/acceptance, consideration, misrepresentation and remedies using IRAC.</li>
-                <li><strong>Business Structure Advice:</strong> Advise a client who wants to start a café with two partners on the advantages and disadvantages of partnership vs private limited company under Malaysian law.</li>
-                <li><strong>Negligence Case Study:</strong> Determine whether a professional (accountant/auditor) owes a duty of care and whether that duty was breached.</li>
-                <li><strong>Agency Scenario:</strong> Decide whether a principal is bound by a contract entered into by an agent with apparent authority.</li>
-            </ul>
-        </section>
+<div class="task">
+<h3>Task 2 — Conceptual Framework short essay (≈350–500 words)</h3>
+<p class="text-sm">Explain the objective of general-purpose financial reporting and the fundamental qualitative characteristics. Apply materiality to a scenario where a company omits a related-party fraud of RM80,000 while total assets are RM50 million.</p>
+<button type="button" class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+<strong>Structure for high marks:</strong> define → explain → apply → conclude.<br><br>
+The objective of general-purpose financial reporting under the IASB Conceptual Framework is to provide financial information about the reporting entity that is useful to existing and potential investors, lenders and other creditors in making decisions about providing resources to the entity. Those decisions involve buying, selling or holding equity and debt instruments, and providing or settling loans and other forms of credit. Users also assess management’s stewardship of the entity’s economic resources.<br><br>
+Useful information must be relevant and faithfully represented. <em>Relevance</em> means the information has predictive and/or confirmatory value. Materiality is an entity-specific aspect of relevance: information is material if omitting, misstating or obscuring it could reasonably be expected to influence decisions of primary users. <em>Faithful representation</em> requires the depiction of economic substance to be as complete, neutral and free from error as practicable.<br><br>
+<strong>Application:</strong> Although RM80,000 is only 0.16% of total assets, the nature of the item (related-party fraud) is qualitatively material. Fraud indicates governance failure and affects users’ assessment of stewardship and the reliability of reported numbers. Omitting it could reasonably influence lenders’ and investors’ decisions. Therefore disclosure (and appropriate accounting) is required despite the small quantitative size.<br><br>
+<strong>Conclusion:</strong> Quantitative thresholds alone do not determine materiality; nature and context matter.
+<div class="mark-tip"><strong>Marks tip:</strong> Quote Framework language accurately; always apply to the numbers/facts given; mention both quantitative and qualitative materiality.</div>
+</div>
+</div>
 
-        <!-- ECM1953 -->
-        <section class="mb-10 bg-white rounded-xl shadow p-6 border border-slate-100">
-            <h2 class="text-xl font-bold text-amber-700 mb-3">ECM1953 – Principles of Economics</h2>
-            <ul class="space-y-3 text-sm">
-                <li><strong>Market Analysis:</strong> Using demand-supply diagrams, analyse the effect of a subsidy or tax on a specific market (e.g., petrol, housing, e-hailing).</li>
-                <li><strong>Market Structure Report:</strong> Choose a Malaysian industry and classify it (perfect competition / oligopoly / monopoly). Justify with evidence on number of firms, barriers and pricing behaviour.</li>
-                <li><strong>Macro Policy Brief:</strong> Explain how Bank Negara’s interest rate decision or a government Budget measure is expected to affect AD, inflation and unemployment.</li>
-                <li><strong>Elasticity Application:</strong> Collect price and quantity data for a product and estimate PED. Discuss pricing implications for the firm.</li>
-            </ul>
-        </section>
+<div class="task">
+<h3>Task 3 — Periodic inventory COGS</h3>
+<p class="text-sm">Opening inventory RM22,000; Purchases RM95,000; Purchase returns RM4,000; Freight-in RM3,500; Closing inventory RM19,500; Sales RM160,000; Sales returns RM5,000. Calculate net sales, COGS and gross profit.</p>
+<button type="button" class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+Net sales = 160,000 − 5,000 = <strong>155,000</strong><br>
+Net purchases = 95,000 − 4,000 + 3,500 = 94,500<br>
+COGS = 22,000 + 94,500 − 19,500 = <strong>97,000</strong><br>
+Gross profit = 155,000 − 97,000 = <strong>58,000</strong>
+<div class="mark-tip"><strong>Marks tip:</strong> Label each subtotal; include freight-in in purchases cost; exclude sales returns from net sales.</div>
+</div>
+</div>
+</section>
 
-        <!-- ETW1001 -->
-        <section class="mb-10 bg-white rounded-xl shadow p-6 border border-slate-100">
-            <h2 class="text-xl font-bold text-cyan-700 mb-3">ETW1001 – Introduction to Statistical Analysis</h2>
-            <ul class="space-y-3 text-sm">
-                <li><strong>Descriptive Statistics Report:</strong> Using a given dataset (sales, student scores, etc.), produce summary statistics, graphs and a short written interpretation in Excel.</li>
-                <li><strong>Confidence Interval & Hypothesis Test:</strong> Construct a 95% CI for a mean and perform a one-sample or two-sample t-test. Interpret results in business language.</li>
-                <li><strong>Simple Regression Project:</strong> Build a regression model relating advertising spend to sales (or similar). Report coefficients, R², residual analysis and business recommendations.</li>
-                <li><strong>Dashboard Task:</strong> Create an Excel dashboard with key descriptive metrics and charts for a fictional company.</li>
-            </ul>
-        </section>
+<!-- ===================== BFW1001 ===================== -->
+<section class="mb-12">
+<h2 class="text-xl font-bold border-b-2 border-[#C0C4B7] pb-2 mb-4">BFW1001 – Foundations of Finance</h2>
 
-        <!-- MGW1010 -->
-        <section class="mb-10 bg-white rounded-xl shadow p-6 border border-slate-100">
-            <h2 class="text-xl font-bold text-violet-700 mb-3">MGW1010 – Introduction to Management</h2>
-            <ul class="space-y-3 text-sm">
-                <li><strong>Theory Critique Essay:</strong> Critically evaluate Scientific Management or Bureaucracy in the context of modern knowledge-work or remote teams.</li>
-                <li><strong>Leadership Case Analysis:</strong> Analyse a real CEO’s leadership style using transformational / transactional / servant frameworks.</li>
-                <li><strong>Ethics Dilemma:</strong> Apply ethical frameworks to a contemporary business ethics case (e.g., data privacy, greenwashing, labour practices).</li>
-                <li><strong>Organisational Observation:</strong> Observe a real organisation (or use public information) and map its structure, culture and environmental influences.</li>
-            </ul>
-        </section>
+<div class="task">
+<h3>Task 1 — NPV decision with full workings</h3>
+<p class="text-sm">Project cost RM120,000. Cash inflows: Y1 40,000; Y2 50,000; Y3 55,000. Required return 10%. Calculate NPV and recommend. Briefly explain why NPV is preferred to payback.</p>
+<button type="button" class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+PV₁ = 40,000/1.10 = 36,364<br>
+PV₂ = 50,000/1.21 = 41,322<br>
+PV₃ = 55,000/1.331 = 41,322<br>
+Σ PV inflows = 119,008<br>
+NPV = 119,008 − 120,000 = <strong>−992 ≈ −RM1,000 → REJECT</strong><br><br>
+NPV is preferred to payback because it incorporates the time value of money for all cash flows over the full life of the project and measures the expected change in wealth. Payback ignores cash flows after the cutoff and (unless discounted) ignores TVM, so it is only a liquidity screen, not a value-maximising rule.
+<div class="mark-tip"><strong>Marks tip:</strong> Show each PV line; state Accept/Reject with NPV figure; give one clear conceptual reason for NPV over payback.</div>
+</div>
+</div>
 
-        <!-- ACW2220 -->
-        <section class="mb-10 bg-white rounded-xl shadow p-6 border border-slate-100">
-            <h2 class="text-xl font-bold text-[#C0C4B7] mb-3">ACW2220 – Management Accounting 1</h2>
-            <ul class="space-y-3 text-sm">
-                <li><strong>CVP Analysis Project:</strong> For a given product, calculate break-even, margin of safety, and the sales needed for a target profit. Perform sensitivity analysis.</li>
-                <li><strong>Relevant Costing Scenarios:</strong> Solve a series of short decision problems (special order, make-or-buy, keep-or-drop) and recommend actions with supporting calculations.</li>
-                <li><strong>Job Costing Exercise:</strong> Prepare job cost sheets, allocate overhead, and determine cost per unit for several jobs.</li>
-                <li><strong>Cost Behaviour Analysis:</strong> Using Excel, separate mixed costs into fixed and variable components (high-low or regression) and estimate total cost at different activity levels.</li>
-            </ul>
-        </section>
-    </main>
+<div class="task">
+<h3>Task 2 — Bond price</h3>
+<p class="text-sm">Face RM1,000; annual coupon 5% (RM50); 4 years to maturity; market yield 7%. Calculate the bond price and state whether it trades at premium, par or discount.</p>
+<button type="button" class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+Price = 50/1.07 + 50/1.07² + 50/1.07³ + 1,050/1.07⁴<br>
+= 46.73 + 43.67 + 40.81 + 816.30 ≈ <strong>RM947.51</strong><br>
+Coupon 5% &lt; yield 7% → bond trades at a <strong>discount</strong>.
+<div class="mark-tip"><strong>Marks tip:</strong> Include principal in final CF; link coupon vs yield to premium/discount.</div>
+</div>
+</div>
+</section>
 
-    <footer class="bg-slate-900 text-slate-400 py-6 text-center text-sm">
-        UNI Study Hub
-    </footer>
+<!-- ===================== BTW1042 ===================== -->
+<section class="mb-12">
+<h2 class="text-xl font-bold border-b-2 border-[#C0C4B7] pb-2 mb-4">BTW1042 – Business Law</h2>
+
+<div class="task">
+<h3>Task 1 — Contract IRAC (counter-offer)</h3>
+<p class="text-sm">Rina offers to sell her laptop to Sam for RM2,500. Sam emails: “I accept, provided you include the original charger.” Rina does not reply. Sam claims a contract exists. Advise using IRAC.</p>
+<button type="button" class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+<strong>Issue:</strong> Whether a binding contract was formed between Rina and Sam.<br><br>
+<strong>Rule:</strong> A contract requires offer and unqualified acceptance. Acceptance must mirror the terms of the offer. A purported acceptance that introduces new terms is a counter-offer, which rejects the original offer (Contracts Act 1950 principles / common-law mirror-image rule as applied in Malaysia). Silence does not generally constitute acceptance.<br><br>
+<strong>Application:</strong> Sam’s reply added a new term (the charger). This was not an unqualified acceptance but a counter-offer, which rejected Rina’s original offer. Rina’s silence cannot be treated as acceptance of Sam’s counter-offer.<br><br>
+<strong>Conclusion:</strong> No contract was formed. Sam’s claim fails.
+<div class="mark-tip"><strong>Marks tip:</strong> Full IRAC labels; state the mirror-image / counter-offer rule before applying facts; clear final advice.</div>
+</div>
+</div>
+
+<div class="task">
+<h3>Task 2 — Sdn Bhd vs partnership (structure advice)</h3>
+<p class="text-sm">Two graduates want to start a consulting firm. They worry about personal liability and may seek investors later. Advise between partnership and Sdn Bhd under Malaysian law.</p>
+<button type="button" class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+<strong>Partnership (Partnership Act 1961):</strong> Generally no separate legal personality; partners have unlimited joint and several liability for firm debts. Continuity is fragile on change of partners. Raising outside equity is awkward.<br><br>
+<strong>Sdn Bhd (Companies Act 2016):</strong> Separate legal entity; members’ liability limited to unpaid shares; perpetual succession; can issue shares to investors (subject to private-company limits: max 50 members, no public offer). Requires ≥1 resident director, company secretary, and ongoing SSM compliance.<br><br>
+<strong>Advice:</strong> Given liability concern and possible future investors, <strong>Sdn Bhd is preferable</strong>. Limited liability protects personal assets (subject to veil-piercing exceptions and personal guarantees banks may still demand). Compliance cost is higher than a partnership but aligned with growth and risk isolation.
+<div class="mark-tip"><strong>Marks tip:</strong> Compare on personality, liability, continuity, capital; end with a reasoned recommendation tied to the clients’ goals.</div>
+</div>
+</div>
+</section>
+
+<!-- ===================== ACW2220 ===================== -->
+<section class="mb-12">
+<h2 class="text-xl font-bold border-b-2 border-[#C0C4B7] pb-2 mb-4">ACW2220 – Management Accounting 1</h2>
+
+<div class="task">
+<h3>Task 1 — Special order decision</h3>
+<p class="text-sm">Normal SP RM80, VC RM48, annual FC RM320,000. Capacity 20,000 units; current sales 15,000. Customer offers RM58 for 3,000 units; no extra FC. Accept? Show incremental analysis. What if capacity were full?</p>
+<button type="button" class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+<strong>Spare capacity (5,000 idle &gt; 3,000):</strong><br>
+Incremental revenue = 58 × 3,000 = 174,000<br>
+Incremental VC = 48 × 3,000 = 144,000<br>
+Incremental profit = <strong>30,000 → ACCEPT</strong><br>
+(Regular FC unchanged → irrelevant)<br><br>
+<strong>If full capacity:</strong> must displace 3,000 regular units.<br>
+Forgone CM on regular = (80−48)×3,000 = 96,000<br>
+CM on special = (58−48)×3,000 = 30,000<br>
+Net = 30,000 − 96,000 = <strong>−66,000 → REJECT</strong>
+<div class="mark-tip"><strong>Marks tip:</strong> Always state capacity assumption; opportunity cost line when constrained; ignore sunk/unchanged FC.</div>
+</div>
+</div>
+
+<div class="task">
+<h3>Task 2 — CVP target profit</h3>
+<p class="text-sm">SP RM50, VC RM30, FC RM100,000. Units for target profit RM40,000? Margin of safety if expected sales 9,000 units?</p>
+<button type="button" class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+CM = 20<br>
+Target units = (100,000 + 40,000) / 20 = <strong>7,000 units</strong><br>
+BE units = 100,000 / 20 = 5,000<br>
+MoS = 9,000 − 5,000 = <strong>4,000 units</strong> (44.4% of expected sales)
+</div>
+</div>
+</section>
+
+<!-- ===================== ECM1953 ===================== -->
+<section class="mb-12">
+<h2 class="text-xl font-bold border-b-2 border-[#C0C4B7] pb-2 mb-4">ECM1953 – Principles of Economics</h2>
+
+<div class="task">
+<h3>Task 1 — PED + pricing advice</h3>
+<p class="text-sm">Price rises from RM20 to RM24; quantity demanded falls from 1,000 to 900. Calculate PED (use midpoint if you wish) and advise whether a further price increase raises or lowers total revenue.</p>
+<button type="button" class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+%ΔP = 4/20 = 20% (simple) or midpoint: 4/22 ≈ 18.2%<br>
+%ΔQd = −100/1,000 = −10% (simple) or midpoint: −100/950 ≈ −10.5%<br>
+PED ≈ −10/20 = <strong>−0.5</strong> (inelastic)<br><br>
+Because |PED| &lt; 1, a further price increase should <strong>raise total revenue</strong> (percentage fall in Qd smaller than percentage rise in P).
+<div class="mark-tip"><strong>Marks tip:</strong> Show formula and arithmetic; link |PED| to TR direction explicitly.</div>
+</div>
+</div>
+
+<div class="task">
+<h3>Task 2 — Fiscal policy AD–AS brief</h3>
+<p class="text-sm">Government increases infrastructure spending. Explain short-run effects on AD, real output and the price level. One limitation?</p>
+<button type="button" class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+Higher G raises planned expenditure → <strong>AD shifts right</strong>. In the short run, the economy moves along SRAS to a <strong>higher real output (Y)</strong> and a <strong>higher price level (P)</strong>.<br><br>
+<strong>Limitation:</strong> if the economy is near capacity, the output gain is small and inflationary pressure is stronger; financing via borrowing may also raise interest rates and crowd out private investment (partial offset to AD).
+<div class="mark-tip"><strong>Marks tip:</strong> Name the curve shift; state both Y and P effects; add one realistic limitation for higher-band answers.</div>
+</div>
+</div>
+</section>
+
+<!-- ===================== ETW1001 ===================== -->
+<section class="mb-12">
+<h2 class="text-xl font-bold border-b-2 border-[#C0C4B7] pb-2 mb-4">ETW1001 – Statistical Analysis</h2>
+
+<div class="task">
+<h3>Task 1 — Mean, variance, interpretation</h3>
+<p class="text-sm">Data: 12, 15, 18, 20, 25. Compute mean and sample SD. Why might median be preferred if one value were 80 instead of 25?</p>
+<button type="button" class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+Mean = (12+15+18+20+25)/5 = <strong>18</strong><br>
+Deviations²: 36+9+0+4+49 = 98<br>
+s² = 98/(5−1) = 24.5 → s = √24.5 ≈ <strong>4.95</strong><br><br>
+If 25 became 80, the mean would be pulled upward by the outlier while the median (18) would stay stable. Median better represents “typical” value under skewness/outliers.
+</div>
+</div>
+
+<div class="task">
+<h3>Task 2 — Regression interpretation</h3>
+<p class="text-sm">Ŷ = 10 + 2.5X (X = training hours, Y = productivity score), R² = 0.55. Interpret slope and R². Can you claim training causes higher productivity?</p>
+<button type="button" class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+<strong>Slope 2.5:</strong> each additional training hour is associated with a 2.5-point higher predicted productivity score, on average.<br>
+<strong>R² 0.55:</strong> 55% of the sample variation in productivity scores is explained by training hours in this linear model.<br><br>
+<strong>Causality:</strong> No — observational regression shows association, not causation, unless the study design supports causal inference (e.g. random assignment, credible controls). Omitted factors (ability, prior experience) may confound.
+<div class="mark-tip"><strong>Marks tip:</strong> Interpret in context units; explicitly refuse unjustified causal claims.</div>
+</div>
+</div>
+</section>
+
+<!-- ===================== MGW1010 ===================== -->
+<section class="mb-12">
+<h2 class="text-xl font-bold border-b-2 border-[#C0C4B7] pb-2 mb-4">MGW1010 – Introduction to Management</h2>
+
+<div class="task">
+<h3>Task 1 — Critically evaluate Scientific Management (essay skeleton + sample paragraphs)</h3>
+<p class="text-sm">Critically evaluate Taylor’s Scientific Management for a software development team working remotely.</p>
+<button type="button" class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+<strong>High-band structure:</strong> Define → Explain principles → Apply to remote software teams → Critique → Conclude with implication.<br><br>
+<strong>Definition/explain:</strong> Scientific Management (Taylor) seeks efficiency through scientific study of tasks, standard methods, careful selection and training, and financial incentives linked to output.<br><br>
+<strong>Application:</strong> Some elements still appear in software work (sprint metrics, code review standards, pair programming norms). Time-and-motion style measurement maps poorly onto creative design and debugging, where output is non-linear and quality matters more than keystroke counts.<br><br>
+<strong>Critique:</strong> Taylorism assumes workers are primarily economically motivated and tasks are routine and decomposable. Remote knowledge work depends on autonomy, intrinsic motivation, collaboration and psychological safety (Theory Y / job characteristics). Heavy surveillance of activity metrics can reduce trust and citizenship behaviour. Contingency theory suggests mechanistic controls fit stable, routine contexts — not dynamic product development.<br><br>
+<strong>Conclusion:</strong> Retain process discipline and clear standards where useful, but reject pure Taylorism; combine agile coordination with autonomy-supportive leadership for remote software teams.
+<div class="mark-tip"><strong>Marks tip:</strong> Critique is mandatory for upper bands — assumptions, evidence, modern fit. End with managerial implication.</div>
+</div>
+</div>
+</section>
+
+<div class="p-4 bg-[#D9C3B6]/40 border border-[#C0C4B7] rounded-xl text-sm mb-8">
+<strong>How to use this page for maximum exam scores:</strong>
+<ol class="list-decimal ml-5 mt-2 space-y-1">
+<li>Attempt the task closed-book first</li>
+<li>Compare structure (IRAC / workings / critique) not only the final number</li>
+<li>Copy the mark-tip habits into every future answer</li>
+<li>Practise writing the conclusion sentence under time pressure</li>
+</ol>
+</div>
+</main>
+
+<footer class="bg-[#4C6170] text-[#C0C4B7] py-6 text-center text-sm">UNI Study Hub · Assignments + Model Answers</footer>
+<script>
+function toggleAns(btn){
+  const p=btn.nextElementSibling;
+  const open=p.classList.toggle('open');
+  btn.textContent=open?'Hide model answer':'Show model answer';
+}
+</script>
 </body>
 </html>
