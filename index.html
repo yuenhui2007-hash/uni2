@@ -10,10 +10,10 @@
 <body>
 <header class="site-header sticky top-0 z-50">
   <div class="max-w-5xl mx-auto px-5 py-4 flex items-center justify-between">
-    <a href="index.html" style="font-family:'Source Serif 4',Georgia,serif;font-size:1.2rem;">UNI</a>
+    <a href="index.html" style="font-family:Fraunces,Georgia,serif;font-size:1.15rem;letter-spacing:-0.02em;">UNI</a>
     <nav class="flex gap-5 text-sm">
-      <a href="qa.html" class="text-muted" style="text-decoration:none;">Q&amp;A</a>
-      <a href="assignments.html" class="text-muted" style="text-decoration:none;">Assignments</a>
+      <a href="qa.html" class="text-muted">Q&amp;A</a>
+      <a href="assignments.html" class="text-muted">Assignments</a>
     </nav>
   </div>
 </header>
@@ -21,25 +21,76 @@
 <main class="max-w-5xl mx-auto px-5 py-12">
   <section class="hero mb-12">
     <span class="badge-soft">Monash B2026 · Accountancy pathway</span>
-    <h1 style="margin-top:0.6rem;">Core unit study hub</h1>
-    <p style="max-width:32rem;">Notes, calculations, diagrams and model answers for the seven Part A cores.</p>
-    <div class="flex flex-wrap gap-3 mt-6">
-      <a href="qa.html" style="background:#111;color:#fff;border-radius:8px;padding:0.6rem 1rem;font-size:0.88rem;font-weight:600;text-decoration:none;">Q&amp;A bank</a>
-      <a href="assignments.html" style="background:#fff;color:#111;border:1px solid #E6E6E3;border-radius:8px;padding:0.6rem 1rem;font-size:0.88rem;font-weight:600;text-decoration:none;">Assignments</a>
+    <h1>Your revision desk for the core units</h1>
+    <p>Notes, calculations, diagrams and model answers — organised for exam prep, not just reading.</p>
+    <div class="flex flex-wrap gap-3 mt-7">
+      <a href="qa.html" style="background:#FFFDFB;color:#2A3F4F;border-radius:999px;padding:0.65rem 1.15rem;font-size:0.88rem;font-weight:700;text-decoration:none;">Practice Q&amp;A</a>
+      <a href="assignments.html" style="background:transparent;color:#F7F3EE;border:1px solid rgba(247,243,238,0.28);border-radius:999px;padding:0.65rem 1.15rem;font-size:0.88rem;font-weight:600;text-decoration:none;">Assignments</a>
     </div>
   </section>
 
-  <h2 style="margin-top:0;border:none;padding:0;">Units</h2>
-  <div class="grid md:grid-cols-2 gap-3 mt-4 mb-10">
-    <a class="unit-card p-5 block no-underline" href="notes/acw1120.html"><div class="text-muted text-xs font-semibold tracking-wide uppercase mb-1">Accounting</div><div style="font-family:'Source Serif 4',Georgia,serif;font-size:1.15rem;color:#111;">ACW1120</div><div class="text-sm text-muted mt-1">Financial Accounting 1</div></a>
-    <a class="unit-card p-5 block no-underline" href="notes/bfw1001.html"><div class="text-muted text-xs font-semibold tracking-wide uppercase mb-1">Finance</div><div style="font-family:'Source Serif 4',Georgia,serif;font-size:1.15rem;color:#111;">BFW1001</div><div class="text-sm text-muted mt-1">Foundations of Finance</div></a>
-    <a class="unit-card p-5 block no-underline" href="notes/btw1042.html"><div class="text-muted text-xs font-semibold tracking-wide uppercase mb-1">Law</div><div style="font-family:'Source Serif 4',Georgia,serif;font-size:1.15rem;color:#111;">BTW1042</div><div class="text-sm text-muted mt-1">Business Law</div></a>
-    <a class="unit-card p-5 block no-underline" href="notes/ecm1953.html"><div class="text-muted text-xs font-semibold tracking-wide uppercase mb-1">Economics</div><div style="font-family:'Source Serif 4',Georgia,serif;font-size:1.15rem;color:#111;">ECM1953</div><div class="text-sm text-muted mt-1">Principles of Economics</div></a>
-    <a class="unit-card p-5 block no-underline" href="notes/etw1001.html"><div class="text-muted text-xs font-semibold tracking-wide uppercase mb-1">Statistics</div><div style="font-family:'Source Serif 4',Georgia,serif;font-size:1.15rem;color:#111;">ETW1001</div><div class="text-sm text-muted mt-1">Statistical Analysis</div></a>
-    <a class="unit-card p-5 block no-underline" href="notes/mgw1010.html"><div class="text-muted text-xs font-semibold tracking-wide uppercase mb-1">Management</div><div style="font-family:'Source Serif 4',Georgia,serif;font-size:1.15rem;color:#111;">MGW1010</div><div class="text-sm text-muted mt-1">Introduction to Management</div></a>
-    <a class="unit-card p-5 block no-underline md:col-span-2" href="notes/acw2220.html"><div class="text-muted text-xs font-semibold tracking-wide uppercase mb-1">Management accounting</div><div style="font-family:'Source Serif 4',Georgia,serif;font-size:1.15rem;color:#111;">ACW2220</div><div class="text-sm text-muted mt-1">Management Accounting 1</div></a>
+  <div class="flex items-end justify-between mb-4">
+    <h2 style="margin:0;">Core units</h2>
+    <span class="text-muted text-sm">7 units</span>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-4 mb-12">
+    <a class="unit-card p-6 block no-underline" href="notes/acw1120.html">
+      <div class="text-muted text-xs font-bold tracking-widest uppercase mb-2">Accounting</div>
+      <div style="font-family:Fraunces,Georgia,serif;font-size:1.25rem;color:#1F2A32;">ACW1120</div>
+      <div class="text-sm mt-1" style="color:#3D4A54;">Financial Accounting 1</div>
+      <p class="text-sm text-muted mt-3 mb-0">Framework · accruals · inventory · statements</p>
+    </a>
+    <a class="unit-card p-6 block no-underline" href="notes/bfw1001.html">
+      <div class="text-muted text-xs font-bold tracking-widest uppercase mb-2">Finance</div>
+      <div style="font-family:Fraunces,Georgia,serif;font-size:1.25rem;color:#1F2A32;">BFW1001</div>
+      <div class="text-sm mt-1" style="color:#3D4A54;">Foundations of Finance</div>
+      <p class="text-sm text-muted mt-3 mb-0">TVM · NPV · bonds · risk</p>
+    </a>
+    <a class="unit-card p-6 block no-underline" href="notes/btw1042.html">
+      <div class="text-muted text-xs font-bold tracking-widest uppercase mb-2">Law</div>
+      <div style="font-family:Fraunces,Georgia,serif;font-size:1.25rem;color:#1F2A32;">BTW1042</div>
+      <div class="text-sm mt-1" style="color:#3D4A54;">Business Law</div>
+      <p class="text-sm text-muted mt-3 mb-0">Contract · negligence · companies</p>
+    </a>
+    <a class="unit-card p-6 block no-underline" href="notes/ecm1953.html">
+      <div class="text-muted text-xs font-bold tracking-widest uppercase mb-2">Economics</div>
+      <div style="font-family:Fraunces,Georgia,serif;font-size:1.25rem;color:#1F2A32;">ECM1953</div>
+      <div class="text-sm mt-1" style="color:#3D4A54;">Principles of Economics</div>
+      <p class="text-sm text-muted mt-3 mb-0">Markets · elasticity · policy</p>
+    </a>
+    <a class="unit-card p-6 block no-underline" href="notes/etw1001.html">
+      <div class="text-muted text-xs font-bold tracking-widest uppercase mb-2">Statistics</div>
+      <div style="font-family:Fraunces,Georgia,serif;font-size:1.25rem;color:#1F2A32;">ETW1001</div>
+      <div class="text-sm mt-1" style="color:#3D4A54;">Statistical Analysis</div>
+      <p class="text-sm text-muted mt-3 mb-0">Descriptives · tests · regression</p>
+    </a>
+    <a class="unit-card p-6 block no-underline" href="notes/mgw1010.html">
+      <div class="text-muted text-xs font-bold tracking-widest uppercase mb-2">Management</div>
+      <div style="font-family:Fraunces,Georgia,serif;font-size:1.25rem;color:#1F2A32;">MGW1010</div>
+      <div class="text-sm mt-1" style="color:#3D4A54;">Introduction to Management</div>
+      <p class="text-sm text-muted mt-3 mb-0">Theory · leadership · ethics</p>
+    </a>
+    <a class="unit-card p-6 block no-underline md:col-span-2" href="notes/acw2220.html">
+      <div class="text-muted text-xs font-bold tracking-widest uppercase mb-2">Management accounting</div>
+      <div style="font-family:Fraunces,Georgia,serif;font-size:1.25rem;color:#1F2A32;">ACW2220</div>
+      <div class="text-sm mt-1" style="color:#3D4A54;">Management Accounting 1</div>
+      <p class="text-sm text-muted mt-3 mb-0">CVP · costing · special order · make or buy · keep or drop</p>
+    </a>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-4">
+    <a class="unit-card p-6 block no-underline" href="qa.html">
+      <div style="font-family:Fraunces,Georgia,serif;font-size:1.15rem;color:#1F2A32;">Q&amp;A bank</div>
+      <p class="text-sm text-muted mt-2 mb-0">Filter by unit · MCQs · Easy / Medium / Hard</p>
+    </a>
+    <a class="unit-card p-6 block no-underline" href="assignments.html">
+      <div style="font-family:Fraunces,Georgia,serif;font-size:1.15rem;color:#1F2A32;">Assignments</div>
+      <p class="text-sm text-muted mt-2 mb-0">Graphs · calculations · long essays · model answers</p>
+    </a>
   </div>
 </main>
-<footer>UNI · Monash Bachelor of Business and Commerce</footer>
+
+<footer>UNI Study Hub · Monash Bachelor of Business and Commerce</footer>
 </body>
 </html>
