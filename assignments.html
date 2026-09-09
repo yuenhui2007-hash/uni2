@@ -15,6 +15,38 @@
 .task h3{font-weight:700;font-size:1.02rem;margin-bottom:.4rem;color:#4C6170}
 .mark-tip{font-size:.8rem;color:#4C6170;margin-top:.75rem;padding:.55rem .7rem;background:#EBE0DD;border-radius:8px;border:1px solid #C0C4B7}
 .step{margin:.35rem 0 .35rem 0}
+
+.subject-bar{
+  display:flex;flex-wrap:wrap;gap:0.45rem;
+  position:sticky;top:3.4rem;z-index:40;
+  background:rgba(243,238,232,0.92);
+  backdrop-filter:blur(12px);
+  border:1px solid var(--line,#D9D2C8);
+  border-radius:16px;
+  padding:0.65rem 0.75rem;
+  margin:0 0 1.5rem 0;
+  box-shadow:0 4px 16px rgba(31,42,50,0.05);
+}
+.subj-btn{
+  border:1px solid var(--line,#D9D2C8);
+  background:#FFFDFB;
+  color:var(--text,#3D4A54);
+  border-radius:999px;
+  padding:0.35rem 0.8rem;
+  font-size:0.78rem;
+  font-weight:650;
+  cursor:pointer;
+  font-family:inherit;
+}
+.subj-btn:hover{border-color:#2F5D50;color:#2F5D50}
+.subj-btn.active{
+  background:#2F5D50;
+  border-color:#2F5D50;
+  color:#fff;
+}
+.subject-section{display:block}
+.subject-section.hidden-subj{display:none !important}
+
 </style>
 </head>
 <body>
@@ -28,8 +60,23 @@
 <h1 class="text-3xl font-bold mb-2">Assignments — Detailed High-Band Answers</h1>
 <p class="text-muted mb-6">Attempt first, then open the model answer. Answers show <em>workings, structure, and examiner logic</em> — not only final numbers.</p>
 
+<div id="subject-bar" class="subject-bar">
+  <button type="button" class="subj-btn active" data-filter="all">All</button>
+  <button type="button" class="subj-btn" data-filter="acw1120">ACW1120</button>
+  <button type="button" class="subj-btn" data-filter="bfw1001">BFW1001</button>
+  <button type="button" class="subj-btn" data-filter="btw1042">BTW1042</button>
+  <button type="button" class="subj-btn" data-filter="acw2220">ACW2220</button>
+  <button type="button" class="subj-btn" data-filter="ecm1953">ECM1953</button>
+  <button type="button" class="subj-btn" data-filter="etw1001">ETW1001</button>
+  <button type="button" class="subj-btn" data-filter="mgw1010">MGW1010</button>
+  <button type="button" class="subj-btn" data-filter="graphs">Graphs</button>
+  <button type="button" class="subj-btn" data-filter="calcs">Calcs</button>
+  <button type="button" class="subj-btn" data-filter="essays">Essays</button>
+</div>
+
+
 <!-- ========== ACW1120 ========== -->
-<section class="mb-14">
+<section class="mb-14 subject-section" data-subject="acw1120">
 <h2 class="text-xl font-bold border-b-2 border-line pb-2 mb-4">ACW1120 – Financial Accounting 1</h2>
 
 <div class="task">
@@ -121,7 +168,7 @@ After these entries, cash per books = 17,250 = adjusted bank.
 </section>
 
 <!-- ========== BFW1001 ========== -->
-<section class="mb-14">
+<section class="mb-14 subject-section" data-subject="bfw1001">
 <h2 class="text-xl font-bold border-b-2 border-line pb-2 mb-4">BFW1001 – Foundations of Finance</h2>
 
 <div class="task">
@@ -155,7 +202,7 @@ PV of extra 20,000 = 20,000 / (1.08)<sup>5</sup> = 20,000 / 1.4693 ≈ <strong>1
 </section>
 
 <!-- ========== BTW1042 ========== -->
-<section class="mb-14">
+<section class="mb-14 subject-section" data-subject="btw1042">
 <h2 class="text-xl font-bold border-b-2 border-line pb-2 mb-4">BTW1042 – Business Law</h2>
 
 <div class="task">
@@ -201,7 +248,7 @@ PV of extra 20,000 = 20,000 / (1.08)<sup>5</sup> = 20,000 / 1.4693 ≈ <strong>1
 </section>
 
 <!-- ========== ACW2220 ========== -->
-<section class="mb-14">
+<section class="mb-14 subject-section" data-subject="acw2220">
 <h2 class="text-xl font-bold border-b-2 border-line pb-2 mb-4">ACW2220 – Management Accounting 1</h2>
 
 <div class="task">
@@ -243,7 +290,7 @@ If opportunity CM were &gt; 6,000, buying could become preferable.
 </section>
 
 <!-- ========== ECM1953 ========== -->
-<section class="mb-14">
+<section class="mb-14 subject-section" data-subject="ecm1953">
 <h2 class="text-xl font-bold border-b-2 border-line pb-2 mb-4">ECM1953 – Principles of Economics</h2>
 
 <div class="task">
@@ -269,7 +316,7 @@ Lower policy rate → lower market interest rates → higher interest-sensitive 
 </section>
 
 <!-- ========== ETW1001 ========== -->
-<section class="mb-14">
+<section class="mb-14 subject-section" data-subject="etw1001">
 <h2 class="text-xl font-bold border-b-2 border-line pb-2 mb-4">ETW1001 – Statistical Analysis</h2>
 
 <div class="task">
@@ -303,7 +350,7 @@ Critical z at 5% two-sided ≈ ±1.96<br>
 </section>
 
 <!-- ========== MGW1010 ========== -->
-<section class="mb-14">
+<section class="mb-14 subject-section" data-subject="mgw1010">
 <h2 class="text-xl font-bold border-b-2 border-line pb-2 mb-4">MGW1010 – Introduction to Management</h2>
 
 <div class="task">
@@ -323,7 +370,7 @@ Critical z at 5% two-sided ≈ ±1.96<br>
 
 
 <!-- ========== GRAPH + CALC + LONG ESSAY BANK ========== -->
-<section class="mb-14">
+<section class="mb-14 subject-section" data-subject="graphs">
 <h2 class="text-xl font-bold border-b-2 border-line pb-2 mb-2">Graph / diagram assignments</h2>
 <p class="text-sm text-muted mb-4">Draw on paper in exams. Model answers describe what must appear for full marks.</p>
 
@@ -418,7 +465,7 @@ Downward-sloping NPV curve crossing the horizontal axis at IRR. For r &lt; IRR, 
 </div>
 </section>
 
-<section class="mb-14">
+<section class="mb-14 subject-section" data-subject="calcs">
 <h2 class="text-xl font-bold border-b-2 border-line pb-2 mb-2">Heavy calculation sets</h2>
 
 <div class="task">
@@ -471,7 +518,7 @@ The actual Y is 5 units above the value predicted by the regression line for tha
 </div>
 </section>
 
-<section class="mb-14">
+<section class="mb-14 subject-section" data-subject="essays">
 <h2 class="text-xl font-bold border-b-2 border-line pb-2 mb-2">Long essay questions (exam-style)</h2>
 <p class="text-sm text-muted mb-4">Aim 600–900 words in a real exam. Model answers give <strong>full outlines + sample high-band paragraphs</strong> you can expand.</p>
 
@@ -566,8 +613,23 @@ If the economy is operating below potential with unused capacity, a rightward sh
 </div>
 </main>
 <footer class=" text-muted py-6 text-center text-sm mt-8">UNI · Detailed assignment answers</footer>
+
 <script>
 function toggleAns(btn){const p=btn.nextElementSibling;const o=p.classList.toggle('open');btn.textContent=o?'Hide model answer':'Show model answer';}
+(function(){
+  const buttons=[...document.querySelectorAll('.subj-btn')];
+  const sections=[...document.querySelectorAll('.subject-section')];
+  function apply(filter){
+    buttons.forEach(b=>b.classList.toggle('active', b.dataset.filter===filter));
+    sections.forEach(sec=>{
+      const show = filter==='all' || sec.dataset.subject===filter;
+      sec.classList.toggle('hidden-subj', !show);
+    });
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+  buttons.forEach(b=>b.addEventListener('click',()=>apply(b.dataset.filter)));
+})();
 </script>
+
 </body>
 </html>
