@@ -761,3 +761,122 @@ main .mt-10 a:hover {
 @media (max-width: 560px) {
   .term-row { grid-template-columns: 1fr; gap: 0.2rem; }
 }
+
+
+/* Active study components */
+.exam-flag {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  background: #1B4332;
+  color: #F0FFF6;
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  margin: 1rem 0 1.25rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+.exam-flag strong {
+  color: #95D5B2;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.2rem;
+  font-family: 'DM Sans', system-ui, sans-serif !important;
+}
+.self-check {
+  background: #FFFDFB;
+  border: 1.5px dashed #2F5D50;
+  border-radius: 14px;
+  padding: 0.9rem 1.05rem;
+  margin: 1.1rem 0 1.4rem;
+}
+.self-check .sc-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #2F5D50;
+  margin-bottom: 0.45rem;
+  font-family: 'DM Sans', system-ui, sans-serif !important;
+}
+.self-check ol, .self-check ul {
+  margin: 0.25rem 0 0 1.1rem !important;
+  padding: 0 !important;
+}
+.self-check li {
+  font-size: 0.92rem !important;
+  margin: 0.3rem 0 !important;
+  color: #1F2A32 !important;
+}
+.steps {
+  counter-reset: step;
+  list-style: none;
+  margin: 0.75rem 0 1.2rem !important;
+  padding: 0 !important;
+}
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding: 0.7rem 0.85rem 0.7rem 3rem !important;
+  margin: 0.45rem 0 !important;
+  background: #FFFDFB;
+  border: 1px solid #D9D2C8;
+  border-radius: 12px;
+  font-size: 0.94rem !important;
+  color: #1F2A32 !important;
+}
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0.7rem; top: 0.65rem;
+  width: 1.55rem; height: 1.55rem;
+  border-radius: 999px;
+  background: #2F5D50;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+.do-not {
+  background: #FDF2F0;
+  border: 1px solid #E8C9C2;
+  border-left: 4px solid #B42318;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.92rem;
+  color: #5C2B24;
+}
+.do-not strong {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  color: #B42318;
+  font-family: 'DM Sans', system-ui, sans-serif !important;
+}
+.memory {
+  background: #F4F0FA;
+  border: 1px solid #D9D0EA;
+  border-left: 4px solid #6941C6;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.92rem;
+  color: #3A2E55;
+}
+.memory strong {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  color: #6941C6;
+  font-family: 'DM Sans', system-ui, sans-serif !important;
+}
