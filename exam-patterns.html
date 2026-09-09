@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UNI – Monash-style Exam Patterns</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+.mock-paper{background:#FFFDFB;border:1px solid #D9D2C8;border-radius:16px;padding:1.25rem 1.35rem;margin-bottom:1.25rem}
+.mock-paper h3{margin:0 0 0.35rem;color:#1F2A32}
+.meta{font-size:0.82rem;color:#6B7782;margin-bottom:0.85rem}
+.qblock{border-top:1px solid #E8E2D8;padding:0.85rem 0}
+.qblock:first-of-type{border-top:none}
+.marks{display:inline-block;font-size:0.72rem;font-weight:700;background:#E4EFEA;color:#2F5D50;border-radius:6px;padding:0.12rem 0.45rem;margin-left:0.35rem}
+.ans-panel{display:none;margin-top:0.6rem;padding:1rem 1.1rem;background:#F4FAF7;border-left:4px solid #2F5D50;border-radius:0 10px 10px 0;font-size:0.9rem;line-height:1.65}
+.ans-panel.open{display:block}
+.show-btn{background:#2F5D50;color:#fff;border:none;border-radius:999px;padding:0.35rem 0.85rem;font-size:0.78rem;font-weight:650;cursor:pointer;margin-top:0.4rem}
+.timer-note{background:#1B4332;color:#E8F5EE;border-radius:12px;padding:0.75rem 1rem;font-size:0.88rem;margin:0.75rem 0 1rem}
+.assign-layout{display:grid;grid-template-columns:200px 1fr;gap:1.1rem;align-items:start}
+.assign-sidebar{position:sticky;top:4.2rem;background:#FFFDFB;border:1px solid #D9D2C8;border-radius:14px;padding:0.75rem}
+.subj-btn{display:block;width:100%;text-align:left;border:none;background:transparent;padding:0.5rem 0.65rem;border-radius:10px;font-size:0.82rem;font-weight:650;color:#3D4A54;cursor:pointer;margin-bottom:0.15rem}
+.subj-btn.active{background:#2F5D50;color:#fff}
+.subject-section.hidden-subj{display:none!important}
+@media(max-width:860px){.assign-layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="site-header sticky top-0 z-50">
+<div class="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center">
+<a href="index.html">← UNI</a>
+<span class="text-muted text-sm">Exam patterns</span>
+</div></header>
+
+<main class="max-w-6xl mx-auto px-4 py-8">
+<h1 style="margin-top:0;">Monash-style exam pattern drills</h1>
+<p class="text-muted">Built from handbook weightings, eAssessment patterns, and typical Business &amp; Commerce question styles. Not official past papers — practice the <em>shape</em> of Monash exams: multi-part, workings, time pressure, hurdles.</p>
+
+<div class="timer-note"><strong>How to use:</strong> Set a phone timer. Attempt without notes first. Show model answers only after. Aim to leave 5 minutes to check narrations / Accept-Reject / IRAC conclusions.</div>
+
+<div class="assign-layout">
+<aside class="assign-sidebar">
+<div class="text-xs font-bold uppercase tracking-wide text-muted mb-2 px-1">Papers</div>
+<button type="button" class="subj-btn active" data-filter="all">All</button>
+<button type="button" class="subj-btn" data-filter="acw1120">ACW1120</button>
+<button type="button" class="subj-btn" data-filter="acw2220">ACW2220</button>
+<button type="button" class="subj-btn" data-filter="bfw1001">BFW1001</button>
+<button type="button" class="subj-btn" data-filter="btw1042">BTW1042</button>
+<button type="button" class="subj-btn" data-filter="ecm1953">ECM1953</button>
+<button type="button" class="subj-btn" data-filter="etw1001">ETW1001</button>
+<button type="button" class="subj-btn" data-filter="mgw1010">MGW1010</button>
+</aside>
+
+<div class="assign-main">
+
+<!-- ACW1120 MID -->
+<section class="subject-section" data-subject="acw1120">
+<div class="mock-paper">
+<h3>ACW1120 — Mid-semester style <span class="marks">~60 min · 3 questions</span></h3>
+<div class="meta">Pattern: theory + T-accounts/adjustments · time tight · show workings · traps on Cash in adjustments</div>
+
+<div class="qblock">
+<strong>Q1 · Framework</strong> <span class="marks">12 marks</span>
+<p class="text-sm">(a) Define <em>relevance</em> and <em>faithful representation</em> using Conceptual Framework language. (6)</p>
+<p class="text-sm">(b) Explain materiality and give one size-based and one nature-based example. (4)</p>
+<p class="text-sm">(c) Why can enhancing characteristics not replace missing relevance? (2)</p>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+<strong>(a)</strong> Relevance: information capable of making a difference to decisions of primary users (predictive and/or confirmatory). Faithful representation: substance of economic phenomena; complete, neutral, free from error as far as practicable.<br>
+<strong>(b)</strong> Materiality = entity-specific relevance; omit/misstate/obscure could reasonably influence users. Size: large inventory error. Nature: related-party fraud even if small $.<br>
+<strong>(c)</strong> Enhancing (comparability, verifiability, timeliness, understandability) improve usefulness only if fundamentals exist.
+</div>
+</div>
+
+<div class="qblock">
+<strong>Q2 · Adjustments</strong> <span class="marks">20 marks</span>
+<p class="text-sm">Year-end 31 Dec. Prepare adjusting journals with narrations:</p>
+<ul class="text-sm list-disc ml-5">
+<li>Prepaid insurance RM9,600 paid 1 Sep for 12 months (recorded as prepaid)</li>
+<li>Unearned fees RM6,000; by 31 Dec 2/3 earned</li>
+<li>Equipment cost RM50,000; residual 5,000; life 5 years; SL; full year</li>
+<li>Accrued wages RM1,800</li>
+</ul>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+Ins exp 3,200 / Prepaid 3,200 (4/12×9,600)<br>
+Unearned 4,000 / Fees revenue 4,000 (2/3×6,000)<br>
+Dep exp 9,000 / AccDep 9,000 ((50k−5k)/5)<br>
+Wages exp 1,800 / Wages payable 1,800<br>
+<strong>Trap:</strong> no Cash in any pure adjusting entry.
+</div>
+</div>
+
+<div class="qblock">
+<strong>Q3 · Mini statements impact</strong> <span class="marks">18 marks</span>
+<p class="text-sm">Before adjustments: revenue 40,000; expenses 22,000; capital 25,000; drawings 2,000. Using Q2 adjustments (ignore inventory), compute adjusted profit and closing equity. Show workings.</p>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+Revenue 40,000+4,000=44,000<br>
+Expenses 22,000+3,200+9,000+1,800=36,000<br>
+Profit=8,000<br>
+Closing equity=25,000+8,000−2,000=<strong>31,000</strong>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ACW1120 FINAL -->
+<section class="subject-section" data-subject="acw1120">
+<div class="mock-paper">
+<h3>ACW1120 — Final style <span class="marks">~2h · multi-part · ~50% unit · hurdle often applies</span></h3>
+<div class="meta">Pattern: several large questions spanning cycle, inventory, statements, interpretation</div>
+
+<div class="qblock">
+<strong>Q1 · Periodic inventory</strong> <span class="marks">15 marks</span>
+<p class="text-sm">Opening inv 18,000; Purchases 95,000; Purchase returns 3,000; discounts 1,500; freight-in 2,200; Closing inv 16,500; Sales 160,000; sales returns 5,000; sales discounts 2,000. Compute net sales, net purchases, COGS, gross profit and GP margin %.</p>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+Net sales=160k−5k−2k=<strong>153,000</strong><br>
+Net purchases=95k−3k−1.5k+2.2k=<strong>92,700</strong><br>
+COGS=18k+92.7k−16.5k=<strong>94,200</strong><br>
+GP=153k−94.2k=<strong>58,800</strong> · margin=58,800/153,000=<strong>38.4%</strong>
+</div>
+</div>
+
+<div class="qblock">
+<strong>Q2 · Allowance method</strong> <span class="marks">12 marks</span>
+<p class="text-sm">AR 60,000; allowance already Cr 800; estimate 4% of AR uncollectible. (a) Adjusting entry (b) net receivables (c) write-off of 500 later — journal.</p>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+Required allow=2,400; adj=2,400−800=1,600 → Dr Bad debt exp 1,600 / Cr Allow 1,600<br>
+Net AR=60,000−2,400=<strong>57,600</strong><br>
+Write-off: Dr Allow 500 / Cr AR 500 (no expense)
+</div>
+</div>
+
+<div class="qblock">
+<strong>Q3 · Bank recon logic</strong> <span class="marks">10 marks</span>
+<p class="text-sm">Explain which side (bank vs books) each item adjusts, and which need journals: deposit in transit; outstanding cheque; NSF cheque; bank collection of note; bank fee.</p>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+Bank side only (no journal): deposits in transit, outstanding cheques.<br>
+Books side (journals): NSF (Dr AR Cr Cash), bank fee (Dr exp Cr Cash), note collection (Dr Cash Cr Notes/rev as taught).
+</div>
+</div>
+</div>
+</section>
+
+<!-- ACW2220 -->
+<section class="subject-section" data-subject="acw2220">
+<div class="mock-paper">
+<h3>ACW2220 — Final style decision paper <span class="marks">multi-part · show CM first</span></h3>
+<div class="meta">Pattern: cost behaviour → CVP → special order / keep-drop · assumptions · decision sentence</div>
+
+<div class="qblock">
+<strong>Q1 · High-low + CVP</strong> <span class="marks">18 marks</span>
+<p class="text-sm">High 12,000 units cost 110,000; low 7,000 units cost 80,000. SP 25. FC from high-low. (a) VC/unit and FC (b) BE units (c) units for target profit 40,000.</p>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+VC=(110k−80k)/(12k−7k)=30k/5k=<strong>RM6</strong><br>
+FC=110k−6×12k=<strong>38,000</strong><br>
+CM/u=25−6=19 · BE=38,000/19=<strong>2,000 units</strong><br>
+Target=(38k+40k)/19=<strong>4,105.26 → 4,106 units</strong> (or leave exact)
+</div>
+</div>
+
+<div class="qblock">
+<strong>Q2 · Special order full capacity</strong> <span class="marks">16 marks</span>
+<p class="text-sm">Capacity 5,000; current sales 5,000; SP 40; VC 22; order 800 units at 30; no extra FC. Accept?</p>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+CM order=(30−22)×800=6,400<br>
+CM lost=(40−22)×800=14,400<br>
+Net=6,400−14,400=<strong>−8,000 → REJECT</strong><br>
+State qualitative caveat (customer relationship) if asked.
+</div>
+</div>
+
+<div class="qblock">
+<strong>Q3 · Keep or drop</strong> <span class="marks">14 marks</span>
+<p class="text-sm">Segment CM 70,000; avoidable FC 45,000; allocated common FC 20,000 continues. Alternative use of space CM 18,000. Drop?</p>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+Effect of drop= −70,000 +45,000 +18,000 = <strong>−7,000 → KEEP</strong><br>
+Common allocated FC irrelevant.
+</div>
+</div>
+</div>
+</section>
+
+<!-- BFW1001 -->
+<section class="subject-section" data-subject="bfw1001">
+<div class="mock-paper">
+<h3>BFW1001 — Calculation + decision paper</h3>
+<div class="meta">Pattern: formula first · timeline · Accept/Reject · NPV vs IRR ranking</div>
+
+<div class="qblock">
+<strong>Q1 · TVM</strong> <span class="marks">12 marks</span>
+<p class="text-sm">PV of RM8,000 annuity end of year for 6 years at 9%. Then restate if annuity due.</p>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+Factor=[1−1.09<sup>−6</sup>]/0.09≈4.4859<br>
+PV_ord=8,000×4.4859=<strong>35,887</strong><br>
+PV_due=35,887×1.09=<strong>39,117</strong>
+</div>
+</div>
+
+<div class="qblock">
+<strong>Q2 · NPV</strong> <span class="marks">16 marks</span>
+<p class="text-sm">I₀=100,000; CF 30k, 35k, 40k, 25k; r=10%. Compute NPV and decide.</p>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+PV≈27,273+28,926+30,053+17,075=103,327<br>
+NPV≈<strong>+3,327 → ACCEPT</strong>
+</div>
+</div>
+
+<div class="qblock">
+<strong>Q3 · Ranking conflict</strong> <span class="marks">12 marks</span>
+<p class="text-sm">Project S: IRR 28%, NPV 2,000. Project L: IRR 18%, NPV 9,000. Mutually exclusive, same risk. Which and why?</p>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+Choose <strong>L</strong> — NPV measures value added to shareholders; IRR% can favour small projects (scale problem).
+</div>
+</div>
+</div>
+</section>
+
+<!-- BTW1042 -->
+<section class="subject-section" data-subject="btw1042">
+<div class="mock-paper">
+<h3>BTW1042 — IRAC case paper</h3>
+<div class="meta">Pattern: every answer structured Issue · Rule · Application · Conclusion</div>
+
+<div class="qblock">
+<strong>Q1 · Offer vs ITT</strong> <span class="marks">15 marks</span>
+<p class="text-sm">Shop displays a laptop tagged RM2,499. Customer hands card at counter; staff says price error, true price RM3,299. Using IRAC, is there a contract at 2,499?</p>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+<strong>I:</strong> Contract at tagged price?<br>
+<strong>R:</strong> Display usually invitation to treat; offer at cashier; acceptance by seller.<br>
+<strong>A:</strong> Tag is ITT; customer’s presentation is offer; staff rejects → no acceptance at 2,499.<br>
+<strong>C:</strong> No contract at RM2,499 (classic display rule; watch for clear unilateral offer wording).
+</div>
+</div>
+
+<div class="qblock">
+<strong>Q2 · Negligence</strong> <span class="marks">20 marks</span>
+<p class="text-sm">Tax agent carelessly files wrong form; client assessed extra tax and penalties. IRAC on negligence liability.</p>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+<strong>I:</strong> Liable in negligence?<br>
+<strong>R:</strong> Duty (professional relationship), breach (competent agent standard), causation, remoteness of pure economic loss.<br>
+<strong>A:</strong> Duty clear; filing error below standard; loss flows from breach; type of loss foreseeable for tax work.<br>
+<strong>C:</strong> Likely liable for foreseeable financial loss (subject to any contributory facts).
+</div>
+</div>
+</div>
+</section>
+
+<!-- ECM -->
+<section class="subject-section" data-subject="ecm1953">
+<div class="mock-paper">
+<h3>ECM1953 — Diagram + explain paper</h3>
+<div class="qblock">
+<strong>Q1</strong> <span class="marks">14 marks</span>
+<p class="text-sm">Market for instant noodles. Income rises (normal good) and input costs rise simultaneously. Using a D-S diagram description, what happens to equilibrium P and Q? Which is ambiguous?</p>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+D shifts right; S shifts left → <strong>P* rises</strong>; <strong>Q* ambiguous</strong> (depends which shift larger). State assumptions.
+</div>
+</div>
+<div class="qblock">
+<strong>Q2</strong> <span class="marks">12 marks</span>
+<p class="text-sm">PED: P 10→12, Qd 200→170. Compute |PED| and effect on TR if firm raises price further in this range.</p>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+%ΔP=+20%; %ΔQ=−15%; |PED|=0.75 inelastic → price rise raises TR in this range.
+</div>
+</div>
+</div>
+</section>
+
+<!-- ETW -->
+<section class="subject-section" data-subject="etw1001">
+<div class="mock-paper">
+<h3>ETW1001 — Formula → number → interpretation</h3>
+<div class="qblock">
+<strong>Q1</strong> <span class="marks">12 marks</span>
+<p class="text-sm">x̄=52, s=8, n=16. Approximate 95% CI for μ (use z=1.96). Interpret.</p>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+SE=2; CI=52±3.92 → <strong>[48.08, 55.92]</strong><br>
+Interpretation: method captures μ in 95% of repeated samples (frequentist); do not say “95% probability μ is in this interval” after observing it.
+</div>
+</div>
+<div class="qblock">
+<strong>Q2</strong> <span class="marks">12 marks</span>
+<p class="text-sm">Ŷ=20+1.5X. Interpret slope. Residual if X=10 and actual Y=40?</p>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer</button>
+<div class="ans-panel">
+Slope: +1 unit X associated with +1.5 Y on average.<br>
+Predicted=35; residual=40−35=<strong>+5</strong> (under-predicted).
+</div>
+</div>
+</div>
+</section>
+
+<!-- MGW -->
+<section class="subject-section" data-subject="mgw1010">
+<div class="mock-paper">
+<h3>MGW1010 — Essay / critique paper</h3>
+<div class="qblock">
+<strong>Q1</strong> <span class="marks">25 marks</span>
+<p class="text-sm">“Scientific Management is obsolete for all modern organisations.” Discuss with definition, application, and critique.</p>
+<button class="show-btn" onclick="toggleAns(this)">Show model answer plan</button>
+<div class="ans-panel">
+Define Taylor principles → apply where routine tasks still benefit → critique: ignores social needs, knowledge work, intrinsic motivation → contingency: useful for some processes, not universal → conclude partial obsolescence, not total.
+</div>
+</div>
+</div>
+</section>
+
+</div>
+</div>
+</main>
+<footer>UNI · Monash-style patterns for practice — verify your Moodle assessment summary</footer>
+<script>
+function toggleAns(btn){const p=btn.nextElementSibling;const o=p.classList.toggle('open');btn.textContent=o?'Hide model answer':'Show model answer';}
+(function(){
+  const buttons=[...document.querySelectorAll('.subj-btn')];
+  const sections=[...document.querySelectorAll('.subject-section')];
+  function apply(filter){
+    buttons.forEach(b=>b.classList.toggle('active',b.dataset.filter===filter));
+    sections.forEach(sec=>{
+      sec.classList.toggle('hidden-subj', !(filter==='all'||sec.dataset.subject===filter));
+    });
+  }
+  buttons.forEach(b=>b.addEventListener('click',()=>apply(b.dataset.filter)));
+})();
+</script>
+</body>
+</html>
