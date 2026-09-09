@@ -1,172 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACW1120 | UNI Advanced Notes</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACW1120 Complete Exam Notes | UNI</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="../css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="bg-[#EBE0DD] text-[#4C6170]">
 <header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
 <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
 <a href="../index.html" class="font-bold hover:text-white">← UNI</a>
-<span class="text-sm text-[#C0C4B7]">ACW1120 · Advanced</span>
-</div>
-</header>
+<span class="text-sm text-[#C0C4B7]">ACW1120 · Full exam notes</span>
+</div></header>
 <main class="max-w-4xl mx-auto px-4 py-8 prose">
 <div class="mb-6">
-<div class="text-sm font-semibold text-[#8A9EAB]">B2026 ACCOUNTANCY · FINANCIAL ACCOUNTING</div>
+<div class="text-sm font-semibold text-[#8A9EAB]">MONASH B2026 · ACCOUNTANCY PATHWAY</div>
 <h1 class="text-3xl font-bold mt-1">ACW1120 – Financial Accounting 1</h1>
-<p class="text-[#65695B] mt-2">Advanced revision notes for closed-book exams: Framework application, recognition judgements, measurement bases, full-cycle mechanics</p>
+<p class="text-[#65695B] mt-2">Complete exam-prep notes: theory, mechanics, worked solutions, common traps, revision checklist</p>
 </div>
 
-<h2>1. Epistemic Role of Financial Reporting</h2>
-<p>Financial reporting reduces information asymmetry between insiders (management) and outside capital providers. Agency theory frames managers as agents who may not maximise principal wealth; accounting numbers enter debt covenants, compensation contracts and equity valuation models. Hence recognition and measurement choices are not neutral bookkeeping — they reallocate reported wealth across periods and stakeholders.</p>
-<p>General-purpose financial statements target <em>primary users</em>: existing and potential investors, lenders and other creditors. The IASB Conceptual Framework subordinates the information needs of other users (regulators, employees, public) when those conflict with primary-user decision usefulness. Stewardship (accountability for resources) is embedded in the objective but does not independently override decision-usefulness in the current Framework.</p>
+<nav class="bg-[#F7F2EF] border border-[#C0C4B7] rounded-xl p-4 mb-8 text-sm">
+<strong>On this page:</strong>
+<a href="#s1" class="text-[#4C6170] underline mx-1">1. Reporting</a>·
+<a href="#s2" class="text-[#4C6170] underline mx-1">2. Framework</a>·
+<a href="#s3" class="text-[#4C6170] underline mx-1">3. Equation &amp; Dr/Cr</a>·
+<a href="#s4" class="text-[#4C6170] underline mx-1">4. Cycle</a>·
+<a href="#s5" class="text-[#4C6170] underline mx-1">5. Adjustments</a>·
+<a href="#s6" class="text-[#4C6170] underline mx-1">6. Depreciation</a>·
+<a href="#s7" class="text-[#4C6170] underline mx-1">7. Statements</a>·
+<a href="#s8" class="text-[#4C6170] underline mx-1">8. Worked set</a>·
+<a href="#s9" class="text-[#4C6170] underline mx-1">9. Checklist</a>
+</nav>
 
+<h2 id="s1">1. Why financial accounting exists</h2>
+<p>Outside investors and lenders cannot observe the firm’s books daily. Financial accounting measures economic events, classifies them into elements, and communicates them in general-purpose financial statements. Those statements support decisions to buy, sell or hold equity and debt, and to extend or settle credit. They also support assessment of management’s stewardship of resources.</p>
+<p>Agency conflict: managers (agents) may pursue goals that diverge from owners/creditors (principals). Accounting numbers enter debt covenants, bonus contracts and valuation models — so recognition and measurement choices have real economic consequences, not just “presentation”.</p>
+<p><strong>Accrual vs cash:</strong> Cash accounting records only cash movements and can misstate performance (e.g. large advance receipts look like profit). Accrual accounting recognises effects when they occur (revenue when earned; expenses when incurred). The Conceptual Framework bases GPFS on accruals.</p>
 
-        <h3>Visual: Accounting equation balance</h3>
-        <div class="overflow-x-auto my-4">
-<svg viewBox="0 0 520 120" class="w-full max-w-lg mx-auto" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="30" width="140" height="60" rx="8" fill="#4C6170"/>
-  <text x="90" y="65" text-anchor="middle" fill="#EBE0DD" font-size="16" font-weight="700" font-family="sans-serif">ASSETS</text>
-  <text x="175" y="65" text-anchor="middle" fill="#4C6170" font-size="28" font-weight="700">=</text>
-  <rect x="200" y="30" width="130" height="60" rx="8" fill="#65695B"/>
-  <text x="265" y="65" text-anchor="middle" fill="#EBE0DD" font-size="14" font-weight="700" font-family="sans-serif">LIABILITIES</text>
-  <text x="345" y="65" text-anchor="middle" fill="#4C6170" font-size="28" font-weight="700">+</text>
-  <rect x="370" y="30" width="130" height="60" rx="8" fill="#9CA38E"/>
-  <text x="435" y="65" text-anchor="middle" fill="#4C6170" font-size="16" font-weight="700" font-family="sans-serif">EQUITY</text>
-</svg>
-        </div>
-        <h3>Visual: Accounting cycle</h3>
-        <div class="overflow-x-auto my-4">
-<svg viewBox="0 0 640 100" class="w-full max-w-2xl mx-auto" xmlns="http://www.w3.org/2000/svg">
-  <defs><marker id="a1" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4C6170"/></marker></defs>
-  <rect x="5" y="28" width="72" height="44" rx="6" fill="#4C6170"/><text x="41" y="54" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">Journal</text>
-  <line x1="77" y1="50" x2="95" y2="50" stroke="#4C6170" stroke-width="2" marker-end="url(#a1)"/>
-  <rect x="98" y="28" width="72" height="44" rx="6" fill="#65695B"/><text x="134" y="54" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">Ledger</text>
-  <line x1="170" y1="50" x2="188" y2="50" stroke="#4C6170" stroke-width="2" marker-end="url(#a1)"/>
-  <rect x="191" y="28" width="72" height="44" rx="6" fill="#8A9EAB"/><text x="227" y="48" text-anchor="middle" fill="#EBE0DD" font-size="9" font-family="sans-serif">Unadj.</text><text x="227" y="60" text-anchor="middle" fill="#EBE0DD" font-size="9" font-family="sans-serif">TB</text>
-  <line x1="263" y1="50" x2="281" y2="50" stroke="#4C6170" stroke-width="2" marker-end="url(#a1)"/>
-  <rect x="284" y="28" width="72" height="44" rx="6" fill="#9CA38E"/><text x="320" y="54" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">Adjust</text>
-  <line x1="356" y1="50" x2="374" y2="50" stroke="#4C6170" stroke-width="2" marker-end="url(#a1)"/>
-  <rect x="377" y="28" width="72" height="44" rx="6" fill="#65695B"/><text x="413" y="48" text-anchor="middle" fill="#EBE0DD" font-size="9" font-family="sans-serif">Adj.</text><text x="413" y="60" text-anchor="middle" fill="#EBE0DD" font-size="9" font-family="sans-serif">TB</text>
-  <line x1="449" y1="50" x2="467" y2="50" stroke="#4C6170" stroke-width="2" marker-end="url(#a1)"/>
-  <rect x="470" y="28" width="72" height="44" rx="6" fill="#4C6170"/><text x="506" y="54" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">FS</text>
-  <line x1="542" y1="50" x2="560" y2="50" stroke="#4C6170" stroke-width="2" marker-end="url(#a1)"/>
-  <rect x="563" y="28" width="72" height="44" rx="6" fill="#8A9EAB"/><text x="599" y="54" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">Close</text>
-</svg>
-        </div>
-        <h3>Visual: T-account logic (Asset vs Liability)</h3>
-        <div class="overflow-x-auto my-4">
-<svg viewBox="0 0 480 140" class="w-full max-w-md mx-auto" xmlns="http://www.w3.org/2000/svg">
-  <text x="110" y="20" text-anchor="middle" fill="#4C6170" font-size="13" font-weight="700" font-family="sans-serif">Asset</text>
-  <line x1="30" y1="40" x2="190" y2="40" stroke="#4C6170" stroke-width="2"/>
-  <line x1="110" y1="40" x2="110" y2="120" stroke="#4C6170" stroke-width="2"/>
-  <text x="70" y="70" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif">Dr ↑</text>
-  <text x="150" y="70" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif">Cr ↓</text>
-  <text x="350" y="20" text-anchor="middle" fill="#4C6170" font-size="13" font-weight="700" font-family="sans-serif">Liability / Equity</text>
-  <line x1="270" y1="40" x2="430" y2="40" stroke="#4C6170" stroke-width="2"/>
-  <line x1="350" y1="40" x2="350" y2="120" stroke="#4C6170" stroke-width="2"/>
-  <text x="310" y="70" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif">Dr ↓</text>
-  <text x="390" y="70" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif">Cr ↑</text>
-</svg>
-        </div>
-
-<h2>2. Conceptual Framework — Operative Tests</h2>
+<h2 id="s2">2. Conceptual Framework (exam core)</h2>
 <div class="definition-box">
-<strong>Objective:</strong> provide financial information about the reporting entity useful to primary users in decisions about providing resources to the entity (buy/sell/hold equity and debt; provide/settle credit), including assessment of management’s stewardship of economic resources.
+<strong>Objective:</strong> Provide financial information about the reporting entity that is useful to existing and potential investors, lenders and other creditors in making decisions about providing resources to the entity (including assessing stewardship).
 </div>
 
-<h3>2.1 Qualitative characteristics as constraints on recognition and measurement</h3>
-<p><strong>Relevance</strong> = capacity to affect decisions through predictive value, confirmatory value, or both. Materiality is an entity-specific screen within relevance: information is material if omitting, misstating or obscuring it could reasonably influence primary users. Materiality is quantitative <em>and</em> qualitative (e.g. related-party fraud may be material despite small amounts).</p>
-<p><strong>Faithful representation</strong> = depiction of substance of economic phenomena that is complete, neutral and free from error <em>to the maximum extent practicable</em>. It is not a claim of perfect accuracy. Neutrality prohibits biased selection/presentation; the Framework’s discussion of prudence is limited — prudence must not justify systematic understatement of assets/income.</p>
-<p><strong>Enhancing characteristics</strong> (comparability including consistency, verifiability, timeliness, understandability) cannot compensate for absence of relevance or faithful representation. Exam questions that ask “which characteristic is more important” expect reasoned trade-off analysis (e.g. timely soft estimate vs delayed hard measurement), not a single rigid ranking.</p>
+<h3>2.1 Qualitative characteristics</h3>
+<p><strong>Fundamental</strong></p>
+<ul>
+<li><strong>Relevance</strong> — can change decisions; predictive and/or confirmatory value. <em>Materiality</em> is entity-specific relevance: omit/misstate/obscure → could reasonably influence primary users (size <em>or</em> nature).</li>
+<li><strong>Faithful representation</strong> — substance of economic phenomena; complete, neutral, free from error as far as practicable (not “perfectly accurate”).</li>
+</ul>
+<p><strong>Enhancing:</strong> comparability (incl. consistency), verifiability, timeliness, understandability. These improve usefulness only if fundamentals are present. Exam trade-off example: a quick estimate may be more relevant for a decision tomorrow than a precise number available next month.</p>
 
-<h3>2.2 Definitions of elements (2018 Framework language)</h3>
+<h3>2.2 Elements — learn exact wording</h3>
 <div class="definition-box">
-<strong>Asset:</strong> a present economic resource controlled by the entity as a result of past events. Economic resource = a right that has the potential to produce economic benefits.<br><br>
-<strong>Liability:</strong> a present obligation of the entity to transfer an economic resource as a result of past events. Obligation = duty/responsibility with no practical ability to avoid.<br><br>
-<strong>Equity:</strong> residual interest in assets after deducting liabilities.<br><br>
-<strong>Income / Expenses:</strong> increases / decreases in assets or decreases / increases in liabilities that increase / decrease equity, excluding contributions from / distributions to equity holders.
+<strong>Asset:</strong> present economic resource controlled by the entity as a result of past events. Economic resource = right with potential to produce economic benefits.<br>
+<strong>Liability:</strong> present obligation to transfer an economic resource as a result of past events; no practical ability to avoid.<br>
+<strong>Equity:</strong> residual interest = Assets − Liabilities.<br>
+<strong>Income:</strong> ↑ assets or ↓ liabilities that ↑ equity (not owner contributions).<br>
+<strong>Expenses:</strong> ↓ assets or ↑ liabilities that ↓ equity (not distributions to owners).
 </div>
-<p>Control is the ability to direct the use of the economic resource and obtain the benefits (and prevent others from doing so). “Past event” prevents recognition of purely prospective intentions. Potential to produce benefits does <em>not</em> require probability &gt; 50% for the <em>definition</em>; probability and measurement uncertainty enter the <em>recognition</em> decision.</p>
+<p><strong>Recognition:</strong> item meets definition <em>and</em> recognition provides useful information (relevant + faithfully representable). Extreme measurement uncertainty or very low probability of inflow/outflow may mean disclosure only, not recognition.</p>
 
-<h3>2.3 Recognition and derecognition</h3>
-<p>Recognition is warranted only when the item meets the definition of an element <em>and</em> recognition provides useful information (relevant + faithfully representable). Low probability of inflow/outflow or very high measurement uncertainty may support non-recognition with disclosure. Derecognition occurs when the entity loses control of an asset or no longer has a present obligation for a liability — exam scenarios often test premature revenue recognition or failure to derecognise transferred assets when risks/rewards (or control) are retained.</p>
+<h3>2.3 Measurement bases (awareness)</h3>
+<p>Historical cost, current value (e.g. fair value, value in use), amortised cost. Cost is verifiable but may be less relevant when prices move; fair value may be relevant but Level-3 inputs are less verifiable.</p>
 
-<h3>2.4 Measurement bases (awareness at this level)</h3>
-<p>Historical cost, current value (fair value, value in use, fulfilment value), and amortised cost appear across standards. Choice of basis affects volatility of profit, covenant headroom and comparability. Historical cost is verifiable but may lack relevance when prices change; fair value may be relevant but hierarchical Level 3 inputs reduce verifiability.</p>
+<div class="overflow-x-auto my-4">
+<svg viewBox="0 0 520 200" class="w-full max-w-lg mx-auto" xmlns="http://www.w3.org/2000/svg">
+<rect x="10" y="10" width="500" height="36" rx="6" fill="#4C6170"/>
+<text x="260" y="34" text-anchor="middle" fill="#EBE0DD" font-size="14" font-weight="700" font-family="sans-serif">Useful financial information</text>
+<rect x="30" y="60" width="210" height="28" rx="5" fill="#65695B"/>
+<text x="135" y="79" text-anchor="middle" fill="#EBE0DD" font-size="12" font-family="sans-serif">FUNDAMENTAL</text>
+<rect x="30" y="98" width="100" height="44" rx="5" fill="#9CA38E"/>
+<text x="80" y="125" text-anchor="middle" fill="#4C6170" font-size="11" font-family="sans-serif">Relevance</text>
+<rect x="140" y="98" width="100" height="44" rx="5" fill="#9CA38E"/>
+<text x="190" y="118" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">Faithful</text>
+<text x="190" y="132" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">representation</text>
+<rect x="280" y="60" width="210" height="28" rx="5" fill="#8A9EAB"/>
+<text x="385" y="79" text-anchor="middle" fill="#EBE0DD" font-size="12" font-family="sans-serif">ENHANCING</text>
+<rect x="280" y="98" width="100" height="36" rx="5" fill="#C0C4B7"/>
+<text x="330" y="121" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">Comparability</text>
+<rect x="390" y="98" width="100" height="36" rx="5" fill="#C0C4B7"/>
+<text x="440" y="121" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">Verifiability</text>
+<rect x="280" y="142" width="100" height="36" rx="5" fill="#C0C4B7"/>
+<text x="330" y="165" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">Timeliness</text>
+<rect x="390" y="142" width="100" height="36" rx="5" fill="#C0C4B7"/>
+<text x="440" y="165" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">Understandability</text>
+</svg>
+</div>
 
-<h2>3. Accrual Basis, Periodicity and Matching</h2>
-<p>Accrual accounting records economic events when they occur. The periodicity assumption forces allocation of continuous activity into discrete reporting periods — creating the need for adjusting entries. “Matching” is not an independent Framework principle that overrides asset/liability definitions; expenses are recognised when a decrease in assets or increase in liabilities arises that reduces equity (other than distributions). In practice, matching language still appears in textbooks for depreciation and cost of sales.</p>
-<p>Cash-basis profit confounds financing, investing and operating timing. Lenders and equity analysts therefore adjust toward accrual measures and cash-flow statements; understanding <em>why</em> accruals dominate GPFS is an exam expectation, not optional colour.</p>
-
-<h2>4. The Accounting Equation as a Linear Constraint</h2>
-<div class="formula-box">A ≡ L + E &nbsp;&nbsp;with&nbsp;&nbsp; E = Capital + ΣIncome − ΣExpenses − Drawings</div>
-<p>Double-entry is the bookkeeping expression of this identity. Analysing a transaction means specifying the simultaneous change in two or more accounts such that the identity holds. Contra-asset accounts (allowance for doubtful debts, accumulated depreciation) carry credit balances but are presented with assets; they are not liabilities.</p>
+<h2 id="s3">3. Accounting equation and double-entry</h2>
+<div class="formula-box text-center text-lg">Assets = Liabilities + Equity</div>
+<div class="formula-box text-center">Equity = Capital + Income − Expenses − Drawings</div>
+<p>Every journal entry keeps the equation in balance: total debits = total credits.</p>
 <div class="overflow-x-auto">
 <table>
-<thead><tr><th>Account class</th><th>↑</th><th>↓</th><th>Normal bal.</th><th>FS location</th></tr></thead>
+<thead><tr><th>Account type</th><th>Increase</th><th>Decrease</th><th>Normal balance</th></tr></thead>
 <tbody>
-<tr><td>Asset</td><td>Dr</td><td>Cr</td><td>Dr</td><td>SFP</td></tr>
-<tr><td>Contra-asset</td><td>Cr</td><td>Dr</td><td>Cr</td><td>SFP (offset)</td></tr>
-<tr><td>Liability</td><td>Cr</td><td>Dr</td><td>Cr</td><td>SFP</td></tr>
-<tr><td>Equity / capital</td><td>Cr</td><td>Dr</td><td>Cr</td><td>SFP / SCE</td></tr>
-<tr><td>Income</td><td>Cr</td><td>Dr</td><td>Cr</td><td>P&amp;L → closed to E</td></tr>
-<tr><td>Expense / drawings</td><td>Dr</td><td>Cr</td><td>Dr</td><td>P&amp;L / SCE → closed</td></tr>
+<tr><td>Assets</td><td>Debit</td><td>Credit</td><td>Debit</td></tr>
+<tr><td>Expenses / Drawings</td><td>Debit</td><td>Credit</td><td>Debit</td></tr>
+<tr><td>Liabilities</td><td>Credit</td><td>Debit</td><td>Credit</td></tr>
+<tr><td>Equity / Capital</td><td>Credit</td><td>Debit</td><td>Credit</td></tr>
+<tr><td>Income / Revenue</td><td>Credit</td><td>Debit</td><td>Credit</td></tr>
+<tr><td>Contra-asset (Accum. Dep.)</td><td>Credit</td><td>Debit</td><td>Credit</td></tr>
+</tbody>
+</table>
+</div>
+<div class="example-box">
+<strong>Transaction drill</strong><br>
+1. Owner invests RM50,000 cash → Dr Cash 50,000 / Cr Capital 50,000<br>
+2. Buy inventory RM8,000 on credit → Dr Inventory 8,000 / Cr AP 8,000<br>
+3. Pay rent RM2,000 cash → Dr Rent expense 2,000 / Cr Cash 2,000<br>
+4. Provide services RM12,000, half cash half on account → Dr Cash 6,000; Dr AR 6,000 / Cr Service revenue 12,000<br>
+5. Customer pays RM3,000 of AR → Dr Cash 3,000 / Cr AR 3,000
+</div>
+
+<h2 id="s4">4. Accounting cycle</h2>
+<ol>
+<li>Identify transactions from source documents</li>
+<li>Analyse effect on equation → choose accounts</li>
+<li>Journalise (chronological; include narration)</li>
+<li>Post to ledger (T-accounts)</li>
+<li>Unadjusted trial balance (Dr totals = Cr totals only)</li>
+<li>Adjusting entries</li>
+<li>Adjusted trial balance</li>
+<li>Financial statements</li>
+<li>Closing entries (temporary → equity)</li>
+<li>Post-closing trial balance (permanent accounts only)</li>
+</ol>
+<p><strong>Critical:</strong> A balanced trial balance does <em>not</em> prove the books are correct. It misses: omitted transactions, equal wrong amounts, errors of principle (e.g. expense capitalised), compensating errors.</p>
+
+<div class="overflow-x-auto my-4">
+<svg viewBox="0 0 640 90" class="w-full max-w-2xl mx-auto" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="ar" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4C6170"/></marker></defs>
+<rect x="4" y="25" width="70" height="40" rx="5" fill="#4C6170"/><text x="39" y="50" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">Journal</text>
+<line x1="74" y1="45" x2="90" y2="45" stroke="#4C6170" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="93" y="25" width="70" height="40" rx="5" fill="#65695B"/><text x="128" y="50" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">Ledger</text>
+<line x1="163" y1="45" x2="179" y2="45" stroke="#4C6170" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="182" y="25" width="70" height="40" rx="5" fill="#8A9EAB"/><text x="217" y="50" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">Unadj TB</text>
+<line x1="252" y1="45" x2="268" y2="45" stroke="#4C6170" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="271" y="25" width="70" height="40" rx="5" fill="#9CA38E"/><text x="306" y="50" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">Adjust</text>
+<line x1="341" y1="45" x2="357" y2="45" stroke="#4C6170" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="360" y="25" width="70" height="40" rx="5" fill="#65695B"/><text x="395" y="50" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">Adj TB</text>
+<line x1="430" y1="45" x2="446" y2="45" stroke="#4C6170" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="449" y="25" width="70" height="40" rx="5" fill="#4C6170"/><text x="484" y="50" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">FS</text>
+<line x1="519" y1="45" x2="535" y2="45" stroke="#4C6170" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="538" y="25" width="70" height="40" rx="5" fill="#8A9EAB"/><text x="573" y="50" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">Close</text>
+</svg>
+</div>
+
+<h2 id="s5">5. Adjusting entries (highest exam weight)</h2>
+<p>Purpose: allocate income/expenses to the correct period under accruals; update assets and liabilities. <strong>Never use Cash in a pure adjusting entry.</strong></p>
+<div class="overflow-x-auto">
+<table>
+<thead><tr><th>Type</th><th>Situation</th><th>Entry</th></tr></thead>
+<tbody>
+<tr><td>Prepaid expense</td><td>Asset partly used up</td><td>Dr Expense / Cr Prepaid</td></tr>
+<tr><td>Unearned revenue</td><td>Liability partly earned</td><td>Dr Unearned revenue / Cr Revenue</td></tr>
+<tr><td>Accrued expense</td><td>Incurred, not paid</td><td>Dr Expense / Cr Payable</td></tr>
+<tr><td>Accrued revenue</td><td>Earned, not billed</td><td>Dr Receivable / Cr Revenue</td></tr>
+<tr><td>Depreciation</td><td>Allocate depreciable amount</td><td>Dr Dep. expense / Cr Accum. dep.</td></tr>
 </tbody>
 </table>
 </div>
 
-<h2>5. Cycle, Internal Control and Limitations of the Trial Balance</h2>
-<p>Flow: source documents → journals (including compound and adjusting entries) → ledger → unadjusted TB → adjustments → adjusted TB → statements → closing → post-closing TB. Subsidiary ledgers (AR, AP) and control accounts reconcile detail to general ledger.</p>
-<p>A trial balance only tests equality of debit and credit totals. It does <strong>not</strong> detect: complete omission of a transaction; entry of equal wrong amounts; errors of principle (capital vs revenue expenditure); compensating errors; wrong account with correct side and amount within the same element class sometimes still balances. Exam questions exploit this limitation.</p>
-
-<h2>6. Adjusting Entries — Intra-Period Allocation</h2>
-<p>Adjustments implement accrual accounting at period-end. Categories:</p>
-<ul>
-<li><strong>Deferrals (prepayments):</strong> cash precedes recognition — prepaid expenses, unearned revenue</li>
-<li><strong>Accruals:</strong> recognition precedes cash — accrued expenses, accrued revenues</li>
-<li><strong>Estimates:</strong> depreciation, impairment allowances (where taught)</li>
-</ul>
-<p>Cash never appears in a pure adjusting entry. Reversing entries (optional technique) may be used at the start of the next period for accruals to simplify subsequent cash recording — know the logic if your unit guide covers it.</p>
-
-<h3>Depreciation as systematic allocation</h3>
-<div class="formula-box">Depreciable amount = Cost − Residual value<br>Straight-line charge per period = Depreciable amount / Useful life</div>
-<p>Cost includes purchase price and directly attributable costs to bring the asset to location and condition for intended use (capitalisation rules may be refined in later units under PPE standards). Residual value and useful life are estimates; changes in estimate are applied prospectively. Carrying amount = Cost − Accumulated depreciation (− impairment if applicable). Depreciation continues while the asset is available for use, including periods of idle capacity (unless classified as held for sale under later standards).</p>
 <div class="example-box">
-<strong>Worked multi-year:</strong> Cost 120,000; residual 12,000; life 9 years; purchased 1 Apr; year-end 31 Dec; straight-line; full months.<br>
-Annual = (120,000−12,000)/9 = 12,000 → monthly = 1,000.<br>
-Year 1 (9 months): expense 9,000; carrying amount 31 Dec Y1 = 120,000−9,000 = 111,000.<br>
-Year 2: expense 12,000; carrying amount = 99,000.
+<strong>A. Prepaid:</strong> 1 Nov pay RM6,000 insurance for 12 months. Year-end 31 Dec.<br>
+Expired = 6,000 × 2/12 = 1,000 → Dr Insurance expense 1,000 / Cr Prepaid insurance 1,000<br><br>
+<strong>B. Unearned:</strong> 1 Oct receive RM9,000 for 6 months’ service. Year-end 31 Dec.<br>
+Earned = 9,000 × 3/6 = 4,500 → Dr Unearned revenue 4,500 / Cr Service revenue 4,500<br><br>
+<strong>C. Accrued expense:</strong> salaries owed RM4,200 unpaid → Dr Salaries expense 4,200 / Cr Salaries payable 4,200<br><br>
+<strong>D. Accrued revenue:</strong> work done unbilled RM3,500 → Dr AR 3,500 / Cr Service revenue 3,500
 </div>
 
-<h2>7. Statement Articulation and Classification</h2>
-<ul>
-<li><strong>P&amp;L:</strong> income and expenses for the period → profit or loss</li>
-<li><strong>SCE:</strong> movement in equity components (capital, retained earnings, drawings)</li>
-<li><strong>SFP:</strong> assets = liabilities + equity at reporting date; current vs non-current classification based on operating cycle / 12-month criteria as taught</li>
-</ul>
-<p>Closing entries zero income and expense accounts into retained earnings (or capital for sole props) and close drawings. Permanent accounts remain; temporary accounts restart.</p>
+<h2 id="s6">6. Depreciation in depth</h2>
+<p>Depreciation is <strong>allocation of cost</strong>, not valuation to market. Depreciable amount = Cost − Residual value. Accumulated depreciation is a <strong>contra-asset</strong>. Carrying amount = Cost − Accum. dep.</p>
+<div class="formula-box">Straight-line annual = (Cost − Residual) / Useful life in years<br>
+For part-year: annual × months in use / 12 (if policy is monthly)</div>
+<div class="example-box">
+Cost 120,000; residual 12,000; life 9 years; bought 1 April; year-end 31 Dec.<br>
+Annual = 108,000/9 = 12,000; monthly = 1,000<br>
+Y1 (9 months): expense <strong>9,000</strong>; carrying amount = 120,000 − 9,000 = <strong>111,000</strong><br>
+Y2: expense 12,000; carrying amount = 99,000
+</div>
+<p>Changes in residual value or useful life = change in <em>estimate</em> → apply prospectively (do not rewrite past depreciation), unless your unit guide states otherwise.</p>
 
-<h2>8. Exam Discriminators</h2>
+<h2 id="s7">7. Financial statements</h2>
 <ul>
-<li>Apply Framework definitions to edge cases (executory contracts, contingent items — recognition vs disclosure)</li>
-<li>Separate errors of principle from clerical errors</li>
-<li>Compute partial-period depreciation correctly</li>
-<li>Prepare a full set of statements from an adjusted TB with additional information</li>
-<li>Explain <em>why</em> an item fails recognition (definition vs measurement uncertainty vs lack of useful information)</li>
+<li><strong>Statement of profit or loss:</strong> Income − Expenses = Profit/(Loss)</li>
+<li><strong>Statement of changes in equity:</strong> Opening equity + Profit − Drawings ± Capital = Closing equity</li>
+<li><strong>Statement of financial position:</strong> Assets = Liabilities + Equity (current / non-current split as taught)</li>
+</ul>
+<p>Closing: Dr each income account / Cr Income summary (or RE); Dr Income summary / Cr each expense; transfer net profit to capital/RE; close drawings to capital/RE.</p>
+
+<h2 id="s8">8. Mini comprehensive worked set</h2>
+<div class="example-box">
+<strong>Facts (extract):</strong> Capital 40,000; Cash 25,000; AR 8,000; Equipment cost 30,000 (bought 1 Jan this year; residual 3,000; life 9 years); AP 5,000; Service revenue (cash+credit) recorded 22,000; Expenses paid (excl. dep.) 9,000. Year-end adjustments: accrued salaries 1,500; unearned revenue still in revenue 2,000 that is unearned; dep. for full year.<br><br>
+<strong>Dep:</strong> (30,000−3,000)/9 = 3,000 → Dr Dep exp 3,000 / Cr Accum dep 3,000<br>
+<strong>Salaries:</strong> Dr Salaries exp 1,500 / Cr Salaries pay 1,500<br>
+<strong>Unearned:</strong> Dr Service revenue 2,000 / Cr Unearned revenue 2,000<br><br>
+<strong>Profit sketch:</strong> Revenue 22,000−2,000 = 20,000; Expenses 9,000+1,500+3,000 = 13,500; Profit = <strong>6,500</strong><br>
+<strong>Equity end:</strong> 40,000+6,500 = 46,500 (no drawings assumed)<br>
+<strong>Equipment CA:</strong> 30,000−3,000 = 27,000
+</div>
+
+<h2 id="s9">9. Pre-exam checklist</h2>
+<ul>
+<li>□ Quote Framework definitions accurately (asset, liability, income, expense)</li>
+<li>□ List fundamental vs enhancing characteristics without mixing them</li>
+<li>□ Dr/Cr rules for all five classes + contra-assets</li>
+<li>□ Four adjusting types + depreciation without using Cash</li>
+<li>□ Straight-line with residual + part-year</li>
+<li>□ What a trial balance can and cannot detect</li>
+<li>□ Prepare P&amp;L, SCE, SFP from adjusted numbers</li>
+<li>□ Closing logic for temporary accounts</li>
 </ul>
 <div class="tip-box">
-<strong>Mark scheme mindset:</strong> definitions → criteria → application to facts → conclusion. Unsupported conclusions score poorly. Show all allocation workings.
+<strong>Mark technique:</strong> Theory = definition → criteria → apply facts → conclude. Practical = workings + narrated journals + clear final figures. Never leave depreciation without residual when residual is given.
 </div>
 <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
 <a href="../index.html" class="font-medium hover:underline">← Hub</a>
 <a href="bfw1001.html" class="font-medium hover:underline">BFW1001 →</a>
 </div>
-</main>
-</body>
-</html>
+</main></body></html>

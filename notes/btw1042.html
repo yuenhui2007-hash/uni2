@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BTW1042 | UNI Advanced Notes</title>
+<title>BTW1042 Complete Exam Notes | UNI</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="../css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -11,79 +11,118 @@
 <header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
 <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
 <a href="../index.html" class="font-bold hover:text-white">← UNI</a>
-<span class="text-sm text-[#C0C4B7]">BTW1042 · Advanced</span>
+<span class="text-sm text-[#C0C4B7]">BTW1042 · Full exam notes</span>
 </div></header>
 <main class="max-w-4xl mx-auto px-4 py-8 prose">
 <div class="mb-6">
-<div class="text-sm font-semibold text-[#8A9EAB]">B2026 · BUSINESS LAW</div>
+<div class="text-sm font-semibold text-[#8A9EAB]">MONASH B2026 · BUSINESS LAW</div>
 <h1 class="text-3xl font-bold mt-1">BTW1042 – Business Law</h1>
-<p class="text-[#65695B] mt-2">Advanced notes: doctrinal tests, IRAC application, negligence economic loss, corporate personality</p>
+<p class="text-[#65695B] mt-2">Complete exam-prep: legal system, contract, negligence, agency, business structures, IRAC templates</p>
 </div>
 
-<h2>1. Legal Method for Business Problems</h2>
-<p>Malaysian business law is a hybrid of statute and common-law reasoning. Answers must identify the governing source (e.g. Contracts Act 1950 ss. on proposal/acceptance/consideration; Companies Act 2016 on separate personality and limited liability), state the doctrinal test, apply facts with close attention to timing and communication, and conclude on enforceability or liability. IRAC is not optional formatting — it is the assessment structure.</p>
+<nav class="bg-[#F7F2EF] border border-[#C0C4B7] rounded-xl p-4 mb-8 text-sm">
+<a href="#l1" class="underline mx-1">1. System</a>·
+<a href="#l2" class="underline mx-1">2. Contract</a>·
+<a href="#l3" class="underline mx-1">3. Negligence</a>·
+<a href="#l4" class="underline mx-1">4. Agency</a>·
+<a href="#l5" class="underline mx-1">5. Structures</a>·
+<a href="#l6" class="underline mx-1">6. IRAC drills</a>·
+<a href="#l7" class="underline mx-1">7. Checklist</a>
+</nav>
 
+<h2 id="l1">1. Malaysian legal system (business focus)</h2>
+<p>Federal Constitution is supreme. Sources: written law (Constitution, Acts, subsidiary legislation) and unwritten law (common law/equity as received and suitable locally; precedent; custom). Hierarchy: Federal Court → Court of Appeal → High Court → Sessions/Magistrates. <em>Stare decisis</em>: lower courts follow higher courts on like points of law.</p>
+<p>Key statutes for this unit: <strong>Contracts Act 1950</strong>, <strong>Partnership Act 1961</strong>, <strong>Companies Act 2016</strong>.</p>
 
-        <h3>Visual: Contract formation path</h3>
-        <div class="overflow-x-auto my-4">
-<svg viewBox="0 0 600 90" class="w-full max-w-2xl mx-auto" xmlns="http://www.w3.org/2000/svg">
-  <defs><marker id="b1" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4C6170"/></marker></defs>
-  <rect x="5" y="25" width="70" height="40" rx="6" fill="#4C6170"/><text x="40" y="50" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">Offer</text>
-  <line x1="75" y1="45" x2="95" y2="45" stroke="#4C6170" stroke-width="2" marker-end="url(#b1)"/>
-  <rect x="98" y="25" width="80" height="40" rx="6" fill="#65695B"/><text x="138" y="50" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">Acceptance</text>
-  <line x1="178" y1="45" x2="198" y2="45" stroke="#4C6170" stroke-width="2" marker-end="url(#b1)"/>
-  <rect x="201" y="25" width="85" height="40" rx="6" fill="#8A9EAB"/><text x="243" y="50" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">Consideration</text>
-  <line x1="286" y1="45" x2="306" y2="45" stroke="#4C6170" stroke-width="2" marker-end="url(#b1)"/>
-  <rect x="309" y="25" width="75" height="40" rx="6" fill="#9CA38E"/><text x="346" y="50" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">Intention</text>
-  <line x1="384" y1="45" x2="404" y2="45" stroke="#4C6170" stroke-width="2" marker-end="url(#b1)"/>
-  <rect x="407" y="25" width="70" height="40" rx="6" fill="#65695B"/><text x="442" y="50" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">Capacity</text>
-  <line x1="477" y1="45" x2="497" y2="45" stroke="#4C6170" stroke-width="2" marker-end="url(#b1)"/>
-  <rect x="500" y="25" width="90" height="40" rx="6" fill="#4C6170"/><text x="545" y="50" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">Contract?</text>
+<h2 id="l2">2. Contract law — formation to vitiation</h2>
+<p>Enforceable agreement requires systematic proof of elements:</p>
+<ol>
+<li>Offer</li>
+<li>Acceptance</li>
+<li>Consideration</li>
+<li>Intention to create legal relations</li>
+<li>Capacity</li>
+<li>Certainty of terms</li>
+<li>Lawful object</li>
+</ol>
+
+<div class="definition-box">
+<strong>Offer:</strong> definite proposal with intention to be bound on acceptance.<br>
+<strong>Invitation to treat:</strong> willingness to negotiate (shop display, ordinary ads, auction call for bids) — not an offer.<br>
+<strong>Acceptance:</strong> absolute and unqualified (mirror image). New terms = counter-offer (rejects original offer).<br>
+<strong>Consideration:</strong> value in law from the promisee; sufficient not adequate; past consideration generally invalid.
+</div>
+
+<p><strong>Intention:</strong> commercial agreements presumed legal intention; domestic/social presumed not — both rebuttable.</p>
+<p><strong>Vitiating factors:</strong> misrepresentation (innocent/negligent/fraudulent), mistake, coercion, undue influence, illegality → void or voidable + remedies (rescission/damages) as applicable.</p>
+
+<div class="overflow-x-auto my-4">
+<svg viewBox="0 0 560 80" class="w-full max-w-xl mx-auto" xmlns="http://www.w3.org/2000/svg">
+<rect x="5" y="20" width="70" height="40" rx="6" fill="#4C6170"/><text x="40" y="45" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">Offer</text>
+<text x="85" y="45" fill="#4C6170" font-size="16">→</text>
+<rect x="100" y="20" width="80" height="40" rx="6" fill="#65695B"/><text x="140" y="45" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">Accept</text>
+<text x="190" y="45" fill="#4C6170" font-size="16">→</text>
+<rect x="205" y="20" width="85" height="40" rx="6" fill="#8A9EAB"/><text x="247" y="45" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">Consider</text>
+<text x="300" y="45" fill="#4C6170" font-size="16">→</text>
+<rect x="315" y="20" width="75" height="40" rx="6" fill="#9CA38E"/><text x="352" y="45" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">Intent</text>
+<text x="400" y="45" fill="#4C6170" font-size="16">→</text>
+<rect x="415" y="20" width="130" height="40" rx="6" fill="#4C6170"/><text x="480" y="45" text-anchor="middle" fill="#EBE0DD" font-size="10" font-family="sans-serif">Valid contract?</text>
 </svg>
-        </div>
-        <h3>Visual: Negligence elements</h3>
-        <div class="overflow-x-auto my-4">
-<svg viewBox="0 0 480 100" class="w-full max-w-lg mx-auto" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="25" width="100" height="50" rx="8" fill="#4C6170"/><text x="60" y="55" text-anchor="middle" fill="#EBE0DD" font-size="11" font-family="sans-serif">Duty</text>
-  <text x="120" y="55" fill="#4C6170" font-size="18">→</text>
-  <rect x="140" y="25" width="100" height="50" rx="8" fill="#65695B"/><text x="190" y="55" text-anchor="middle" fill="#EBE0DD" font-size="11" font-family="sans-serif">Breach</text>
-  <text x="250" y="55" fill="#4C6170" font-size="18">→</text>
-  <rect x="270" y="25" width="100" height="50" rx="8" fill="#8A9EAB"/><text x="320" y="55" text-anchor="middle" fill="#EBE0DD" font-size="11" font-family="sans-serif">Causation</text>
-  <text x="380" y="55" fill="#4C6170" font-size="18">→</text>
-  <rect x="400" y="25" width="70" height="50" rx="8" fill="#9CA38E"/><text x="435" y="55" text-anchor="middle" fill="#4C6170" font-size="11" font-family="sans-serif">Damage</text>
-</svg>
-        </div>
+</div>
 
-<h2>2. Contract — Formation Pathologies</h2>
-<p><strong>Offer</strong> requires intention to be bound on acceptance and sufficient certainty of terms. <strong>Invitations to treat</strong> (shop display, ordinary ads, tenders as invitations unless clearly offers) protect the inviter from unintended multilateral acceptances. Cross-offers do not form a contract without a moment of consensus.</p>
-<p><strong>Acceptance</strong> must be final and unqualified. Battle-of-forms scenarios turn on last shot / dominant offer analysis as taught. Communication rules: instantaneous communication effective when received; postal acceptance rule (if applicable to the facts and not ousted) makes acceptance effective on posting — know exceptions (not correctly addressed; instantaneous methods; offeror prescribes method).</p>
-<p><strong>Consideration:</strong> executory or executed; must move from promisee; sufficiency ≠ adequacy; past consideration generally bad unless requested act with implied contemporaneous promise (limited exception as taught). Performance of existing public/contractual duty is problematic consideration unless exceeding the duty or conferring practical benefit (modern common-law developments — apply only if in syllabus).</p>
-<p><strong>Intention:</strong> commercial presumption vs domestic presumption; rebuttal with explicit wording (“subject to contract”, honour clauses).</p>
-<p><strong>Vitiation:</strong> misrepresentation (type drives remedy), duress/coercion, undue influence, mistake (common/mutual/unilateral — narrow), illegality and public policy. Map each to void vs voidable and available remedies.</p>
+<h2 id="l3">3. Tort of negligence</h2>
+<p>Four elements — all required:</p>
+<ol>
+<li><strong>Duty of care</strong> — foreseeability, proximity, fair/just/reasonable (novel cases)</li>
+<li><strong>Breach</strong> — below standard of reasonable person / reasonably competent professional</li>
+<li><strong>Causation</strong> — factual “but for” + legal causation</li>
+<li><strong>Remoteness</strong> — type of loss reasonably foreseeable</li>
+</ol>
+<p>Negligent misstatement / pure economic loss: special relationship, assumption of responsibility, reasonable reliance (accountants advising clients).</p>
 
-<h2>3. Negligence — Including Pure Economic Loss</h2>
-<p>Duty, breach, causation (factual + legal), remoteness. Professional standard: Bolam-type reasonably competent peer practice, qualified by logical basis of that practice where taught. Pure economic loss for negligent misstatement requires special relationship / assumption of responsibility / reasonable reliance (Hedley Byrne line as received). Accountants’ exposure to third parties is fact-sensitive — engagement letter disclaimers and identified user groups matter.</p>
+<h2 id="l4">4. Agency</h2>
+<p>Agent can bind principal to third parties. <strong>Actual authority</strong> (express/implied) vs <strong>apparent authority</strong> (principal’s representation + third-party reliance). Agent duties: follow instructions, care and skill, avoid conflict, account. Principal: pay and indemnify as agreed.</p>
 
-<h2>4. Agency and Attribution</h2>
-<p>Actual authority (express/implied incidental) vs apparent authority (representation by principal, reliance by third party). Undisclosed principal doctrine and ratification (timing, knowledge, capacity) if in syllabus. Vicarious liability and corporate attribution are distinct from agency but often examined together in employment/commercial scenarios.</p>
-
-<h2>5. Business Organisations — Legal Architecture</h2>
-<p><em>Salomon</em> principle: company is a separate legal person; shareholders’ liability limited to amount unpaid on shares (CA 2016). Veil-piercing remains exceptional (façade, fraud, specific statutory routes). Partnership: default unlimited joint and several liability; agency of partners for partnership business. Choice of form is a risk-allocation and governance decision, not merely “prestige”.</p>
+<h2 id="l5">5. Business structures comparison</h2>
 <div class="overflow-x-auto">
 <table>
-<thead><tr><th>Dimension</th><th>Sole prop</th><th>Partnership</th><th>Sdn Bhd</th></tr></thead>
+<thead><tr><th></th><th>Sole prop</th><th>Partnership</th><th>Sdn Bhd</th></tr></thead>
 <tbody>
-<tr><td>Personality</td><td>None</td><td>Generally none</td><td>Separate</td></tr>
-<tr><td>Liability</td><td>Unlimited</td><td>Joint &amp; several</td><td>Limited</td></tr>
-<tr><td>Governance</td><td>Owner</td><td>Partners’ agreement / Act</td><td>Directors’ duties + constitution</td></tr>
-<tr><td>Capital</td><td>Personal</td><td>Partners’ contributions</td><td>Share issue / retained earnings / debt</td></tr>
-<tr><td>Exit / continuity</td><td>Dies with owner</td><td>Dissolution rules</td><td>Perpetual succession; share transfer</td></tr>
+<tr><td>Legal personality</td><td>None</td><td>Generally none</td><td>Separate entity</td></tr>
+<tr><td>Liability</td><td>Unlimited</td><td>Joint &amp; several unlimited</td><td>Limited to unpaid shares</td></tr>
+<tr><td>Statute</td><td>—</td><td>Partnership Act 1961</td><td>Companies Act 2016</td></tr>
+<tr><td>Continuity</td><td>Ends with owner</td><td>May dissolve on change</td><td>Perpetual succession</td></tr>
+<tr><td>Raising capital</td><td>Limited</td><td>Partners</td><td>Shares / debt / retained profits</td></tr>
+<tr><td>Formality</td><td>Low</td><td>Low–moderate</td><td>Higher (filing, governance)</td></tr>
 </tbody>
 </table>
 </div>
-<div class="tip-box">
-<strong>Exam edge:</strong> quote tests not slogans; apply every element to facts; address counter-arguments (e.g. “even if offer, acceptance failed because…”).
+<p><em>Salomon</em> principle: company ≠ shareholders. Veil piercing is exceptional (fraud/façade/statutory routes).</p>
+
+<h2 id="l6">6. IRAC drills (memorise structure)</h2>
+<div class="example-box">
+<strong>Problem:</strong> Ali offers car RM40,000. Ben: “I accept if spare tyre included.” Ali silent.<br>
+<strong>I:</strong> Is there a binding contract?<br>
+<strong>R:</strong> Acceptance must be unqualified; conditional acceptance = counter-offer rejecting original offer; silence ≠ acceptance.<br>
+<strong>A:</strong> Ben introduced a new term → counter-offer. Ali did not accept the counter-offer.<br>
+<strong>C:</strong> No contract formed.
 </div>
+<div class="example-box">
+<strong>Negligence sketch:</strong> Accountant gives careless tax advice; client relies; penalties imposed.<br>
+Duty (client relationship) → Breach (below competent standard) → Causation (but for advice) → Remoteness (financial loss foreseeable) → liability likely subject to defences.
+</div>
+
+<h2 id="l7">7. Checklist</h2>
+<ul>
+<li>□ Offer vs invitation to treat with examples</li>
+<li>□ Counter-offer effect</li>
+<li>□ Consideration rules (past consideration)</li>
+<li>□ Four negligence elements in order</li>
+<li>□ Actual vs apparent authority</li>
+<li>□ Table sole prop / partnership / Sdn Bhd</li>
+<li>□ Always IRAC problem questions</li>
+</ul>
+<div class="tip-box"><strong>Exam:</strong> State the rule before applying facts. Incomplete IRAC = mid-band only.</div>
 <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
 <a href="bfw1001.html" class="font-medium hover:underline">← BFW1001</a>
 <a href="ecm1953.html" class="font-medium hover:underline">ECM1953 →</a>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BFW1001 | UNI Advanced Notes</title>
+<title>BFW1001 Complete Exam Notes | UNI</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="../css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -11,114 +11,151 @@
 <header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
 <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
 <a href="../index.html" class="font-bold hover:text-white">← UNI</a>
-<span class="text-sm text-[#C0C4B7]">BFW1001 · Advanced</span>
+<span class="text-sm text-[#C0C4B7]">BFW1001 · Full exam notes</span>
 </div></header>
 <main class="max-w-4xl mx-auto px-4 py-8 prose">
 <div class="mb-6">
-<div class="text-sm font-semibold text-[#9CA38E]">B2026 · FOUNDATIONS OF FINANCE</div>
+<div class="text-sm font-semibold text-[#9CA38E]">MONASH B2026 · FINANCE</div>
 <h1 class="text-3xl font-bold mt-1">BFW1001 – Foundations of Finance</h1>
-<p class="text-[#65695B] mt-2">Advanced notes: valuation algebra, project cash-flow construction, capital budgeting conflicts, risk decomposition</p>
+<p class="text-[#65695B] mt-2">Complete exam-prep: TVM toolkit, capital budgeting, risk-return, worked calculations</p>
 </div>
 
-<h2>1. Value Maximisation as the Benchmark Objective</h2>
-<p>Introductory corporate finance adopts shareholder-wealth maximisation (or firm-value maximisation) as the normative objective under complete contracting and well-functioning markets. In the presence of agency conflicts, asymmetric information and externalities, this benchmark is qualified — but exam technique still uses NPV as the operational expression of value creation unless the question explicitly introduces constraints (capital rationing, ESG mandates, stakeholder trade-offs).</p>
-<p>Three decision classes: <strong>investment</strong> (which real assets), <strong>financing</strong> (claims against the firm), <strong>payout/liquidity</strong> (distributions and net working capital). Separation of investment and financing (Modigliani–Miller ideal) is taught as a baseline; when capital structure matters, WACC and adjusted present value appear in later units.</p>
+<nav class="bg-[#F7F2EF] border border-[#C0C4B7] rounded-xl p-4 mb-8 text-sm">
+<strong>On this page:</strong>
+<a href="#f1" class="underline mx-1">1. Objective</a>·
+<a href="#f2" class="underline mx-1">2. TVM</a>·
+<a href="#f3" class="underline mx-1">3. Annuities</a>·
+<a href="#f4" class="underline mx-1">4. Capital budgeting</a>·
+<a href="#f5" class="underline mx-1">5. Cash flows</a>·
+<a href="#f6" class="underline mx-1">6. Risk</a>·
+<a href="#f7" class="underline mx-1">7. Worked set</a>·
+<a href="#f8" class="underline mx-1">8. Checklist</a>
+</nav>
 
+<h2 id="f1">1. What finance is deciding</h2>
+<p>Corporate finance allocates resources across time under uncertainty. Three decision blocks:</p>
+<ul>
+<li><strong>Investment</strong> — which real assets / projects (capital budgeting)</li>
+<li><strong>Financing</strong> — debt vs equity and contract design</li>
+<li><strong>Payout &amp; liquidity</strong> — dividends, buybacks, working capital</li>
+</ul>
+<p>Benchmark objective in this unit: maximise firm value / shareholder wealth. NPV is the operational tool that measures value created at the opportunity cost of capital.</p>
 
-        <h3>Visual: Cash-flow timeline</h3>
-        <div class="overflow-x-auto my-4">
-<svg viewBox="0 0 520 110" class="w-full max-w-lg mx-auto" xmlns="http://www.w3.org/2000/svg">
-  <line x1="40" y1="55" x2="480" y2="55" stroke="#4C6170" stroke-width="3"/>
-  <circle cx="60" cy="55" r="9" fill="#4C6170"/>
-  <circle cx="180" cy="55" r="9" fill="#9CA38E"/>
-  <circle cx="300" cy="55" r="9" fill="#9CA38E"/>
-  <circle cx="420" cy="55" r="9" fill="#65695B"/>
-  <text x="60" y="30" text-anchor="middle" fill="#4C6170" font-size="12" font-weight="700" font-family="sans-serif">t=0</text>
-  <text x="60" y="88" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif">−I₀</text>
-  <text x="180" y="30" text-anchor="middle" fill="#4C6170" font-size="12" font-family="sans-serif">t=1</text>
-  <text x="180" y="88" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif">CF₁</text>
-  <text x="300" y="30" text-anchor="middle" fill="#4C6170" font-size="12" font-family="sans-serif">t=2</text>
-  <text x="300" y="88" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif">CF₂</text>
-  <text x="420" y="30" text-anchor="middle" fill="#4C6170" font-size="12" font-family="sans-serif">t=n</text>
-  <text x="420" y="88" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif">CFₙ</text>
-  <text x="250" y="15" text-anchor="middle" fill="#8A9EAB" font-size="11" font-family="sans-serif">discount → PV &nbsp;|&nbsp; compound → FV</text>
-</svg>
-        </div>
-        <h3>Visual: Risk–return trade-off</h3>
-        <div class="overflow-x-auto my-4">
-<svg viewBox="0 0 400 260" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
-  <line x1="50" y1="220" x2="370" y2="220" stroke="#4C6170" stroke-width="2"/>
-  <line x1="50" y1="220" x2="50" y2="30" stroke="#4C6170" stroke-width="2"/>
-  <text x="210" y="248" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif">Systematic risk (β) →</text>
-  <text x="18" y="130" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif" transform="rotate(-90 18 130)">E[R] →</text>
-  <line x1="70" y1="190" x2="340" y2="50" stroke="#9CA38E" stroke-width="3"/>
-  <circle cx="100" cy="175" r="7" fill="#4C6170"/><text x="100" y="162" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">Rf</text>
-  <circle cx="200" cy="120" r="7" fill="#65695B"/><text x="200" y="107" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">Market</text>
-  <circle cx="300" cy="70" r="7" fill="#8A9EAB"/><text x="300" y="57" text-anchor="middle" fill="#4C6170" font-size="10" font-family="sans-serif">High-β</text>
-  <text x="250" y="200" fill="#9CA38E" font-size="11" font-family="sans-serif">SML / trade-off</text>
-</svg>
-        </div>
-        <h3>Visual: NPV profile (IRR = root)</h3>
-        <div class="overflow-x-auto my-4">
-<svg viewBox="0 0 400 220" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
-  <line x1="40" y1="110" x2="370" y2="110" stroke="#4C6170" stroke-width="2"/>
-  <line x1="40" y1="200" x2="40" y2="20" stroke="#4C6170" stroke-width="2"/>
-  <text x="205" y="215" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">Discount rate r →</text>
-  <text x="14" y="115" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif" transform="rotate(-90 14 115)">NPV</text>
-  <path d="M50,40 Q120,50 180,110 Q250,180 350,195" fill="none" stroke="#65695B" stroke-width="3"/>
-  <circle cx="180" cy="110" r="6" fill="#4C6170"/>
-  <text x="195" y="100" fill="#4C6170" font-size="11" font-weight="700" font-family="sans-serif">IRR</text>
-  <text x="80" y="55" fill="#9CA38E" font-size="11" font-family="sans-serif">NPV&gt;0</text>
-  <text x="280" y="170" fill="#8A9EAB" font-size="11" font-family="sans-serif">NPV&lt;0</text>
-</svg>
-        </div>
-
-<h2>2. Discounted Cash Flow Algebra</h2>
+<h2 id="f2">2. Time value of money</h2>
 <div class="definition-box">
-Present value is the current market value of a promised (or expected) future payoff, obtained by discounting at a rate that compensates for time and risk. Arbitrage-free pricing in frictionless markets equates PV to the cost of a replicating portfolio.
+A ringgit today is worth more than a ringgit in the future because of (1) opportunity cost of capital, (2) inflation, (3) risk that the future payment may not arrive as expected.
 </div>
 <div class="formula-box">
-FV = PV(1+r)<sup>n</sup><br>
-PV = FV(1+r)<sup>−n</sup><br>
-PV<sub>ordinary annuity</sub> = PMT · a<sub>n⌉r</sub> = PMT[1−(1+r)<sup>−n</sup>]/r<br>
-PV<sub>perpetuity</sub> = PMT/r &nbsp;(first cash flow one period ahead)<br>
-PV<sub>growing perpetuity</sub> = C₁/(r−g) &nbsp;(r&gt;g)
+<strong>Lump sum</strong><br>
+FV = PV × (1+r)<sup>n</sup><br>
+PV = FV / (1+r)<sup>n</sup> = FV × (1+r)<sup>−n</sup>
 </div>
-<p>Effective annual rate (EAR) vs quoted APR: EAR = (1 + r<sub>nom</sub>/m)<sup>m</sup> − 1. Always align compounding frequency with cash-flow frequency. Annuity due = ordinary annuity × (1+r).</p>
+<p>Always match the period of <strong>r</strong> with <strong>n</strong>. If cash flows are monthly, convert annual rate to monthly: r<sub>m</sub> = r<sub>annual</sub>/12 (nominal/APR style as taught), or use EAR when the question requires effective rates.</p>
+<div class="formula-box">EAR = (1 + r<sub>nom</sub>/m)<sup>m</sup> − 1</div>
 
-<h2>3. Project Cash Flows — Construction Rules</h2>
-<p>NPV uses <strong>incremental free cash flows</strong>, not accounting profit. Standard adjustments:</p>
+<div class="example-box">
+<strong>FV:</strong> 10,000 for 5 years at 8% annual → 10,000×(1.08)<sup>5</sup> = 10,000×1.469328 = <strong>14,693</strong><br>
+<strong>PV:</strong> need 20,000 in 4 years, r=9% → 20,000/(1.09)<sup>4</sup> = 20,000/1.411582 = <strong>14,168</strong>
+</div>
+
+<div class="overflow-x-auto my-4">
+<svg viewBox="0 0 500 100" class="w-full max-w-lg mx-auto" xmlns="http://www.w3.org/2000/svg">
+<line x1="40" y1="50" x2="460" y2="50" stroke="#4C6170" stroke-width="3"/>
+<circle cx="60" cy="50" r="8" fill="#4C6170"/><circle cx="180" cy="50" r="8" fill="#9CA38E"/>
+<circle cx="300" cy="50" r="8" fill="#9CA38E"/><circle cx="420" cy="50" r="8" fill="#65695B"/>
+<text x="60" y="28" text-anchor="middle" fill="#4C6170" font-size="12" font-weight="700" font-family="sans-serif">t=0 PV</text>
+<text x="180" y="28" text-anchor="middle" fill="#4C6170" font-size="12" font-family="sans-serif">t=1</text>
+<text x="300" y="28" text-anchor="middle" fill="#4C6170" font-size="12" font-family="sans-serif">t=2</text>
+<text x="420" y="28" text-anchor="middle" fill="#4C6170" font-size="12" font-family="sans-serif">t=n FV</text>
+<text x="60" y="78" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">invest</text>
+<text x="300" y="78" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">compound →</text>
+</svg>
+</div>
+
+<h2 id="f3">3. Annuities and perpetuities</h2>
+<p><strong>Ordinary annuity:</strong> level payments at <em>end</em> of each period.<br>
+<strong>Annuity due:</strong> level payments at <em>beginning</em> of each period → PV and FV are higher by a factor of (1+r) vs ordinary.</p>
+<div class="formula-box">
+PV<sub>A</sub> = PMT × [1 − (1+r)<sup>−n</sup>] / r<br>
+FV<sub>A</sub> = PMT × [(1+r)<sup>n</sup> − 1] / r<br>
+PV<sub>perpetuity</sub> = PMT / r &nbsp;(first payment one period from now)<br>
+PV<sub>growing perpetuity</sub> = C₁ / (r − g) &nbsp;with r &gt; g
+</div>
+<div class="example-box">
+PMT 5,000 end of each year for 6 years, r=7%.<br>
+Factor = [1−(1.07)<sup>−6</sup>]/0.07 ≈ 4.7665<br>
+PV<sub>A</sub> = 5,000 × 4.7665 ≈ <strong>23,833</strong>
+</div>
+
+<h2 id="f4">4. Capital budgeting criteria</h2>
+<div class="formula-box">NPV = −I₀ + Σ CF<sub>t</sub> / (1+r)<sup>t</sup></div>
+<p><strong>Decision:</strong> independent project → accept if NPV &gt; 0. Mutually exclusive → higher NPV (same risk class).</p>
+<p><strong>IRR:</strong> rate that sets NPV = 0. Accept if IRR &gt; required return (independent projects). Problems: multiple IRRs if cash-flow signs flip more than once; ranking can conflict with NPV when scale/timing differs.</p>
+<p><strong>Payback:</strong> years to recover I₀. Ignores TVM (unless discounted) and cash flows after cutoff — secondary screen only.</p>
+<div class="overflow-x-auto">
+<table>
+<thead><tr><th>Method</th><th>Rule</th><th>Strength</th><th>Weakness</th></tr></thead>
+<tbody>
+<tr><td>NPV</td><td>Accept if &gt; 0</td><td>Direct value; additive</td><td>Needs correct r</td></tr>
+<tr><td>IRR</td><td>Accept if &gt; hurdle</td><td>Intuitive %</td><td>Multiple IRRs; ranking issues</td></tr>
+<tr><td>Payback</td><td>≤ cutoff years</td><td>Simple liquidity</td><td>Ignores TVM &amp; later CFs</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="overflow-x-auto my-4">
+<svg viewBox="0 0 380 200" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
+<line x1="40" y1="100" x2="350" y2="100" stroke="#4C6170" stroke-width="2"/>
+<line x1="40" y1="180" x2="40" y2="25" stroke="#4C6170" stroke-width="2"/>
+<path d="M50,35 Q120,45 170,100 Q230,160 330,175" fill="none" stroke="#65695B" stroke-width="3"/>
+<circle cx="170" cy="100" r="6" fill="#4C6170"/>
+<text x="185" y="92" fill="#4C6170" font-size="12" font-weight="700" font-family="sans-serif">IRR</text>
+<text x="200" y="195" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">Discount rate →</text>
+<text x="90" y="50" fill="#9CA38E" font-size="11" font-family="sans-serif">NPV&gt;0</text>
+</svg>
+</div>
+
+<h2 id="f5">5. Building project cash flows</h2>
 <ul>
-<li>Add back non-cash charges (depreciation) after tax as taught in your unit sequence</li>
-<li>Tax on operating earnings; treat tax shields consistently with the discount rate chosen</li>
-<li>ΔNWC: increases are cash outflows; recover at horizon if operations wind down</li>
-<li>Opportunity cost of assets already owned (forgone after-tax sale proceeds)</li>
-<li>Side effects: eroded contribution from existing products (cannibalisation)</li>
-<li>Ignore sunk costs; ignore interest expense in FCF if using WACC (financing in the rate)</li>
+<li>Use <strong>incremental</strong> after-tax cash flows (with project − without)</li>
+<li>Include side effects (cannibalisation) and opportunity costs</li>
+<li>Include ΔNWC (outflow at start; recover at end if applicable)</li>
+<li>Ignore sunk costs</li>
+<li>Do not deduct interest in FCF if discounting at WACC (financing is in the rate)</li>
 </ul>
 
-<h2>4. Capital Budgeting Criteria — Comparative Statics</h2>
-<div class="formula-box">NPV = −I₀ + Σ<sub>t=1..T</sub> CF<sub>t</sub>/(1+r)<sup>t</sup></div>
-<p><strong>NPV &gt; 0</strong> increases wealth at the risk-adjusted opportunity cost of capital. NPV is additive across independent projects (absent interactions).</p>
-<p><strong>IRR:</strong> solve NPV(r*) = 0. Accept independent projects if r* &gt; hurdle. Pathologies: non-conventional cash flows → multiple real positive IRRs (Descartes’ rule of signs); mutually exclusive ranking conflicts when scale or timing differs (crossover rate analysis); reinvestment assumption at IRR vs at WACC for NPV.</p>
-<p><strong>Profitability index</strong> PI = PV(future CF)/I₀ useful under hard capital rationing for single-period constraint ranking (with care for indivisibilities).</p>
-<p><strong>Payback / discounted payback:</strong> liquidity heuristics; truncated horizon ignores terminal value — inconsistent with value maximisation as a sole criterion.</p>
+<h2 id="f6">6. Risk and return</h2>
+<div class="definition-box">
+Investors require higher expected returns for higher risk. Only <strong>systematic</strong> risk is priced in a diversified portfolio; unsystematic risk can be diversified away.
+</div>
+<p>If you discount a high-β project at a firm-wide WACC that is too low, NPV is overstated → may accept value-destroying projects.</p>
+
+<h2 id="f7">7. Worked capital budgeting set</h2>
 <div class="example-box">
-<strong>Ranking conflict sketch:</strong> Project A small, high IRR, modest NPV; Project B large, lower IRR, higher NPV. Under unconstrained capital and value maximisation, choose B. IRR alone misleads.
+I₀ = 100,000. CF₁=40,000; CF₂=45,000; CF₃=50,000. r = 12%.<br>
+PV₁ = 40,000/1.12 = 35,714<br>
+PV₂ = 45,000/1.2544 = 35,873<br>
+PV₃ = 50,000/1.404928 = 35,589<br>
+Σ PV = 107,176<br>
+NPV = 107,176 − 100,000 = <strong>+7,176 → ACCEPT</strong><br><br>
+<strong>Interpretation:</strong> project adds about RM7,176 of value at a 12% opportunity cost of capital.
+</div>
+<div class="example-box">
+<strong>Compare two projects (same risk):</strong> A NPV=5,000 IRR=28%; B NPV=18,000 IRR=16%. Unconstrained value maximisation → choose <strong>B</strong> (higher NPV). IRR alone would wrongly prefer A.
 </div>
 
-<h2>5. Risk, Diversification and Cost of Capital Intuition</h2>
-<p>Return variance decomposes into systematic and idiosyncratic components. Portfolio diversification drives idiosyncratic risk toward zero; covariance with the market portfolio remains. Equilibrium models (CAPM intuition at this level) price only non-diversifiable risk: E[R<sub>i</sub>] = R<sub>f</sub> + β<sub>i</sub>(E[R<sub>m</sub>]−R<sub>f</sub>).</p>
-<p>Using a company WACC on a project with β different from the firm’s asset beta biases accept/reject decisions. Pure-play or subjective adjustment of discount rates is the practical response at introductory level.</p>
-
-<h2>6. Financial System Architecture</h2>
-<p>Direct finance (markets) vs intermediated finance (banks, funds). Primary vs secondary markets; money vs capital markets. Market efficiency hypotheses (weak/semi-strong/strong) constrain the scope for “free” abnormal returns and motivate reliance on DCF with public information — discuss only to the depth of your syllabus.</p>
-
-<div class="tip-box">
-<strong>Exam targets:</strong> timeline precision; EAR conversions; full incremental CF list before discounting; explicit comparison of NPV vs IRR failure modes; state the wealth-maximisation link in the conclusion sentence.
-</div>
+<h2 id="f8">8. Checklist</h2>
+<ul>
+<li>□ FV/PV lump sum with correct n and r</li>
+<li>□ Ordinary annuity PV/FV factors</li>
+<li>□ NPV full workings + decision sentence</li>
+<li>□ Why NPV preferred to IRR for mutually exclusive projects</li>
+<li>□ List incremental CF rules (sunk, opportunity, NWC)</li>
+<li>□ Systematic vs unsystematic risk one-liner</li>
+</ul>
+<div class="tip-box"><strong>Exam:</strong> Draw a timeline every time. Formula first, then numbers. End with “Accept/Reject because NPV = …”</div>
 <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
 <a href="acw1120.html" class="font-medium hover:underline">← ACW1120</a>
-<a href="btw1042.html" class="font-medium hover:underline">BTW1042 →</a>
+<a href="acw2220.html" class="font-medium hover:underline">ACW2220 →</a>
 </div>
 </main></body></html>

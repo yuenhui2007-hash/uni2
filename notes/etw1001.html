@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ETW1001 | UNI Advanced Notes</title>
+<title>ETW1001 Complete Exam Notes | UNI</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="../css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -11,65 +11,103 @@
 <header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
 <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
 <a href="../index.html" class="font-bold hover:text-white">← UNI</a>
-<span class="text-sm text-[#C0C4B7]">ETW1001 · Advanced</span>
+<span class="text-sm text-[#C0C4B7]">ETW1001 · Full exam notes</span>
 </div></header>
 <main class="max-w-4xl mx-auto px-4 py-8 prose">
 <div class="mb-6">
-<div class="text-sm font-semibold text-[#8A9EAB]">B2026 · STATISTICAL ANALYSIS</div>
+<div class="text-sm font-semibold text-[#8A9EAB]">MONASH B2026 · STATISTICS</div>
 <h1 class="text-3xl font-bold mt-1">ETW1001 – Introduction to Statistical Analysis</h1>
-<p class="text-[#65695B] mt-2">Advanced notes: estimator logic, interval interpretation, testing errors, regression limits</p>
+<p class="text-[#65695B] mt-2">Complete exam-prep: descriptive stats, inference, regression, interpretation</p>
 </div>
 
-<h2>1. Statistical Reasoning in Business</h2>
-<p>Decisions under uncertainty require (i) summarising sample evidence and (ii) quantifying uncertainty about population parameters. Misinterpretation of p-values, confidence intervals and R² is more costly than arithmetic slips — exams increasingly test interpretation.</p>
+<nav class="bg-[#F7F2EF] border border-[#C0C4B7] rounded-xl p-4 mb-8 text-sm">
+<a href="#t1" class="underline mx-1">1. Descriptives</a>·
+<a href="#t2" class="underline mx-1">2. Probability</a>·
+<a href="#t3" class="underline mx-1">3. Inference</a>·
+<a href="#t4" class="underline mx-1">4. Regression</a>·
+<a href="#t5" class="underline mx-1">5. Worked</a>·
+<a href="#t6" class="underline mx-1">6. Checklist</a>
+</nav>
 
-
-        <h3>Visual: Normal distribution &amp; empirical rule</h3>
-        <div class="overflow-x-auto my-4">
-<svg viewBox="0 0 400 200" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
-  <line x1="30" y1="170" x2="370" y2="170" stroke="#4C6170" stroke-width="2"/>
-  <path d="M40,170 Q80,160 100,120 Q140,40 200,30 Q260,40 300,120 Q320,160 360,170" fill="#E4E7DF" stroke="#65695B" stroke-width="2"/>
-  <line x1="200" y1="30" x2="200" y2="170" stroke="#4C6170" stroke-width="1.5" stroke-dasharray="3"/>
-  <text x="200" y="188" text-anchor="middle" fill="#4C6170" font-size="11" font-family="sans-serif">μ</text>
-  <line x1="140" y1="170" x2="140" y2="155" stroke="#8A9EAB" stroke-width="2"/>
-  <line x1="260" y1="170" x2="260" y2="155" stroke="#8A9EAB" stroke-width="2"/>
-  <text x="200" y="155" text-anchor="middle" fill="#65695B" font-size="10" font-family="sans-serif">≈68% within 1σ</text>
-  <text x="200" y="12" text-anchor="middle" fill="#4C6170" font-size="11" font-family="sans-serif">Bell curve</text>
-</svg>
-        </div>
-        <h3>Visual: Regression line</h3>
-        <div class="overflow-x-auto my-4">
-<svg viewBox="0 0 360 240" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
-  <line x1="40" y1="200" x2="330" y2="200" stroke="#4C6170" stroke-width="2"/>
-  <line x1="40" y1="200" x2="40" y2="30" stroke="#4C6170" stroke-width="2"/>
-  <text x="185" y="225" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">X</text>
-  <text x="16" y="120" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif" transform="rotate(-90 16 120)">Y</text>
-  <line x1="50" y1="170" x2="310" y2="50" stroke="#9CA38E" stroke-width="2.5"/>
-  <circle cx="80" cy="155" r="4" fill="#4C6170"/>
-  <circle cx="120" cy="140" r="4" fill="#4C6170"/>
-  <circle cx="160" cy="100" r="4" fill="#4C6170"/>
-  <circle cx="200" cy="115" r="4" fill="#4C6170"/>
-  <circle cx="240" cy="80" r="4" fill="#4C6170"/>
-  <circle cx="280" cy="55" r="4" fill="#4C6170"/>
-  <text x="250" y="45" fill="#65695B" font-size="11" font-family="sans-serif">Ŷ = b₀ + b₁X</text>
-</svg>
-        </div>
-
-<h2>2. Descriptives with Design Intent</h2>
-<p>Mean vs median: use median under skewness/outliers; mean for roughly symmetric data and as input to many inferential procedures. Sample variance uses n−1 (Bessel’s correction) for unbiasedness of σ² under iid normal sampling. Empirical rule / Chebyshev: know which requires normality assumptions.</p>
-
-<h2>3. Estimation</h2>
-<p>Point estimator properties (informal): unbiasedness, efficiency, consistency. SE of the mean ≈ s/√n. CI for mean (σ known): x̄ ± z<sub>α/2</sub> σ/√n; σ unknown: t<sub>n−1</sub>. Correct frequentist reading: the interval is random before data; the parameter is fixed; long-run coverage is 1−α. After observing data, avoid “probability the mean is in [a,b] is 0.95” unless Bayesian framework is taught.</p>
-
-<h2>4. Testing</h2>
-<p>H₀ as the straw-man of no effect / no difference; choose one- vs two-sided from the research claim <em>before</em> seeing data. p-value = probability, under H₀, of data as extreme or more extreme than observed — <strong>not</strong> P(H₀ true | data). Type I (α) vs Type II (β); power 1−β rises with n, effect size, α, and lower noise. Statistical significance ≠ economic significance (effect size, costs of error).</p>
-
-<h2>5. Simple Linear Regression</h2>
-<div class="formula-box">Y = β₀ + β₁X + ε &nbsp;;&nbsp; Ŷ = b₀ + b₁X</div>
-<p>OLS minimises Σe². b₁ is causal only under strong assumptions (random assignment / no omitted confounders / correct functional form). R² measures in-sample linear fit, not predictive validity out of sample and not causality. Residual plots diagnose nonlinearity and heteroscedasticity at the level required by the unit.</p>
-<div class="tip-box">
-<strong>Exam:</strong> define hypotheses in symbols and words; interpret CI and slope in context units; refuse causal claims from observational regression without warrant.
+<h2 id="t1">1. Descriptive statistics</h2>
+<p><strong>Mean</strong> x̄ = Σx/n — sensitive to outliers.<br>
+<strong>Median</strong> — middle value; robust to outliers; prefer when skewed.<br>
+<strong>Mode</strong> — most frequent.</p>
+<div class="formula-box">
+Sample variance s² = Σ(x − x̄)² / (n − 1)<br>
+Sample SD s = √s²
 </div>
+<p>Use n−1 for sample variance (unbiased estimator of σ² under standard assumptions). Range = max−min; IQR = Q3−Q1.</p>
+<div class="example-box">
+Data: 5,7,9,11,13. Mean=9.<br>
+Deviations²: 16+4+0+4+16=40 → s²=40/4=10 → s=√10≈<strong>3.16</strong>
+</div>
+
+<div class="overflow-x-auto my-4">
+<svg viewBox="0 0 380 180" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
+<line x1="30" y1="150" x2="350" y2="150" stroke="#4C6170" stroke-width="2"/>
+<path d="M40,150 Q90,140 120,100 Q160,40 190,30 Q220,40 260,100 Q290,140 340,150" fill="#E4E7DF" stroke="#65695B" stroke-width="2"/>
+<line x1="190" y1="30" x2="190" y2="150" stroke="#4C6170" stroke-dasharray="3"/>
+<text x="190" y="168" text-anchor="middle" fill="#4C6170" font-size="11" font-family="sans-serif">μ</text>
+<text x="190" y="20" text-anchor="middle" fill="#65695B" font-size="10" font-family="sans-serif">≈68% in μ±1σ</text>
+</svg>
+</div>
+
+<h2 id="t2">2. Probability basics</h2>
+<p>0 ≤ P ≤ 1. Addition/multiplication rules as taught. Normal distribution: empirical rule ~68% / 95% / 99.7% within 1 / 2 / 3 SD of mean (approx).</p>
+
+<h2 id="t3">3. Inference</h2>
+<p><strong>Parameter</strong> = population (μ, σ, p). <strong>Statistic</strong> = sample (x̄, s, p̂).</p>
+<p><strong>CI idea:</strong> x̄ ± critical value × SE. 95% CI: in repeated sampling, ~95% of such intervals capture the true mean. Do not say “P(μ in this interval)=0.95” after seeing the data (frequentist).</p>
+<p><strong>Hypothesis test steps:</strong></p>
+<ol>
+<li>H₀ and H₁</li>
+<li>α (often 0.05)</li>
+<li>Test statistic</li>
+<li>p-value or critical value</li>
+<li>Reject or fail to reject H₀</li>
+<li>Business conclusion in words</li>
+</ol>
+<p><strong>Type I:</strong> reject true H₀. <strong>Type II:</strong> fail to reject false H₀. Power = 1 − β.</p>
+
+<h2 id="t4">4. Simple linear regression</h2>
+<div class="formula-box">Ŷ = b₀ + b₁X</div>
+<p>b₁ = estimated average change in Y for +1 unit X.<br>
+b₀ = predicted Y when X=0 (may be meaningless if X=0 is outside data range).<br>
+R² = fraction of sample variation in Y explained by X — not proof of causality.</p>
+<div class="example-box">
+Ŷ = 15 + 3.2X (X = advertising RM’000, Y = sales RM’000)<br>
+Slope: each extra RM1,000 advertising associated with ~RM3,200 higher sales on average.
+</div>
+
+<div class="overflow-x-auto my-4">
+<svg viewBox="0 0 340 220" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
+<line x1="40" y1="190" x2="310" y2="190" stroke="#4C6170" stroke-width="2"/>
+<line x1="40" y1="190" x2="40" y2="30" stroke="#4C6170" stroke-width="2"/>
+<line x1="50" y1="160" x2="290" y2="50" stroke="#9CA38E" stroke-width="2.5"/>
+<circle cx="80" cy="145" r="4" fill="#4C6170"/><circle cx="130" cy="120" r="4" fill="#4C6170"/>
+<circle cx="180" cy="100" r="4" fill="#4C6170"/><circle cx="230" cy="75" r="4" fill="#4C6170"/>
+<circle cx="270" cy="55" r="4" fill="#4C6170"/>
+<text x="175" y="210" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">X</text>
+</svg>
+</div>
+
+<h2 id="t5">5. Worked mini set</h2>
+<div class="example-box">
+Data: 2,4,6,8,10. Mean=6. Σ(x−x̄)²=40. s²=40/4=10. s≈3.16.<br>
+Median=6. No single mode (all unique) or all equally frequent.
+</div>
+
+<h2 id="t6">6. Checklist</h2>
+<ul>
+<li>□ Mean vs median when to use which</li>
+<li>□ Sample SD formula with n−1</li>
+<li>□ Parameter vs statistic</li>
+<li>□ Type I / Type II</li>
+<li>□ Interpret slope and R² without claiming causality</li>
+<li>□ Write hypotheses and conclusions in words</li>
+</ul>
+<div class="tip-box"><strong>Exam:</strong> Interpretation marks often exceed pure calculation marks.</div>
 <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
 <a href="ecm1953.html" class="font-medium hover:underline">← ECM1953</a>
 <a href="mgw1010.html" class="font-medium hover:underline">MGW1010 →</a>

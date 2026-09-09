@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ACW2220 | UNI Advanced Notes</title>
+<title>ACW2220 Complete Exam Notes | UNI</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="../css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -11,98 +11,143 @@
 <header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
 <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
 <a href="../index.html" class="font-bold hover:text-white">← UNI</a>
-<span class="text-sm text-[#C0C4B7]">ACW2220 · Advanced</span>
+<span class="text-sm text-[#C0C4B7]">ACW2220 · Full exam notes</span>
 </div></header>
 <main class="max-w-4xl mx-auto px-4 py-8 prose">
 <div class="mb-6">
-<div class="text-sm font-semibold text-[#8A9EAB]">B2026 · MANAGEMENT ACCOUNTING</div>
+<div class="text-sm font-semibold text-[#8A9EAB]">MONASH B2026 · MANAGEMENT ACCOUNTING</div>
 <h1 class="text-3xl font-bold mt-1">ACW2220 – Management Accounting 1</h1>
-<p class="text-[#65695B] mt-2">Advanced notes: cost behaviour modelling, CVP under constraints, relevant-cost decision protocols, common exam traps</p>
+<p class="text-[#65695B] mt-2">Complete exam-prep: cost behaviour, CVP, relevant costing decisions, worked solutions</p>
 </div>
 
-<h2>1. Decision-Led Cost Analysis</h2>
-<p>Management accounting designs cost objects (product, job, customer, channel, segment) to answer specific decisions. Different decisions require different cost aggregations — full absorption cost for inventory valuation under financial reporting is often the <em>wrong</em> input for short-term pricing or make-or-buy. The degree skill is selecting the cost construction that matches the decision horizon and constraint set.</p>
+<nav class="bg-[#F7F2EF] border border-[#C0C4B7] rounded-xl p-4 mb-8 text-sm">
+<strong>On this page:</strong>
+<a href="#m1" class="underline mx-1">1. Role</a>·
+<a href="#m2" class="underline mx-1">2. Cost types</a>·
+<a href="#m3" class="underline mx-1">3. CVP</a>·
+<a href="#m4" class="underline mx-1">4. Decisions</a>·
+<a href="#m5" class="underline mx-1">5. Worked</a>·
+<a href="#m6" class="underline mx-1">6. Checklist</a>
+</nav>
 
+<h2 id="m1">1. Management vs financial accounting</h2>
+<p>Financial accounting → external users, standards, historical. Management accounting → internal managers, future-oriented, no GAAP constraint, cost-benefit of information. Same organisation; different questions (“What is profit under IFRS?” vs “Should we accept this order?”).</p>
 
-        <h3>Visual: Cost behaviour</h3>
-        <div class="overflow-x-auto my-4">
-<svg viewBox="0 0 520 170" class="w-full max-w-lg mx-auto" xmlns="http://www.w3.org/2000/svg">
-  <line x1="30" y1="140" x2="150" y2="140" stroke="#4C6170" stroke-width="1.5"/><line x1="30" y1="140" x2="30" y2="25" stroke="#4C6170" stroke-width="1.5"/>
-  <line x1="30" y1="140" x2="140" y2="35" stroke="#9CA38E" stroke-width="3"/>
-  <text x="90" y="160" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">Variable</text>
-  <line x1="190" y1="140" x2="310" y2="140" stroke="#4C6170" stroke-width="1.5"/><line x1="190" y1="140" x2="190" y2="25" stroke="#4C6170" stroke-width="1.5"/>
-  <line x1="190" y1="85" x2="300" y2="85" stroke="#8A9EAB" stroke-width="3"/>
-  <text x="250" y="160" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">Fixed</text>
-  <line x1="350" y1="140" x2="470" y2="140" stroke="#4C6170" stroke-width="1.5"/><line x1="350" y1="140" x2="350" y2="25" stroke="#4C6170" stroke-width="1.5"/>
-  <line x1="350" y1="100" x2="460" y2="100" stroke="#C0C4B7" stroke-width="1.5" stroke-dasharray="4"/>
-  <line x1="350" y1="100" x2="460" y2="40" stroke="#4C6170" stroke-width="3"/>
-  <text x="410" y="160" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">Total TC</text>
+<h2 id="m2">2. Cost classifications you must master</h2>
+<div class="overflow-x-auto">
+<table>
+<thead><tr><th>Lens</th><th>Categories</th><th>Exam use</th></tr></thead>
+<tbody>
+<tr><td>Behaviour</td><td>Variable / Fixed / Mixed</td><td>CVP, flexible budgets</td></tr>
+<tr><td>Traceability</td><td>Direct / Indirect</td><td>Product costing</td></tr>
+<tr><td>Function</td><td>Manufacturing / Non-manufacturing</td><td>Inventory vs period cost</td></tr>
+<tr><td>Decision</td><td>Relevant / Sunk / Opportunity</td><td>Special order, make/buy, drop</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Relevant range:</strong> activity band where cost-behaviour assumptions hold. Outside it, step-fixed costs appear.</p>
+<p><strong>Sunk cost:</strong> already incurred, irreversible → ignore for forward decisions.<br>
+<strong>Opportunity cost:</strong> benefit of best alternative forgone → often relevant, often not in the ledger.</p>
+
+<div class="overflow-x-auto my-4">
+<svg viewBox="0 0 500 150" class="w-full max-w-lg mx-auto" xmlns="http://www.w3.org/2000/svg">
+<line x1="30" y1="120" x2="150" y2="120" stroke="#4C6170"/><line x1="30" y1="120" x2="30" y2="20" stroke="#4C6170"/>
+<line x1="30" y1="120" x2="140" y2="30" stroke="#9CA38E" stroke-width="3"/>
+<text x="90" y="142" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">Variable</text>
+<line x1="180" y1="120" x2="300" y2="120" stroke="#4C6170"/><line x1="180" y1="120" x2="180" y2="20" stroke="#4C6170"/>
+<line x1="180" y1="70" x2="290" y2="70" stroke="#8A9EAB" stroke-width="3"/>
+<text x="240" y="142" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">Fixed</text>
+<line x1="330" y1="120" x2="450" y2="120" stroke="#4C6170"/><line x1="330" y1="120" x2="330" y2="20" stroke="#4C6170"/>
+<line x1="330" y1="90" x2="440" y2="90" stroke="#C0C4B7" stroke-dasharray="4"/>
+<line x1="330" y1="90" x2="440" y2="35" stroke="#4C6170" stroke-width="3"/>
+<text x="390" y="142" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">Total</text>
 </svg>
-        </div>
-        <h3>Visual: Break-even (CVP) chart</h3>
-        <div class="overflow-x-auto my-4">
-<svg viewBox="0 0 420 280" class="w-full max-w-md mx-auto" xmlns="http://www.w3.org/2000/svg">
-  <line x1="50" y1="240" x2="390" y2="240" stroke="#4C6170" stroke-width="2"/>
-  <line x1="50" y1="240" x2="50" y2="30" stroke="#4C6170" stroke-width="2"/>
-  <text x="220" y="268" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">Units →</text>
-  <text x="16" y="140" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif" transform="rotate(-90 16 140)">RM →</text>
-  <line x1="50" y1="180" x2="370" y2="180" stroke="#8A9EAB" stroke-width="2" stroke-dasharray="5"/>
-  <text x="360" y="172" text-anchor="end" fill="#8A9EAB" font-size="10" font-family="sans-serif">FC</text>
-  <line x1="50" y1="180" x2="370" y2="60" stroke="#65695B" stroke-width="2.5"/>
-  <text x="360" y="55" text-anchor="end" fill="#65695B" font-size="10" font-family="sans-serif">TC</text>
-  <line x1="50" y1="240" x2="370" y2="40" stroke="#9CA38E" stroke-width="2.5"/>
-  <text x="360" y="35" text-anchor="end" fill="#9CA38E" font-size="10" font-family="sans-serif">Sales</text>
-  <circle cx="210" cy="140" r="6" fill="#4C6170"/>
-  <line x1="210" y1="140" x2="210" y2="240" stroke="#4C6170" stroke-width="1" stroke-dasharray="3"/>
-  <text x="210" y="255" text-anchor="middle" fill="#4C6170" font-size="11" font-weight="700" font-family="sans-serif">BEP</text>
-  <text x="120" y="200" fill="#8A9EAB" font-size="11" font-family="sans-serif">Loss</text>
-  <text x="280" y="95" fill="#9CA38E" font-size="11" font-family="sans-serif">Profit</text>
-</svg>
-        </div>
+</div>
 
-<h2>2. Cost Behaviour and the Relevant Range</h2>
-<p>Variable costs are linear in activity only inside the relevant range; quantity discounts, overtime premiums and step-fixed supervision create piecewise-linear or nonlinear total cost functions. High-low estimates use only two points and are outlier-sensitive; least-squares regression uses all points and yields R²/standard error for fit assessment when required.</p>
-<p>Committed vs discretionary fixed costs matter for keep-or-drop: only avoidable fixed costs enter the differential analysis.</p>
-
-<h2>3. CVP — Algebra, Multi-Product and Limitations</h2>
+<h2 id="m3">3. CVP analysis</h2>
+<div class="definition-box">Contribution margin = Sales − All variable costs. CM covers fixed costs then profit.</div>
 <div class="formula-box">
-Q<sub>BE</sub> = FC / (p − v)<br>
-Sales<sub>BE</sub> = FC / CM ratio<br>
-Q<sub>target</sub> = (FC + π) / (p − v)<br>
-Margin of safety % = (Q<sub>expected</sub> − Q<sub>BE</sub>) / Q<sub>expected</sub>
+CM per unit = p − v<br>
+CM ratio = CM / Sales<br>
+Break-even units = FC / CM per unit<br>
+Break-even sales = FC / CM ratio<br>
+Target-profit units = (FC + Target profit) / CM per unit<br>
+Margin of safety = Expected sales − BE sales
 </div>
-<p>Operating leverage: high FC / low VC amplifies profit sensitivity to volume (degree of operating leverage ≈ CM / operating profit at a given volume). Multi-product CVP requires a constant sales mix; break-even in “packages” of the mix, then decompose into units of each product. Inventory change violates the sales = production assumption and confounds contribution analysis with absorption costing fixed-overhead volume variances (bridge to later topics).</p>
-
-<h2>4. Relevant Costing — Formal Protocol</h2>
-<ol>
-<li>Define alternatives and the decision horizon</li>
-<li>List all future cash flows that differ</li>
-<li>Include opportunity costs of scarce resources (contribution displaced)</li>
-<li>Exclude sunk costs and non-differential allocated overhead</li>
-<li>Optimise quantitative criterion then stress-test qualitative factors (quality, dependence on supplier, strategic option value, customer retaliation on segmented pricing)</li>
-</ol>
-
-<h3>Special orders</h3>
-<p>Idle capacity: minimum acceptable price = unit variable cost + unitised extra fixed costs + any unit opportunity cost. Full capacity: opportunity cost = forgone CM on regular sales displaced. Predatory-pricing / long-term customer reference-price effects are qualitative overlays.</p>
-
-<h3>Make vs buy</h3>
-<p>Relevant make cost = avoidable costs + opportunity cost of freed capacity (highest-valued alternative use). Allocated HQ overhead that continues is irrelevant. Strategic factors: IP leakage, supply-chain resilience, core competence.</p>
-
-<h3>Segment continuity</h3>
+<p><strong>Assumptions to state:</strong> constant p and v; linear costs; constant mix; sales = production; relevant range holds.</p>
 <div class="example-box">
-CM 120,000; avoidable FC 70,000; unavoidable allocated FC 55,000.<br>
-Segment margin on avoidable basis = 50,000 &gt; 0 → keep.<br>
-If the examiner allocates 55,000 and shows an “accounting loss”, the trap is treating unavoidable FC as saved by dropping.
+p=90, v=54, FC=108,000, target profit=36,000<br>
+CM=36 → BE=3,000 units (sales 270,000)<br>
+Target units=(108,000+36,000)/36=<strong>4,000</strong><br>
+If expected sales=5,000, MoS=2,000 units (40%)
 </div>
 
-<h2>5. Costing Systems and Distorted Decisions</h2>
-<p>Volume-based overhead allocation cross-subsidises low-volume complex products when overhead is driven by batches, setups, design hours (ABC insight). Degree exams may require narrative critique of unit-cost figures used for pricing when the allocation base is weak.</p>
-
-<div class="tip-box">
-<strong>High-band answers:</strong> explicit relevant-cost schedule; opportunity cost line item; qualitative paragraph; sensitivity (“if capacity were constrained…”). Never “accept because price &gt; absorption cost” without justification.
+<div class="overflow-x-auto my-4">
+<svg viewBox="0 0 400 260" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
+<line x1="45" y1="220" x2="370" y2="220" stroke="#4C6170" stroke-width="2"/>
+<line x1="45" y1="220" x2="45" y2="30" stroke="#4C6170" stroke-width="2"/>
+<line x1="45" y1="165" x2="350" y2="165" stroke="#8A9EAB" stroke-dasharray="4"/>
+<line x1="45" y1="165" x2="350" y2="55" stroke="#65695B" stroke-width="2.5"/>
+<line x1="45" y1="220" x2="350" y2="40" stroke="#9CA38E" stroke-width="2.5"/>
+<circle cx="195" cy="130" r="5" fill="#4C6170"/>
+<text x="195" y="245" text-anchor="middle" fill="#4C6170" font-size="11" font-family="sans-serif">BEP</text>
+<text x="100" y="185" fill="#8A9EAB" font-size="11" font-family="sans-serif">Loss</text>
+<text x="270" y="90" fill="#9CA38E" font-size="11" font-family="sans-serif">Profit</text>
+</svg>
 </div>
+
+<h2 id="m4">4. Relevant costing decisions</h2>
+<p><strong>Protocol:</strong> (1) alternatives (2) differential future cash flows (3) opportunity costs (4) ignore sunk &amp; non-differential allocated FC (5) qualitative factors.</p>
+
+<h3>Special order (spare capacity)</h3>
+<div class="example-box">
+Normal p=95, v=55. Offer p=70 for 800 units. FC unchanged. Spare capacity.<br>
+Incremental profit = (70−55)×800 = <strong>12,000 → ACCEPT</strong><br>
+If full capacity and displaces regular sales, subtract forgone CM on lost units.
+</div>
+
+<h3>Make or buy</h3>
+<div class="example-box">
+Make: DM18 + DL12 + Var OH7 + Allocated fixed OH9 = 46 total accounting<br>
+Relevant make = 18+12+7 = <strong>37</strong> (fixed continues)<br>
+Buy quote = 35 → <strong>BUY</strong> saves 2/unit if quality OK
+</div>
+
+<h3>Keep or drop</h3>
+<div class="example-box">
+CM 80,000; avoidable FC 50,000; allocated common FC 40,000 continues.<br>
+Dropping: lose 80k CM, save only 50k → worse by 30k → <strong>KEEP</strong>
+</div>
+
+<div class="overflow-x-auto">
+<table>
+<thead><tr><th>Decision</th><th>Include</th><th>Exclude</th></tr></thead>
+<tbody>
+<tr><td>Special order</td><td>Incremental rev &amp; VC; extra FC; opportunity cost if constrained</td><td>Unchanged allocated FC; sunk</td></tr>
+<tr><td>Make/buy</td><td>Avoidable costs; opportunity cost of capacity</td><td>Unavoidable fixed OH</td></tr>
+<tr><td>Keep/drop</td><td>Lost CM; avoidable FC</td><td>Common FC that remain</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 id="m5">5. Extra worked problems</h2>
+<div class="example-box">
+<strong>Target profit with tax (if taught):</strong> sometimes need profit before tax = after-tax target / (1−t). Then units = (FC + PBT) / CM.<br><br>
+<strong>Special order with extra FC:</strong> p=60, v=45, qty=500, extra FC=2,000<br>
+ΔProfit = 500×15 − 2,000 = 5,500 → accept
+</div>
+
+<h2 id="m6">6. Checklist</h2>
+<ul>
+<li>□ CM, BE, target profit, margin of safety formulas</li>
+<li>□ State CVP assumptions</li>
+<li>□ Relevant cost definition + sunk + opportunity</li>
+<li>□ Special order / make-buy / keep-drop numerical patterns</li>
+<li>□ Never use absorption cost alone to accept/reject short-term orders</li>
+</ul>
+<div class="tip-box"><strong>Exam:</strong> Always table “relevant vs irrelevant”. End with recommendation + one qualitative caveat.</div>
 <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
-<a href="mgw1010.html" class="font-medium hover:underline">← MGW1010</a>
+<a href="bfw1001.html" class="font-medium hover:underline">← BFW1001</a>
 <a href="../index.html" class="font-medium hover:underline">Hub →</a>
 </div>
 </main></body></html>

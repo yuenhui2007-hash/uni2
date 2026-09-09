@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ECM1953 | UNI Advanced Notes</title>
+<title>ECM1953 Complete Exam Notes | UNI</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="../css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -11,90 +11,106 @@
 <header class="bg-[#4C6170] text-[#EBE0DD] sticky top-0 z-50 shadow-md">
 <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
 <a href="../index.html" class="font-bold hover:text-white">← UNI</a>
-<span class="text-sm text-[#C0C4B7]">ECM1953 · Advanced</span>
+<span class="text-sm text-[#C0C4B7]">ECM1953 · Full exam notes</span>
 </div></header>
 <main class="max-w-4xl mx-auto px-4 py-8 prose">
 <div class="mb-6">
-<div class="text-sm font-semibold text-[#9CA38E]">B2026 · PRINCIPLES OF ECONOMICS</div>
+<div class="text-sm font-semibold text-[#9CA38E]">MONASH B2026 · ECONOMICS</div>
 <h1 class="text-3xl font-bold mt-1">ECM1953 – Principles of Economics</h1>
-<p class="text-[#65695B] mt-2">Advanced notes: constrained optimisation intuition, comparative statics, market power, policy transmission</p>
+<p class="text-[#65695B] mt-2">Complete exam-prep: micro + macro, diagrams, elasticity, policy</p>
 </div>
 
-<h2>1. Core Method</h2>
-<p>Economics analyses constrained choice. Opportunity cost, marginal analysis (MB = MC at interior optimum), and equilibrium comparative statics are the toolkit. Diagrams are analytical arguments, not decoration — label intercepts, curves, equilibria, and the shock.</p>
+<nav class="bg-[#F7F2EF] border border-[#C0C4B7] rounded-xl p-4 mb-8 text-sm">
+<a href="#e1" class="underline mx-1">1. Basics</a>·
+<a href="#e2" class="underline mx-1">2. D&amp;S</a>·
+<a href="#e3" class="underline mx-1">3. Elasticity</a>·
+<a href="#e4" class="underline mx-1">4. Firms</a>·
+<a href="#e5" class="underline mx-1">5. Macro</a>·
+<a href="#e6" class="underline mx-1">6. Checklist</a>
+</nav>
 
+<h2 id="e1">1. Economic way of thinking</h2>
+<div class="definition-box">Opportunity cost = value of the next-best alternative forgone. Rational choice compares marginal benefit and marginal cost.</div>
+<p>PPF: points on curve = efficient; inside = inefficient; outside = unattainable given current resources/tech. Growth shifts PPF outward.</p>
 
-        <h3>Visual: Demand &amp; supply equilibrium</h3>
-        <div class="overflow-x-auto my-4">
-<svg viewBox="0 0 360 280" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
-  <line x1="50" y1="240" x2="330" y2="240" stroke="#4C6170" stroke-width="2"/>
-  <line x1="50" y1="240" x2="50" y2="30" stroke="#4C6170" stroke-width="2"/>
-  <text x="190" y="265" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif">Quantity</text>
-  <text x="18" y="140" text-anchor="middle" fill="#65695B" font-size="12" font-family="sans-serif" transform="rotate(-90 18 140)">Price</text>
-  <line x1="70" y1="50" x2="300" y2="220" stroke="#8A9EAB" stroke-width="3"/>
-  <text x="295" y="235" fill="#8A9EAB" font-size="13" font-weight="700" font-family="sans-serif">D</text>
-  <line x1="70" y1="220" x2="300" y2="50" stroke="#9CA38E" stroke-width="3"/>
-  <text x="295" y="45" fill="#9CA38E" font-size="13" font-weight="700" font-family="sans-serif">S</text>
-  <circle cx="185" cy="135" r="6" fill="#4C6170"/>
-  <line x1="185" y1="135" x2="185" y2="240" stroke="#4C6170" stroke-width="1" stroke-dasharray="4"/>
-  <line x1="50" y1="135" x2="185" y2="135" stroke="#4C6170" stroke-width="1" stroke-dasharray="4"/>
-  <text x="40" y="140" text-anchor="end" fill="#4C6170" font-size="12" font-family="sans-serif">P*</text>
-  <text x="185" y="255" text-anchor="middle" fill="#4C6170" font-size="12" font-family="sans-serif">Q*</text>
-</svg>
-        </div>
-        <h3>Visual: Demand shift (↑AD-style / demand ↑)</h3>
-        <div class="overflow-x-auto my-4">
-<svg viewBox="0 0 360 260" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
-  <line x1="50" y1="220" x2="330" y2="220" stroke="#4C6170" stroke-width="2"/>
-  <line x1="50" y1="220" x2="50" y2="30" stroke="#4C6170" stroke-width="2"/>
-  <line x1="70" y1="200" x2="280" y2="50" stroke="#9CA38E" stroke-width="2.5"/>
-  <text x="290" y="50" fill="#9CA38E" font-size="12" font-family="sans-serif">S</text>
-  <line x1="70" y1="60" x2="280" y2="200" stroke="#C0C4B7" stroke-width="2" stroke-dasharray="4"/>
-  <text x="290" y="200" fill="#C0C4B7" font-size="12" font-family="sans-serif">D₁</text>
-  <line x1="100" y1="50" x2="310" y2="190" stroke="#8A9EAB" stroke-width="2.5"/>
-  <text x="320" y="185" fill="#8A9EAB" font-size="12" font-family="sans-serif">D₂</text>
-  <path d="M200,150 L230,130" stroke="#4C6170" stroke-width="1.5" marker-end="url(#a1)"/>
-  <text x="180" y="240" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">D shifts right → P↑ Q↑</text>
-</svg>
-        </div>
-        <h3>Visual: AD–AS short-run demand shock</h3>
-        <div class="overflow-x-auto my-4">
-<svg viewBox="0 0 360 260" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
-  <line x1="50" y1="220" x2="330" y2="220" stroke="#4C6170" stroke-width="2"/>
-  <line x1="50" y1="220" x2="50" y2="30" stroke="#4C6170" stroke-width="2"/>
-  <text x="190" y="245" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">Real output Y</text>
-  <text x="16" y="130" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif" transform="rotate(-90 16 130)">P</text>
-  <line x1="200" y1="40" x2="200" y2="220" stroke="#C0C4B7" stroke-width="2" stroke-dasharray="4"/>
-  <text x="210" y="50" fill="#C0C4B7" font-size="10" font-family="sans-serif">LRAS</text>
-  <line x1="70" y1="180" x2="300" y2="60" stroke="#9CA38E" stroke-width="2.5"/>
-  <text x="305" y="60" fill="#9CA38E" font-size="11" font-family="sans-serif">SRAS</text>
-  <line x1="70" y1="80" x2="280" y2="200" stroke="#C0C4B7" stroke-width="2"/>
-  <text x="60" y="80" fill="#C0C4B7" font-size="11" font-family="sans-serif">AD₁</text>
-  <line x1="100" y1="55" x2="310" y2="175" stroke="#8A9EAB" stroke-width="2.5"/>
-  <text x="90" y="55" fill="#8A9EAB" font-size="11" font-family="sans-serif">AD₂</text>
-  <circle cx="175" cy="145" r="5" fill="#65695B"/>
-  <circle cx="220" cy="115" r="5" fill="#4C6170"/>
-  <text x="140" y="250" text-anchor="middle" fill="#65695B" font-size="10" font-family="sans-serif">Y rises, P rises (SR)</text>
-</svg>
-        </div>
-
-<h2>2. Demand–Supply Comparative Statics</h2>
-<p>Own-price movements along curves vs shifts from exogenous determinants. Simultaneous shifts: direction of P or Q may be theoretically ambiguous without magnitude assumptions — state the ambiguity explicitly for marks. Incidence of tax: wedge between buyer and seller prices; burden shares depend on elasticities (more inelastic side bears more).</p>
-
-<h2>3. Elasticity and Pricing</h2>
-<div class="formula-box">PED = %ΔQd / %ΔP &nbsp;&nbsp;|&nbsp;&nbsp; Midpoint method when required by the question</div>
-<p>TR test: raise price → TR↑ iff demand inelastic. MR for linear demand is twice as steep as AR; monopoly produces where MR = MC and reads price from demand, generating DWL relative to efficient benchmark under standard assumptions.</p>
-
-<h2>4. Cost Curves and Structure</h2>
-<p>SMC intersects AVC and ATC at their minima. Shutdown: P &lt; min AVC in short run. Entry/exit drive long-run competitive equilibrium toward P = min LRAC (zero economic profit) under free entry and identical firms. Oligopoly: strategic interdependence (reaction functions / kinked demand / game matrix as taught). Monopoly: barriers, efficiency critique, regulation rationale.</p>
-
-<h2>5. Macro AD–AS and Policy</h2>
-<div class="formula-box">AD ≡ C+I+G+NX</div>
-<p>SRAS upward-sloping under sticky wages/prices or misperceptions; LRAS vertical at potential output in classical benchmark. Demand shock: short-run Y and P move together; long-run adjustment via expectations/wages returns Y to potential with permanent P change (model-dependent narrative — follow your lecturer’s version).</p>
-<p>Monetary transmission: i → I, C durables, exchange rate → NX. Fiscal: multiplier diluted by crowding-out and marginal propensity to import; automatic stabilisers vs discretionary policy lags.</p>
-<div class="tip-box">
-<strong>Exam:</strong> state ceteris paribus; show shock → curve shift → new equilibrium; distinguish movement along vs shift; for policy, write the transmission chain.
+<h2 id="e2">2. Demand, supply, equilibrium</h2>
+<p><strong>Law of demand:</strong> P↑ → Qd↓ (ceteris paribus). <strong>Law of supply:</strong> P↑ → Qs↑. Equilibrium: Qd=Qs.</p>
+<p>Own-price change → <em>movement along</em> curve. Other determinants → <em>shift</em> of curve (income, tastes, related goods, expectations, input costs, technology, taxes, number of firms/buyers).</p>
+<div class="example-box">
+Demand ↑ (shift right), supply fixed → P*↑ and Q*↑.<br>
+Supply ↑, demand fixed → P*↓ and Q*↑.<br>
+Both shift: one of P or Q may be ambiguous — say so.
 </div>
+
+<div class="overflow-x-auto my-4">
+<svg viewBox="0 0 340 260" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
+<line x1="45" y1="220" x2="310" y2="220" stroke="#4C6170" stroke-width="2"/>
+<line x1="45" y1="220" x2="45" y2="30" stroke="#4C6170" stroke-width="2"/>
+<line x1="60" y1="50" x2="280" y2="200" stroke="#8A9EAB" stroke-width="3"/>
+<text x="290" y="210" fill="#8A9EAB" font-size="13" font-weight="700" font-family="sans-serif">D</text>
+<line x1="60" y1="200" x2="280" y2="50" stroke="#9CA38E" stroke-width="3"/>
+<text x="290" y="50" fill="#9CA38E" font-size="13" font-weight="700" font-family="sans-serif">S</text>
+<circle cx="170" cy="125" r="6" fill="#4C6170"/>
+<line x1="170" y1="125" x2="170" y2="220" stroke="#4C6170" stroke-dasharray="3"/>
+<line x1="45" y1="125" x2="170" y2="125" stroke="#4C6170" stroke-dasharray="3"/>
+<text x="35" y="130" text-anchor="end" fill="#4C6170" font-size="12" font-family="sans-serif">P*</text>
+<text x="170" y="240" text-anchor="middle" fill="#4C6170" font-size="12" font-family="sans-serif">Q*</text>
+</svg>
+</div>
+
+<h2 id="e3">3. Elasticity</h2>
+<div class="formula-box">PED = (%ΔQd)/(%ΔP)</div>
+<p>|PED|&gt;1 elastic; =1 unit; &lt;1 inelastic. Price rise increases TR if inelastic; decreases TR if elastic. Determinants: substitutes, necessity, budget share, time.</p>
+<div class="example-box">
+P: 10→12 (+20%); Qd: 200→160 (−20%) → PED = −1 → unit elastic; TR unchanged (10×200=2000; 12×160=1920 ≈ check midpoint method if required).
+</div>
+
+<h2 id="e4">4. Costs, profit max, market structure</h2>
+<p>Profit max: produce where <strong>MR = MC</strong>. Competitive firm: P = MR. Monopoly: MR &lt; P; produce MR=MC, read P from demand.</p>
+<div class="overflow-x-auto">
+<table>
+<thead><tr><th>Structure</th><th>Firms</th><th>Product</th><th>Entry</th><th>Price power</th></tr></thead>
+<tbody>
+<tr><td>Perfect competition</td><td>Many</td><td>Identical</td><td>Free</td><td>None</td></tr>
+<tr><td>Monopolistic competition</td><td>Many</td><td>Differentiated</td><td>Free</td><td>Limited</td></tr>
+<tr><td>Oligopoly</td><td>Few</td><td>Similar/diff</td><td>Barriers</td><td>Strategic</td></tr>
+<tr><td>Monopoly</td><td>One</td><td>Unique</td><td>Blocked</td><td>High</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 id="e5">5. Macro: AD–AS and policy</h2>
+<div class="formula-box">AD = C + I + G + (X − M)</div>
+<p>AD↑ (e.g. higher G) → short run: higher Y and higher P along SRAS. LRAS at potential output in classical long-run benchmark.</p>
+<p><strong>Monetary policy:</strong> interest rates / money (Bank Negara). Lower i → I and durable C↑ → AD↑.<br>
+<strong>Fiscal policy:</strong> G and taxes. Expansionary: ↑G or ↓T → AD↑. Lags and crowding-out may limit impact.</p>
+
+<div class="overflow-x-auto my-4">
+<svg viewBox="0 0 340 240" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
+<line x1="45" y1="200" x2="310" y2="200" stroke="#4C6170" stroke-width="2"/>
+<line x1="45" y1="200" x2="45" y2="30" stroke="#4C6170" stroke-width="2"/>
+<line x1="190" y1="40" x2="190" y2="200" stroke="#C0C4B7" stroke-dasharray="4"/>
+<text x="200" y="50" fill="#C0C4B7" font-size="10" font-family="sans-serif">LRAS</text>
+<line x1="60" y1="170" x2="280" y2="60" stroke="#9CA38E" stroke-width="2.5"/>
+<text x="285" y="60" fill="#9CA38E" font-size="11" font-family="sans-serif">SRAS</text>
+<line x1="60" y1="70" x2="260" y2="180" stroke="#C0C4B7" stroke-width="2"/>
+<text x="55" y="70" fill="#C0C4B7" font-size="11" font-family="sans-serif">AD1</text>
+<line x1="90" y1="50" x2="290" y2="160" stroke="#8A9EAB" stroke-width="2.5"/>
+<text x="85" y="50" fill="#8A9EAB" font-size="11" font-family="sans-serif">AD2</text>
+<text x="175" y="225" text-anchor="middle" fill="#65695B" font-size="11" font-family="sans-serif">Y →</text>
+</svg>
+</div>
+
+<h2 id="e6">6. Checklist</h2>
+<ul>
+<li>□ Opportunity cost definition</li>
+<li>□ Shift vs movement</li>
+<li>□ PED calc + TR relationship</li>
+<li>□ MR=MC rule + market structure table</li>
+<li>□ AD components + policy transmission</li>
+<li>□ Fully labelled diagrams in answers</li>
+</ul>
+<div class="tip-box"><strong>Exam:</strong> Diagrams must have axes titles, curve labels, equilibrium markers, and arrows for shifts.</div>
 <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
 <a href="btw1042.html" class="font-medium hover:underline">← BTW1042</a>
 <a href="etw1001.html" class="font-medium hover:underline">ETW1001 →</a>
