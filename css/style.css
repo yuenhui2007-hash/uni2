@@ -669,3 +669,95 @@ main .mt-10 a:hover {
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
+/* Structured concept layout — avoid wall-of-text */
+.concept-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 1rem 0 1.35rem;
+}
+@media (min-width: 640px) {
+  .concept-grid.two { grid-template-columns: 1fr 1fr; }
+}
+.concept-card {
+  background: #FFFEFB;
+  border: 1px solid #DDD6CB;
+  border-radius: 16px;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 3px 12px rgba(40,30,20,0.03);
+}
+.concept-card .label {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1B4332;
+  background: #EDF6F1;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  margin-bottom: 0.45rem;
+  font-family: 'DM Sans', system-ui, sans-serif !important;
+}
+.concept-card h4 {
+  font-family: Fraunces, Georgia, serif !important;
+  font-size: 1.05rem !important;
+  margin: 0.15rem 0 0.4rem !important;
+  color: #1A2E28 !important;
+}
+.concept-card p, .concept-card li {
+  font-size: 0.92rem !important;
+  line-height: 1.55 !important;
+  color: #3A4248 !important;
+  margin: 0.25rem 0 !important;
+}
+.concept-card ul {
+  margin: 0.35rem 0 0 1rem !important;
+  padding: 0 !important;
+}
+.concept-split {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+@media (min-width: 700px) {
+  .concept-split { grid-template-columns: 1fr 1fr; }
+}
+.concept-split .fund {
+  border-top: 4px solid #1B4332;
+}
+.concept-split .enh {
+  border-top: 4px solid #D4A373;
+}
+.callout-mini {
+  background: #FBF3EA;
+  border: 1px solid #E8D5C0;
+  border-radius: 12px;
+  padding: 0.75rem 0.95rem;
+  font-size: 0.9rem;
+  color: #5C4A38;
+  margin: 0.85rem 0 1.2rem;
+}
+.term-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0.65rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #E8E2D8;
+}
+.term-row:last-child { border-bottom: none; }
+.term-row .term {
+  font-weight: 700;
+  color: #1B4332;
+  font-size: 0.92rem;
+}
+.term-row .meaning {
+  font-size: 0.92rem;
+  color: #3A4248;
+  line-height: 1.5;
+}
+@media (max-width: 560px) {
+  .term-row { grid-template-columns: 1fr; gap: 0.2rem; }
+}
