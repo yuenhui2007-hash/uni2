@@ -432,3 +432,240 @@ h2[id]:target, h2:target {
     transition: none !important;
   }
 }
+
+
+
+/* ========== NOTES PAGE OVERHAUL ========== */
+body {
+  background: #EFEBE4 !important;
+}
+
+.site-header {
+  background: rgba(239, 235, 228, 0.92) !important;
+  border-bottom: 1px solid #DDD6CB !important;
+}
+
+/* Progress */
+.notes-progress {
+  position: fixed;
+  top: 0; left: 0; height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, #1B4332, #40916C, #D4A373);
+  z-index: 200;
+}
+
+/* Main reading column */
+main.prose, main.max-w-4xl {
+  max-width: 780px !important;
+  padding-top: 1.75rem !important;
+  padding-bottom: 3rem !important;
+}
+
+/* Hero */
+.notes-hero {
+  background: #1B4332;
+  background-image:
+    radial-gradient(ellipse 80% 80% at 100% 0%, rgba(64,145,108,0.45), transparent 55%),
+    radial-gradient(ellipse 60% 60% at 0% 100%, rgba(212,163,115,0.2), transparent 50%);
+  color: #F8F4EF;
+  border-radius: 24px;
+  padding: 1.75rem 1.6rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 20px 50px rgba(27, 67, 50, 0.22);
+}
+.notes-hero .kicker {
+  font-family: 'DM Sans', system-ui, sans-serif !important;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #95D5B2;
+  margin-bottom: 0.4rem;
+}
+.notes-hero h1 {
+  color: #FFFEFB !important;
+  font-size: clamp(1.6rem, 3vw, 2.15rem) !important;
+  margin: 0 0 0.45rem 0 !important;
+  line-height: 1.15 !important;
+}
+.notes-hero p {
+  color: rgba(248, 244, 239, 0.78) !important;
+  font-size: 0.95rem !important;
+  margin: 0 !important;
+  max-width: 36rem;
+  line-height: 1.55;
+}
+
+/* TOC */
+.page-toc {
+  background: #FFFEFB !important;
+  border: 1px solid #DDD6CB !important;
+  border-radius: 20px !important;
+  padding: 1.1rem 1.15rem !important;
+  margin-bottom: 2rem !important;
+  box-shadow: 0 8px 24px rgba(40, 30, 20, 0.04);
+}
+.page-toc-label {
+  font-size: 0.68rem !important;
+  letter-spacing: 0.1em !important;
+  color: #7A7368 !important;
+  margin-bottom: 0.8rem !important;
+}
+.page-toc-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.page-toc-links a {
+  background: #F3EEE6 !important;
+  border: 1px solid #E0D8CC !important;
+  color: #2C3338 !important;
+  border-radius: 999px !important;
+  padding: 0.38rem 0.85rem !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: all 0.18s ease !important;
+}
+.page-toc-links a:hover {
+  background: #1B4332 !important;
+  border-color: #1B4332 !important;
+  color: #FFFEFB !important;
+  transform: translateY(-1px);
+}
+
+/* Typography in notes */
+main.prose p, main p {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: #3A4248;
+  margin: 0.85rem 0;
+}
+main.prose h2, main h2[id] {
+  font-size: 1.35rem !important;
+  margin-top: 2.75rem !important;
+  margin-bottom: 0.9rem !important;
+  padding: 0.55rem 0 0.55rem 1rem;
+  border-left: 5px solid #1B4332;
+  background: linear-gradient(90deg, rgba(27,67,50,0.07), transparent 65%);
+  border-radius: 0 12px 12px 0;
+  scroll-margin-top: 5rem;
+  color: #1A2E28 !important;
+}
+main.prose h2::before, main h2[id]::before { display: none !important; }
+main.prose h3, main h3 {
+  font-size: 1.08rem !important;
+  color: #1B4332 !important;
+  margin-top: 1.6rem !important;
+}
+
+/* Content cards */
+.definition-box, .example-box, .tip-box {
+  border-radius: 16px !important;
+  padding: 1.15rem 1.25rem !important;
+  margin: 1.25rem 0 !important;
+  border: 1px solid #DDD6CB !important;
+  box-shadow: 0 4px 14px rgba(40,30,20,0.03);
+}
+.definition-box {
+  background: #FFFEFB !important;
+  border-left: 5px solid #1B4332 !important;
+}
+.example-box {
+  background: #EDF6F1 !important;
+  border-left: 5px solid #40916C !important;
+}
+.tip-box {
+  background: #FBF3EA !important;
+  border-left: 5px solid #D4A373 !important;
+}
+.formula-box {
+  background: #1A2E28 !important;
+  color: #E8F5EE !important;
+  border-radius: 16px !important;
+  padding: 1.15rem 1.25rem !important;
+  border: none !important;
+  box-shadow: 0 12px 28px rgba(26, 46, 40, 0.2);
+  font-size: 0.92rem !important;
+  line-height: 1.8 !important;
+  position: relative;
+}
+.formula-box::after {
+  content: "FORMULA";
+  position: absolute;
+  top: 0.65rem; right: 0.9rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  color: #95D5B2;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+/* Tables */
+main table {
+  border-radius: 16px !important;
+  border: 1px solid #DDD6CB !important;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(40,30,20,0.03);
+  margin: 1.2rem 0;
+}
+main th {
+  background: #1A2E28 !important;
+  color: #E8F5EE !important;
+  padding: 0.8rem 1rem !important;
+}
+main td {
+  padding: 0.75rem 1rem !important;
+  border-top: 1px solid #E8E2D8 !important;
+}
+main tr:nth-child(even) td { background: #F7F3EC !important; }
+
+/* Diagrams */
+main svg {
+  background: #FFFEFB !important;
+  border: 1px solid #DDD6CB !important;
+  border-radius: 18px !important;
+  padding: 0.85rem !important;
+  box-shadow: 0 6px 18px rgba(40,30,20,0.04);
+  margin: 0.75rem 0;
+}
+
+/* Lists */
+main ul, main ol { padding-left: 1.25rem; }
+main li {
+  margin: 0.4rem 0;
+  color: #3A4248;
+}
+
+/* Bottom nav */
+main .mt-10 {
+  border-top: 1px solid #DDD6CB !important;
+  padding-top: 1.25rem !important;
+  margin-top: 2.5rem !important;
+}
+main .mt-10 a {
+  background: #FFFEFB;
+  border: 1px solid #DDD6CB;
+  border-radius: 999px;
+  padding: 0.45rem 0.95rem;
+  text-decoration: none !important;
+  font-weight: 600;
+  color: #1B4332 !important;
+  transition: all 0.15s ease;
+}
+main .mt-10 a:hover {
+  background: #1B4332 !important;
+  color: #FFFEFB !important;
+  border-color: #1B4332 !important;
+}
+
+/* Fade-in on load */
+.notes-hero, .page-toc, main h2[id], .definition-box, .example-box, .formula-box {
+  animation: notesIn 0.5s ease both;
+}
+@keyframes notesIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
