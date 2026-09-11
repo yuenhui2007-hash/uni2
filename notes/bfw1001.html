@@ -21,7 +21,7 @@
 <main class="max-w-4xl mx-auto px-5 py-8 prose">
 <div class="notes-hero"><div class="kicker">MONASH B2026 · FINANCE</div><h1>BFW1001 – Foundations of Finance</h1><p>Complete exam-prep: TVM toolkit, capital budgeting, risk-return, worked calculations</p></div>
 
-<nav class="page-toc"><span class="page-toc-label">On this page · 20 sections</span><div class="page-toc-links"><a href="#def-bank">Definition bank — finance</a><a href="#f1">1. What finance is deciding</a><a href="#f2">2. Time value of money</a><a href="#f3">3. Annuities and perpetuities</a><a href="#f4">4. Capital budgeting criteria</a><a href="#f5">5. Building project cash flows</a><a href="#f6">6. Risk and return</a><a href="#f7">7. Worked capital budgeting set</a><a href="#f8">8. Checklist</a><a href="#f9">9. Monash topic map (BFW1001 / BFF1001 alignment)</a><a href="#f10">10. Financial system, institutions and regulation</a><a href="#f11">11. Debt securities (exam awareness)</a><a href="#f12">12. Equity securities</a><a href="#f13">13. Foreign exchange (intro)</a><a href="#f14">14. Extended checklist</a><a href="#f15">15. Mixed TVM problem bank (worked)</a><a href="#f16">16. NPV vs IRR conflict — numerical</a><a href="#f17">17. Bond price sensitivity</a><a href="#f18">18. Risk classes and discount rates</a><a href="#f19">19. Exam calculation discipline</a></div></nav>
+<nav class="page-toc"><span class="page-toc-label">On this page · 21 sections</span><div class="page-toc-links"><a href="#def-bank">Definition bank — finance</a><a href="#f1">1. What finance is deciding</a><a href="#f2">2. Time value of money</a><a href="#f3">3. Annuities and perpetuities</a><a href="#f4">4. Capital budgeting criteria</a><a href="#f5">5. Building project cash flows</a><a href="#f6">6. Risk and return</a><a href="#f7">7. Worked capital budgeting set</a><a href="#f8">8. Checklist</a><a href="#f9">9. Monash topic map (BFW1001 / BFF1001 alignment)</a><a href="#f10">10. Financial system, institutions and regulation</a><a href="#f11">11. Debt securities (exam awareness)</a><a href="#f12">12. Equity securities</a><a href="#f13">13. Foreign exchange (intro)</a><a href="#f14">14. Extended checklist</a><a href="#f15">15. Mixed TVM problem bank (worked)</a><a href="#f16">16. NPV vs IRR conflict — numerical</a><a href="#f17">17. Bond price sensitivity</a><a href="#f18">18. Risk classes and discount rates</a><a href="#f19">19. Exam calculation discipline</a><a href="#exam-tips-bfw">Exam tips — BFW1001</a></div></nav>
 
 <h2 id="def-bank">Definition bank — finance</h2>
 <div class="concept-grid">
@@ -318,6 +318,42 @@ I₀=80,000; CF=25,000; 30,000; 35,000; 20,000; r=11%.<br>
 PV=25k/1.11 + 30k/1.2321 + 35k/1.3676 + 20k/1.5181 ≈ 22,523 + 24,349 + 25,592 + 13,174 = 85,638<br>
 NPV ≈ <strong>+5,638 → ACCEPT</strong>
 </div>
+
+
+<h2 id="exam-tips-bfw">Exam tips — BFW1001</h2>
+<div class="exam-flag"><div><strong>Calculation discipline</strong>Formula → timeline → substitute → box answer → decision sentence (Accept/Reject or which project). Markers award process marks even if arithmetic slips slightly.</div></div>
+
+<div class="concept-card">
+<span class="label">What scores</span>
+<ul>
+<li>Matching <strong>r</strong> and <strong>n</strong> to the same period (monthly vs annual).</li>
+<li>NPV decision for independent projects; <strong>higher NPV</strong> when mutually exclusive (same risk).</li>
+<li>Stating why IRR can conflict with NPV (scale / timing).</li>
+<li>Bond price vs yield intuition: yield ↑ → price ↓.</li>
+<li>Ignoring sunk costs; including opportunity cost and ΔNWC when building project CF.</li>
+</ul>
+</div>
+
+<div class="do-not"><strong>Top traps</strong>
+Using IRR to rank mutually exclusive projects · forgetting initial investment in NPV · treating EAR and APR as interchangeable without conversion · discounting interest-tax shields twice if already using after-tax WACC logic incorrectly at intro level.
+</div>
+
+<div class="memory"><strong>Memory</strong>
+PV = FV/(1+r)^n · Annuity PV = PMT × [1−(1+r)^−n]/r · NPV &gt; 0 → accept · Perpetuity = C/r · Growing = C₁/(r−g).
+</div>
+
+<div class="example-box">
+<strong>Mixed exam set</strong><br>
+Loan 20,000; annual rate 12% compounded monthly; pay in 24 equal monthly payments (ordinary).<br>
+Monthly r = 0.12/12 = 0.01; n = 24<br>
+PMT = 20,000 / ([1−1.01^−24]/0.01) ≈ 20,000 / 21.2434 ≈ <strong>941.47</strong>
+</div>
+<div class="self-check"><div class="sc-title">Last-night sprint</div>
+<ol>
+<li>PV of 5,000 in 5 years at 8%.</li>
+<li>One sentence: when do NPV and IRR rank differently?</li>
+<li>Coupon 6%, yield 8%, n&gt;0 — premium or discount bond?</li>
+</ol></div>
 
 <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
 <a href="acw1120.html" class="font-medium hover:underline">← ACW1120</a>

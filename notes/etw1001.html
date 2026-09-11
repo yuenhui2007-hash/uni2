@@ -17,7 +17,7 @@
 <main class="max-w-4xl mx-auto px-5 py-8 prose">
 <div class="notes-hero"><div class="kicker">MONASH B2026 · STATISTICS</div><h1>ETW1001 – Introduction to Statistical Analysis</h1><p>Complete exam-prep: descriptive stats, inference, regression, interpretation</p></div>
 
-<nav class="page-toc"><span class="page-toc-label">On this page · 14 sections</span><div class="page-toc-links"><a href="#def-bank">Definition bank — statistics</a><a href="#t1">1. Descriptive statistics</a><a href="#t2">2. Probability basics</a><a href="#t3">3. Inference</a><a href="#t4">4. Simple linear regression</a><a href="#t5">5. Worked mini set</a><a href="#t6">6. Checklist</a><a href="#t7">7. Descriptive statistics — more worked sets</a><a href="#t8">8. Confidence interval template</a><a href="#t9">9. Hypothesis test write-up template</a><a href="#t10">10. Regression interpretation bank</a><a href="#t11">11. Choosing the right measure (exam judgment)</a><a href="#t12">12. Two-sample intuition (if taught)</a><a href="#t13">13. Exam answer template — statistics</a></div></nav>
+<nav class="page-toc"><span class="page-toc-label">On this page · 15 sections</span><div class="page-toc-links"><a href="#def-bank">Definition bank — statistics</a><a href="#t1">1. Descriptive statistics</a><a href="#t2">2. Probability basics</a><a href="#t3">3. Inference</a><a href="#t4">4. Simple linear regression</a><a href="#t5">5. Worked mini set</a><a href="#t6">6. Checklist</a><a href="#t7">7. Descriptive statistics — more worked sets</a><a href="#t8">8. Confidence interval template</a><a href="#t9">9. Hypothesis test write-up template</a><a href="#t10">10. Regression interpretation bank</a><a href="#t11">11. Choosing the right measure (exam judgment)</a><a href="#t12">12. Two-sample intuition (if taught)</a><a href="#t13">13. Exam answer template — statistics</a><a href="#exam-tips-etw">Exam tips — ETW1001</a></div></nav>
 
 <h2 id="def-bank">Definition bank — statistics</h2>
 <div class="concept-grid">
@@ -250,6 +250,38 @@ Median = 4.0 (better “typical” salary)
 <li>Write 1–2 sentences of interpretation.</li>
 <li>Add a limitation if the question asks for evaluation.</li>
 </ol>
+
+
+<h2 id="exam-tips-etw">Exam tips — ETW1001</h2>
+<div class="exam-flag"><div><strong>Number + sentence</strong>Almost every calculation needs a one-line business interpretation. Leaving only the decimal is mid-band.</div></div>
+
+<div class="concept-card">
+<span class="label">Write-up template</span>
+<ul>
+<li>State parameter in context (e.g. mean delivery time for all orders).</li>
+<li>Formula, then substitution.</li>
+<li>Box the numerical result with units.</li>
+<li>Interpret: what it means for the decision-maker.</li>
+<li>Limitation if asked (assumptions, causality, sample size).</li>
+</ul>
+</div>
+
+<div class="do-not"><strong>Top traps</strong>
+Saying “prove H₀” · interpreting CI as “95% probability μ is in this interval” after seeing the data · claiming causation from observational regression · using population variance formula on a sample without care.
+</div>
+
+<div class="example-box">
+<strong>Hypothesis write-up</strong><br>
+H₀: μ = 50; H₁: μ ≠ 50; α = 0.05<br>
+z = 2.1 &gt; 1.96 → reject H₀<br>
+<strong>Conclusion:</strong> At 5% significance, evidence that the population mean differs from 50 (sample suggests higher/lower as per sign).
+</div>
+<div class="self-check"><div class="sc-title">Last-night sprint</div>
+<ol>
+<li>When prefer median over mean?</li>
+<li>What does slope b mean in Ŷ = a + bX?</li>
+<li>Type I error in one sentence?</li>
+</ol></div>
 
 <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
 <a href="ecm1953.html" class="font-medium hover:underline">← ECM1953</a>
