@@ -17,7 +17,7 @@
 <main class="max-w-4xl mx-auto px-5 py-8 prose">
 <div class="notes-hero"><div class="kicker">MONASH B2026 · STATISTICS</div><h1>ETW1001 – Introduction to Statistical Analysis</h1><p>Complete exam-prep: descriptive stats, inference, regression, interpretation</p></div>
 
-<nav class="page-toc"><span class="page-toc-label">On this page · 15 sections</span><div class="page-toc-links"><a href="#def-bank">Definition bank — statistics</a><a href="#t1">1. Descriptive statistics</a><a href="#t2">2. Probability basics</a><a href="#t3">3. Inference</a><a href="#t4">4. Simple linear regression</a><a href="#t5">5. Worked mini set</a><a href="#t6">6. Checklist</a><a href="#t7">7. Descriptive statistics — more worked sets</a><a href="#t8">8. Confidence interval template</a><a href="#t9">9. Hypothesis test write-up template</a><a href="#t10">10. Regression interpretation bank</a><a href="#t11">11. Choosing the right measure (exam judgment)</a><a href="#t12">12. Two-sample intuition (if taught)</a><a href="#t13">13. Exam answer template — statistics</a><a href="#exam-tips-etw">Exam tips — ETW1001</a></div></nav>
+<nav class="page-toc"><span class="page-toc-label">On this page · 18 sections</span><div class="page-toc-links"><a href="#def-bank">Definition bank — statistics</a><a href="#t1">1. Descriptive statistics</a><a href="#t2">2. Probability basics</a><a href="#t3">3. Inference</a><a href="#t4">4. Simple linear regression</a><a href="#t5">5. Worked mini set</a><a href="#t6">6. Checklist</a><a href="#t7">7. Descriptive statistics — more worked sets</a><a href="#t8">8. Confidence interval template</a><a href="#t9">9. Hypothesis test write-up template</a><a href="#t10">10. Regression interpretation bank</a><a href="#t11">11. Choosing the right measure (exam judgment)</a><a href="#t12">12. Two-sample intuition (if taught)</a><a href="#t13">13. Exam answer template — statistics</a><a href="#exam-tips-etw">Exam tips — ETW1001</a><a href="#detail-sampling">Sampling error vs bias</a><a href="#detail-errors">Type I and Type II errors</a><a href="#detail-r2">R² and residuals — careful language</a></div></nav>
 
 <h2 id="def-bank">Definition bank — statistics</h2>
 <div class="concept-grid">
@@ -282,6 +282,22 @@ z = 2.1 &gt; 1.96 → reject H₀<br>
 <li>What does slope b mean in Ŷ = a + bX?</li>
 <li>Type I error in one sentence?</li>
 </ol></div>
+
+
+<h2 id="detail-sampling">Sampling error vs bias</h2>
+<p><strong>Sampling error</strong> is the natural random difference between sample statistic and population parameter; it shrinks as n rises (other things equal).<br>
+<strong>Bias</strong> is systematic error (bad sampling frame, non-response, leading questions). Larger n does not fix bias — improve design instead.</p>
+<div class="example-box">
+Online voluntary poll about campus food with n = 5,000 can still be biased if only unhappy students respond.
+</div>
+
+<h2 id="detail-errors">Type I and Type II errors</h2>
+<p><strong>Type I:</strong> reject H₀ when H₀ is true (false positive).<br>
+<strong>Type II:</strong> fail to reject H₀ when H₀ is false (false negative).<br>
+α (significance level) is the probability of Type I error you tolerate. Lower α → harder to reject H₀ → more Type II risk, other things equal.</p>
+
+<h2 id="detail-r2">R² and residuals — careful language</h2>
+<p>R² is the proportion of variation in Y explained by the model in-sample. High R² does not prove causality. Residual plots help check patterns (non-linearity, outliers). Always interpret slope in context with units of X and Y.</p>
 
 <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
 <a href="ecm1953.html" class="font-medium hover:underline">← ECM1953</a>

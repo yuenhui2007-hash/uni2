@@ -21,7 +21,7 @@
 <main class="max-w-4xl mx-auto px-5 py-8 prose">
 <div class="notes-hero"><div class="kicker">MONASH B2026 · FINANCE</div><h1>BFW1001 – Foundations of Finance</h1><p>Complete exam-prep: TVM toolkit, capital budgeting, risk-return, worked calculations</p></div>
 
-<nav class="page-toc"><span class="page-toc-label">On this page · 21 sections</span><div class="page-toc-links"><a href="#def-bank">Definition bank — finance</a><a href="#f1">1. What finance is deciding</a><a href="#f2">2. Time value of money</a><a href="#f3">3. Annuities and perpetuities</a><a href="#f4">4. Capital budgeting criteria</a><a href="#f5">5. Building project cash flows</a><a href="#f6">6. Risk and return</a><a href="#f7">7. Worked capital budgeting set</a><a href="#f8">8. Checklist</a><a href="#f9">9. Monash topic map (BFW1001 / BFF1001 alignment)</a><a href="#f10">10. Financial system, institutions and regulation</a><a href="#f11">11. Debt securities (exam awareness)</a><a href="#f12">12. Equity securities</a><a href="#f13">13. Foreign exchange (intro)</a><a href="#f14">14. Extended checklist</a><a href="#f15">15. Mixed TVM problem bank (worked)</a><a href="#f16">16. NPV vs IRR conflict — numerical</a><a href="#f17">17. Bond price sensitivity</a><a href="#f18">18. Risk classes and discount rates</a><a href="#f19">19. Exam calculation discipline</a><a href="#exam-tips-bfw">Exam tips — BFW1001</a></div></nav>
+<nav class="page-toc"><span class="page-toc-label">On this page · 24 sections</span><div class="page-toc-links"><a href="#def-bank">Definition bank — finance</a><a href="#f1">1. What finance is deciding</a><a href="#f2">2. Time value of money</a><a href="#f3">3. Annuities and perpetuities</a><a href="#f4">4. Capital budgeting criteria</a><a href="#f5">5. Building project cash flows</a><a href="#f6">6. Risk and return</a><a href="#f7">7. Worked capital budgeting set</a><a href="#f8">8. Checklist</a><a href="#f9">9. Monash topic map (BFW1001 / BFF1001 alignment)</a><a href="#f10">10. Financial system, institutions and regulation</a><a href="#f11">11. Debt securities (exam awareness)</a><a href="#f12">12. Equity securities</a><a href="#f13">13. Foreign exchange (intro)</a><a href="#f14">14. Extended checklist</a><a href="#f15">15. Mixed TVM problem bank (worked)</a><a href="#f16">16. NPV vs IRR conflict — numerical</a><a href="#f17">17. Bond price sensitivity</a><a href="#f18">18. Risk classes and discount rates</a><a href="#f19">19. Exam calculation discipline</a><a href="#exam-tips-bfw">Exam tips — BFW1001</a><a href="#detail-wacc-intro">Cost of capital — exam awareness</a><a href="#detail-payback">Payback method — use and limits</a><a href="#detail-bond-ytm">Bond pricing logic</a></div></nav>
 
 <h2 id="def-bank">Definition bank — finance</h2>
 <div class="concept-grid">
@@ -354,6 +354,23 @@ PMT = 20,000 / ([1−1.01^−24]/0.01) ≈ 20,000 / 21.2434 ≈ <strong>941.47</
 <li>One sentence: when do NPV and IRR rank differently?</li>
 <li>Coupon 6%, yield 8%, n&gt;0 — premium or discount bond?</li>
 </ol></div>
+
+
+<h2 id="detail-wacc-intro">Cost of capital — exam awareness</h2>
+<p>The discount rate should reflect the risk of the cash flows being valued. At introductory level you are often <strong>given</strong> r. When comparing projects, using a firm-wide rate on a much riskier project overstates NPV (too low a hurdle). Using too high a rate on a safe project rejects value-creating investments.</p>
+<div class="example-box">
+<strong>Sensitivity idea:</strong> Project NPV = +5,000 at 10%. If the true required return is 14%, NPV may turn negative — always state the rate assumption.
+</div>
+
+<h2 id="detail-payback">Payback method — use and limits</h2>
+<p><strong>Payback</strong> = years to recover initial investment from cash inflows. Easy to communicate; ignores time value (unless discounted payback) and all cash flows after recovery. Good as a liquidity screen, poor as the sole accept/reject rule versus NPV.</p>
+<div class="example-box">
+I₀ = 60,000; CF 20k, 25k, 30k → recovery during year 3.<br>
+After 2 years: 45,000 recovered; need 15,000 more / 30,000 ≈ 0.5 → payback ≈ <strong>2.5 years</strong>.
+</div>
+
+<h2 id="detail-bond-ytm">Bond pricing logic</h2>
+<p>If coupon rate = yield to maturity → price ≈ par. Coupon &lt; yield → discount. Coupon &gt; yield → premium. As maturity approaches, price is pulled toward par (other things equal).</p>
 
 <div class="mt-10 pt-6 border-t border-[#C0C4B7] flex justify-between text-sm">
 <a href="acw1120.html" class="font-medium hover:underline">← ACW1120</a>
