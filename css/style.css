@@ -480,3 +480,50 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+
+/* Contract / checklist element flow */
+.elements-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin: 0.5rem 0 1rem;
+}
+.el-item {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.75rem 0.95rem;
+  box-shadow: 0 2px 8px rgba(20,24,28,0.03);
+}
+.el-num {
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Outfit, system-ui, sans-serif;
+  margin-top: 0.1rem;
+}
+.el-item strong {
+  display: block;
+  color: var(--ink);
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+}
+.el-item em {
+  display: block;
+  font-style: normal;
+  font-size: 0.86rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
