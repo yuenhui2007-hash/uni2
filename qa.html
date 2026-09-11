@@ -65,7 +65,12 @@
 <body>
     <header class="site-header sticky top-0 z-50">
 <div class="max-w-4xl mx-auto px-5 py-4 flex justify-between items-center">
-<a href="index.html">← UNI</a>
+<a href="index.html">UNI</a>
+<nav class="flex gap-4 text-sm">
+<a href="qa.html" class="text-muted">Q&amp;A</a>
+<a href="exam-patterns.html" class="text-muted">Exams</a>
+<a href="assignments.html" class="text-muted">Assignments</a>
+</nav>
 <span class="text-muted text-sm">Q&A</span>
 </div></header>
 
@@ -939,5 +944,18 @@
             });
         });
     </script>
+
+<button id="backTop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function(){
+  const btn = document.getElementById('backTop');
+  if(!btn) return;
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('show', window.scrollY > 400);
+  }, {passive:true});
+  btn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+})();
+</script>
+
 </body>
 </html>

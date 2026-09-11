@@ -238,4 +238,17 @@ Remote software team demotivated despite high pay → hygiene may be OK; motivat
 })();
 </script>
 
+
+<button id="backTop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function(){
+  const btn = document.getElementById("backTop");
+  if(!btn) return;
+  window.addEventListener("scroll", () => {
+    btn.classList.toggle("show", window.scrollY > 400);
+  }, {passive:true});
+  btn.addEventListener("click", () => window.scrollTo({top:0, behavior:"smooth"}));
+})();
+</script>
+
 </body></html>

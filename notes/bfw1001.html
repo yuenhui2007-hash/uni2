@@ -11,8 +11,12 @@
 <div class="notes-progress" id="notes-progress"></div>
 <header class="site-header sticky top-0 z-50">
 <div class="max-w-4xl mx-auto px-5 py-4 flex justify-between items-center">
-<a href="../index.html">← UNI</a>
-<span class="text-muted text-sm">BFW1001</span>
+<a href="../index.html">UNI</a>
+<nav class="flex gap-3 text-sm">
+<a href="../qa.html" class="text-muted">Q&amp;A</a>
+<a href="../exam-patterns.html" class="text-muted">Exams</a>
+<a href="../assignments.html" class="text-muted">Work</a>
+</nav>
 </div></header>
 <main class="max-w-4xl mx-auto px-5 py-8 prose">
 <div class="notes-hero"><div class="kicker">MONASH B2026 · FINANCE</div><h1>BFW1001 – Foundations of Finance</h1><p>Complete exam-prep: TVM toolkit, capital budgeting, risk-return, worked calculations</p></div>
@@ -332,6 +336,19 @@ NPV ≈ <strong>+5,638 → ACCEPT</strong>
   };
   document.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
+})();
+</script>
+
+
+<button id="backTop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function(){
+  const btn = document.getElementById('backTop');
+  if(!btn) return;
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('show', window.scrollY > 400);
+  }, {passive:true});
+  btn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
 })();
 </script>
 
